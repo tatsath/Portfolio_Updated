@@ -1,0 +1,1507 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Hariom Tatsat</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" href="data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3e%3crect width='100' height='100' rx='20' fill='%23232020'/%3e%3ctext y='.9em' x='50%25' text-anchor='middle' font-family='Inter, sans-serif' font-size='80' fill='%23ffffff'%3eH%3c/text%3e%3c/svg%3e">
+    <style>
+        /* Base Styles */
+        * {
+            padding: 0;
+            margin: 0;
+            box-sizing: border-box;
+            font-family: 'Inter', 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            text-decoration: none;
+            list-style: none;
+            scroll-behavior: smooth;
+        }
+
+        :root {
+            --bg-main: #232020;
+            --bg-card: #2c2a2a;
+            --bg-header: rgba(30, 28, 28, 0.85);
+            --bg-footer: #1a1818;
+
+            --text-primary: #f0f0f0;
+            --text-secondary: #b0b0b0;
+            --text-headings: #ffffff;
+
+            --accent-primary: #ffffff;
+            --accent-secondary: #cccccc;
+
+            --button-bg-light: #e0e0e0;
+            --button-text-dark: #232020;
+
+            --shadow-color: rgba(255, 255, 255, 0.05);
+            --card-shadow: 0 4px 12px var(--shadow-color);
+            --hover-transition: all 0.3s ease;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            background-color: var(--bg-main);
+            font-size: 16px;
+            line-height: 1.6;
+            color: var(--text-primary);
+        }
+
+        /* Modern Header with Glass Effect */
+        .header {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            backdrop-filter: blur(10px);
+            background-color: var(--bg-header);
+            box-shadow: 0 1px 5px var(--shadow-color);
+            z-index: 1000;
+            transition: all 0.4s ease;
+        }
+
+        .header.scrolled {
+            padding: 10px 0;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 15px 30px;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo a {
+            font-size: 28px;
+            font-weight: bold;
+            color: var(--text-headings);
+            letter-spacing: -0.5px;
+        }
+
+        .logo a span {
+            color: var(--accent-primary);
+        }
+
+        .menu {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .menu a {
+            display: block;
+            padding: 10px 15px;
+            font-size: 17px;
+            font-weight: 500;
+            transition: var(--hover-transition);
+            color: var(--text-primary);
+            position: relative;
+        }
+
+        .menu a:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: 5px;
+            left: 50%;
+            background-color: var(--accent-primary);
+            transition: var(--hover-transition);
+            transform: translateX(-50%);
+        }
+
+        .menu a:hover:after {
+            width: 70%;
+        }
+
+        .menu a:hover {
+            color: var(--accent-primary);
+        }
+
+        .btn-contact {
+            background-color: var(--button-bg-light);
+            color: var(--button-text-dark) !important;
+            border: none;
+            padding: 10px 20px !important;
+            text-align: center;
+            text-decoration: none;
+            font-size: 16px;
+            border-radius: 30px !important;
+            cursor: pointer;
+            transition: var(--hover-transition);
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+        }
+
+        .btn-contact:hover {
+            background-color: var(--accent-secondary);
+            transform: translateY(-2px);
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        .menu-icon {
+            display: none;
+            color: var(--text-headings);
+            font-size: 28px;
+            cursor: pointer;
+        }
+
+        #menu-toggle {
+            display: none;
+        }
+
+        /* Hero Section */
+        #hero {
+            padding-top: 100px;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: linear-gradient(135deg, #2a2828 0%, var(--bg-main) 70%);
+            z-index: -1;
+        }
+
+        .hero-particles {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+
+        .container {
+            margin-left: auto;
+            margin-right: auto;
+            padding-left: 15px;
+            padding-right: 15px;
+            max-width: 1200px;
+            width: 100%;
+        }
+        /* Fix for fixed header overlapping anchors */
+        section[id],
+        div.card-section[id] {
+            scroll-margin-top: 85px; /* Adjust this value to match your header's height + some buffer */
+        }
+        .row {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: 30px;
+        }
+
+        #dhead {
+            margin-top: 120px;
+            padding: 40px 0;
+        }
+
+        #dpic {
+            grid-column: span 5;
+            text-align: right;
+            position: relative;
+            display: flex;
+            justify-content: flex-end;
+            align-items: center;
+        }
+
+        #ddesc {
+            grid-column: span 7;
+            padding-top: 40px;
+            padding-left: 20px;
+        }
+
+        .ppic {
+            width: 280px;
+            height: 280px;
+            border-radius: 140px;
+            box-shadow: 0 10px 30px var(--shadow-color);
+            transition: transform 0.5s ease;
+            border: 5px solid var(--bg-card);
+            object-fit: cover;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ppic:hover {
+            transform: scale(1.05);
+        }
+        
+        /* --- RECTIFIED PROFILE BACKGROUND AND ANIMATION --- */
+        .profile-bg {
+            position: absolute;
+            width: 320px;
+            height: 320px;
+            border-radius: 160px;
+            background: linear-gradient(45deg, var(--accent-secondary), #777777);
+            top: 50%;
+            right: -20px;
+            transform: translateY(-50%);
+            z-index: 1;
+            /* Use the desktop animation by default */
+            animation: pulse-desktop 3s infinite alternate;
+        }
+
+        /* Desktop animation */
+        @keyframes pulse-desktop {
+            0% {
+                transform: translateY(-50%) scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translateY(-50%) scale(1.05);
+                opacity: 0.8;
+            }
+        }
+        
+        /* Mobile/Tablet animation for perfect centering */
+        @keyframes pulse-mobile {
+            0% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.6;
+            }
+
+            100% {
+                transform: translate(-50%, -50%) scale(1.05);
+                opacity: 0.8;
+            }
+        }
+
+
+        h1 {
+            font-size: 48px;
+            font-weight: 700;
+            padding: 0;
+            margin: 0;
+            background: none;
+            -webkit-background-clip: unset;
+            background-clip: unset;
+            color: var(--text-headings);
+            display: inline-block;
+            animation: fadeInDown 1s ease-out;
+        }
+
+        h2 {
+            font-weight: 500;
+            color: var(--text-secondary);
+            font-size: 24px;
+            padding: 0;
+            margin: 15px 0 30px 0;
+            max-width: 500px;
+            animation: fadeInUp 1s ease-out 0.3s;
+            animation-fill-mode: both;
+        }
+
+        .typewriter {
+            overflow: hidden;
+            white-space: nowrap;
+            animation: typing 3.5s steps(40, end), blink-caret 0.75s step-end infinite;
+            display: block;
+        }
+
+        @keyframes typing {
+            from {
+                width: 0;
+            }
+
+            to {
+                width: 100%;
+            }
+        }
+
+        @keyframes blink-caret {
+
+            from,
+            to {
+                border-color: transparent;
+            }
+
+            50% {
+                border-color: var(--accent-primary);
+            }
+        }
+
+        @keyframes fadeInDown {
+            from {
+                opacity: 0;
+                transform: translateY(-20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        #dico {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+            animation: fadeInUp 1s ease-out 0.6s;
+            animation-fill-mode: both;
+        }
+
+        .social-icon {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            box-shadow: var(--card-shadow);
+            transition: var(--hover-transition);
+            color: var(--text-primary);
+            font-size: 22px;
+        }
+
+        .social-icon:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 6px 15px var(--shadow-color);
+            background: var(--accent-primary);
+            color: var(--bg-main);
+        }
+
+        .iico {
+            width: 40px;
+            height: 40px;
+            transition: var(--hover-transition);
+        }
+
+        .iico:hover {
+            transform: scale(1.1);
+        }
+
+        /* Timeline */
+        #history {
+            position: relative;
+        }
+
+        .section-title {
+            text-align: center;
+            margin-bottom: 60px;
+            font-size: 36px;
+            font-weight: 700;
+            color: var(--text-headings);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .section-title:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-primary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .entry {
+            margin-bottom: 40px;
+            position: relative;
+            transition: var(--hover-transition);
+        }
+
+        .entry:hover {
+            transform: translateX(5px);
+        }
+
+        .timespan {
+            grid-column: span 2;
+            font-size: 16px;
+            text-align: right;
+            padding-right: 25px;
+            color: var(--accent-primary);
+            font-weight: 600;
+        }
+
+        .ico {
+            grid-column: span 1;
+            border-left: 2px solid var(--accent-primary);
+            position: relative;
+            height: 100%;
+            min-height: 100px;
+        }
+
+        .ico img {
+            border-radius: 10px;
+            width: 60px;
+            margin-left: 20px;
+            box-shadow: var(--card-shadow);
+            transition: var(--hover-transition);
+        }
+
+        .ico img:hover {
+            transform: scale(1.1);
+        }
+
+        .entry-dot {
+            position: absolute;
+            top: 0;
+            left: -10px;
+            width: 18px;
+            height: 18px;
+            border-radius: 50%;
+            background-color: var(--bg-main);
+            border: 3px solid var(--accent-primary);
+            z-index: 2;
+        }
+
+        .desc {
+            grid-column: span 9;
+            padding-left: 20px;
+            padding-bottom: 20px;
+        }
+
+        .desc h3 {
+            font-size: 22px;
+            margin-bottom: 10px;
+            color: var(--text-headings);
+        }
+
+        .desc p {
+            color: var(--text-secondary);
+            font-size: 16px;
+            line-height: 1.6;
+        }
+
+        /* Card Sections */
+        .ctitle {
+            font-size: 36px;
+            margin-bottom: 40px;
+            text-align: center;
+            font-weight: 700;
+            color: var(--text-headings);
+            position: relative;
+            padding-bottom: 15px;
+        }
+
+        .ctitle:after {
+            content: '';
+            position: absolute;
+            width: 80px;
+            height: 3px;
+            background: var(--accent-primary);
+            bottom: 0;
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        .card-section {
+            padding: 80px 0;
+        }
+
+        .card-section:nth-of-type(odd) {
+            background-color: var(--bg-main);
+        }
+
+        .card-section:nth-of-type(even) {
+            background-color: var(--bg-card);
+        }
+
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .card {
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: var(--card-shadow);
+            transition: var(--hover-transition);
+            height: 100%;
+            display: flex;
+            flex-direction: column;
+        }
+
+        .card-section:nth-of-type(odd) .card {
+            background-color: var(--bg-card);
+        }
+
+        .card-section:nth-of-type(even) .card {
+            background-color: #333030;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 8px 20px var(--shadow-color);
+        }
+
+        .ccimg {
+            overflow: hidden;
+            position: relative;
+            height: 200px;
+        }
+
+        .ccimg img {
+            width: 100%;
+            height: 100%;
+            transition: transform 0.5s ease;
+            object-fit: cover;
+        }
+
+        .card:hover .ccimg img {
+            transform: scale(1.1);
+        }
+
+        .ccimg:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 30%;
+            background: linear-gradient(to top, rgba(10, 10, 10, 0.6), transparent);
+        }
+
+        .cdesc {
+            padding: 20px;
+            flex-grow: 1;
+            font-size: 16px;
+            line-height: 1.5;
+            color: var(--text-primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--bg-footer);
+            color: var(--text-primary);
+            padding: 60px 0 30px;
+        }
+
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 30px;
+            margin-bottom: 30px;
+        }
+
+        .footer-section h3 {
+            font-size: 22px;
+            margin-bottom: 20px;
+            position: relative;
+            padding-bottom: 10px;
+            color: var(--text-headings);
+        }
+
+        .footer-section h3:after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: 0;
+            width: 50px;
+            height: 2px;
+            background-color: var(--accent-primary);
+        }
+
+        .footer-section p {
+            color: var(--text-secondary);
+            line-height: 1.7;
+        }
+
+        .footer-links {
+            display: flex;
+            flex-direction: column;
+            gap: 10px;
+        }
+
+        .footer-links a {
+            color: var(--text-secondary);
+            transition: var(--hover-transition);
+        }
+
+        .footer-links a:hover {
+            color: var(--accent-primary);
+            padding-left: 5px;
+        }
+
+        .footer-social {
+            display: flex;
+            gap: 15px;
+            margin-top: 20px;
+        }
+
+        .footer-social a {
+            display: inline-flex;
+            justify-content: center;
+            align-items: center;
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            background: var(--bg-card);
+            color: var(--text-primary);
+            transition: var(--hover-transition);
+            font-size: 18px;
+        }
+
+        .footer-social a:hover {
+            background: var(--accent-primary);
+            color: var(--bg-main);
+            transform: translateY(-5px);
+        }
+
+        .copyright {
+            text-align: center;
+            padding-top: 30px;
+            border-top: 1px solid #444444;
+            color: #888888;
+            font-size: 14px;
+        }
+
+        /* Back to Top Button */
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            background: var(--button-bg-light);
+            color: var(--button-text-dark);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 20px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
+            transition: var(--hover-transition);
+            z-index: 999;
+            opacity: 0;
+            visibility: hidden;
+        }
+
+        .back-to-top.active {
+            opacity: 1;
+            visibility: visible;
+        }
+
+        .back-to-top:hover {
+            background: var(--accent-secondary);
+            transform: translateY(-5px);
+        }
+
+        /* Responsive */
+        @media (max-width: 1024px) {
+            .row {
+                gap: 20px;
+            }
+
+            h1 {
+                font-size: 40px;
+            }
+
+            h2 {
+                font-size: 20px;
+            }
+        }
+
+        @media (max-width: 992px) {
+            #dpic {
+                grid-column: span 12;
+                text-align: center;
+                justify-content: center;
+            }
+
+            /* --- RECTIFIED PROFILE BACKGROUND POSITIONING --- */
+            .profile-bg {
+                /* Reset desktop positioning */
+                right: auto;
+                left: 50%;
+                /* Set initial transform for centering */
+                transform: translate(-50%, -50%);
+                /* Switch to the mobile-safe animation */
+                animation-name: pulse-mobile;
+            }
+
+            #ddesc {
+                grid-column: span 12;
+                padding-top: 40px;
+                text-align: center;
+                padding-left: 0;
+            }
+
+            #dico {
+                justify-content: center;
+            }
+
+            .timespan {
+                grid-column: span 3;
+            }
+
+            .desc {
+                grid-column: span 8;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .menu {
+                flex-direction: column;
+                align-items: flex-start;
+                position: absolute;
+                top: 70px;
+                left: 0;
+                width: 100%;
+                padding: 20px;
+                background-color: var(--bg-card);
+                box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+                transform: scaleY(0);
+                transform-origin: top;
+                transition: transform 0.3s ease;
+                z-index: 1000;
+            }
+
+            .menu a {
+                width: 100%;
+                padding: 12px 15px;
+            }
+
+            .menu-icon {
+                display: block;
+            }
+
+            #menu-toggle:checked~.menu {
+                transform: scaleY(1);
+            }
+
+            .timespan {
+                grid-column: span 12;
+                text-align: left;
+                padding-right: 0;
+                padding-bottom: 10px;
+            }
+
+            .ico {
+                grid-column: span 2;
+            }
+
+            .desc {
+                grid-column: span 10;
+            }
+
+            .footer-content {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .footer-section h3:after {
+                left: 50%;
+                transform: translateX(-50%);
+            }
+
+            .footer-social {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 576px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            h2 {
+                font-size: 18px;
+            }
+
+            .ppic {
+                width: 220px;
+                height: 220px;
+            }
+
+            .profile-bg {
+                width: 250px;
+                height: 250px;
+            }
+
+            .section-title,
+            .ctitle {
+                font-size: 28px;
+            }
+
+            .ico {
+                grid-column: span 3;
+            }
+
+            .desc {
+                grid-column: span 9;
+                padding-left: 10px;
+            }
+
+            .footer-section h3 {
+                font-size: 20px;
+            }
+
+            .footer-social a {
+                width: 35px;
+                height: 35px;
+                font-size: 16px;
+            }
+
+            .copyright {
+                font-size: 13px;
+            }
+        }
+
+        /* Animation for cards with AOS */
+        [data-aos] {
+            opacity: 0;
+            transition-property: opacity, transform;
+        }
+
+        [data-aos].aos-animate {
+            opacity: 1;
+        }
+
+        [data-aos="fade-up"] {
+            transform: translateY(50px);
+        }
+
+        [data-aos="fade-up"].aos-animate {
+            transform: translateY(0);
+        }
+
+        [data-aos="fade-right"] {
+            transform: translateX(-50px);
+        }
+
+        [data-aos="fade-right"].aos-animate {
+            transform: translateX(0);
+        }
+
+        [data-aos="fade-left"] {
+            transform: translateX(50px);
+        }
+
+        [data-aos="fade-left"].aos-animate {
+            transform: translateX(0);
+        }
+
+        /* Particle Animation */
+        .particle {
+            position: absolute;
+            border-radius: 50%;
+            background-color: var(--accent-secondary);
+            opacity: 0.4;
+        }
+
+        /* Custom section animations */
+        .section-fade-in {
+            opacity: 0;
+            animation: fadeIn 1s ease-out forwards;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+            }
+
+            to {
+                opacity: 1;
+            }
+        }
+
+        hr {
+            border: none;
+            height: 1px;
+            background: linear-gradient(to right, transparent, var(--accent-secondary), transparent);
+            margin: 20px 0;
+            opacity: 0.4;
+        }
+
+        .float-animation {
+            animation: float 3s ease-in-out infinite;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(0px);
+            }
+
+            50% {
+                transform: translateY(-10px);
+            }
+
+            100% {
+                transform: translateY(0px);
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Header -->
+    <header class="header">
+        <nav>
+            <div class="logo">
+                <a href="#"><span>Hariom</span> Tatsat</a>
+            </div>
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <ul class="menu">
+                <li><a href="#">Home</a></li>
+                <li><a href="#history">Experience</a></li>
+                <li><a href="#speaking">Speaking</a></li>
+                <li><a href="#MM">Media Mentions</a></li>
+                <li><a href="#article-posts">Articles</a></li>
+                <li><a href="#courses">Courses & Workshop</a></li>
+                <li><a href="#books-papers">Books & Papers</a></li>
+                <!-- <li><a href="#awards">Awards</a></li> -->
+                <li><a href="https://topmate.io/hariom_t" target="_blank" class="btn-contact">Contact Us</a>
+                </li>
+            </ul>
+        </nav>
+    </header>
+
+    <!-- Hero Section with Particles -->
+    <section id="hero">
+        <div class="hero-bg"></div>
+        <div class="hero-particles" id="particles-js"></div>
+        <div class="container">
+            <div class="row" id="dhead">
+                <div id="dpic">
+                    <div class="profile-bg"></div>
+                    <img src="/assets/hariom.jpeg" class="ppic" alt="Hariom Tatsat" />
+                </div>
+                <div id="ddesc">
+                    <h1>Hariom Tatsat</h1>
+                    <h2 class="typewriter">Democratizing Financial AI</h2>
+                    <div id="dico">
+                        <a href="https://github.com/tatsath" target="_blank" class="social-icon">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hariomtatsat/" target="_blank" class="social-icon">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/HariomTatsat24" target="_blank" class="social-icon">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <hr>
+
+    <!-- Experience Timeline -->
+    <div id="history" class="card-section">
+        <div class="container">
+            <div class="ctitle">Professional Experience</div>
+            <div class="entry row" data-aos="fade-up">
+                <div class="timespan">
+                    2017 - Present
+                </div>
+                <div class="ico">
+                    <div class="entry-dot"></div>
+                    <img src="/assets/barclays.jpeg" alt="Barclays" />
+                </div>
+                <div class="desc">
+                    <h3>Vice President at Barclays Investment Bank, NY</h3>
+                    <p>
+                        Leading data-driven decision-making using statistics, machine learning and AI.
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry row" data-aos="fade-up" data-aos-delay="100">
+                <div class="timespan">
+                    2014 - 2016
+                </div>
+                <div class="ico">
+                    <div class="entry-dot"></div>
+                    <img src="/assets/FAB.jpeg" alt="FAB" />
+                </div>
+                <div class="desc">
+                    <h3>Desk Quant at First Abu Dhabi Bank (FAB)</h3>
+                    <p>
+                        Pricing and hedging of Financial Instruments for exotic
+                        rates and credit desk. Used financial mathematics for data driven decision-making.
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry row" data-aos="fade-up" data-aos-delay="200">
+                <div class="timespan">
+                    2012 - 2014
+                </div>
+                <div class="ico">
+                    <div class="entry-dot"></div>
+                    <img src="/assets/RBS.jpeg" alt="RBS" />
+                </div>
+                <div class="desc">
+                    <h3>Senior Quant at RBS</h3>
+                    <p>
+                        Led Counterparty Credit Risk and CVA Quant teams. Worked on simulation on Big-Data for Financial
+                        decision making.
+                    </p>
+                </div>
+            </div>
+
+            <div class="entry row" data-aos="fade-up" data-aos-delay="300">
+                <div class="timespan">
+                    2010 - 2012
+                </div>
+                <div class="ico">
+                    <div class="entry-dot"></div>
+                    <img src="/assets/nomura.jpeg" alt="Nomura" />
+                </div>
+                <div class="desc">
+                    <h3>Associate at Nomura</h3>
+                    <p>
+                        Pricing and hedging of Financial Instruments for credit derivatives desk.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Speaking Section -->
+    <div class="card-section" id="speaking">
+        <div class="container">
+            <div class="ctitle">Speaking</div>
+            <div class="card-container">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://www.youtube.com/watch?v=w5M4AaVTVoQ" target="_blank">
+                        <div class="ccimg"><img src="assets/aug14.png" alt="AI Use Cases" /></div>
+                    </a>
+                    <div class="cdesc">Harnessing data for AI Use Cases in Finance by Hariom Tatsat
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <a href="https://www.datascience.salon/hariom-tatsat/" target="_blank">
+                        <div class="ccimg"><img src="assets/Featuredtalk3.jpeg" alt="Data Science Salon" /></div>
+                    </a>
+                    <div class="cdesc">Reinforcement Learning Interpretability</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://open.spotify.com/episode/0qmbifSURd4wVL29mv10gY?si=b33497739d2b4342&nd=1" target="_blank">
+                        <div class="ccimg"><img src="assets/sp.jpg" alt="Spotify Podcast" /></div>
+                    </a>
+                    <div class="cdesc">Podcast - Reinforcement Learning in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://www.youtube.com/watch?v=X-VjX4Nt0_Q&t=622s" target="_blank">
+                        <div class="ccimg"><img src="assets/Featuredtalk4.jpeg" alt="YouTube Webinar" /></div>
+                    </a>
+                    <div class="cdesc">Webinar on AI and Machine Learning in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://www.youtube.com/watch?v=nxu129vN82s&t=163s" target="_blank">
+                        <div class="ccimg"><img src="assets/ds.webp" alt="YouTube ML in Finance" /></div>
+                    </a>
+                    <div class="cdesc">Machine Learning in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://newyork.theaisummit.com/speakers/hariom-tatsat?&categories=16027261-EF29-143F-763CEC9DC2394930&sortby=personSurname%20asc%2C__piwikviews&azletter=T&searchgroup=libraryentry-speakers" target="_blank">
+                        <div class="ccimg"><img src="assets/ai_summit_newyork.jpg" alt="Speaker at AI summit Newyork 2024" /></div>
+                    </a>
+                    <div class="cdesc">Speaker at AI Summit NewYork 2024</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://www.youtube.com/watch?v=Jknlz0m13ZM&t=250s" target="_blank">
+                        <div class="ccimg"><img src="assets/rein.png" alt="YouTube RL for Trading" /></div>
+                    </a>
+                    <div class="cdesc">Reinforcement Learning for trading</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://www.linkedin.com/feed/update/urn:li:activity:6955158172781191169/" target="_blank">
+                        <div class="ccimg"><img src="assets/CQF.jpeg" alt="CQF Institute" /></div>
+                    </a>
+                    <div class="cdesc">CQF Institute Presentation</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
+                    <a href="https://aifin.nyc/" target="_blank">
+                        <div class="ccimg"><img src="assets/htt2.jpeg" alt="AI Fin NYC" /></div>
+                    </a>
+                    <div class="cdesc">Navigating the Realities of AI in Financial Services</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="700">
+                    <a href="https://open.spotify.com/episode/6o9KcGXHwkaBuENykDpKKy?si=de471563ad384da2&nd=1" target="_blank">
+                        <div class="ccimg"><img src="assets/podcast2.png" alt="Spotify Podcast ML" /></div>
+                    </a>
+                    <div class="cdesc">Podcast - Machine Learning in Finance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Media Mentions Section -->
+    <div class="card-section" id="MM">
+        <div class="container">
+            <div class="ctitle">Media Mentions</div>
+            <div class="card-container">
+                <div class="card" data-aos="fade-up">
+                    <a href="https://thechicagojournal.com/hariom-tatsat-a-quant-striving-to-bridge-the-worlds-of-finance-and-machine-learning/" target="_blank">
+                        <div class="ccimg"><img src="assets/test2mention.png" alt="Chicago Journal Article" /></div>
+                    </a>
+                    <div class="cdesc">A Quant Striving to Bridge the Worlds of Finance and ML</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://economicinsider.com/unveiling-the-next-gen-of-generative-ai-and-chatgpt-in-finance-in-transforming-the-financial-landscape/" target="_blank">
+                        <div class="ccimg"><img src="assets/htec.webp" alt="Economic Insider Article" /></div>
+                    </a>
+                    <div class="cdesc">Unveiling the Next-Gen of Generative AI and ChatGPT in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://ceoweekly.com/a-remarkable-journey-from-a-small-town-in-india-to-wall-street-and-beyond/" target="_blank">
+                        <div class="ccimg"><img src="assets/ceo.png" alt="CEO Weekly Article" /></div>
+                    </a>
+                    <div class="cdesc">A Remarkable Journey: From a Small Town in India to Wall Street</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://aimresearch.co/2023/10/04/adoption-of-ai-gen-ai-in-finance-with-hariom-tatsat/" target="_blank">
+                        <div class="ccimg"><img src="assets/Featuredtalk1.jpeg" alt="AIM Research Article" /></div>
+                    </a>
+                    <div class="cdesc">Adoption of AI/Gen AI in Finance with Hariom Tatsat</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://usinsider.com/bridging-the-gap-between-machine-learning-and-finance-expert-insights-from-hariom-tatsat/" target="_blank">
+                        <div class="ccimg"><img src="assets/us.jpg" alt="US Insider Article" /></div>
+                    </a>
+                    <div class="cdesc">Bridging the Gap Between ML and Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="500">
+                    <a href="https://www.outlookindia.com/business-spotlight/hariom-tatsats-journey-of-financial-innovation-through-ai-and-machine-learning" target="_blank">
+                        <div class="ccimg"><img src="assets/ot.png" alt="Outlook India Article" /></div>
+                    </a>
+                    <div class="cdesc">Journey Of Financial Innovation Through AI And ML</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="600">
+                    <a href="https://sanfranciscopost.com/the-future-is-here-how-ai-will-transform-investment-and-asset-allocation/" target="_blank">
+                        <div class="ccimg"><img src="assets/sf.png" alt="San Francisco Post Article" /></div>
+                    </a>
+                    <div class="cdesc">The Future is Here: How AI Will Transform Investment and Asset Allocation
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="700">
+                    <a href="https://nywire.com/up-and-close-interview-with-hariom-tatsat-author-and-expert-in-ai-in-finance/" target="_blank">
+                        <div class="ccimg"><img src="assets/htny.webp" alt="NY Wire Interview" /></div>
+                    </a>
+                    <div class="cdesc">Up and Close Interview with Hariom Tatsat</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="800">
+                    <a href="https://nyweekly.com/business/reinforcement-learning-the-untapped-frontier-in-algorithmic-trading-spearheaded-by-hariom-tatsats-in-collaboration-with-leihigh-university/" target="_blank">
+                        <div class="ccimg"><img src="assets/ny-weekly-logo.jpg" alt="NY Weekly Article" /></div>
+                    </a>
+                    <div class="cdesc">Reinforcement Learning: The Untapped Frontier in Algorithmic Trading</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Articles and Posts -->
+    <div class="card-section" id="article-posts">
+        <div class="container">
+            <div class="ctitle">Articles and Posts</div>
+            <div class="card-container">
+                <div class="card" data-aos="fade-up">
+                    <a href="https://aimresearch.co/cdo-insights/adoption-of-ai-gen-ai-in-finance-with-hariom-tatsat" target="_blank">
+                        <div class="ccimg"><img src="assets/aim_research.png" alt="Adoption of AI/Gen AI in Finance with Hariom Tatsat" />
+                        </div>
+                    </a>
+                    <div class="cdesc">AI and GenAI in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://www.linkedin.com/in/hariomtatsat/recent-activity/all/" target="_blank">
+                        <div class="ccimg"><img src="assets/linkedin.jpg" alt="LLM Interpretability in Finance" />
+                        </div>
+                    </a>
+                    <div class="cdesc">Inside the Black box: LLM Interpretability in Finance </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://www.linkedin.com/posts/hariomtatsat_introducing-bloomberggpt-bloombergs-50-activity-7054862889060360193-nmV_/" target="_blank">
+                        <div class="ccimg"><img src="assets/bloombergpt.jpeg" alt="Bloomberg GPT AI" /></div>
+                    </a>
+                    <div class="cdesc">Is BloombergGPT the ultimate AI-based solution for finance-related tasks?
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://www.linkedin.com/posts/hariomtatsat_machine-learning-and-data-science-blueprints-activity-6775450726555553792-Ub0D/" target="_blank">
+                        <div class="ccimg"><img src="assets/ai_portfolio_management.png" alt="AI in Portfolio management" /></div>
+                    </a>
+                    <div class="cdesc">AI in Portfolio management</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://www.linkedin.com/posts/hariomtatsat_machine-learning-and-data-science-blueprints-activity-6765329570196463616-wA_T/" target="_blank">
+                        <div class="ccimg"><img src="assets/rl_in_finance.png" alt="Reinforcement Learning in Finance" /></div>
+                    </a>
+                    <div class="cdesc">Reinforcement Learning in Finance</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!--Courses and Workshop  -->
+    <div class="card-section" id="courses">
+        <div class="container">
+            <div class="ctitle">Courses and Workshop</div>
+            <div class="card-container">
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <a href="https://finmlcourse.thinkific.com/courses/ML" target="_blank">
+                        <div class="ccimg"><img src="assets/one1.jpg" alt="ML in Finance Course" /></div>
+                    </a>
+                    <div class="cdesc">Machine Learning in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://finmlcourse.thinkific.com/courses/algo-trading-courses-multiverse" target="_blank">
+                        <div class="ccimg"><img src="assets/three3.jpg" alt="Algo Trading Course" /></div>
+                    </a>
+                    <div class="cdesc">Algo Trading Multiverse</div>
+                </div>
+                <div class="card" data-aos="fade-up">
+                    <a href="https://masterclass.economictimes.indiatimes.com/ai-generative-ai-finance-services-hariom-tatsat" target="_blank">
+                        <div class="ccimg"><img src="/assets/CT1.png" alt="AI Finance Masterclass" /></div>
+                    </a>
+                    <div class="cdesc">AI and Generative AI for Finance Masterclass (Online Interactive Workshop)
+                    </div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://www.careers360.com/colleges/indian-school-of-business-hyderabad-campus/advanced-programme-in-leadership-and-digital-innovation-in-finance-certification-course" target="_blank">
+                        <div class="ccimg"><img src="assets/ISB.jpeg" alt="ISB Programme" /></div>
+                    </a>
+                    <div class="cdesc">Advanced Programme in Leadership and Digital Innovation
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Books and Papers Section -->
+    <div class="card-section" id="books-papers">
+        <div class="container">
+            <div class="ctitle">Books and Papers</div>
+            <div class="card-container">
+                <div class="card" data-aos="fade-up">
+                    <a href="https://www.amazon.com/Machine-Learning-Science-Blueprints-Finance/dp/1492073059" target="_blank">
+                        <div class="ccimg"><img src="assets/2two.jpg" alt="O'Reilly Book" /></div>
+                    </a>
+                    <div class="cdesc">Co-author of the book published in December 2020 by O'Reilly.</div>
+                </div>
+                
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <a href="https://epubs.siam.org/doi/abs/10.1137/21M144640X" target="_blank">
+                        <div class="ccimg"><img src="assets/siam.svg" alt="Robust Risk-Aware Reinforcement Learning" /></div>
+                    </a>
+                    <div class="cdesc">Robust Risk-Aware Reinforcement Learning</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <a href="https://arxiv.org/abs/2505.24650" target="_blank">
+                        <div class="ccimg"><img src="assets/arxiv-logo.png" alt="Beyond the Black Box: Interpretability of LLMs in Finance" /></div>
+                    </a>
+                    <div class="cdesc">Beyond the Black Box: Interpretability of LLMs in Finance</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="400">
+                    <a href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3973146" target="_blank">
+                        <div class="ccimg"><img src="assets/ssrn.png" alt="Deep Q-Network Interpertability: Applications to ETF Trading" /></div>
+                    </a>
+                    <div class="cdesc">Deep Q-Network Interpertability: Applications to ETF Trading</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- Awards & Publications-->
+    <div class="card-section" id="awards">
+        <div class="container">
+            <div class="ctitle">Awards</div>
+            <div class="card-container">
+                <div class="card" data-aos="fade-up">
+                    <a href="https://drive.google.com/file/d/1Cph8GqihmE742pVF5m9mTr6-3TWYvn7r/view" target="_blank">
+                        <div class="ccimg"><img src="assets/award1.png" alt="Indian Achievers Forum Award" />
+                        </div>
+                    </a>
+                    <div class="cdesc">Award for outstanding professional achievement and
+                        contribution to nation building, presented by the Indian Achievers’ Forum.</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="100">
+                    <!-- href="https://arxiv.org/pdf/2108.10403.pdf" -->
+                    <a target="_blank">
+                        <div class="ccimg"><img src="assets/sr.png" alt="Arxiv Publication RDEU" /></div>
+                    </a>
+                    <div class="cdesc">Robust risk-aware RL using RDEU and Wasserstein distance to optimize
+                        financial
+                        decisions under uncertainty and downside risk.</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="200">
+                    <!-- href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3973146" -->
+                    <a  target="_blank">
+                        <div class="ccimg"><img src="assets/ell1.png" alt="SSRN Publication Interpretability" />
+                        </div>
+                    </a>
+                    <div class="cdesc">Interpretability framework for Deep Q-Learning applied to ETF trading,
+                        enabling
+                        visual, user-friendly insights into RL decision-making processes.</div>
+                </div>
+                <div class="card" data-aos="fade-up" data-aos-delay="300">
+                    <!-- href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=2999131" -->
+                    <a  target="_blank">
+                        <div class="ccimg"><img src="assets/ssrn.png" alt="SSRN Publication Risk Tolerance" />
+                        </div>
+                    </a>
+                    <div class="cdesc">Analyzing investor risk tolerance using machine learning to correct
+                        biases, adapt
+                        to market changes, and optimize long-term asset allocation.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>About Hariom</h3>
+                    <p>I’m Hariom Tatsat, a finance professional specializing in the application of AI and
+                        Machine Learning in the financial sector. My mission is to democratize financial AI
+                        through education and innovation, making advanced financial technologies accessible to
+                        all.</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <div class="footer-links">
+                        <a href="#">Home</a>
+                        <a href="#history">Experience</a>
+                        <a href="#speaking">Speaking</a>
+                        <a href="#MM">Media</a>
+                        <a href="#courses">Courses</a>
+                        <a href="#books-papers">Books & Papers</a>
+                    </div>
+                </div>
+                <div class="footer-section">
+                    <h3>Connect</h3>
+                    <p>Follow Hariom on social media:</p>
+                    <div class="footer-social">
+                        <a href="https://github.com/tatsath" target="_blank" aria-label="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                        <a href="https://www.linkedin.com/in/hariomtatsat/" target="_blank" aria-label="LinkedIn">
+                            <i class="fab fa-linkedin-in"></i>
+                        </a>
+                        <a href="https://x.com/HariomTatsat24" target="_blank" aria-label="Twitter">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://topmate.io/hariom_t" target="_blank" aria-label="Book Appointment">
+                            <i class="fas fa-calendar-check"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="copyright">
+                © 2025 Hariom Tatsat. All Rights Reserved.
+            </div>
+        </div>
+    </footer>
+
+    <a href="#" class="back-to-top"><i class="fas fa-arrow-up"></i></a>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+        AOS.init({
+            duration: 800,
+            easing: 'ease-in-out-quad',
+            once: true
+        });
+
+        const header = document.querySelector('.header');
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 50) {
+                header.classList.add('scrolled');
+            } else {
+                header.classList.remove('scrolled');
+            }
+        });
+
+        const backToTopButton = document.querySelector('.back-to-top');
+        if (backToTopButton) {
+            window.addEventListener('scroll', () => {
+                if (window.scrollY > 300) {
+                    backToTopButton.classList.add('active');
+                } else {
+                    backToTopButton.classList.remove('active');
+                }
+            });
+            backToTopButton.addEventListener('click', (e) => {
+                e.preventDefault();
+                window.scrollTo({
+                    top: 0,
+                    behavior: 'smooth'
+                });
+            });
+        }
+
+        const particlesContainer = document.getElementById('particles-js');
+        if (particlesContainer && typeof pJSDom === 'undefined') {
+            for (let i = 0; i < 30; i++) {
+                let particle = document.createElement('div');
+                particle.classList.add('particle');
+                particle.style.width = `${Math.random() * 4 + 1}px`; // Slightly smaller particles
+                particle.style.height = particle.style.width;
+                particle.style.left = `${Math.random() * 100}%`;
+                particle.style.top = `${Math.random() * 100}%`;
+
+                const animName = `particleAnim${i}`;
+                const styleSheet = document.styleSheets[0]; // Assumes first stylesheet is the main one
+
+                // Simplified particle animation for dark theme
+                const keyframes =
+                    `@keyframes ${animName} {
+                    0%, 100% { 
+                        transform: translate(0, 0) scale(1); 
+                        opacity: ${Math.random() * 0.2 + 0.2}; /* Range 0.2 to 0.4 */
+                    }
+                    50% { 
+                        transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 80 - 40}px) scale(${Math.random() * 0.3 + 0.7}); 
+                        opacity: ${Math.random() * 0.1 + 0.1}; /* Range 0.1 to 0.2 */
+                    }
+                }`;
+
+                try {
+                    // Check if stylesheet and insertRule are available
+                    if (styleSheet && typeof styleSheet.insertRule === 'function') {
+                        styleSheet.insertRule(keyframes, styleSheet.cssRules.length);
+                        particle.style.animation = `${animName} ${Math.random() * 15 + 10}s linear infinite`;
+                        particle.style.animationDelay = `${Math.random() * 5}s`;
+                    }
+                } catch (e) {
+                    console.warn("Could not insert particle animation rule (simple fallback):", e);
+                }
+                particlesContainer.appendChild(particle);
+            }
+        }
+    </script>
+</body>
+
+</html>
