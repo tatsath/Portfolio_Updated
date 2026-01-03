@@ -1,0 +1,35 @@
+{
+  "version": 4,
+  "history": [
+    {
+      "id": "fc690396-61da-4f44-b0a1-d829b9503d78",
+      "name": "First",
+      "messages": [],
+      "model": {
+        "id": "gpt-3.5-turbo",
+        "name": "GPT-3.5",
+        "maxLength": 12000,
+        "tokenLimit": 4000
+      },
+      "prompt": "You are ChatGPT, a large language model trained by OpenAI. Follow the user's instructions carefully. Respond using markdown.",
+      "temperature": 1,
+      "folderId": null
+    }
+  ],
+  "folders": [],
+  "prompts": [
+    {
+      "id": "d77a75ea-4b38-4823-9b1a-fe334123bb9a",
+      "name": "Prompt 1",
+      "description": "Hi",
+      "content": "Hi",
+      "model": {
+        "id": "gpt-3.5-turbo",
+        "name": "GPT-3.5",
+        "maxLength": 12000,
+        "tokenLimit": 4000
+      },
+      "folderId": null
+    }
+  ]
+}
