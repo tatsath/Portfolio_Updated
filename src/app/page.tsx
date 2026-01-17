@@ -420,7 +420,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -428,11 +428,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -442,12 +442,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
@@ -1287,7 +1287,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -1295,11 +1295,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -1309,12 +1309,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
@@ -2623,7 +2623,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -2631,11 +2631,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -2645,12 +2645,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
@@ -2660,7 +2660,7 @@ export default function HomePage() {
         <div
           className="card-section"
           id="books"
-          style={{ ...cardSectionStyle, backgroundColor: "var(--bg-main)" }}
+          style={{ ...cardSectionStyle, backgroundColor: "var(--bg-main)", paddingTop: "40px", paddingBottom: "80px" }}
         >
           <div className="container" style={containerStyle}>
             <div className="ctitle" style={ctitleStyle}>
@@ -2821,7 +2821,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -2829,11 +2829,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -2843,12 +2843,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
@@ -3217,7 +3217,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -3225,11 +3225,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -3239,12 +3239,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
@@ -3598,7 +3598,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -3606,11 +3606,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -3620,12 +3620,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
@@ -4211,7 +4211,7 @@ export default function HomePage() {
         <div
           style={{
             width: "100%",
-            padding: "80px 0",
+            padding: "40px 0",
             display: "flex",
             justifyContent: "center",
             alignItems: "center",
@@ -4219,11 +4219,11 @@ export default function HomePage() {
         >
           <div
             style={{
-              width: "70%",
-              maxWidth: "800px",
-              height: "2px",
+              width: "60%",
+              maxWidth: "700px",
+              height: "3px",
               background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
-              opacity: 0.4,
+              opacity: 0.7,
               position: "relative",
             }}
           >
@@ -4233,12 +4233,12 @@ export default function HomePage() {
                 left: "50%",
                 top: "50%",
                 transform: "translate(-50%, -50%)",
-                width: "12px",
-                height: "12px",
+                width: "14px",
+                height: "14px",
                 borderRadius: "50%",
                 backgroundColor: "var(--text-primary)",
-                opacity: 0.6,
-                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+                opacity: 0.8,
+                boxShadow: "0 0 10px rgba(0, 0, 0, 0.3)",
               }}
             />
           </div>
