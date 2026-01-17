@@ -2066,18 +2066,6 @@ export default function HomePage() {
                         >
                           2022
                         </span>
-                        <span
-                          style={{
-                            padding: "6px 12px",
-                            backgroundColor: "var(--bg-card)",
-                            color: "var(--text-primary)",
-                            borderRadius: "6px",
-                            fontSize: "12px",
-                            fontWeight: 600,
-                          }}
-                        >
-                          Conference
-                        </span>
                       </div>
                       <h3
                         style={{
@@ -2326,18 +2314,6 @@ export default function HomePage() {
                           }}
                         >
                           2024
-                        </span>
-                        <span
-                          style={{
-                            padding: "6px 12px",
-                            backgroundColor: "var(--bg-card)",
-                            color: "var(--text-primary)",
-                            borderRadius: "6px",
-                            fontSize: "12px",
-                            fontWeight: 600,
-                          }}
-                        >
-                          Conference
                         </span>
                   </div>
               <h3
