@@ -99,23 +99,13 @@ export default function Header() {
             </Link>
           </li>
           <li>
-            <Link href="/blog" style={linkStyle}>
-              Blog
-            </Link>
-          </li>
-          <li>
             <Link href="/ai-interpretability" style={linkStyle}>
               AI Interpretability
             </Link>
           </li>
           <li>
-            <Link href="/#books" style={linkStyle}>
-              Books
-            </Link>
-          </li>
-          <li>
-            <Link href="/#papers" style={linkStyle}>
-              Papers
+            <Link href="/blog" style={linkStyle}>
+              Blog
             </Link>
           </li>
           <li>
@@ -126,6 +116,16 @@ export default function Header() {
           <li>
             <Link href="/#speaking" style={linkStyle}>
               Speaking
+            </Link>
+          </li>
+          <li>
+            <Link href="/#books" style={linkStyle}>
+              Books
+            </Link>
+          </li>
+          <li>
+            <Link href="/#papers" style={linkStyle}>
+              Papers
             </Link>
           </li>
           <li>

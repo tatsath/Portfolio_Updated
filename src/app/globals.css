@@ -3,18 +3,18 @@
 @tailwind utilities;
 
 :root {
-  --bg-main: #232020;
-  --bg-card: #2c2a2a;
-  --bg-header: rgba(30, 28, 28, 0.85);
-  --bg-footer: #1a1818;
-  --text-primary: #f0f0f0;
-  --text-secondary: #b0b0b0;
-  --text-headings: #ffffff;
-  --accent-primary: #ffffff;
-  --accent-secondary: #cccccc;
-  --button-bg-light: #e0e0e0;
-  --button-text-dark: #232020;
-  --shadow-color: rgba(255, 255, 255, 0.05);
+  --bg-main: #ffffff;
+  --bg-card: #f8f9fa;
+  --bg-header: rgba(255, 255, 255, 0.95);
+  --bg-footer: #f8f9fa;
+  --text-primary: #1a1a1a;
+  --text-secondary: #4a4a4a;
+  --text-headings: #000000;
+  --accent-primary: #000000;
+  --accent-secondary: #333333;
+  --button-bg-light: #1a1a1a;
+  --button-text-dark: #ffffff;
+  --shadow-color: rgba(0, 0, 0, 0.1);
   --card-shadow: 0 4px 12px var(--shadow-color);
   --hover-transition: all 0.3s ease;
 }
@@ -86,8 +86,8 @@ div.card-section[id] {
 .particle {
   position: absolute;
   border-radius: 50%;
-  background-color: var(--accent-secondary);
-  opacity: 0.4;
+  background-color: var(--text-secondary);
+  opacity: 0.2;
 }
 
 /* Custom section animations */
@@ -108,9 +108,9 @@ div.card-section[id] {
 hr {
   border: none;
   height: 1px;
-  background: linear-gradient(to right, transparent, var(--accent-secondary), transparent);
+  background: linear-gradient(to right, transparent, var(--text-secondary), transparent);
   margin: 20px 0;
-  opacity: 0.4;
+  opacity: 0.3;
 }
 
 .float-animation {
@@ -198,6 +198,12 @@ hr {
   }
   .hero-title-section {
     text-align: center !important;
+  }
+  .hero-title-section h1 {
+    text-align: center !important;
+  }
+  .hero-title-section > div {
+    justify-content: center !important;
   }
   .hero-image-container {
     width: 100% !important;

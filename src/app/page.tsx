@@ -62,11 +62,11 @@ export default function HomePage() {
         const keyframes = `@keyframes ${animName} {
           0%, 100% { 
             transform: translate(0, 0) scale(1); 
-            opacity: ${Math.random() * 0.2 + 0.2};
+            opacity: ${Math.random() * 0.1 + 0.1};
           }
           50% { 
             transform: translate(${Math.random() * 80 - 40}px, ${Math.random() * 80 - 40}px) scale(${Math.random() * 0.3 + 0.7}); 
-            opacity: ${Math.random() * 0.1 + 0.1};
+            opacity: ${Math.random() * 0.05 + 0.05};
           }
         }`;
 
@@ -131,12 +131,12 @@ export default function HomePage() {
         <section
           id="hero"
           style={{
-            paddingTop: "120px",
-            paddingBottom: "100px",
+            paddingTop: "100px",
+            paddingBottom: "60px",
             minHeight: "auto",
             position: "relative",
             overflow: "hidden",
-            background: "linear-gradient(135deg, #1a1a2e 0%, #16213e 50%, var(--bg-main) 100%)",
+            background: "var(--bg-main)",
           }}
         >
           <div
@@ -152,108 +152,223 @@ export default function HomePage() {
             }}
           />
           
-          {/* Background Image - Up and Close Interview (Full Width, Professional) */}
+          {/* Background Image - Positioned on Right Side, Showing More of Left Side */}
           <div
             style={{
               position: "absolute",
-              left: 0,
+              right: 0,
               top: 0,
-              width: "100%",
+              width: "50%",
               height: "100%",
               zIndex: 1,
               pointerEvents: "none",
               backgroundImage: "url('/assets/htny.webp')",
               backgroundSize: "cover",
-              backgroundPosition: "center",
+              backgroundPosition: "70% center",
               backgroundRepeat: "no-repeat",
-              opacity: 0.35,
-            }}
-          />
-          {/* Gradient Overlay for Professional Blend */}
-          <div
-            style={{
-              position: "absolute",
-              left: 0,
-              top: 0,
-              width: "100%",
-              height: "100%",
-              zIndex: 1,
-              pointerEvents: "none",
-              background: "linear-gradient(to right, rgba(26, 26, 46, 0.7) 0%, rgba(26, 26, 46, 0.25) 40%, rgba(22, 33, 62, 0.1) 70%, transparent 100%)",
+              opacity: 1.0,
             }}
           />
 
           <div className="container" style={{ ...containerStyle, maxWidth: "1400px", position: "relative", zIndex: 2 }}>
-            {/* Text Content Section */}
+            {/* Hero Content Grid - Text Left, Image Right */}
             <div
               style={{
-                maxWidth: "900px",
-                margin: "0 auto 60px auto",
-                textAlign: "center",
+                display: "grid",
+                gridTemplateColumns: "1fr 1fr",
+                gap: "60px",
+                alignItems: "center",
+                minHeight: "400px",
               }}
+              className="hero-content-grid"
             >
-            {/* Name and Title Section */}
-            <div
-              style={{
-                textAlign: "center",
-                  marginBottom: "40px",
-              }}
-                className="hero-title-section"
-            >
-              <h1
-                style={{
-                  fontSize: "clamp(36px, 8vw, 64px)",
-                  fontWeight: 700,
-                  color: "var(--text-headings)",
-                  margin: "0 0 20px 0",
-                  letterSpacing: "0.05em",
-                  textTransform: "uppercase",
-                  lineHeight: 1.1,
-                }}
-              >
-                HARIOM TATSAT
-              </h1>
+              {/* Left Side - Text Content */}
               <div
                 style={{
-                  fontSize: "clamp(12px, 2vw, 16px)",
-                  fontWeight: 500,
-                  color: "var(--text-headings)",
-                  letterSpacing: "0.1em",
-                  textTransform: "uppercase",
                   display: "flex",
-                  flexWrap: "wrap",
-                    gap: "15px",
-                    justifyContent: "center",
+                  flexDirection: "column",
+                  justifyContent: "center",
+                  backgroundColor: "var(--bg-main)",
+                  padding: "40px",
+                  borderRadius: "8px",
+                  position: "relative",
+                  zIndex: 2,
                 }}
               >
-                <span>VP, QUANT AI</span>
-                <span style={{ color: "var(--text-secondary)" }}>|</span>
-                <span>O'REILLY AUTHOR</span>
-                <span style={{ color: "var(--text-secondary)" }}>|</span>
-                <span>UC BERKELEY × IIT</span>
-                <span style={{ color: "var(--text-secondary)" }}>|</span>
-                <span>BERKELEY SKYDECK ADVISOR</span>
-              </div>
-            </div>
-
-              {/* Biography Section */}
-              <div
-                style={{
-                  marginBottom: "40px",
-                }}
-              >
-                <p
+                {/* Name and Title Section */}
+                <div
                   style={{
-                    fontSize: "clamp(16px, 2.5vw, 18px)",
-                    color: "var(--text-primary)",
-                    lineHeight: 1.8,
-                    marginBottom: "20px",
                     textAlign: "left",
+                    marginBottom: "40px",
+                  }}
+                  className="hero-title-section"
+                >
+                  <h1
+                    style={{
+                      fontSize: "clamp(36px, 8vw, 64px)",
+                      fontWeight: 700,
+                      color: "var(--text-headings)",
+                      margin: "0 0 20px 0",
+                      letterSpacing: "0.05em",
+                      textTransform: "uppercase",
+                      lineHeight: 1.1,
+                    }}
+                  >
+                    HARIOM TATSAT
+                  </h1>
+                  <div
+                    style={{
+                      fontSize: "clamp(12px, 2vw, 16px)",
+                      fontWeight: 500,
+                      color: "var(--text-headings)",
+                      letterSpacing: "0.1em",
+                      textTransform: "uppercase",
+                      display: "flex",
+                      flexWrap: "wrap",
+                      gap: "15px",
+                      justifyContent: "flex-start",
+                    }}
+                  >
+                    <span>AUTHOR</span>
+                    <span style={{ color: "var(--text-secondary)" }}>|</span>
+                    <span>AI QUANT</span>
+                    <span style={{ color: "var(--text-secondary)" }}>|</span>
+                    <span>ADVISOR</span>
+                    <span style={{ color: "var(--text-secondary)" }}>|</span>
+                    <span>STOIC</span>
+                  </div>
+                  <div
+                    style={{
+                      display: "flex",
+                      gap: "15px",
+                      justifyContent: "flex-start",
+                      alignItems: "center",
+                      marginTop: "20px",
+                    }}
+                  >
+                <a
+                  href="https://github.com/tatsath"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub"
+                  style={{
+                    display: "inline-flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    background: "transparent",
+                    color: "var(--text-primary)",
+                    border: "1px solid var(--text-secondary)",
+                    transition: "var(--hover-transition)",
+                    fontSize: "16px",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--text-primary)";
+                    e.currentTarget.style.color = "var(--bg-main)";
+                    e.currentTarget.style.borderColor = "var(--text-primary)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--text-primary)";
+                    e.currentTarget.style.borderColor = "var(--text-secondary)";
                   }}
                 >
-                  VP, Quant AI at Barclays with 15+ years bridging AI innovation with enterprise governance in regulated financial services. O'Reilly author (<em>Machine Learning & Data Science Blueprints for Finance</em>), published researcher (SIAM, arXiv, SSRN), and advisor to founders through UC Berkeley SkyDeck. Featured speaker at AI Summit New York, Data Science Salon, and industry forums on deploying trustworthy, production-grade AI systems.
-                </p>
+                  <i className="fab fa-github" />
+                </a>
+                <a
+                  href="https://www.linkedin.com/in/hariomtatsat/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn"
+                  style={{
+                    display: "inline-flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    background: "transparent",
+                    color: "var(--text-primary)",
+                    border: "1px solid var(--text-secondary)",
+                    transition: "var(--hover-transition)",
+                    fontSize: "16px",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--text-primary)";
+                    e.currentTarget.style.color = "var(--bg-main)";
+                    e.currentTarget.style.borderColor = "var(--text-primary)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--text-primary)";
+                    e.currentTarget.style.borderColor = "var(--text-secondary)";
+                  }}
+                >
+                  <i className="fab fa-linkedin-in" />
+                </a>
+                <a
+                  href="https://x.com/HariomTatsat24"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="Twitter"
+                  style={{
+                    display: "inline-flex",
+                    justifyContent: "center",
+                    alignItems: "center",
+                    width: "36px",
+                    height: "36px",
+                    borderRadius: "50%",
+                    background: "transparent",
+                    color: "var(--text-primary)",
+                    border: "1px solid var(--text-secondary)",
+                    transition: "var(--hover-transition)",
+                    fontSize: "16px",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--text-primary)";
+                    e.currentTarget.style.color = "var(--bg-main)";
+                    e.currentTarget.style.borderColor = "var(--text-primary)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--text-primary)";
+                    e.currentTarget.style.borderColor = "var(--text-secondary)";
+                  }}
+                >
+                  <i className="fab fa-twitter" />
+                </a>
               </div>
+                </div>
+
+                {/* Biography Section */}
+                <div
+                  style={{
+                    marginTop: "30px",
+                  }}
+                >
+                  <p
+                    style={{
+                      fontSize: "clamp(16px, 2.5vw, 18px)",
+                      color: "var(--text-primary)",
+                      lineHeight: 1.8,
+                      marginBottom: "20px",
+                      textAlign: "left",
+                    }}
+                  >
+                    Hariom has years of experience bridging AI innovation with financial services. He is an O'Reilly author and published researcher. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning (2023). Hariom has performed several research in neuroscience-inspired mechanistic interpretability in the context of responsible AI. He has a deep interest in physics, philosophy and simulation hypothesis.
+                  </p>
+                </div>
+              </div>
+
+              {/* Right Side - Empty space for background image to show through */}
+              <div
+                style={{
+                  position: "relative",
+                  zIndex: 1,
+                }}
+              />
             </div>
           </div>
         </section>
@@ -332,7 +447,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                       }}
                     >
-                      Conference Talk
+                      Conference Video
               </div>
                   </div>
                 </a>
@@ -355,7 +470,7 @@ export default function HomePage() {
                       marginBottom: "10px",
                     }}
                   >
-                    Conference Talk · AI4 2025
+                    Conference Video · AI4 2025
                   </div>
                   <h3
                     style={{
@@ -433,7 +548,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                       }}
                     >
-                      Conference Talk
+                      Conference Video
               </div>
                   </div>
                 </a>
@@ -456,7 +571,7 @@ export default function HomePage() {
                       marginBottom: "10px",
                     }}
                   >
-                    Conference Talk · AI Summit New York
+                    Conference Video · AI Summit New York
                   </div>
                   <h3
                     style={{
@@ -534,7 +649,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                       }}
                     >
-                      Webinar
+                      Webinar Video
               </div>
             </div>
                 </a>
@@ -557,7 +672,7 @@ export default function HomePage() {
                       marginBottom: "10px",
                     }}
                   >
-                    Webinar · AI and Machine Learning
+                    Webinar Video · AI and Machine Learning
                   </div>
                   <h3
                     style={{
@@ -635,7 +750,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                       }}
                     >
-                      Tutorial
+                      Tutorial Video
             </div>
           </div>
                 </a>
@@ -658,7 +773,7 @@ export default function HomePage() {
                       marginBottom: "10px",
                     }}
                   >
-                    Tutorial · Machine Learning
+                    Tutorial Video · Machine Learning
                   </div>
                   <h3
                 style={{
@@ -736,7 +851,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                 }}
               >
-                      Tutorial
+                      Tutorial Video
               </div>
                   </div>
                 </a>
@@ -759,7 +874,7 @@ export default function HomePage() {
                       marginBottom: "10px",
                 }}
               >
-                    Tutorial · Reinforcement Learning
+                    Tutorial Video · Reinforcement Learning
               </div>
                   <h3
           style={{
@@ -938,7 +1053,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                       }}
                     >
-                      Apple Podcasts
+                      Podcast
                     </div>
                   </div>
                 </a>
@@ -1039,7 +1154,7 @@ export default function HomePage() {
                         borderRadius: "4px",
                       }}
                     >
-                      Spotify
+                      Podcast
                     </div>
                   </div>
                 </a>
@@ -1493,7 +1608,7 @@ export default function HomePage() {
 
             {/* Year Filter */}
             <div style={{ display: "flex", gap: "10px", marginBottom: "30px", flexWrap: "wrap", justifyContent: "center" }}>
-              {["All Years", "2025-2026", "2024"].map((year) => (
+              {["All Years", "2025-2026", "2020-2024"].map((year) => (
                 <button
                   key={year}
                   onClick={() => setSelectedYear(year)}
@@ -1501,8 +1616,8 @@ export default function HomePage() {
                     padding: "8px 16px",
                     borderRadius: "20px",
                     border: selectedYear === year ? "none" : "1px solid var(--accent-primary)",
-                    backgroundColor: selectedYear === year ? "#2563eb" : "transparent",
-                    color: selectedYear === year ? "white" : "var(--text-primary)",
+                    backgroundColor: selectedYear === year ? "var(--text-primary)" : "transparent",
+                    color: selectedYear === year ? "var(--bg-main)" : "var(--text-primary)",
                     fontSize: "14px",
                     fontWeight: 600,
                     cursor: "pointer",
@@ -1518,10 +1633,6 @@ export default function HomePage() {
               {/* 2025-2026 Events */}
               {(selectedYear === "All Years" || selectedYear === "2025-2026") && (
                 <>
-                  <div style={{ gridColumn: "1 / -1", fontSize: "24px", fontWeight: 700, color: "var(--text-headings)", marginTop: "20px", marginBottom: "20px", paddingBottom: "10px", borderBottom: "2px solid var(--accent-primary)" }}>
-                    2025-2026
-                  </div>
-                  
                   {/* Momentum AI Finance USA 2025 - Nov 2025 */}
                   <div className="card" data-aos="fade-up" style={cardStyle}>
                     <a
@@ -1573,8 +1684,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1586,8 +1697,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1660,8 +1771,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                   fontWeight: 600,
@@ -1673,8 +1784,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1747,8 +1858,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1760,8 +1871,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1785,13 +1896,96 @@ export default function HomePage() {
                 </>
               )}
 
-              {/* 2024 Events */}
-              {(selectedYear === "All Years" || selectedYear === "2024") && (
+              {/* 2020-2024 Events */}
+              {(selectedYear === "All Years" || selectedYear === "2020-2024") && (
                 <>
-                  <div style={{ gridColumn: "1 / -1", fontSize: "24px", fontWeight: 700, color: "var(--text-headings)", marginTop: "20px", marginBottom: "20px", paddingBottom: "10px", borderBottom: "2px solid var(--accent-primary)" }}>
-                    2024
+                  {/* Data Science Salon - Reinforcement Learning Interpretability - 2022 */}
+                  <div className="card" data-aos="fade-up" style={cardStyle}>
+                    <a
+                      href="https://www.datascience.salon/hariom-tatsat/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      style={{ textDecoration: "none", display: "block" }}
+                    >
+                      <div
+                        className="ccimg"
+                        style={{
+                          overflow: "hidden",
+                          position: "relative",
+                          height: "250px",
+                        }}
+                      >
+                        <img
+                          src="/assets/Featuredtalk3.jpeg"
+                          alt="Data Science Salon - Reinforcement Learning Interpretability"
+                          style={{
+                            width: "100%",
+                            height: "100%",
+                            transition: "transform 0.5s ease",
+                            objectFit: "cover",
+                          }}
+                          onMouseEnter={(e) => {
+                            e.currentTarget.style.transform = "scale(1.1)";
+                          }}
+                          onMouseLeave={(e) => {
+                            e.currentTarget.style.transform = "scale(1)";
+                          }}
+                        />
+                      </div>
+                    </a>
+                    <div
+                      className="cdesc"
+                      style={{
+                        padding: "25px",
+                        flexGrow: 1,
+                        fontSize: "16px",
+                        lineHeight: 1.6,
+                        color: "var(--text-primary)",
+                        backgroundColor: "var(--bg-card)",
+                        display: "flex",
+                        flexDirection: "column",
+                      }}
+                    >
+                      <div style={{ display: "flex", gap: "10px", marginBottom: "15px", flexWrap: "wrap" }}>
+                        <span
+                          style={{
+                            padding: "6px 12px",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
+                            borderRadius: "6px",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                            textTransform: "uppercase",
+                          }}
+                        >
+                          2022
+                        </span>
+                        <span
+                          style={{
+                            padding: "6px 12px",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
+                            borderRadius: "6px",
+                            fontSize: "12px",
+                            fontWeight: 600,
+                          }}
+                        >
+                          Conference
+                        </span>
+                      </div>
+                      <h3
+                        style={{
+                          fontSize: "22px",
+                          fontWeight: 700,
+                          color: "var(--text-headings)",
+                          marginBottom: "8px",
+                        }}
+                      >
+                        Data Science Salon - Reinforcement Learning Interpretability
+                      </h3>
+                    </div>
                   </div>
-                  
+
                   {/* FinTech DevNight NYC - Sep 2024 */}
                   <div className="card" data-aos="fade-up" style={cardStyle}>
                     <a
@@ -1843,8 +2037,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1856,8 +2050,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1930,8 +2124,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -1943,8 +2137,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2017,8 +2211,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2030,8 +2224,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2104,8 +2298,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2117,8 +2311,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2191,8 +2385,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2204,14 +2398,14 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
                           }}
                         >
-                          Webinar
+                          Conference
                         </span>
                       </div>
                       <h3
@@ -2278,8 +2472,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#2563eb",
-                            color: "white",
+                            backgroundColor: "var(--text-primary)",
+                            color: "var(--bg-main)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2291,8 +2485,8 @@ export default function HomePage() {
                         <span
                           style={{
                             padding: "6px 12px",
-                            backgroundColor: "#e5e7eb",
-                            color: "#374151",
+                            backgroundColor: "var(--bg-card)",
+                            color: "var(--text-primary)",
                             borderRadius: "6px",
                             fontSize: "12px",
                             fontWeight: 600,
@@ -2359,17 +2553,6 @@ export default function HomePage() {
                 />
               </div>
             <div>
-              <h3
-                style={{
-                    fontSize: "32px",
-                    fontWeight: 700,
-                  color: "var(--text-headings)",
-                  marginBottom: "25px",
-                    lineHeight: 1.2,
-                }}
-              >
-                  Machine Learning & Data Science Blueprints for Finance
-              </h3>
                 <p
                   style={{
                     fontSize: "18px",
@@ -2378,7 +2561,7 @@ export default function HomePage() {
                     fontStyle: "italic",
                   }}
                 >
-                  From Building Trading Strategies to Robo-Advisors using Python
+                  No. 1 new release on Amazon.com in the AI category
                 </p>
                 
                 <div
@@ -2399,44 +2582,24 @@ export default function HomePage() {
                   >
                     Features of this book:
                   </h4>
-                  <div
+                  <ul
                     style={{
-                      display: "grid",
-                      gridTemplateColumns: "repeat(2, 1fr)",
-                      gap: "15px",
+                      fontSize: "15px",
+                      color: "var(--text-primary)",
+                      lineHeight: 1.8,
+                      paddingLeft: "20px",
+                      margin: 0,
                     }}
                   >
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      #1 New release on Amazon.com
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Ideal for finance professionals
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Master supervised learning models
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Build advanced trading strategies
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Apply reinforcement learning techniques
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Use NLP for sentiment analysis
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Dimensionality reduction for portfolios
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      20+ real-world case studies
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Perfect for hedge funds, banks
-                    </div>
-                    <div style={{ fontSize: "15px", color: "var(--text-primary)", lineHeight: 1.5 }}>
-                      Code examples included for practice
-                    </div>
-                  </div>
+                    <li style={{ marginBottom: "8px" }}>20+ real-world case studies of AI/ML in Finance</li>
+                    <li style={{ marginBottom: "8px" }}>Supervised learning for trading, pricing, and portfolio management</li>
+                    <li style={{ marginBottom: "8px" }}>Classification models for risk prediction and fraud detection</li>
+                    <li style={{ marginBottom: "8px" }}>Dimensionality reduction for portfolio optimization</li>
+                    <li style={{ marginBottom: "8px" }}>Clustering algorithms for pattern recognition</li>
+                    <li style={{ marginBottom: "8px" }}>Reinforcement learning for trading and hedging</li>
+                    <li style={{ marginBottom: "8px" }}>NLP techniques for sentiment analysis</li>
+                    <li style={{ marginBottom: "8px" }}>Code examples included for practice</li>
+                  </ul>
                 </div>
 
                 <div style={{ display: "flex", gap: "15px", flexWrap: "wrap", marginTop: "30px" }}>
@@ -2516,278 +2679,352 @@ export default function HomePage() {
           style={{ ...cardSectionStyle, backgroundColor: "var(--bg-card)" }}
         >
           <div className="container" style={containerStyle}>
-            <div className="ctitle" style={ctitleStyle}>
-              Papers
-            </div>
-            <div>
-              <div style={{ display: "flex", flexDirection: "column", gap: "20px" }}>
-                {/* Paper 1 */}
-                <div
-                  data-aos="fade-up"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    gap: "30px",
-                    padding: "25px",
-                    backgroundColor: "var(--bg-card)",
-                    borderRadius: "8px",
-                    boxShadow: "var(--card-shadow)",
-                    transition: "var(--hover-transition)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                    e.currentTarget.style.boxShadow = "0 8px 20px var(--shadow-color)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "var(--card-shadow)";
-                  }}
-                >
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", gap: "15px", alignItems: "center", marginBottom: "10px" }}>
-                      <span
-                        style={{
-                          padding: "4px 12px",
-                          backgroundColor: "var(--accent-primary)",
-                          color: "var(--bg-main)",
-                          fontSize: "11px",
-                          fontWeight: 600,
-                          borderRadius: "4px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        SIAM
-                      </span>
-                  </div>
-                    <h4
-                      style={{
-                        fontSize: "20px",
-                        fontWeight: 600,
-                        color: "var(--text-headings)",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      Robust Risk-Aware Reinforcement Learning
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "var(--text-secondary)",
-                        lineHeight: 1.6,
-                        marginBottom: "15px",
-                      }}
-                    >
-                      Risk-aware RL framework for financial decision-making under uncertainty
-                    </p>
-                    <a
-                      href="https://epubs.siam.org/doi/abs/10.1137/21M144640X"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: "inline-block",
-                        padding: "8px 16px",
-                        backgroundColor: "transparent",
-                        color: "var(--accent-primary)",
-                        border: "1px solid var(--accent-primary)",
-                        borderRadius: "6px",
-                        fontSize: "13px",
-                        fontWeight: 600,
-                        textDecoration: "none",
-                        transition: "var(--hover-transition)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--accent-primary)";
-                        e.currentTarget.style.color = "var(--bg-main)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "transparent";
-                        e.currentTarget.style.color = "var(--accent-primary)";
-                      }}
-                    >
-                      Read Paper →
-                    </a>
-                  </div>
-                  </div>
-
-                {/* Paper 2 */}
-                <div
-                  data-aos="fade-up"
-                  data-aos-delay="100"
-                  style={{
-                    display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    gap: "30px",
-                    padding: "25px",
-                    backgroundColor: "var(--bg-card)",
-                    borderRadius: "8px",
-                    boxShadow: "var(--card-shadow)",
-                    transition: "var(--hover-transition)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                    e.currentTarget.style.boxShadow = "0 8px 20px var(--shadow-color)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "var(--card-shadow)";
-                  }}
-                >
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", gap: "15px", alignItems: "center", marginBottom: "10px" }}>
-                      <span
-                        style={{
-                          padding: "4px 12px",
-                          backgroundColor: "var(--accent-primary)",
-                          color: "var(--bg-main)",
-                          fontSize: "11px",
-                          fontWeight: 600,
-                          borderRadius: "4px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        arXiv
-                      </span>
-                </div>
-                    <h4
-                      style={{
-                        fontSize: "20px",
-                        fontWeight: 600,
-                        color: "var(--text-headings)",
-                        marginBottom: "8px",
-                      }}
-                    >
-                      Beyond the Black Box: Interpretability of LLMs in Finance
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "var(--text-secondary)",
-                        lineHeight: 1.6,
-                        marginBottom: "15px",
-                      }}
-                    >
-                      Methods for making large language models transparent and trustworthy in financial applications
-                    </p>
-                    <a
-                      href="https://arxiv.org/abs/2505.24650"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: "inline-block",
-                        padding: "8px 16px",
-                        backgroundColor: "transparent",
-                        color: "var(--accent-primary)",
-                        border: "1px solid var(--accent-primary)",
-                        borderRadius: "6px",
-                        fontSize: "13px",
-                        fontWeight: 600,
-                        textDecoration: "none",
-                        transition: "var(--hover-transition)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--accent-primary)";
-                        e.currentTarget.style.color = "var(--bg-main)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "transparent";
-                        e.currentTarget.style.color = "var(--accent-primary)";
-                      }}
-                    >
-                      Read Paper →
-                    </a>
+            <div style={{ display: "flex", justifyContent: "space-between", alignItems: "center", marginBottom: "30px", flexWrap: "wrap", gap: "20px" }}>
+              <div className="ctitle" style={ctitleStyle}>
+                Papers
               </div>
+              <a
+                href="https://scholar.google.com/citations?hl=en&user=IU2b2KQAAAAJ"
+                target="_blank"
+                rel="noopener noreferrer"
+                style={{
+                  display: "inline-block",
+                  padding: "10px 20px",
+                  backgroundColor: "transparent",
+                  color: "var(--accent-primary)",
+                  border: "1px solid var(--accent-primary)",
+                  borderRadius: "8px",
+                  fontSize: "14px",
+                  fontWeight: 600,
+                  textDecoration: "none",
+                  transition: "all 0.2s ease",
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.backgroundColor = "var(--accent-primary)";
+                  e.currentTarget.style.color = "var(--bg-main)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.backgroundColor = "transparent";
+                  e.currentTarget.style.color = "var(--accent-primary)";
+                }}
+              >
+                View on Google Scholar →
+              </a>
             </div>
-
-                {/* Paper 3 */}
+            <div className="card-container" style={cardContainerStyle}>
+              {/* Paper 1 - Beyond the Black Box */}
+              <div className="card" data-aos="fade-up" style={cardStyle}>
                 <div
-                  data-aos="fade-up"
-                  data-aos-delay="200"
                   style={{
+                    padding: "20px",
+                    flexGrow: 1,
                     display: "flex",
-                    justifyContent: "space-between",
-                    alignItems: "flex-start",
-                    gap: "30px",
-                    padding: "25px",
-                    backgroundColor: "var(--bg-card)",
-                    borderRadius: "8px",
-                    boxShadow: "var(--card-shadow)",
-                    transition: "var(--hover-transition)",
-                  }}
-                  onMouseEnter={(e) => {
-                    e.currentTarget.style.transform = "translateY(-2px)";
-                    e.currentTarget.style.boxShadow = "0 8px 20px var(--shadow-color)";
-                  }}
-                  onMouseLeave={(e) => {
-                    e.currentTarget.style.transform = "translateY(0)";
-                    e.currentTarget.style.boxShadow = "var(--card-shadow)";
+                    flexDirection: "column",
                   }}
                 >
-                  <div style={{ flex: 1 }}>
-                    <div style={{ display: "flex", gap: "15px", alignItems: "center", marginBottom: "10px" }}>
-                      <span
-                        style={{
-                          padding: "4px 12px",
-                          backgroundColor: "var(--accent-primary)",
-                          color: "var(--bg-main)",
-                          fontSize: "11px",
-                          fontWeight: 600,
-                          borderRadius: "4px",
-                          textTransform: "uppercase",
-                        }}
-                      >
-                        SSRN
-                      </span>
-                    </div>
-                    <h4
+                  <div style={{ marginBottom: "12px" }}>
+                    <span
                       style={{
-                        fontSize: "20px",
+                        padding: "4px 10px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "10px",
                         fontWeight: 600,
-                        color: "var(--text-headings)",
-                        marginBottom: "8px",
+                        borderRadius: "4px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px",
                       }}
                     >
-                      Deep Q-Network Interpretability: Applications to ETF Trading
-                    </h4>
-                    <p
-                      style={{
-                        fontSize: "15px",
-                        color: "var(--text-secondary)",
-                        lineHeight: 1.6,
-                        marginBottom: "15px",
-                      }}
-                    >
-                      Interpretable deep reinforcement learning for exchange-traded fund trading strategies
-                    </p>
-                    <a
-                      href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3973146"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{
-                        display: "inline-block",
-                        padding: "8px 16px",
-                        backgroundColor: "transparent",
-                        color: "var(--accent-primary)",
-                        border: "1px solid var(--accent-primary)",
-                        borderRadius: "6px",
-                        fontSize: "13px",
-                        fontWeight: 600,
-                        textDecoration: "none",
-                        transition: "var(--hover-transition)",
-                      }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.backgroundColor = "var(--accent-primary)";
-                        e.currentTarget.style.color = "var(--bg-main)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.backgroundColor = "transparent";
-                        e.currentTarget.style.color = "var(--accent-primary)";
-                      }}
-                    >
-                      Read Paper →
-                    </a>
+                      arXiv
+                    </span>
                   </div>
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "10px",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    Beyond the Black Box: Interpretability of LLMs in Finance
+                  </h4>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                      lineHeight: 1.6,
+                      marginBottom: "15px",
+                      flexGrow: 1,
+                    }}
+                  >
+                    Explores methods for making large language models transparent and trustworthy in financial applications. The paper introduces neuroscience-inspired mechanistic interpretability techniques to understand model decision-making processes.
+                  </p>
+                  <a
+                    href="https://arxiv.org/abs/2505.24650"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-block",
+                      padding: "8px 16px",
+                      backgroundColor: "transparent",
+                      color: "var(--accent-primary)",
+                      border: "1px solid var(--accent-primary)",
+                      borderRadius: "6px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      transition: "all 0.2s ease",
+                      alignSelf: "flex-start",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "var(--accent-primary)";
+                      e.currentTarget.style.color = "var(--bg-main)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "var(--accent-primary)";
+                    }}
+                  >
+                    Read Paper →
+                  </a>
+                </div>
+              </div>
+
+              {/* Paper 2 - New Google Scholar Paper */}
+              <div className="card" data-aos="fade-up" style={cardStyle}>
+                <div
+                  style={{
+                    padding: "20px",
+                    flexGrow: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div style={{ marginBottom: "12px" }}>
+                    <span
+                      style={{
+                        padding: "4px 10px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "10px",
+                        fontWeight: 600,
+                        borderRadius: "4px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      Google Scholar
+                    </span>
+                  </div>
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "10px",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    Research Publication
+                  </h4>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                      lineHeight: 1.6,
+                      marginBottom: "15px",
+                      flexGrow: 1,
+                    }}
+                  >
+                    A research contribution exploring advanced topics in AI and finance. This work contributes to the understanding of computational methods and their applications in financial systems.
+                  </p>
+                  <a
+                    href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=IU2b2KQAAAAJ&citation_for_view=IU2b2KQAAAAJ:u-x6o8ySG0sC"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-block",
+                      padding: "8px 16px",
+                      backgroundColor: "transparent",
+                      color: "var(--accent-primary)",
+                      border: "1px solid var(--accent-primary)",
+                      borderRadius: "6px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      transition: "all 0.2s ease",
+                      alignSelf: "flex-start",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "var(--accent-primary)";
+                      e.currentTarget.style.color = "var(--bg-main)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "var(--accent-primary)";
+                    }}
+                  >
+                    Read Paper →
+                  </a>
+                </div>
+              </div>
+
+              {/* Paper 3 - Robust Risk-Aware Reinforcement Learning */}
+              <div className="card" data-aos="fade-up" style={cardStyle}>
+                <div
+                  style={{
+                    padding: "20px",
+                    flexGrow: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div style={{ marginBottom: "12px" }}>
+                    <span
+                      style={{
+                        padding: "4px 10px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "10px",
+                        fontWeight: 600,
+                        borderRadius: "4px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      SIAM
+                    </span>
+                  </div>
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "10px",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    Robust Risk-Aware Reinforcement Learning
+                  </h4>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                      lineHeight: 1.6,
+                      marginBottom: "15px",
+                      flexGrow: 1,
+                    }}
+                  >
+                    A risk-aware reinforcement learning framework that addresses financial decision-making under uncertainty. The approach combines robust optimization with risk-sensitive policies to improve performance in volatile market conditions.
+                  </p>
+                  <a
+                    href="https://epubs.siam.org/doi/abs/10.1137/21M144640X"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-block",
+                      padding: "8px 16px",
+                      backgroundColor: "transparent",
+                      color: "var(--accent-primary)",
+                      border: "1px solid var(--accent-primary)",
+                      borderRadius: "6px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      transition: "all 0.2s ease",
+                      alignSelf: "flex-start",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "var(--accent-primary)";
+                      e.currentTarget.style.color = "var(--bg-main)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "var(--accent-primary)";
+                    }}
+                  >
+                    Read Paper →
+                  </a>
+                </div>
+              </div>
+
+              {/* Paper 4 - Deep Q-Network Interpretability */}
+              <div className="card" data-aos="fade-up" style={cardStyle}>
+                <div
+                  style={{
+                    padding: "20px",
+                    flexGrow: 1,
+                    display: "flex",
+                    flexDirection: "column",
+                  }}
+                >
+                  <div style={{ marginBottom: "12px" }}>
+                    <span
+                      style={{
+                        padding: "4px 10px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "10px",
+                        fontWeight: 600,
+                        borderRadius: "4px",
+                        textTransform: "uppercase",
+                        letterSpacing: "0.5px",
+                      }}
+                    >
+                      SSRN
+                    </span>
+                  </div>
+                  <h4
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "10px",
+                      lineHeight: 1.3,
+                    }}
+                  >
+                    Deep Q-Network Interpretability: Applications to ETF Trading
+                  </h4>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                      lineHeight: 1.6,
+                      marginBottom: "15px",
+                      flexGrow: 1,
+                    }}
+                  >
+                    Presents an interpretable deep reinforcement learning framework for exchange-traded fund trading strategies. The work enables visual, user-friendly insights into RL decision-making processes for financial applications.
+                  </p>
+                  <a
+                    href="https://papers.ssrn.com/sol3/papers.cfm?abstract_id=3973146"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    style={{
+                      display: "inline-block",
+                      padding: "8px 16px",
+                      backgroundColor: "transparent",
+                      color: "var(--accent-primary)",
+                      border: "1px solid var(--accent-primary)",
+                      borderRadius: "6px",
+                      fontSize: "13px",
+                      fontWeight: 600,
+                      textDecoration: "none",
+                      transition: "all 0.2s ease",
+                      alignSelf: "flex-start",
+                    }}
+                    onMouseEnter={(e) => {
+                      e.currentTarget.style.backgroundColor = "var(--accent-primary)";
+                      e.currentTarget.style.color = "var(--bg-main)";
+                    }}
+                    onMouseLeave={(e) => {
+                      e.currentTarget.style.backgroundColor = "transparent";
+                      e.currentTarget.style.color = "var(--accent-primary)";
+                    }}
+                  >
+                    Read Paper →
+                  </a>
                 </div>
               </div>
             </div>
@@ -2839,7 +3076,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   A Quant Striving to Bridge the Worlds of Finance and ML
@@ -2880,7 +3117,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Unveiling the Next-Gen of Generative AI and ChatGPT in Finance
@@ -2921,7 +3158,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   A Remarkable Journey: From a Small Town in India to Wall Street
@@ -2929,47 +3166,6 @@ export default function HomePage() {
               </div>
 
               <div className="card" data-aos="fade-up" data-aos-delay="300" style={cardStyle}>
-                <a
-                  href="https://aimresearch.co/2023/10/04/adoption-of-ai-gen-ai-in-finance-with-hariom-tatsat/"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="ccimg"
-                    style={{
-                      overflow: "hidden",
-                      position: "relative",
-                      height: "200px",
-                    }}
-                  >
-                    <img
-                      src="/assets/Featuredtalk1.jpeg"
-                      alt="AIM Research Article"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        transition: "transform 0.5s ease",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                </a>
-                <div
-                  className="cdesc"
-                  style={{
-                    padding: "20px",
-                    flexGrow: 1,
-                    fontSize: "16px",
-                    lineHeight: 1.5,
-                    color: "var(--text-primary)",
-                    backgroundColor: "#333030",
-                  }}
-                >
-                  Adoption of AI/Gen AI in Finance with Hariom Tatsat
-                </div>
-              </div>
-
-              <div className="card" data-aos="fade-up" data-aos-delay="400" style={cardStyle}>
                 <a
                   href="https://usinsider.com/bridging-the-gap-between-machine-learning-and-finance-expert-insights-from-hariom-tatsat/"
                   target="_blank"
@@ -3003,14 +3199,14 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Bridging the Gap Between ML and Finance
                 </div>
               </div>
 
-              <div className="card" data-aos="fade-up" data-aos-delay="500" style={cardStyle}>
+              <div className="card" data-aos="fade-up" data-aos-delay="400" style={cardStyle}>
                 <a
                   href="https://www.outlookindia.com/business-spotlight/hariom-tatsats-journey-of-financial-innovation-through-ai-and-machine-learning"
                   target="_blank"
@@ -3044,14 +3240,14 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Journey Of Financial Innovation Through AI And ML
                 </div>
               </div>
 
-              <div className="card" data-aos="fade-up" data-aos-delay="600" style={cardStyle}>
+              <div className="card" data-aos="fade-up" data-aos-delay="500" style={cardStyle}>
                 <a
                   href="https://sanfranciscopost.com/the-future-is-here-how-ai-will-transform-investment-and-asset-allocation/"
                   target="_blank"
@@ -3085,7 +3281,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   The Future is Here: How AI Will Transform Investment and Asset
@@ -3093,7 +3289,7 @@ export default function HomePage() {
                 </div>
               </div>
 
-              <div className="card" data-aos="fade-up" data-aos-delay="700" style={cardStyle}>
+              <div className="card" data-aos="fade-up" data-aos-delay="600" style={cardStyle}>
                 <a
                   href="https://nywire.com/up-and-close-interview-with-hariom-tatsat-author-and-expert-in-ai-in-finance/"
                   target="_blank"
@@ -3127,14 +3323,14 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Up and Close Interview with Hariom Tatsat
                 </div>
               </div>
 
-              <div className="card" data-aos="fade-up" data-aos-delay="800" style={cardStyle}>
+              <div className="card" data-aos="fade-up" data-aos-delay="700" style={cardStyle}>
                 <a
                   href="https://nyweekly.com/business/reinforcement-learning-the-untapped-frontier-in-algorithmic-trading-spearheaded-by-hariom-tatsats-in-collaboration-with-leihigh-university/"
                   target="_blank"
@@ -3168,7 +3364,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Reinforcement Learning: The Untapped Frontier in Algorithmic
@@ -3192,7 +3388,7 @@ export default function HomePage() {
             <div className="card-container" style={cardContainerStyle}>
               <div className="card" data-aos="fade-up" style={cardStyle}>
                 <a
-                  href="https://aimresearch.co/cdo-insights/adoption-of-ai-gen-ai-in-finance-with-hariom-tatsat"
+                  href="https://aimresearch.co/2023/10/04/adoption-of-ai-gen-ai-in-finance-with-hariom-tatsat/"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -3205,7 +3401,7 @@ export default function HomePage() {
                     }}
                   >
                     <img
-                      src="/assets/aim_research.png"
+                      src="/assets/Featuredtalk1.jpeg"
                       alt="Adoption of AI/Gen AI in Finance with Hariom Tatsat"
                       style={{
                         width: "100%",
@@ -3227,7 +3423,7 @@ export default function HomePage() {
                     backgroundColor: "var(--bg-card)",
                   }}
                 >
-                  AI and GenAI in Finance
+                  Adoption of AI/Gen AI in Finance with Hariom Tatsat
                 </div>
               </div>
 
@@ -3445,7 +3641,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Machine Learning in Finance
@@ -3486,7 +3682,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Algo Trading Multiverse
@@ -3527,7 +3723,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   AI and Generative AI for Finance Masterclass (Online
@@ -3569,7 +3765,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Advanced Programme in Leadership and Digital Innovation
@@ -3626,7 +3822,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Award for outstanding professional achievement and contribution
@@ -3664,7 +3860,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Robust risk-aware RL using RDEU and Wasserstein distance to
@@ -3703,7 +3899,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Interpretability framework for Deep Q-Learning applied to ETF
@@ -3742,7 +3938,7 @@ export default function HomePage() {
                     fontSize: "16px",
                     lineHeight: 1.5,
                     color: "var(--text-primary)",
-                    backgroundColor: "#333030",
+                    backgroundColor: "var(--bg-card)",
                   }}
                 >
                   Analyzing investor risk tolerance using machine learning to
@@ -3755,6 +3951,68 @@ export default function HomePage() {
         </div>
         )}
 
+        {/* Contact Section */}
+        <section
+          id="contact"
+          style={{
+            padding: "80px 0",
+            backgroundColor: "var(--bg-main)",
+          }}
+        >
+          <div className="container" style={containerStyle}>
+            <h2
+              style={{
+                ...ctitleStyle,
+                marginBottom: "40px",
+              }}
+            >
+              Contact
+            </h2>
+            <div
+              style={{
+                textAlign: "center",
+                maxWidth: "600px",
+                margin: "0 auto",
+              }}
+            >
+              <p
+                style={{
+                  fontSize: "18px",
+                  color: "var(--text-primary)",
+                  marginBottom: "30px",
+                  lineHeight: 1.8,
+                }}
+              >
+                For inquiries, speaking engagements, or collaborations, please reach out:
+              </p>
+              <a
+                href="mailto:hariom_tatsat@mfe.berkeley.edu"
+                style={{
+                  display: "inline-block",
+                  fontSize: "20px",
+                  color: "var(--text-headings)",
+                  textDecoration: "none",
+                  padding: "15px 30px",
+                  border: "2px solid var(--text-primary)",
+                  borderRadius: "8px",
+                  transition: "var(--hover-transition)",
+                  fontWeight: 500,
+                }}
+                onMouseEnter={(e) => {
+                  e.currentTarget.style.background = "var(--text-primary)";
+                  e.currentTarget.style.color = "var(--bg-main)";
+                }}
+                onMouseLeave={(e) => {
+                  e.currentTarget.style.background = "transparent";
+                  e.currentTarget.style.color = "var(--text-headings)";
+                }}
+              >
+                hariom_tatsat@mfe.berkeley.edu
+              </a>
+            </div>
+          </div>
+        </section>
+
         {/* Footer */}
         <footer
           style={{
@@ -3765,207 +4023,12 @@ export default function HomePage() {
         >
           <div className="container" style={containerStyle}>
             <div
-              className="footer-content"
-              style={{
-                display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(250px, 1fr))",
-                gap: "30px",
-                marginBottom: "30px",
-              }}
-            >
-              <div className="footer-section">
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    marginBottom: "20px",
-                    position: "relative",
-                    paddingBottom: "10px",
-                    color: "var(--text-headings)",
-                  }}
-                >
-                  About Hariom
-                </h3>
-                <p
-                  style={{
-                    color: "var(--text-secondary)",
-                    lineHeight: 1.7,
-                  }}
-                >
-                  I'm Hariom Tatsat, a finance professional specializing in the
-                  application of AI and Machine Learning in the financial
-                  sector. My mission is to democratize financial AI through
-                  education and innovation, making advanced financial
-                  technologies accessible to all.
-                </p>
-              </div>
-              <div className="footer-section">
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    marginBottom: "20px",
-                    position: "relative",
-                    paddingBottom: "10px",
-                    color: "var(--text-headings)",
-                  }}
-                >
-                  Quick Links
-                </h3>
-                <div
-                  className="footer-links"
-                  style={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "10px",
-                  }}
-                >
-                  <Link href="/" style={{ color: "var(--text-secondary)" }}>
-                    Home
-                  </Link>
-                  <Link
-                    href="/#history"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    Experience
-                  </Link>
-                  <Link
-                    href="/#speaking"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    Speaking
-                  </Link>
-                  <Link href="/#MM" style={{ color: "var(--text-secondary)" }}>
-                    Media
-                  </Link>
-                  <Link
-                    href="/#publications"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    Publications
-                  </Link>
-                  <Link href="/blog" style={{ color: "var(--text-secondary)" }}>
-                    Blog
-                  </Link>
-                  <Link
-                    href="/ai-interpretability"
-                    style={{ color: "var(--text-secondary)" }}
-                  >
-                    AI Interpretability
-                  </Link>
-                </div>
-              </div>
-              <div className="footer-section">
-                <h3
-                  style={{
-                    fontSize: "22px",
-                    marginBottom: "20px",
-                    position: "relative",
-                    paddingBottom: "10px",
-                    color: "var(--text-headings)",
-                  }}
-                >
-                  Connect
-                </h3>
-                <p style={{ color: "var(--text-secondary)" }}>
-                  Follow Hariom on social media:
-                </p>
-                <div
-                  className="footer-social"
-                  style={{
-                    display: "flex",
-                    gap: "15px",
-                    marginTop: "20px",
-                  }}
-                >
-                  <a
-                    href="https://github.com/tatsath"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="GitHub"
-                    style={{
-                      display: "inline-flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      background: "var(--bg-card)",
-                      color: "var(--text-primary)",
-                      transition: "var(--hover-transition)",
-                      fontSize: "18px",
-                    }}
-                  >
-                    <i className="fab fa-github" />
-                  </a>
-                  <a
-                    href="https://www.linkedin.com/in/hariomtatsat/"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="LinkedIn"
-                    style={{
-                      display: "inline-flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      background: "var(--bg-card)",
-                      color: "var(--text-primary)",
-                      transition: "var(--hover-transition)",
-                      fontSize: "18px",
-                    }}
-                  >
-                    <i className="fab fa-linkedin-in" />
-                  </a>
-                  <a
-                    href="https://x.com/HariomTatsat24"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Twitter"
-                    style={{
-                      display: "inline-flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      background: "var(--bg-card)",
-                      color: "var(--text-primary)",
-                      transition: "var(--hover-transition)",
-                      fontSize: "18px",
-                    }}
-                  >
-                    <i className="fab fa-twitter" />
-                  </a>
-                  <a
-                    href="https://topmate.io/hariom_t"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    aria-label="Book Appointment"
-                    style={{
-                      display: "inline-flex",
-                      justifyContent: "center",
-                      alignItems: "center",
-                      width: "40px",
-                      height: "40px",
-                      borderRadius: "50%",
-                      background: "var(--bg-card)",
-                      color: "var(--text-primary)",
-                      transition: "var(--hover-transition)",
-                      fontSize: "18px",
-                    }}
-                  >
-                    <i className="fas fa-calendar-check" />
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div
               className="copyright"
               style={{
                 textAlign: "center",
                 paddingTop: "30px",
-                borderTop: "1px solid #444444",
-                color: "#888888",
+                borderTop: "1px solid var(--text-secondary)",
+                color: "var(--text-secondary)",
                 fontSize: "14px",
               }}
             >
