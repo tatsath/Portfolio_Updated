@@ -195,8 +195,8 @@ export default function Header() {
                 border: "none",
                 cursor: "pointer",
                 fontFamily: "inherit",
-                width: "100%",
-                textAlign: "left",
+                width: isMobile ? "100%" : "auto",
+                textAlign: isMobile ? "left" : "center",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = "var(--text-headings)";
@@ -209,7 +209,7 @@ export default function Header() {
               <span
                 style={{
                   marginLeft: "5px",
-                  fontSize: "12px",
+                  fontSize: "10px",
                 }}
               >
                 {contactDropdownOpen ? "▲" : "▼"}
@@ -219,13 +219,18 @@ export default function Header() {
               <div
                 data-header-contact-dropdown
                 style={{
-                  position: "relative",
-                  marginTop: "5px",
-                  backgroundColor: "var(--bg-card)",
+                  position: isMobile ? "relative" : "absolute",
+                  top: isMobile ? "auto" : "100%",
+                  right: isMobile ? "auto" : 0,
+                  left: isMobile ? "auto" : "auto",
+                  marginTop: isMobile ? "5px" : "5px",
+                  backgroundColor: "var(--bg-main)",
                   border: "1px solid var(--text-secondary)",
-                  borderRadius: "8px",
+                  borderRadius: "6px",
                   overflow: "hidden",
-                  width: "100%",
+                  minWidth: isMobile ? "100%" : "200px",
+                  boxShadow: isMobile ? "none" : "0 2px 8px var(--shadow-color)",
+                  zIndex: 1002,
                 }}
               >
                 <a
@@ -236,15 +241,15 @@ export default function Header() {
                   }}
                   style={{
                     display: "block",
-                    padding: "15px 20px",
+                    padding: "12px 16px",
                     color: "var(--text-headings)",
                     textDecoration: "none",
-                    fontSize: "16px",
+                    fontSize: "15px",
                     borderBottom: "1px solid var(--text-secondary)",
                     transition: "var(--hover-transition)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--bg-main)";
+                    e.currentTarget.style.background = "var(--bg-card)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "transparent";
@@ -262,14 +267,14 @@ export default function Header() {
                   }}
                   style={{
                     display: "block",
-                    padding: "15px 20px",
+                    padding: "12px 16px",
                     color: "var(--text-headings)",
                     textDecoration: "none",
-                    fontSize: "16px",
+                    fontSize: "15px",
                     transition: "var(--hover-transition)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--bg-main)";
+                    e.currentTarget.style.background = "var(--bg-card)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "transparent";
