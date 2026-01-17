@@ -377,7 +377,7 @@ export default function HomePage() {
                       textAlign: "left",
                     }}
                   >
-                    Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning (2023). Hariom has performed several research in neuroscience-inspired mechanistic interpretability in the context of responsible AI. He has a deep interest in physics, philosophy and simulation hypothesis.
+                    Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He has several research in AI and Machine Learning and is performing research in neuroscience-inspired mechanistic interpretability to understand the inner workings of LLMs. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning. He has a deep interest in physics, philosophy and simulation hypothesis.
                   </p>
                 </div>
               </div>
