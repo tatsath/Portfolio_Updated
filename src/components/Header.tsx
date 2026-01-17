@@ -6,6 +6,7 @@ import { useState, useEffect } from "react";
 export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,24 @@ export default function Header() {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    // Close dropdown when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (contactDropdownOpen && !target.closest('[data-header-contact-dropdown]')) {
+        setContactDropdownOpen(false);
+      }
+    };
+
+    if (contactDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [contactDropdownOpen]);
 
   const linkStyle = {
     display: "block",
@@ -133,10 +152,101 @@ export default function Header() {
               Media
             </Link>
           </li>
-          <li>
-            <Link href="/#contact" style={linkStyle}>
+          <li
+            style={{
+              position: "relative",
+            }}
+            data-header-contact-dropdown
+          >
+            <button
+              onClick={() => setContactDropdownOpen(!contactDropdownOpen)}
+              data-header-contact-dropdown
+              style={{
+                ...linkStyle,
+                background: "none",
+                border: "none",
+                cursor: "pointer",
+                fontFamily: "inherit",
+              }}
+              onMouseEnter={(e) => {
+                e.currentTarget.style.color = "var(--text-headings)";
+              }}
+              onMouseLeave={(e) => {
+                e.currentTarget.style.color = "var(--text-primary)";
+              }}
+            >
               Contact
-            </Link>
+              <span
+                style={{
+                  marginLeft: "5px",
+                  fontSize: "12px",
+                }}
+              >
+                {contactDropdownOpen ? "▲" : "▼"}
+              </span>
+            </button>
+            {contactDropdownOpen && (
+              <div
+                data-header-contact-dropdown
+                style={{
+                  position: "absolute",
+                  top: "100%",
+                  right: 0,
+                  marginTop: "5px",
+                  backgroundColor: "var(--bg-main)",
+                  border: "2px solid var(--text-primary)",
+                  borderRadius: "8px",
+                  boxShadow: "0 4px 12px var(--shadow-color)",
+                  minWidth: "250px",
+                  zIndex: 1001,
+                  overflow: "hidden",
+                }}
+              >
+                <a
+                  href="mailto:hariom_tatsat@mfe.berkeley.edu"
+                  onClick={() => setContactDropdownOpen(false)}
+                  style={{
+                    display: "block",
+                    padding: "15px 20px",
+                    color: "var(--text-headings)",
+                    textDecoration: "none",
+                    fontSize: "16px",
+                    borderBottom: "1px solid var(--text-secondary)",
+                    transition: "var(--hover-transition)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--bg-card)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                  }}
+                >
+                  Email
+                </a>
+                <a
+                  href="https://topmate.io/hariom_t/642160?utm_source=public_profile&utm_campaign=hariom_t"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  onClick={() => setContactDropdownOpen(false)}
+                  style={{
+                    display: "block",
+                    padding: "15px 20px",
+                    color: "var(--text-headings)",
+                    textDecoration: "none",
+                    fontSize: "16px",
+                    transition: "var(--hover-transition)",
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--bg-card)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                  }}
+                >
+                  Schedule a Meeting
+                </a>
+              </div>
+            )}
           </li>
         </ul>
       </nav>

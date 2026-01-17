@@ -18,6 +18,7 @@ declare global {
 
 export default function HomePage() {
   const [showBackToTop, setShowBackToTop] = useState(false);
+  const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
   const [selectedYear, setSelectedYear] = useState("All Years");
 
   useEffect(() => {
@@ -83,6 +84,24 @@ export default function HomePage() {
       }
     }
   }, []);
+
+  useEffect(() => {
+    // Close dropdown when clicking outside
+    const handleClickOutside = (event: MouseEvent) => {
+      const target = event.target as HTMLElement;
+      if (contactDropdownOpen && !target.closest('[data-contact-dropdown]')) {
+        setContactDropdownOpen(false);
+      }
+    };
+
+    if (contactDropdownOpen) {
+      document.addEventListener("mousedown", handleClickOutside);
+    }
+
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, [contactDropdownOpen]);
 
   const containerStyle = {
     marginLeft: "auto",
@@ -3973,6 +3992,7 @@ export default function HomePage() {
                 textAlign: "center",
                 maxWidth: "600px",
                 margin: "0 auto",
+                position: "relative",
               }}
             >
               <p
@@ -3985,30 +4005,113 @@ export default function HomePage() {
               >
                 For inquiries, speaking engagements, or collaborations, please reach out:
               </p>
-              <a
-                href="mailto:hariom_tatsat@mfe.berkeley.edu"
+              <div
                 style={{
+                  position: "relative",
                   display: "inline-block",
-                  fontSize: "20px",
-                  color: "var(--text-headings)",
-                  textDecoration: "none",
-                  padding: "15px 30px",
-                  border: "2px solid var(--text-primary)",
-                  borderRadius: "8px",
-                  transition: "var(--hover-transition)",
-                  fontWeight: 500,
                 }}
-                onMouseEnter={(e) => {
-                  e.currentTarget.style.background = "var(--text-primary)";
-                  e.currentTarget.style.color = "var(--bg-main)";
-                }}
-                onMouseLeave={(e) => {
-                  e.currentTarget.style.background = "transparent";
-                  e.currentTarget.style.color = "var(--text-headings)";
-                }}
+                data-contact-dropdown
               >
-                hariom_tatsat@mfe.berkeley.edu
-              </a>
+                <button
+                  onClick={() => setContactDropdownOpen(!contactDropdownOpen)}
+                  data-contact-dropdown
+                  style={{
+                    display: "inline-flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    fontSize: "18px",
+                    color: "var(--text-headings)",
+                    padding: "15px 30px",
+                    border: "2px solid var(--text-primary)",
+                    borderRadius: "8px",
+                    background: "transparent",
+                    cursor: "pointer",
+                    transition: "var(--hover-transition)",
+                    fontWeight: 500,
+                  }}
+                  onMouseEnter={(e) => {
+                    e.currentTarget.style.background = "var(--text-primary)";
+                    e.currentTarget.style.color = "var(--bg-main)";
+                  }}
+                  onMouseLeave={(e) => {
+                    e.currentTarget.style.background = "transparent";
+                    e.currentTarget.style.color = "var(--text-headings)";
+                  }}
+                >
+                  Contact
+                  <span
+                    style={{
+                      marginLeft: "5px",
+                      fontSize: "12px",
+                    }}
+                  >
+                    {contactDropdownOpen ? "▲" : "▼"}
+                  </span>
+                </button>
+                {contactDropdownOpen && (
+                  <div
+                    data-contact-dropdown
+                    style={{
+                      position: "absolute",
+                      top: "100%",
+                      left: "50%",
+                      transform: "translateX(-50%)",
+                      marginTop: "10px",
+                      backgroundColor: "var(--bg-main)",
+                      border: "2px solid var(--text-primary)",
+                      borderRadius: "8px",
+                      boxShadow: "0 4px 12px var(--shadow-color)",
+                      minWidth: "250px",
+                      zIndex: 1000,
+                      overflow: "hidden",
+                    }}
+                  >
+                    <a
+                      href="mailto:hariom_tatsat@mfe.berkeley.edu"
+                      onClick={() => setContactDropdownOpen(false)}
+                      style={{
+                        display: "block",
+                        padding: "15px 20px",
+                        color: "var(--text-headings)",
+                        textDecoration: "none",
+                        fontSize: "16px",
+                        borderBottom: "1px solid var(--text-secondary)",
+                        transition: "var(--hover-transition)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "var(--bg-card)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "transparent";
+                      }}
+                    >
+                      Email
+                    </a>
+                    <a
+                      href="https://topmate.io/hariom_t/642160?utm_source=public_profile&utm_campaign=hariom_t"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      onClick={() => setContactDropdownOpen(false)}
+                      style={{
+                        display: "block",
+                        padding: "15px 20px",
+                        color: "var(--text-headings)",
+                        textDecoration: "none",
+                        fontSize: "16px",
+                        transition: "var(--hover-transition)",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.background = "var(--bg-card)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.background = "transparent";
+                      }}
+                    >
+                      Schedule a Meeting
+                    </a>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
         </section>
