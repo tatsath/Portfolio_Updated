@@ -380,6 +380,29 @@ export default function HomePage() {
                     Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He has several research in AI and Machine Learning and is performing research in neuroscience-inspired mechanistic interpretability to understand the inner workings of LLMs. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning. He has a deep interest in physics, philosophy and simulation hypothesis.
                   </p>
                 </div>
+                
+                {/* Mobile Image - Shows only on mobile */}
+                <div
+                  className="hero-mobile-image"
+                  style={{
+                    display: "none",
+                    marginTop: "40px",
+                    textAlign: "center",
+                  }}
+                >
+                  <img
+                    src="/assets/htny.webp"
+                    alt="Hariom Tatsat"
+                    style={{
+                      width: "100%",
+                      maxWidth: "400px",
+                      height: "auto",
+                      borderRadius: "12px",
+                      boxShadow: "0 8px 24px var(--shadow-color)",
+                      objectFit: "cover",
+                    }}
+                  />
+                </div>
               </div>
 
               {/* Right Side - Empty space for background image to show through */}

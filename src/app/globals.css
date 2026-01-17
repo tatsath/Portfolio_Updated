@@ -237,11 +237,21 @@ hr {
     min-height: 300px !important;
   }
   
-  /* Hero background image on mobile */
+  /* Hide background image on mobile */
   .hero-background-image {
-    width: 100% !important;
-    background-position: center center !important;
-    opacity: 0.4 !important;
+    display: none !important;
+  }
+  
+  /* Show mobile image in content area */
+  .hero-mobile-image {
+    display: block !important;
+  }
+  
+  /* Ensure text container has proper background on mobile */
+  .hero-content-grid > div:first-child {
+    background-color: var(--bg-main) !important;
+    padding: 30px 20px !important;
+    border-radius: 8px !important;
   }
   
   /* Books section mobile */
