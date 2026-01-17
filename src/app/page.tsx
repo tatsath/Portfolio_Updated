@@ -173,6 +173,7 @@ export default function HomePage() {
           
           {/* Background Image - Positioned on Right Side, Showing More of Left Side */}
           <div
+            className="hero-background-image"
             style={{
               position: "absolute",
               right: 0,
@@ -376,7 +377,7 @@ export default function HomePage() {
                       textAlign: "left",
                     }}
                   >
-                    Hariom has years of experience bridging AI innovation with financial services. He is an O'Reilly author and published researcher. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning (2023). Hariom has performed several research in neuroscience-inspired mechanistic interpretability in the context of responsible AI. He has a deep interest in physics, philosophy and simulation hypothesis.
+                    Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning (2023). Hariom has performed several research in neuroscience-inspired mechanistic interpretability in the context of responsible AI. He has a deep interest in physics, philosophy and simulation hypothesis.
                   </p>
                 </div>
               </div>
@@ -391,6 +392,43 @@ export default function HomePage() {
             </div>
           </div>
         </section>
+
+        {/* Section Separator */}
+        <div
+          style={{
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
+          </div>
+        </div>
 
         {/* Videos and Podcasts Section */}
         <section
@@ -1222,16 +1260,42 @@ export default function HomePage() {
           </div>
         </section>
 
-        <hr
+        {/* Section Separator */}
+        <div
           style={{
-            border: "none",
-            height: "1px",
-            background:
-              "linear-gradient(to right, transparent, var(--accent-secondary), transparent)",
-            margin: "20px 0",
-            opacity: 0.4,
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
           }}
-        />
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
+          </div>
+        </div>
 
         {/* Experience Timeline - DISABLED (can be re-enabled in future) */}
         {/* To re-enable, change {false && ( to {true && ( */}
@@ -2529,8 +2593,45 @@ export default function HomePage() {
                 </>
               )}
                   </div>
-                </div>
               </div>
+            </div>
+
+        {/* Section Separator */}
+        <div
+          style={{
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
+          </div>
+        </div>
 
         {/* Books Section */}
         <div
@@ -2546,6 +2647,7 @@ export default function HomePage() {
             {/* Book Section */}
             <div
               data-aos="fade-up"
+              className="book-section-container"
               style={{
                 display: "grid",
                 gridTemplateColumns: "auto 1fr",
@@ -2559,19 +2661,20 @@ export default function HomePage() {
                 margin: "0 auto 60px",
               }}
             >
-              <div style={{ flexShrink: 0 }}>
+              <div style={{ flexShrink: 0 }} className="book-image-container">
                 <img
                   src="/assets/2two.jpg"
                   alt="Machine Learning & Data Science Blueprints for Finance"
                   style={{
                     width: "300px",
+                    maxWidth: "100%",
                     height: "auto",
                     borderRadius: "12px",
                     boxShadow: "0 12px 30px rgba(0,0,0,0.4)",
                   }}
                 />
               </div>
-            <div>
+            <div className="book-content-container">
                 <p
                   style={{
                     fontSize: "18px",
@@ -2688,6 +2791,43 @@ export default function HomePage() {
                 </p>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Section Separator */}
+        <div
+          style={{
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
           </div>
         </div>
 
@@ -3050,6 +3190,43 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Section Separator */}
+        <div
+          style={{
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
+          </div>
+        </div>
+
         {/* Media Mentions Section */}
         <div
           className="card-section"
@@ -3391,6 +3568,43 @@ export default function HomePage() {
                 </div>
               </div>
             </div>
+          </div>
+        </div>
+
+        {/* Section Separator */}
+        <div
+          style={{
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
           </div>
         </div>
 
@@ -3969,6 +4183,43 @@ export default function HomePage() {
           </div>
         </div>
         )}
+
+        {/* Section Separator */}
+        <div
+          style={{
+            width: "100%",
+            padding: "80px 0",
+            display: "flex",
+            justifyContent: "center",
+            alignItems: "center",
+          }}
+        >
+          <div
+            style={{
+              width: "70%",
+              maxWidth: "800px",
+              height: "2px",
+              background: "linear-gradient(to right, transparent, var(--text-primary), var(--text-primary), transparent)",
+              opacity: 0.4,
+              position: "relative",
+            }}
+          >
+            <div
+              style={{
+                position: "absolute",
+                left: "50%",
+                top: "50%",
+                transform: "translate(-50%, -50%)",
+                width: "12px",
+                height: "12px",
+                borderRadius: "50%",
+                backgroundColor: "var(--text-primary)",
+                opacity: 0.6,
+                boxShadow: "0 0 8px rgba(0, 0, 0, 0.2)",
+              }}
+            />
+          </div>
+        </div>
 
         {/* Contact Section */}
         <section

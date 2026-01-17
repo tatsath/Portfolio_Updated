@@ -7,6 +7,7 @@ export default function Header() {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [contactDropdownOpen, setContactDropdownOpen] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,6 +15,18 @@ export default function Header() {
     };
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
+  }, []);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 968);
+      if (window.innerWidth > 968) {
+        setIsMenuOpen(false);
+      }
+    };
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+    return () => window.removeEventListener("resize", checkMobile);
   }, []);
 
   useEffect(() => {
@@ -66,6 +79,7 @@ export default function Header() {
           padding: "15px 30px",
           maxWidth: "1400px",
           margin: "0 auto",
+          position: "relative",
         }}
       >
         <div className="logo">
@@ -93,62 +107,76 @@ export default function Header() {
           htmlFor="menu-toggle"
           className="menu-icon"
           style={{
-            display: "none",
+            display: isMobile ? "block" : "none",
             color: "var(--text-headings)",
             fontSize: "28px",
             cursor: "pointer",
+            zIndex: 1002,
           }}
         >
-          ☰
+          {isMenuOpen ? "✕" : "☰"}
         </label>
         <ul
           className="menu"
+          id="main-menu"
           style={{
-            display: "flex",
-            justifyContent: "center",
-            alignItems: "center",
+            display: isMobile ? (isMenuOpen ? "flex" : "none") : "flex",
+            justifyContent: isMobile ? "flex-start" : "center",
+            alignItems: isMobile ? "stretch" : "center",
             gap: "8px",
             listStyle: "none",
-            flexWrap: "wrap",
+            flexWrap: isMobile ? "nowrap" : "wrap",
+            position: isMobile ? "absolute" : "relative",
+            top: isMobile ? "100%" : "auto",
+            left: isMobile ? 0 : "auto",
+            right: isMobile ? 0 : "auto",
+            backgroundColor: isMobile ? "var(--bg-main)" : "transparent",
+            boxShadow: isMobile ? "0 4px 12px var(--shadow-color)" : "none",
+            padding: isMobile ? "20px" : 0,
+            margin: 0,
+            border: isMobile ? "1px solid var(--text-secondary)" : "none",
+            borderTop: isMobile ? "1px solid var(--text-secondary)" : "none",
+            zIndex: 1001,
+            flexDirection: isMobile ? "column" : "row",
           }}
         >
           <li>
-            <Link href="/" style={linkStyle}>
+            <Link href="/" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Home
             </Link>
           </li>
           <li>
-            <Link href="/ai-interpretability" style={linkStyle}>
+            <Link href="/ai-interpretability" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               AI Interpretability
             </Link>
           </li>
           <li>
-            <Link href="/blog" style={linkStyle}>
+            <Link href="/blog" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Blog
             </Link>
           </li>
           <li>
-            <Link href="/#videos" style={linkStyle}>
+            <Link href="/#videos" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Videos
             </Link>
           </li>
           <li>
-            <Link href="/#speaking" style={linkStyle}>
+            <Link href="/#speaking" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Speaking
             </Link>
           </li>
           <li>
-            <Link href="/#books" style={linkStyle}>
+            <Link href="/#books" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Books
             </Link>
           </li>
           <li>
-            <Link href="/#papers" style={linkStyle}>
+            <Link href="/#papers" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Papers
             </Link>
           </li>
           <li>
-            <Link href="/#media" style={linkStyle}>
+            <Link href="/#media" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Media
             </Link>
           </li>
@@ -167,6 +195,8 @@ export default function Header() {
                 border: "none",
                 cursor: "pointer",
                 fontFamily: "inherit",
+                width: "100%",
+                textAlign: "left",
               }}
               onMouseEnter={(e) => {
                 e.currentTarget.style.color = "var(--text-headings)";
@@ -189,22 +219,21 @@ export default function Header() {
               <div
                 data-header-contact-dropdown
                 style={{
-                  position: "absolute",
-                  top: "100%",
-                  right: 0,
+                  position: "relative",
                   marginTop: "5px",
-                  backgroundColor: "var(--bg-main)",
-                  border: "2px solid var(--text-primary)",
+                  backgroundColor: "var(--bg-card)",
+                  border: "1px solid var(--text-secondary)",
                   borderRadius: "8px",
-                  boxShadow: "0 4px 12px var(--shadow-color)",
-                  minWidth: "250px",
-                  zIndex: 1001,
                   overflow: "hidden",
+                  width: "100%",
                 }}
               >
                 <a
                   href="mailto:hariom_tatsat@mfe.berkeley.edu"
-                  onClick={() => setContactDropdownOpen(false)}
+                  onClick={() => {
+                    setContactDropdownOpen(false);
+                    setIsMenuOpen(false);
+                  }}
                   style={{
                     display: "block",
                     padding: "15px 20px",
@@ -215,7 +244,7 @@ export default function Header() {
                     transition: "var(--hover-transition)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--bg-card)";
+                    e.currentTarget.style.background = "var(--bg-main)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "transparent";
@@ -227,7 +256,10 @@ export default function Header() {
                   href="https://topmate.io/hariom_t/642160?utm_source=public_profile&utm_campaign=hariom_t"
                   target="_blank"
                   rel="noopener noreferrer"
-                  onClick={() => setContactDropdownOpen(false)}
+                  onClick={() => {
+                    setContactDropdownOpen(false);
+                    setIsMenuOpen(false);
+                  }}
                   style={{
                     display: "block",
                     padding: "15px 20px",
@@ -237,7 +269,7 @@ export default function Header() {
                     transition: "var(--hover-transition)",
                   }}
                   onMouseEnter={(e) => {
-                    e.currentTarget.style.background = "var(--bg-card)";
+                    e.currentTarget.style.background = "var(--bg-main)";
                   }}
                   onMouseLeave={(e) => {
                     e.currentTarget.style.background = "transparent";
