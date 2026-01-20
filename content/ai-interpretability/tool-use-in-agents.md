@@ -2,7 +2,7 @@
 title: "Debugging Tool Use in Agent Systems"
 date: 2025-10-07T00:00:00Z
 lastmod: 2025-10-07T00:00:00Z
-draft: false
+draft: true
 description: "Using internal activations to diagnose and fix tool-use failures in agentic AI systems."
 author: ["H.T"]
 categories: ["Opinion"]
@@ -14,9 +14,9 @@ mathjax: true
 
 Modern enterprises are increasingly deploying LLM agents that orchestrate tools for research, analytics, and decision-making. However, the path to reliable agent deployment is proving more challenging than initially anticipated.
 
-Recent empirical studies reveal the scale of the problem. A comprehensive UC Berkeley study examining multi-agent systems across 150+ tasks found that failures stem from many distinct modes: specification and design errors, inter-agent misalignment, verification and termination issues, and tool-related misfires. The study argues that these failures "require more complex solutions" than simple orchestration tweaks—even after extensive tracing and debugging, reliability remains a fundamental blocker.
+Recent empirical studies reveal the scale of the problem. A comprehensive UC Berkeley study examining multi-agent systems across 150+ tasks found that failures stem from many distinct modes: specification and design errors, inter-agent misalignment, verification and termination issues, and tool-related misfires. The study argues that these failures "require more complex solutions" than simple orchestration tweaks. Even after extensive tracing and debugging, reliability remains a fundamental blocker.
 
-Industry surveys reflect this challenge. McKinsey's 2025 global survey found that only **23%** of organizations report they are _scaling_ an agentic AI system, while many remain in the "experimenting" phase. This limited confidence for broad deployment suggests that observability alone is insufficient. Gartner predicts that **over 40% of agentic AI initiatives may be canceled by 2027** due to risk, ROI, and operational issues—indicating that while tooling exists, trust remains fragile.
+Industry surveys reflect this challenge. McKinsey's 2025 global survey found that only **23%** of organizations report they are _scaling_ an agentic AI system, while many remain in the "experimenting" phase. This limited confidence for broad deployment suggests that observability alone is insufficient. Gartner predicts that **over 40% of agentic AI initiatives may be canceled by 2027** due to risk, ROI, and operational issues, indicating that while tooling exists, trust remains fragile.
 
 The core issue: **observability does not equal confidence**. Having visibility into what agents _did_ is not the same as understanding what they _intended_ to do, or whether their internal reasoning was sound.
 
@@ -34,7 +34,7 @@ A growing ecosystem of observability platforms has emerged to address agent reli
 
 **Arize Phoenix** (open-source) provides tracing and evaluation tooling based on OTEL/OpenInference standards, enabling teams to instrument agent applications and troubleshoot issues.
 
-**TruLens** (open-source) uses "feedback functions"—often LLM-based—to score agent runs on relevance, groundedness, and other dimensions.
+**TruLens** (open-source) uses "feedback functions" (often LLM-based) to score agent runs on relevance, groundedness, and other dimensions.
 
 These platforms share a common approach: instrument agent runs, collect traces, add evaluations, and provide dashboards and alerts. They can trigger guardrails, alerts, or automated workflows based on output and evaluation scores. However, they operate primarily on **external signals**: what happened (actions/outputs), not what was internally intended.
 
@@ -70,7 +70,7 @@ These works establish the feasibility of probe-based monitoring but typically re
 
 **Anthropic's SAE Research** has shown that Sparse Autoencoders can extract monosemantic, interpretable features encoding formatting modes, sentiment, structured output, and latent skills. Their work demonstrates that SAEs decompose dense activations into sparse, interpretable components that correspond to human-understandable concepts.
 
-When comparing base models to tool-fine-tuned models, new or shifted features emerge that correspond to tool-use patterns—features that recognize function-call JSON, tool schemas, and structured output modes. This suggests that tool-intent information is localized to specific internal features that can be identified and monitored.
+When comparing base models to tool-fine-tuned models, new or shifted features emerge that correspond to tool-use patterns: features that recognize function-call JSON, tool schemas, and structured output modes. This suggests that tool-intent information is localized to specific internal features that can be identified and monitored.
 
 **CorrSteer** (Cho et al., 2025) demonstrates that SAE features can be correlated with task success/failure and used to steer model behavior at inference time. The methodology applies to various tasks including QA, bias mitigation, and reasoning benchmarks, showing that internal features encode decision-relevant information that can be monitored and controlled.
 
@@ -157,7 +157,7 @@ Future work could explore:
 
 ## Conclusion
 
-The agent reliability challenge is real and multifaceted. While external observability platforms provide essential tooling for monitoring agent behavior, they operate on surface-level signals. Internal activation monitoring—whether via probes or SAEs—offers a complementary approach that provides visibility into what models internally intend, not just what they externally do.
+The agent reliability challenge is real and multifaceted. While external observability platforms provide essential tooling for monitoring agent behavior, they operate on surface-level signals. Internal activation monitoring (whether via probes or SAEs) offers a complementary approach that provides visibility into what models internally intend, not just what they externally do.
 
 For regulated industries and high-stakes applications, this internal visibility becomes a critical control mechanism. It enables detection of failure modes that external monitoring cannot observe: silent failures, spurious calls, and intent-action misalignments.
 
