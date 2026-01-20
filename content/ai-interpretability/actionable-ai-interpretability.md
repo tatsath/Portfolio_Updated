@@ -1,7 +1,7 @@
 ---
-title: "Interpretability as Runtime Governance"
-date: 2025-12-03T00:00:00Z
-lastmod: 2025-12-03T00:00:00Z
+title: "Interpretability: The Missing Link for AI"
+date: 2025-12-12T00:00:00Z
+lastmod: 2025-12-12T00:00:00Z
 draft: false
 description: 'From "Understanding Neurons" to Measurable Control Systems'
 author: ["H.T."]
@@ -9,155 +9,280 @@ categories: ["Opinion"]
 ShowToc: true
 ---
 
-## Introduction
-
-### From "Understanding Neurons" to Measurable Control Systems
-
-AI has moved from an academic pursuit to one of the most powerful economic and geopolitical forces shaping our century. Progress feels inevitable—the bus of AI won't be stopped—but how it unfolds is still within human control. We can choose what gets deployed, what gets audited, what gets constrained, and what gets trusted. Interpretability is the steering wheel.
-
-For years, interpretability lived in the "nice-to-have" bucket: intellectually beautiful, occasionally useful for debugging, but rarely treated as core infrastructure. That era is ending. The moment frontier models enter workflows that move money, allocate capital, approve credit, generate filings, or trigger compliance actions, a new standard appears: _governability at runtime_. Dario Amodei captured the mood of this transition bluntly: we're deploying increasingly capable systems whose internal mechanisms remain opaque, and that mismatch is becoming unacceptable as capability accelerates.
-
-This post is an argument for the next stage of interpretability. Not interpretability as a microscope that produces clever neuron anecdotes. Interpretability as a production discipline: measurable signals, continuous monitoring, controlled intervention, and audit-ready evidence. In other words: interpretability as runtime governance.
+# Interpretability Is the Missing Link of AI  
+*Why the next era of AI adoption will be won by teams who can **inspect, debug, and govern** models—not just prompt them.*
 
 ---
 
-## Why Interpretability is Now a Production Requirement
+## The invisible risk
 
-A useful way to understand the urgency is to start from the kind of failure that creates real damage. The next financial crisis won't require evil AI. It won't even require high error rates. It only requires a failure mode that stays invisible during validation, spreads across institutions through shared tooling and vendor models, and activates under stress. In past crises, we learned too late what we didn't understand because we couldn't see the mechanism—only the outputs. In modern systems, that blind spot is amplified by the fact that LLMs don't just output numbers; they output persuasive language with confidence cues that _feel_ like reasoning.
+There’s a sentence that sounds dramatic until you sit with it:
 
-That persuasion creates a new kind of operational risk: borrowed trust. We start trusting models because they sound competent, because benchmarks look good, because vendors are reputable, because internal demos are impressive—and because language itself is a powerful "trust interface." But fluency is not reliability. Output correctness can remain high while the internal mechanism is brittle, unstable, or misgeneralizing.
+**The next financial crisis could be one model failure away.**
 
-This is also why most AI pilots die in the same place: the gap between "it works" and "it can be shipped." Enterprises don't kill systems because they dislike innovation; they kill systems because they can't defend them. Model risk can't sign off. Legal can't justify. Compliance can't audit. Ops can't monitor. Leadership can't explain. When that happens, accuracy becomes irrelevant. The blocker is confidence—_defensible_ confidence that survives scrutiny.
+Not because a single model will “cause” a crisis in isolation—systems don’t collapse that cleanly—but because crises are born from **correlated opacity**: many institutions relying on mechanisms they cannot fully interrogate, operating under stress, while incentives push decision cycles faster than understanding.
 
-Interpretability belongs in production because it turns "trust me" into "here's the evidence."
+In 2008, models weren’t malicious. They were **opaque in practice**: assumptions, sensitivities, and failure modes were not legible to the people who depended on them. The damage wasn’t just “wrong numbers.” It was **delayed comprehension**—we learned too late what we didn’t understand.
 
----
+That same structure is returning, but with a new shape: modern AI systems can fail **quietly** while sounding correct.
 
-## The Production Reality
+### When “correct” is still unsafe
 
-### What Actually Goes Wrong
+The most dangerous failure mode in modern generative AI is not an obviously wrong answer. It is **a right-looking answer produced for unstable internal reasons**.
 
-When people talk past each other about interpretability, it's often because they're implicitly optimizing for different failure modes. In high-stakes domains, the failure modes that matter aren't abstract. They recur, they're expensive, and they're hard to fully prevent using black-box evaluation alone.
+That distinction matters because the operating environment always shifts:
+- inputs drift,
+- incentives change,
+- workflows expand,
+- models update,
+- tooling chains grow longer.
 
-Hallucination is the obvious one, but the more dangerous version isn't a silly mistake—it's a plausible fabrication that gets embedded into reports, decisions, or client communications. Drift is the silent one: data shifts, prompts evolve, vendor weights update, toolchains change, and behavior gradually slides until you notice after damage occurs. Tool misuse appears as systems become agentic: the risk shifts from "bad text" to "bad actions," like unsafe tool calls, incorrect database queries, policy violations, or automation that does the wrong thing quickly. Then there's the failure mode that breaks governance the hardest: silent misgeneralization. The model looks correct in tests, but internally learned a brittle heuristic. Under new conditions it fails without throwing an error—and keeps speaking confidently.
+A system can look fine under a narrow test harness and still be fragile under distribution shift. The real risk is not “inaccuracy,” it’s **internal fragility hidden by plausible outputs**.
 
-If you've built traditional software, the difference is stark: software fails loudly with stack traces and crashes. Modern AI often fails quietly with plausible outputs. The core risk isn't just wrong answers. It's _unknown wrongness_—and governance without internals struggles precisely because it can't distinguish competence from coincidence.
+The best public articulation of this is the "race" framing: model capability is compounding faster than interpretability maturity, and if interpretability arrives late, we still deploy—just deploy blind. [[1]](#ref-1)
 
----
+### From answers to actions
 
-## Why Mechanistic Interpretability Gets Criticized
+Generative AI is no longer just summarizing. It is being wired into workflows that **act**:
+- drafting client communications,
+- extracting covenant terms,
+- recommending operational steps,
+- routing cases,
+- calling tools,
+- orchestrating multi-step processes.
 
-### And Why Critics Aren't Wrong
+Once the model is in the loop, the failure modes are no longer confined to a wrong sentence. They become **cascades**: one small error becomes an irreversible chain reaction—especially in agentic systems where tool-use compounds mistakes.
 
-This is where serious writing has to be honest: many critiques of mechanistic interpretability are directionally correct. A lot of interpretability work has produced impressive demonstrations that don't naturally survive the enterprise test. They can be prompt-sensitive, layer-sensitive, model-version-sensitive, and difficult to operationalize. They often lack the artifacts enterprises need: reproducible evaluation, versioning, monitoring integration, and a story that can be defended to auditors.
-
-That "story" point matters. Without measurement, interpretability becomes narrative-driven: _this feature seems to mean X_, _this circuit looks like reasoning_, _this neuron fires on Y_. The Martian-style critique—"where is the benchmark?"—lands because enterprises don't buy insight; they buy controls. Without benchmarks and standardized evaluation, progress is hard to compare, claims are hard to validate, and adoption is hard to justify.
-
-The "one-layer fallacy" is another critique that's more right than people admit. Chris Olah's circuits framing made this vivid years ago: neural networks are best understood as computations distributed across components, not as single-neuron stories. Anthropic's work on dictionary learning and "features" reinforced the same point from a different angle: individual neurons are often the wrong unit; you need better decompositions to get meaningful structure.
-
-And then there's the enterprise constraint that quietly invalidates a lot of research assumptions: closed models. In many real deployments you don't have weights. You may not have unrestricted activations. You can't always run surgical interventions. Interpretability that depends on ideal access conditions can be excellent science and still be unusable governance.
-
-So yes—critiques are partially correct. The solution isn't to downplay them. The solution is to change the framing: stop treating interpretability as a microscope and start building it as infrastructure.
-
----
-
-## Interpretability as Infrastructure
-
-### Not Microscopy
-
-"Microscope interpretability" is impressive but fragile. It's often manual, expert-only, hard to reproduce, and triggered after something goes wrong. "Infrastructure interpretability" is different. It's automated, measurable, versioned, integrated into lifecycle workflows, and designed to generate durable artifacts: regression reports, model diffs, runtime monitors, incident reproduction bundles, and evidence packs.
-
-Goodfire's Eric Ho describes the destination in engineering terms: we want neural-network equivalents of the basic capabilities software engineers take for granted—understanding, debugging, and editing. That analogy is the right one. The goal isn't to admire the model's internals; it's to control outcomes under uncertainty.
-
-This is also why Neuronpedia's emergence is important. It isn't "just a website." It's part of the infrastructure thesis: shared tooling for exploring, testing, and operationalizing mechanistic interpretability results—especially around sparse autoencoders and feature dashboards. The platform idea matters because interpretation can't stay trapped in private notebooks if it's going to become governance.
+This is why interpretability is not a “nice-to-have.” It is the missing layer that makes scaled deployment **governable** rather than faith-based.
 
 ---
 
-## What "Actionable Interpretability" Means
+## Why interpretability gets dismissed
 
-To avoid hype, interpretability needs a minimal contract—a definition that is enforceable.
+If you want a convincing argument, you don’t pretend skepticism is ignorance. You concede what is true:
 
-Actionable interpretability produces signals that can be measured, monitored over time, and tied to real decisions. It isn't enough for a method to be interesting; it has to yield something operational: an alert, a gate, a mitigation, a defensible explanation, or a reliable way to localize a failure.
+A lot of interpretability work has looked fragile, slow, and academic to practitioners.
 
-This is where the field's "practical" voices become valuable. Chris Potts' "Assessing skeptical views of interpretability research" is a good example of skepticism used constructively: if interpretability is real, it should help us build better systems, not just watch them fail. And the pragmatic direction shows up in the growing emphasis on tools that are cheap enough to run continuously—like probes and other lightweight monitors. Neel Nanda's writing makes the point in a way engineers appreciate: transformers are linear-algebra machines; probes often fit naturally into that structure, and they can be fast enough to deploy at scale.
+And the skeptics are responding to real gaps.
 
-The meta-point is simple: interpretability becomes "real" in production when it participates in a closed loop: observe → measure → intervene → audit.
+### The engineer’s objection
 
----
+The strongest critique is simple:  
+**“Show me the tool engineers actually rely on.”**
 
-## The Lens Framing
+This objection is not anti-science. It is an insistence on an engineering bar:
+- repeatability,
+- automation,
+- revalidation after model updates,
+- measurable benefit against strong baselines,
+- clear operational integration.
 
-### Interpretability → Monitoring → Intervention → Audit
+That critique has been stated explicitly in "engineer-first" framings of interpretability progress, arguing that compelling narratives often outrun deployable leverage. [[7]](#ref-7)
 
-If you want interpretability to survive enterprise scrutiny, you have to build it like a system, not like a paper.
+### The benchmark gap
 
-Interpretability produces internal signals—features, directions, circuits, traces. Monitoring turns those signals into continuous indicators tied to failure modes: hallucination risk, tool-call risk, drift detection, misgeneralization alerts. Intervention turns monitoring into control: gating, fallbacks, escalation, and (where white-box access permits) targeted edits or steering. Audit turns the whole loop into evidence: what happened, why it happened, what changed, what was done, and how recurrence is prevented.
+Interpretability research historically produced insight without always producing **measurement**. That is why the benchmark question is not a footnote—it’s the bridge to enterprise adoption.
 
-That pipeline is the difference between "cool research" and "deployable governance."
+When benchmarks arrive, two things happen:
+1. weak methods stop being protected by aesthetics,
+2. progress becomes legible to non-believers.
 
----
+Recent benchmark work has sharpened this into a hard standard: if your elegant method cannot beat a simple baseline, you do not get to claim operational progress.
 
-## The Toolkit
+A concrete example is **AXBENCH**, which evaluates representation-based steering and shows how strong "boring" baselines can be. [[11]](#ref-11)  
+And interpretability-specific suites like **SAEBench** and datasets like **RAVEL** exist precisely because proxy metrics (like reconstruction loss) are not enough—you need evaluations tied to capabilities people care about: disentanglement, concept detection, and practical tasks. [[12]](#ref-12) [[13]](#ref-13)
 
-### Features, Circuits, Patching, Steering, Diffing
+### The closed-model trap
 
-The interpretability toolkit is converging toward a stack rather than a single magic method.
+In many enterprises, teams don’t have the kind of access that a lot of mechanistic interpretability assumes (weights, activations, intervention hooks). With frontier closed APIs, causal inspection is constrained.
 
-Sparse autoencoders and dictionary-learning approaches aim to carve activation space into more interpretable "features," addressing superposition and giving us better units of analysis than single neurons. Circuit-style work tries to capture mechanisms—how representations combine into computations—and offers a language for tracing decisions through the model. Intervention techniques like activation patching, and faster approximations like attribution patching, push interpretability toward causal claims: not just _what correlates with behavior_, but _what is necessary for behavior_.
+So the critique is fair:  
+**“How can interpretability matter if we can’t look inside the model?”**
 
-Then there's the most underappreciated production primitive: model diffing. When a model update causes "something feels off," you want a neural-network analogue of a git diff—what changed internally that explains what changed externally? Eric Ho explicitly calls out this need in the context of unexpected behavior shifts.
+But it becomes less paralyzing once you stop treating interpretability as a microscope and start treating it as infrastructure:
 
-This is also where interpretability intersects with evaluation practice. The joint evaluation work between Anthropic and OpenAI is a reminder that accountability is increasingly multi-layered: black-box evaluation, red-teaming, and (where possible) interpretability signals should reinforce each other rather than compete.
+- you can build **white-box controls** on open or internal models,
+- use them to develop **acceptance tests** and **detectors**,
+- and enforce system-level governance even when the vendor remains closed.
 
----
+In other words: closed models don’t eliminate interpretability—they shift where interpretability lives (in the stack, in evaluation gates, in vendor requirements, in hybrid architectures).
 
-## Why Finance Makes This Non-Optional
+### The one-layer fallacy
 
-Finance is where AI meets accountability. Models don't just "assist"; they influence decisions that must be defensible to committees, regulators, counterparties, and clients.
+Another legitimate complaint:  
+**“Understanding one neuron doesn’t explain a decision.”**
 
-In trading contexts, interpretability can help explain why a system flipped risk posture under seemingly similar information—especially valuable when markets move quickly and narratives shift. In credit workflows, interpretability can support evidence packs that connect document signals to risk features to recommendations, reducing the gap between model output and governance requirements. In AML and financial crime, interpretable internal indicators can reduce false positives and make alerts explainable in ways that survive audit.
+Correct. Reasoning and control are typically **distributed** and entangled. Single-layer “gotchas” collapse under distribution shift.
 
-The key pattern is consistent: in finance, the output is never the only artifact. You need the output _plus_ the trace _plus_ the controls _plus_ the audit trail. Interpretability is how you assemble that chain.
-
----
-
-## What the Field is Missing
-
-### Metrics, Versioning, Transfer
-
-If interpretability is going to become runtime governance, three gaps become impossible to ignore.
-
-The first is metrics. Not one universal benchmark, but a practical measurement stack aligned to operational questions: stability under perturbations, causal validity via interventions, coverage across failure modes, and reproducibility across versions.
-
-The second is versioning. Interpretability artifacts are not static truths; they're assets. Features get re-labeled. Monitors drift. Model updates change internal geometry. Enterprises will need lineage, compatibility, and change control for interpretability the same way they do for data pipelines and risk models.
-
-The third is transfer. Interpretability that only works on one model family, one layer, one prompt style, or one access regime will struggle to survive contact with production. Transfer doesn't have to be perfect, but it has to be measurable, re-validatable, and operationally tractable.
-
-If you want a forward-looking view of these open problems, there are now survey-style treatments explicitly framing "what's missing" as a research agenda rather than a set of complaints.
+This is exactly why the field has moved toward **features**, **circuits**, and **interventions**—because the goal is not a cute neuron story; it's identifying the mechanisms that actually compute behavior across contexts. [[3]](#ref-3) [[4]](#ref-4) [[5]](#ref-5)
 
 ---
 
-## How to Make This Real
+## What actually changed
 
-### Without Turning It Into Hype
+The enterprise perception of interpretability is often stuck in an old picture: researchers “staring at neurons.” That’s not where the frontier is.
 
-If you want interpretability to matter inside an organization, don't begin with "understanding neurons." Begin with one high-stakes question the business already cares about: where are we least confident, which failure mode scares us most, what evidence would we need to deploy safely?
+The shift is more important than it looks:
 
-Then build one minimal governance loop end-to-end. Pick a failure mode. Define the measurable signals—external and internal. Build a monitor. Stress it under perturbations. Attach mitigation (gating, escalation, fallback). Generate an evidence pack.
+**Interpretability is becoming a toolkit that can be engineered into systems.**
 
-Do that once and interpretability stops being a debate. It becomes capability.
+### Features at scale
+
+A core blockage in early mechanistic interpretability was **superposition**: many concepts represented in overlapping, mixed ways. Dictionary-learning approaches—often discussed under the banner of monosemanticity—operationalize a scalable idea:
+
+> learn a representation where internal activations become decomposable into more separable “features.”
+
+This reframes interpretability from hand-labeling neurons to building **feature dictionaries** that can be searched, tested, and versioned. [[3]](#ref-3)
+
+Platforms that expose these artifacts matter because they turn interpretability into something shareable:
+feature browsers, activation examples, clustering, labeling workflows, and reproducible pointers into the model's internals. [[6]](#ref-6)
+
+### From features to circuits
+
+Features answer: **“what is represented?”**  
+Circuits aim to answer: **“what computation is implemented?”**
+
+The circuits framing remains one of the cleanest statements of the mission: not merely correlate internal units with concepts, but reverse-engineer the algorithms the network uses. [[4]](#ref-4) [[5]](#ref-5)
+
+And the most persuasive circuit work tends to share a trait enterprises recognize immediately:
+it attempts to meet an engineering standard—faithfulness tests, quantitative evaluation, and clear criteria for what counts as an explanation.
+
+A flagship example is the **Indirect Object Identification** circuit work in GPT-2 small, which explicitly tries to bridge "toy interpretability" and "real model behavior" with measurable completeness. [[10]](#ref-10)
+
+### From observation to intervention
+
+The real inflection point is causality.
+
+Observation alone doesn’t govern a model. Governance requires the ability to answer:
+- *If I dampen this mechanism, does the behavior change the way the hypothesis predicts?*
+- *If I patch in an activation from a clean run, do I recover the correct behavior?*
+- *If a failure appears, can I localize a causal contributor rather than guess?*
+
+That's why activation patching / attribution patching became central as a "best practice" discipline: interpretability is not a story until it survives intervention tests. [[8]](#ref-8) [[9]](#ref-9)
+
+This is also where healthy skepticism belongs. If a method doesn't beat strong baselines on steering, detection, or control tasks, the method isn't "almost there"—it's not yet an operational tool. That standard is not anti-interpretability. It's what makes interpretability adoptable. [[11]](#ref-11) [[12]](#ref-12)
 
 ---
 
-## References
+## From microscope to control plane
 
-- Dario Amodei, _The Urgency of Interpretability_
-- Eric Ho (Goodfire), _On Optimism for Interpretability_
-- Anthropic, _Towards Monosemanticity: Decomposing Language Models with Dictionary Learning_
-- Chris Olah (Distill), _Circuits: Zoom In_
-- Anthropic Interpretability Team, _Transformer Circuits_
-- Neuronpedia (platform + docs on SAEs and features)
-- Chris Potts, _Assessing skeptical views of interpretability research_
-- Neel Nanda, writing on probes / mechanistic interpretability (Othello-GPT and related essays)
-- Neel Nanda, _Attribution Patching_ and best-practice discussions
-- OpenAI & Anthropic, shared public safety evaluation findings
+Here is the reframing that unifies nearly every point you listed:
+
+**Interpretability fails when it is treated as a microscope.  
+It works when it is treated as a control plane.**
+
+A microscope produces insights.  
+A control plane produces **controls**.
+
+### What a control plane produces
+
+A serious interpretability layer in a production stack should produce artifacts that survive scrutiny:
+
+**Model diffs**  
+What changed internally between v1 and v2? What new mechanisms appeared? What weakened?
+
+**Trace artifacts**  
+For a given decision: which internal features/circuits were active, and how did they route evidence?
+
+**Causal tests**  
+What happens when we suppress, patch, or amplify candidate mechanisms?
+
+**Runtime monitors**  
+Internal signals that predict failure earlier than output-based monitoring can.
+
+**Governance outputs**  
+Exportable evidence packs: versioned, reproducible, reviewable—built for audit, not vibes.
+
+This is why benchmarks like RAVEL and SAEBench are important: they move the field from "we saw something interesting" to "we can measure whether a method is reliably disentangling, localizing, and supporting practical interventions." [[12]](#ref-12) [[13]](#ref-13)
+
+### How this fits regulated deployment
+
+In regulated settings, the deployment question is rarely “does it work in a demo?” It is:
+
+- Can we bound failure modes?
+- Can we detect regressions after an update?
+- Can we provide an audit trail for decisions?
+- Can we show incident response procedures that are more rigorous than prompt tweaks?
+
+Public system cards and safety documentation are already converging on this governance shape—evaluation, mitigations, and structured evidence. Interpretability strengthens that layer by adding mechanistic evidence rather than purely black-box outcome tests. [[16]](#ref-16) [[17]](#ref-17)
+
+---
+
+## The leadership standard: evidence, not vibes
+
+Interpretability becomes convincing when it is framed as a leadership standard for high-stakes systems:
+
+If a model can move money, approve credit, generate legal text, or trigger operational actions, then it must be governable.
+
+“Governable” means: measurable, auditable, monitorable, and debuggable.
+
+### A minimal bar for high-stakes workflows
+
+A reasonable minimum standard looks like:
+- **repeatable evaluations** that detect drift and regressions,
+- **mechanism-aware checks** where available (features/circuits/interventions),
+- **upgrade gates** that prevent silent behavior shifts,
+- **incident playbooks** that go beyond “change the prompt and hope.”
+
+Real deployment incidents make the point: black-box evaluation can miss behavior shifts that only become obvious after release, and post-hoc debugging is painful when you can't see what changed internally. [[16]](#ref-16)
+
+### Why monitoring alone doesn’t close the gap
+
+Output monitoring is necessary—but it is not sufficient.
+
+Monitoring answers: *“Something went wrong.”*  
+Interpretability (as a control plane) answers: *“What changed, why it broke, and what control fixes it without collateral damage.”*
+
+The difference is the difference between:
+- reacting to symptoms, and
+- debugging root causes.
+
+This is the same pattern that separates fragile prototypes from real systems in every mature engineering discipline.
+
+---
+
+## Conclusion: the teams that win
+
+We are going to deploy powerful models. Incentives make that nearly inevitable. The real question is how we deploy them:
+
+- as black-box oracles surrounded by rituals, or  
+- as engineered systems surrounded by controls.
+
+The "race" framing captures the stakes: interpretability must mature quickly enough to matter. [[1]](#ref-1)  
+The optimism case is also real: the information is not hidden—we have computational graphs, internal structure, and early evidence that scalable methods can surface meaningful mechanisms. [[2]](#ref-2)  
+And the skeptic discipline is necessary: progress must be benchmarked against strong baselines, and explanations must survive causal tests. [[7]](#ref-7) [[11]](#ref-11)
+
+So here is the non-generic ending:
+
+**Interpretability is the difference between AI that scales and AI that scares.**  
+Not because it makes models transparent in a philosophical sense, but because it enables the engineering primitives that high-stakes deployment requires: diagnosis, control, evidence, and accountability.
+
+The teams that win the next era will not merely build smarter agents.  
+They will build **governable** agents.
+
+Interpretability—done as infrastructure—is how you get there.
+
+---
+
+## References {#references}
+
+- <a id="ref-1"></a>**1. The Urgency of Interpretability** — [Anthropic](https://www.anthropic.com/news/the-urgency-of-interpretability)  
+- <a id="ref-2"></a>**2. On Optimism for Interpretability** — [Goodfire](https://www.goodfire.ai/blog/on-optimism-for-interpretability)  
+- <a id="ref-3"></a>**3. Towards Monosemanticity: Decomposing Language Models with Dictionary Learning** — [Anthropic](https://arxiv.org/abs/2309.08600)  
+- <a id="ref-4"></a>**4. Circuits: Zoom In** — [Distill](https://distill.pub/2020/circuits/zoom-in/)  
+- <a id="ref-5"></a>**5. Transformer Circuits** — [Anthropic Interpretability](https://transformer-circuits.pub/)  
+- <a id="ref-6"></a>**6. Neuronpedia (SAEs, features, tooling)** — [Neuronpedia](https://www.neuronpedia.org/)  
+- <a id="ref-7"></a>**7. Engineer's Interpretability Sequence** — [LessWrong](https://www.lesswrong.com/posts/WTcQ3SE9f72xgt7y3/the-engineer-s-interpretability-sequence)  
+- <a id="ref-8"></a>**8. How to Think About Activation Patching** — [Alignment Forum](https://www.alignmentforum.org/posts/FysBv9ceBPB6Jf7nT/how-to-think-about-activation-patching)  
+- <a id="ref-9"></a>**9. Othello-GPT / board-state interpretability** — [arXiv](https://arxiv.org/abs/2210.12848)  
+- <a id="ref-10"></a>**10. Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small** — [OpenReview](https://openreview.net/forum?id=NpsVSN6o4ul)  
+- <a id="ref-11"></a>**11. AXBENCH: Steering LLMs? Even Simple Baselines…** — [OpenReview PDF](https://openreview.net/pdf?id=K2CckZjNy0)  
+- <a id="ref-12"></a>**12. SAEBench: A Comprehensive Benchmark for Sparse Autoencoders** — [arXiv PDF](https://arxiv.org/pdf/2503.09532)  
+- <a id="ref-13"></a>**13. RAVEL: Evaluating Interpretability Methods…** — [arXiv](https://arxiv.org/abs/2402.17700)  
+- <a id="ref-14"></a>**14. RAVEL project page** — [Stanford HAI](https://hai.stanford.edu/research/ravel-evaluating-interpretability-methods-on-disentangling-language-model-representations)  
+- <a id="ref-15"></a>**15. "Are sparse autoencoders useful for detecting harmful content?"** — [DeepMind Safety Research](https://deepmindsafetyresearch.medium.com/are-sparse-autoencoders-useful-for-detecting-harmful-content-8c48d3b9a6d0)  
+- <a id="ref-16"></a>**16. OpenAI postmortem on sycophantic behavior shift** — [OpenAI](https://openai.com/index/sycophancy-in-gpt-4o/)  
+- <a id="ref-17"></a>**17. Anthropic transparency / system documentation hub** — [Anthropic](https://www.anthropic.com/transparency)  
+- <a id="ref-18"></a>**18. AI pilots often fail to reach production** — [CIO](https://www.cio.com/article/221243/why-ai-pilots-fail-and-how-to-avoid-it.html)  
+- <a id="ref-19"></a>**19. Gartner on many AI projects not reaching production** — [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-01-08-gartner-says-80-percent-of-software-engineering-organizations-will-have-established-ai-engineering-practices-by-2027)  
+- <a id="ref-20"></a>**20. SAE Bench on Neuronpedia** — [Neuronpedia](https://www.neuronpedia.org/sae-bench/info)  

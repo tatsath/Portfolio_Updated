@@ -94,6 +94,16 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       .replace(/\s+/g, "-");
   };
 
+  // Extract explicit ID from heading text if present, return { text, id }
+  const extractHeadingId = (text: string): { text: string; id: string } => {
+    const idMatch = text.match(/\s*\{#([^}]+)\}$/);
+    if (idMatch) {
+      const cleanText = text.replace(/\s*\{#[^}]+\}$/, "").trim();
+      return { text: cleanText, id: idMatch[1] };
+    }
+    return { text: text.trim(), id: generateId(text) };
+  };
+
   const generateTOC = (content: string) => {
     const headingRegex = /^(#{2,4})\s+(.+)$/gm;
     const headings: Array<{ level: number; text: string; id: string }> = [];
@@ -102,16 +112,35 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
 
     while ((match = headingRegex.exec(content)) !== null) {
       const level = match[1]?.length || 0;
-      const text = match[2] || "";
-      let id = generateId(text);
-
-      const count = idCounts.get(id) || 0;
-      idCounts.set(id, count + 1);
-      if (count > 0) {
-        id = `${id}-${count}`;
+      let text = match[2] || "";
+      
+      // Strip out {#id} syntax from the text if present
+      const idMatch = text.match(/\s*\{#([^}]+)\}$/);
+      if (idMatch) {
+        text = text.replace(/\s*\{#[^}]+\}$/, "").trim();
+        // Use the explicit ID if provided
+        const explicitId = idMatch[1];
+        let id = explicitId;
+        
+        const count = idCounts.get(id) || 0;
+        idCounts.set(id, count + 1);
+        if (count > 0) {
+          id = `${id}-${count}`;
+        }
+        
+        headings.push({ level, text, id });
+      } else {
+        // No explicit ID, generate one from text
+        let id = generateId(text);
+        
+        const count = idCounts.get(id) || 0;
+        idCounts.set(id, count + 1);
+        if (count > 0) {
+          id = `${id}-${count}`;
+        }
+        
+        headings.push({ level, text, id });
       }
-
-      headings.push({ level, text, id });
     }
 
     return headings;
@@ -310,39 +339,44 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                   components={{
                     h1: () => null,
                     h2: ({ node, ...props }) => {
-                      const text = props.children?.toString() || "";
-                      const id = generateId(text);
+                      const rawText = props.children?.toString() || "";
+                      const { text, id } = extractHeadingId(rawText);
                       return (
                         <h2
                           id={id}
                           className="text-2xl font-bold mt-12 mb-6 scroll-mt-20 first:mt-0"
                           style={{ color: "var(--text-headings)" }}
                           {...props}
-                        />
+                        >
+                          {text}
+                        </h2>
                       );
                     },
                     h3: ({ node, ...props }) => {
-                      const text = props.children?.toString() || "";
-                      const id = generateId(text);
+                      const rawText = props.children?.toString() || "";
+                      const { text, id } = extractHeadingId(rawText);
                       return (
                         <h3
                           id={id}
                           className="text-xl font-bold mt-8 mb-4 scroll-mt-20"
                           style={{ color: "var(--text-headings)" }}
                           {...props}
-                        />
+                        >
+                          {text}
+                        </h3>
                       );
                     },
                     h4: ({ node, ...props }) => {
-                      const text = props.children?.toString() || "";
-                      const id = generateId(text);
+                      const rawText = props.children?.toString() || "";
+                      const { text, id } = extractHeadingId(rawText);
                       return (
                         <h4
                           id={id}
                           className="text-lg font-bold mt-6 mb-3 scroll-mt-20"
                           style={{ color: "var(--text-headings)" }}
-                          {...props}
-                        />
+                        >
+                          {text}
+                        </h4>
                       );
                     },
                     code: ({ node, className, children, ...props }) => (
