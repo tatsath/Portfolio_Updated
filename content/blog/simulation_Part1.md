@@ -2,7 +2,7 @@
 title: "Reality: The Simulation Spectrum - Part I"
 date: 2025-01-15T00:00:00Z
 lastmod: 2025-01-15T00:00:00Z
-draft: false
+draft: true
 description: "Exploring the simulation hypothesis through physics, philosophy, and medical science. Part I: Opening the Code and the glitches we can't ignore."
 categories: ["Physics"]
 ShowToc: true

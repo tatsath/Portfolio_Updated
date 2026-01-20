@@ -1,7 +1,7 @@
 ---
 title: "The Illusion of Chain-of-Thought Transparency"
-date: 2025-12-10T00:00:00Z
-lastmod: 2025-12-10T00:00:00Z
+date: 2025-11-10T00:00:00Z
+lastmod: 2025-11-10T00:00:00Z
 draft: false
 description: "Why reading reasoning text tells you very little about what models actually think."
 author: ["H.T"]
