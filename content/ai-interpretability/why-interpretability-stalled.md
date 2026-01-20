@@ -1,8 +1,8 @@
 ---
 title: "Why Interpretability Stalled - and and How It can Gets Unstuck"
-date: 2025-11-08T00:00:00Z
-lastmod: 2025-11-08T00:00:00Z
-draft: false
+date: 2025-11-07T00:00:00Z
+lastmod: 2025-11-07T00:00:00Z
+draft: true
 description: "The real bottlenecks that slowed interpretability progress, and what's quietly starting to change."
 author: ["H.T"]
 categories: ["Opinion"]

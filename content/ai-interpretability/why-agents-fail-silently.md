@@ -1,7 +1,7 @@
 ---
 title: "Why Agents Fail Silently"
-date: 2025-01-23T00:00:00Z
-lastmod: 2025-01-23T00:00:00Z
+date: 2025-12-10T00:00:00Z
+lastmod: 2025-12-10T00:00:00Z
 draft: true
 description: "Decision failures vs model failures."
 author: ["H.T"]
