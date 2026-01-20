@@ -77,7 +77,7 @@ This objection is not anti-science. It is an insistence on an engineering bar:
 - measurable benefit against strong baselines,
 - clear operational integration.
 
-That critique has been stated explicitly in "engineer-first" framings of interpretability progress, arguing that compelling narratives often outrun deployable leverage. [[7]](#ref-7)
+That critique has been stated explicitly in "engineer-first" framings of interpretability progress, arguing that compelling narratives often outrun deployable leverage. [[4]](#ref-4)
 
 ### The benchmark gap
 
@@ -89,8 +89,8 @@ When benchmarks arrive, two things happen:
 
 Recent benchmark work has sharpened this into a hard standard: if your elegant method cannot beat a simple baseline, you do not get to claim operational progress.
 
-A concrete example is **AXBENCH**, which evaluates representation-based steering and shows how strong "boring" baselines can be. [[11]](#ref-11)  
-And interpretability-specific suites like **SAEBench** and datasets like **RAVEL** exist precisely because proxy metrics (like reconstruction loss) are not enough—you need evaluations tied to capabilities people care about: disentanglement, concept detection, and practical tasks. [[12]](#ref-12) [[13]](#ref-13)
+A concrete example is **AXBENCH**, which evaluates representation-based steering and shows how strong "boring" baselines can be. [[6]](#ref-6)  
+And interpretability-specific suites like **SAEBench** exist precisely because proxy metrics (like reconstruction loss) are not enough—you need evaluations tied to capabilities people care about: disentanglement, concept detection, and practical tasks. [[5]](#ref-5)
 
 ### The closed-model trap
 
@@ -114,7 +114,7 @@ Another legitimate complaint:
 
 Correct. Reasoning and control are typically **distributed** and entangled. Single-layer “gotchas” collapse under distribution shift.
 
-This is exactly why the field has moved toward **features**, **circuits**, and **interventions**—because the goal is not a cute neuron story; it's identifying the mechanisms that actually compute behavior across contexts. [[3]](#ref-3) [[4]](#ref-4) [[5]](#ref-5)
+This is exactly why the field has moved toward **features**, **circuits**, and **interventions**—because the goal is not a cute neuron story; it's identifying the mechanisms that actually compute behavior across contexts. [[7]](#ref-7) [[11]](#ref-11) [[13]](#ref-13)
 
 ---
 
@@ -132,22 +132,22 @@ A core blockage in early mechanistic interpretability was **superposition**: man
 
 > learn a representation where internal activations become decomposable into more separable “features.”
 
-This reframes interpretability from hand-labeling neurons to building **feature dictionaries** that can be searched, tested, and versioned. [[3]](#ref-3)
+This reframes interpretability from hand-labeling neurons to building **feature dictionaries** that can be searched, tested, and versioned. [[7]](#ref-7) [[8]](#ref-8)
 
 Platforms that expose these artifacts matter because they turn interpretability into something shareable:
-feature browsers, activation examples, clustering, labeling workflows, and reproducible pointers into the model's internals. [[6]](#ref-6)
+feature browsers, activation examples, clustering, labeling workflows, and reproducible pointers into the model's internals. [[9]](#ref-9)
 
 ### From features to circuits
 
 Features answer: **“what is represented?”**  
 Circuits aim to answer: **“what computation is implemented?”**
 
-The circuits framing remains one of the cleanest statements of the mission: not merely correlate internal units with concepts, but reverse-engineer the algorithms the network uses. [[4]](#ref-4) [[5]](#ref-5)
+The circuits framing remains one of the cleanest statements of the mission: not merely correlate internal units with concepts, but reverse-engineer the algorithms the network uses. [[10]](#ref-10) [[11]](#ref-11) [[12]](#ref-12)
 
 And the most persuasive circuit work tends to share a trait enterprises recognize immediately:
 it attempts to meet an engineering standard—faithfulness tests, quantitative evaluation, and clear criteria for what counts as an explanation.
 
-A flagship example is the **Indirect Object Identification** circuit work in GPT-2 small, which explicitly tries to bridge "toy interpretability" and "real model behavior" with measurable completeness. [[10]](#ref-10)
+A flagship example is the **Indirect Object Identification** circuit work in GPT-2 small, which explicitly tries to bridge "toy interpretability" and "real model behavior" with measurable completeness. [[11]](#ref-11)
 
 ### From observation to intervention
 
@@ -158,9 +158,9 @@ Observation alone doesn’t govern a model. Governance requires the ability to a
 - *If I patch in an activation from a clean run, do I recover the correct behavior?*
 - *If a failure appears, can I localize a causal contributor rather than guess?*
 
-That's why activation patching / attribution patching became central as a "best practice" discipline: interpretability is not a story until it survives intervention tests. [[8]](#ref-8) [[9]](#ref-9)
+That's why activation patching / attribution patching became central as a "best practice" discipline: interpretability is not a story until it survives intervention tests. [[13]](#ref-13) [[14]](#ref-14)
 
-This is also where healthy skepticism belongs. If a method doesn't beat strong baselines on steering, detection, or control tasks, the method isn't "almost there"—it's not yet an operational tool. That standard is not anti-interpretability. It's what makes interpretability adoptable. [[11]](#ref-11) [[12]](#ref-12)
+This is also where healthy skepticism belongs. If a method doesn't beat strong baselines on steering, detection, or control tasks, the method isn't "almost there"—it's not yet an operational tool. That standard is not anti-interpretability. It's what makes interpretability adoptable. [[6]](#ref-6) [[5]](#ref-5)
 
 ---
 
@@ -193,7 +193,7 @@ Internal signals that predict failure earlier than output-based monitoring can.
 **Governance outputs**  
 Exportable evidence packs: versioned, reproducible, reviewable—built for audit, not vibes.
 
-This is why benchmarks like RAVEL and SAEBench are important: they move the field from "we saw something interesting" to "we can measure whether a method is reliably disentangling, localizing, and supporting practical interventions." [[12]](#ref-12) [[13]](#ref-13)
+This is why benchmarks like SAEBench are important: they move the field from "we saw something interesting" to "we can measure whether a method is reliably disentangling, localizing, and supporting practical interventions." [[5]](#ref-5)
 
 ### How this fits regulated deployment
 
@@ -204,7 +204,7 @@ In regulated settings, the deployment question is rarely “does it work in a de
 - Can we provide an audit trail for decisions?
 - Can we show incident response procedures that are more rigorous than prompt tweaks?
 
-Public system cards and safety documentation are already converging on this governance shape—evaluation, mitigations, and structured evidence. Interpretability strengthens that layer by adding mechanistic evidence rather than purely black-box outcome tests. [[16]](#ref-16) [[17]](#ref-17)
+Public system cards and safety documentation are already converging on this governance shape—evaluation, mitigations, and structured evidence. Interpretability strengthens that layer by adding mechanistic evidence rather than purely black-box outcome tests. [[3]](#ref-3) [[15]](#ref-15)
 
 ---
 
@@ -224,7 +224,7 @@ A reasonable minimum standard looks like:
 - **upgrade gates** that prevent silent behavior shifts,
 - **incident playbooks** that go beyond “change the prompt and hope.”
 
-Real deployment incidents make the point: black-box evaluation can miss behavior shifts that only become obvious after release, and post-hoc debugging is painful when you can't see what changed internally. [[16]](#ref-16)
+Real deployment incidents make the point: black-box evaluation can miss behavior shifts that only become obvious after release, and post-hoc debugging is painful when you can't see what changed internally. [[3]](#ref-3)
 
 ### Why monitoring isn't enough
 
@@ -250,7 +250,7 @@ We are going to deploy powerful models. Incentives make that nearly inevitable. 
 
 The "race" framing captures the stakes: interpretability must mature quickly enough to matter. [[1]](#ref-1)  
 The optimism case is also real: the information is not hidden—we have computational graphs, internal structure, and early evidence that scalable methods can surface meaningful mechanisms. [[2]](#ref-2)  
-And the skeptic discipline is necessary: progress must be benchmarked against strong baselines, and explanations must survive causal tests. [[7]](#ref-7) [[11]](#ref-11)
+And the skeptic discipline is necessary: progress must be benchmarked against strong baselines, and explanations must survive causal tests. [[16]](#ref-16) [[6]](#ref-6)
 
 So here is the non-generic ending:
 
@@ -266,23 +266,20 @@ Interpretability—done as infrastructure—is how you get there.
 
 ## References {#references}
 
-- <a id="ref-1"></a>**1. The Urgency of Interpretability** — [Anthropic](https://www.anthropic.com/news/the-urgency-of-interpretability)  
-- <a id="ref-2"></a>**2. On Optimism for Interpretability** — [Goodfire](https://www.goodfire.ai/blog/on-optimism-for-interpretability)  
-- <a id="ref-3"></a>**3. Towards Monosemanticity: Decomposing Language Models with Dictionary Learning** — [Anthropic](https://arxiv.org/abs/2309.08600)  
-- <a id="ref-4"></a>**4. Circuits: Zoom In** — [Distill](https://distill.pub/2020/circuits/zoom-in/)  
-- <a id="ref-5"></a>**5. Transformer Circuits** — [Anthropic Interpretability](https://transformer-circuits.pub/)  
-- <a id="ref-6"></a>**6. Neuronpedia (SAEs, features, tooling)** — [Neuronpedia](https://www.neuronpedia.org/)  
-- <a id="ref-7"></a>**7. Engineer's Interpretability Sequence** — [LessWrong](https://www.lesswrong.com/posts/WTcQ3SE9f72xgt7y3/the-engineer-s-interpretability-sequence)  
-- <a id="ref-8"></a>**8. How to Think About Activation Patching** — [Alignment Forum](https://www.alignmentforum.org/posts/FysBv9ceBPB6Jf7nT/how-to-think-about-activation-patching)  
-- <a id="ref-9"></a>**9. Othello-GPT / board-state interpretability** — [arXiv](https://arxiv.org/abs/2210.12848)  
-- <a id="ref-10"></a>**10. Interpretability in the Wild: a Circuit for Indirect Object Identification in GPT-2 small** — [OpenReview](https://openreview.net/forum?id=NpsVSN6o4ul)  
-- <a id="ref-11"></a>**11. AXBENCH: Steering LLMs? Even Simple Baselines…** — [OpenReview PDF](https://openreview.net/pdf?id=K2CckZjNy0)  
-- <a id="ref-12"></a>**12. SAEBench: A Comprehensive Benchmark for Sparse Autoencoders** — [arXiv PDF](https://arxiv.org/pdf/2503.09532)  
-- <a id="ref-13"></a>**13. RAVEL: Evaluating Interpretability Methods…** — [arXiv](https://arxiv.org/abs/2402.17700)  
-- <a id="ref-14"></a>**14. RAVEL project page** — [Stanford HAI](https://hai.stanford.edu/research/ravel-evaluating-interpretability-methods-on-disentangling-language-model-representations)  
-- <a id="ref-15"></a>**15. "Are sparse autoencoders useful for detecting harmful content?"** — [DeepMind Safety Research](https://deepmindsafetyresearch.medium.com/are-sparse-autoencoders-useful-for-detecting-harmful-content-8c48d3b9a6d0)  
-- <a id="ref-16"></a>**16. OpenAI postmortem on sycophantic behavior shift** — [OpenAI](https://openai.com/index/sycophancy-in-gpt-4o/)  
-- <a id="ref-17"></a>**17. Anthropic transparency / system documentation hub** — [Anthropic](https://www.anthropic.com/transparency)  
-- <a id="ref-18"></a>**18. AI pilots often fail to reach production** — [CIO](https://www.cio.com/article/221243/why-ai-pilots-fail-and-how-to-avoid-it.html)  
-- <a id="ref-19"></a>**19. Gartner on many AI projects not reaching production** — [Gartner](https://www.gartner.com/en/newsroom/press-releases/2024-01-08-gartner-says-80-percent-of-software-engineering-organizations-will-have-established-ai-engineering-practices-by-2027)  
-- <a id="ref-20"></a>**20. SAE Bench on Neuronpedia** — [Neuronpedia](https://www.neuronpedia.org/sae-bench/info)  
+- <a id="ref-1"></a>**1. Dario Amodei** — [_The Urgency of Interpretability_](https://www.darioamodei.com/post/the-urgency-of-interpretability) (Apr 2025)  
+- <a id="ref-2"></a>**2. Eric Ho (Goodfire)** — [_On Optimism for Interpretability_](https://www.goodfire.ai/blog/on-optimism-for-interpretability) (Jul 2025)  
+- <a id="ref-3"></a>**3. OpenAI** — [_Expanding on what we missed with sycophancy_](https://openai.com/index/expanding-on-sycophancy/) (May 2025)  
+- <a id="ref-4"></a>**4. Stephen Casper** — [_The Engineer's Interpretability Sequence_](https://www.alignmentforum.org/s/6GfFLrY9v8x7zMZ7N) (Alignment Forum)  
+- <a id="ref-5"></a>**5. Adam Karvonen et al.** — [_SAEBench: A Comprehensive Benchmark for Sparse Autoencoders_](https://openreview.net/forum?id=qrU3yNfX0d) (OpenReview)  
+- <a id="ref-6"></a>**6. AxBench** — [concept steering / method-vs-baseline benchmarking (project/paper hub)](https://axbench.org/)  
+- <a id="ref-7"></a>**7. Anthropic** — [_Towards Monosemanticity: Decomposing Language Models with Dictionary Learning_](https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning)  
+- <a id="ref-8"></a>**8. Transformer Circuits** — [_Decomposing Language Models With Dictionary Learning_](https://transformer-circuits.pub/2023/monosemantic-features)  
+- <a id="ref-9"></a>**9. Neuronpedia** — [SAE feature explorer and docs](https://www.neuronpedia.org/)  
+- <a id="ref-10"></a>**10. Chris Olah (Distill)** — [_Circuits: Zoom In_](https://distill.pub/2020/circuits/zoom-in/)  
+- <a id="ref-11"></a>**11. Anthropic Interpretability Team** — [_Transformer Circuits Thread_](https://transformer-circuits.pub/)  
+- <a id="ref-12"></a>**12. Anthropic Interpretability Team** — [_Transformer Circuits_](https://transformer-circuits.pub/) (overview / index)  
+- <a id="ref-13"></a>**13. Neel Nanda** — [_Attribution Patching_](https://www.neelnanda.io/) (methods + best practices)  
+- <a id="ref-14"></a>**14. Neel Nanda** — [writing on probes / mechanistic interpretability (incl. Othello-GPT materials)](https://www.neelnanda.io/)  
+- <a id="ref-15"></a>**15. Anthropic** — [model safety/evaluation artifacts (example transparency patterns)](https://www.anthropic.com/transparency)  
+- <a id="ref-16"></a>**16. Chris Potts** — [_Assessing skeptical views of interpretability research_](https://web.stanford.edu/~cgpotts/) (talk / notes)  
+- <a id="ref-17"></a>**17. CIO / IDC reporting** — [estimates on how many AI pilots fail to reach production (one widely cited figure: 88%)](https://www.cio.com/article/2471646/ai-projects-fail-in-production-88-percent-fail-to-make-it-from-pilot-to-production.html)  
