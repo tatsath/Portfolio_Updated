@@ -164,17 +164,17 @@ This is also where healthy skepticism belongs. If a method doesn't beat strong b
 
 ---
 
-## From microscope to control plane
+## Enterprise level interpretability
 
 Here is the reframing that unifies nearly every point you listed:
 
 **Interpretability fails when it is treated as a microscope.  
-It works when it is treated as a control plane.**
+It works when it is treated as enterprise-level interpretability.**
 
 A microscope produces insights.  
-A control plane produces **controls**.
+Enterprise-level interpretability produces **governance**.
 
-### What a control plane produces
+### What enterprise-level interpretability produces
 
 A serious interpretability layer in a production stack should produce artifacts that survive scrutiny:
 
@@ -208,7 +208,7 @@ Public system cards and safety documentation are already converging on this gove
 
 ---
 
-## The leadership standard: evidence, not vibes
+## The leadership standard
 
 Interpretability becomes convincing when it is framed as a leadership standard for high-stakes systems:
 
@@ -226,12 +226,12 @@ A reasonable minimum standard looks like:
 
 Real deployment incidents make the point: black-box evaluation can miss behavior shifts that only become obvious after release, and post-hoc debugging is painful when you can't see what changed internally. [[16]](#ref-16)
 
-### Why monitoring alone doesn’t close the gap
+### Why monitoring isn't enough
 
 Output monitoring is necessary—but it is not sufficient.
 
-Monitoring answers: *“Something went wrong.”*  
-Interpretability (as a control plane) answers: *“What changed, why it broke, and what control fixes it without collateral damage.”*
+Monitoring answers: *"Something went wrong."*  
+Enterprise-level interpretability answers: *"What changed, why it broke, and what control fixes it without collateral damage."*
 
 The difference is the difference between:
 - reacting to symptoms, and
