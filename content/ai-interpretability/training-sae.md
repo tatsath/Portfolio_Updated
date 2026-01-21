@@ -3,7 +3,7 @@ title: "Training Sparse Autoencoders That Produce Useful Features"
 date: 2025-11-26T00:00:00Z
 lastmod: 2025-11-26T00:00:00Z
 draft: false
-description: "A training-first interpretability write-up with Llama-3.1-8B-Instruct case study and practical failure-mode atlas"
+description: "A training-first interpretability write-up with Llama-3.1-8B-Instruct case study and practical failure-mode blueprint"
 author: ["H.T"]
 categories: ["Educational"]
 ShowToc: true
@@ -81,7 +81,7 @@ A practical example: Sparsify is ideal for the first pass where you discover tha
 
 ---
 
-### dictionary_learning
+### Dictionary Learning
 
 Repo: https://github.com/saprmarks/dictionary_learning **<u>[[4]](#ref-4)</u>**
 
@@ -151,12 +151,57 @@ This case study is included because it compresses the core lesson into one table
 
 Here is the training-centric summary (pattern is the point):
 
-| Layer | Latents | Loss recovered | L0 sparsity | Dead features | Absorption | What it implies |
-|:-----:|:-------:|:--------------:|:-----------:|:--------------:|:----------:|:---------------|
-| 4  | 1200 | 97.7% | ~298 | 67.7% | 0.395 | Deceptively good: high recon, wasted capacity, redundant basis |
-| 10 | 400  | 92.8% | ~115 | 40.8% | 0.286 | Still deceptively good: fewer issues, but deadness dominates |
-| 19 | 400  | 70.3% | ~167 | 19.5% | 0.264 | Healthiest tradeoff in this sweep |
-| 28 | 400  | 0.0%  | ~194 | ~1%  | 0.281 | Collapse / failure (treat as debugging first) |
+<table style="border-collapse: collapse; width: 100%; border: 1px solid #000;">
+<thead>
+<tr style="border: 1px solid #000;">
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">Layer</th>
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">Latents</th>
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">Loss recovered</th>
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">L0 sparsity</th>
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">Dead features</th>
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">Absorption</th>
+<th style="border: 1px solid #000; padding: 8px; text-align: center;">What it implies</th>
+</tr>
+</thead>
+<tbody>
+<tr style="border: 1px solid #000;">
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">4</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">1200</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">97.7%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">~298</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">67.7%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">0.395</td>
+<td style="border: 1px solid #000; padding: 8px;">Deceptively good: high recon, wasted capacity, redundant basis</td>
+</tr>
+<tr style="border: 1px solid #000;">
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">10</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">400</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">92.8%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">~115</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">40.8%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">0.286</td>
+<td style="border: 1px solid #000; padding: 8px;">Still deceptively good: fewer issues, but deadness dominates</td>
+</tr>
+<tr style="border: 1px solid #000;">
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">19</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">400</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">70.3%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">~167</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">19.5%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">0.264</td>
+<td style="border: 1px solid #000; padding: 8px;">Healthiest tradeoff in this sweep</td>
+</tr>
+<tr style="border: 1px solid #000;">
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">28</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">400</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">0.0%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">~194</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">~1%</td>
+<td style="border: 1px solid #000; padding: 8px; text-align: center;">0.281</td>
+<td style="border: 1px solid #000; padding: 8px;">Collapse / failure (treat as debugging first)</td>
+</tr>
+</tbody>
+</table>
 
 Two observations are worth lingering on.
 
@@ -175,7 +220,7 @@ Even if readers can’t replicate your environment exactly, these artifacts make
 
 ---
 
-## Failure-mode atlas
+## Failure-mode blueprint
 
 Over time, SAE training outcomes fall into a small set of recognizable buckets. Naming them helps teams stop arguing about one metric and start debugging the right thing.
 
@@ -189,7 +234,7 @@ A **duplicated** run is one where the dictionary is “alive,” but it’s aliv
 
 A **collapsed/noisy** run is one where metrics are nonsensical or reconstruction falls to zero. Treat these like engineering failures first: verify hooks, activation finiteness, dtype, scaling, and whether training updates are actually applied.
 
-The point of this atlas is safety: it keeps you from shipping interpretability stories that don’t survive evaluation. It also keeps you from wasting compute “tuning hyperparameters” when the real issue is you hooked the wrong tensor.
+The point of this blueprint is safety: it keeps you from shipping interpretability stories that don't survive evaluation. It also keeps you from wasting compute "tuning hyperparameters" when the real issue is you hooked the wrong tensor.
 
 ---
 
@@ -217,7 +262,7 @@ And I would make **out-of-sample evaluation early** a habit, because it catches 
 - <a id="ref-1"></a>**1. Adam Karvonen et al.** — [SAEBench](https://github.com/adamkarvonen/SAEBench) (GitHub)  
 - <a id="ref-2"></a>**2. SAE Bench** — [sae-bench on PyPI](https://pypi.org/project/sae-bench/) (PyPI)  
 - <a id="ref-3"></a>**3. EleutherAI** — [Sparsify](https://github.com/EleutherAI/sparsify) (GitHub)  
-- <a id="ref-4"></a>**4. Saprmarks** — [dictionary_learning](https://github.com/saprmarks/dictionary_learning) (GitHub)  
+- <a id="ref-4"></a>**4. Saprmarks** — [Dictionary Learning](https://github.com/saprmarks/dictionary_learning) (GitHub)  
 - <a id="ref-5"></a>**5. EleutherAI** — [_SAE seed similarity_](https://blog.eleuther.ai/sae_seed_similarity/) (blog post)  
 
 ---
