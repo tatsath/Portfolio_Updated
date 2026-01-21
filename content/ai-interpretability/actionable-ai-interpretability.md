@@ -16,9 +16,7 @@ ShowToc: true
 
 ## The invisible risk
 
-There’s a sentence that sounds dramatic until you sit with it:
-
-**The next financial crisis could be one model failure away.**
+**The next financial crisis could be one model failure away.** This might sound dramatic at first, but it may be true if you think about it deeply. 
 
 Not because a single model will "cause" a crisis in isolation (systems don't collapse that cleanly), but because crises are born from **correlated opacity**: many institutions relying on mechanisms they cannot fully interrogate, operating under stress, while incentives push decision cycles faster than understanding.
 
