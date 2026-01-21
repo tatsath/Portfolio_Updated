@@ -10,8 +10,6 @@ ShowToc: true
 mathjax: true
 ---
 # The Illusion of Chain-of-Thought Transparency  
-*December 10, 2025*  
-**Why reading reasoning text tells you very little about what models actually think.**
 
 ---
 
