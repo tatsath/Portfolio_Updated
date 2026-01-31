@@ -24,6 +24,8 @@ In 2008, models weren't malicious. They were **opaque in practice**: assumptions
 
 That same structure is returning, but with a new shape: modern AI systems can fail **quietly** while sounding correct.
 
+Today's AI is in many ways a **computer without a monitor**: we have guardrails, system prompts, and surface-level controls, but almost nothing that lets organizations look inside. Responsibility and control are not keeping pace with model development. When a self-driving car gets a ticket, it's the owner who pays—not the company that built the system. Organizations need to be ready with a response, and that requires visibility into how models behave, not just how they answer.
+
 ### When “correct” is still unsafe
 
 The most dangerous failure mode in modern generative AI is not an obviously wrong answer. It is **a right-looking answer produced for unstable internal reasons**.
@@ -61,21 +63,21 @@ If you want a convincing argument, you don’t pretend skepticism is ignorance. 
 
 A lot of interpretability work has looked fragile, slow, and academic to practitioners.
 
-And the skeptics are responding to real gaps.
+And the skeptics are responding to real gaps. The way to avoid interpretability being dismissed is not to argue past that gap but to give enterprises **deployable tools**—and in practice, the tools that are deployable often go under different names (observability, model governance, acceptance testing).
 
-### The engineer’s objection
+### The engineering bar
 
 The strongest critique is simple:  
-**“Show me the tool engineers actually rely on.”**
+**“Show me the interpretability tools that can be deployed in production.”**
 
-This objection is not anti-science. It is an insistence on an engineering bar:
+That bar is not anti-science. It is an insistence on:
 - repeatability,
 - automation,
 - revalidation after model updates,
 - measurable benefit against strong baselines,
 - clear operational integration.
 
-That critique has been stated explicitly in "engineer-first" framings of interpretability progress, arguing that compelling narratives often outrun deployable leverage. **<u>[[4]](#ref-4)</u>**
+That critique has been stated explicitly in "engineer-first" framings of interpretability progress: compelling narratives often outrun deployable leverage. **<u>[[4]](#ref-4)</u>**
 
 ### The benchmark gap
 
@@ -105,18 +107,18 @@ But it becomes less paralyzing once you stop treating interpretability as a micr
 
 In other words: closed models don't eliminate interpretability. They shift where interpretability lives (in the stack, in evaluation gates, in vendor requirements, in hybrid architectures).
 
-### The one-layer fallacy
+### Limited to one or two layers
 
 Another legitimate complaint:  
 **“Understanding one neuron doesn’t explain a decision.”**
 
-Correct. Reasoning and control are typically **distributed** and entangled. Single-layer “gotchas” collapse under distribution shift.
+Correct. Most mechanistic interpretability tools are still limited to one or two layers and some circuits; they don't yet go much beyond that. Reasoning and control are typically **distributed** and entangled. Single-layer “gotchas” collapse under distribution shift.
 
 This is exactly why the field has moved toward **features**, **circuits**, and **interventions**: because the goal is not a cute neuron story; it's identifying the mechanisms that actually compute behavior across contexts. **<u>[[7]](#ref-7)</u>** **<u>[[11]](#ref-11)</u>** **<u>[[13]](#ref-13)</u>**
 
 ---
 
-## What actually changed
+## Where the frontier is
 
 The enterprise perception of interpretability is often stuck in an old picture: researchers “staring at neurons.” That’s not where the frontier is.
 
@@ -206,9 +208,9 @@ Public system cards and safety documentation are already converging on this gove
 
 ---
 
-## The leadership standard
+## The high-stakes bar
 
-Interpretability becomes convincing when it is framed as a leadership standard for high-stakes systems:
+Interpretability becomes convincing when it is framed as the bar for high-stakes systems:
 
 If a model can move money, approve credit, generate legal text, or trigger operational actions, then it must be governable.
 
@@ -249,8 +251,6 @@ We are going to deploy powerful models. Incentives make that nearly inevitable. 
 The "race" framing captures the stakes: interpretability must mature quickly enough to matter. **<u>[[1]](#ref-1)</u>**  
 The optimism case is also real: the information is not hidden. We have computational graphs, internal structure, and early evidence that scalable methods can surface meaningful mechanisms. **<u>[[2]](#ref-2)</u>**  
 And the skeptic discipline is necessary: progress must be benchmarked against strong baselines, and explanations must survive causal tests. **<u>[[16]](#ref-16)</u>** **<u>[[6]](#ref-6)</u>**
-
-So here is the non-generic ending:
 
 **Interpretability is the difference between AI that scales and AI that scares.**  
 Not because it makes models transparent in a philosophical sense, but because it enables the engineering primitives that high-stakes deployment requires: diagnosis, control, evidence, and accountability.
