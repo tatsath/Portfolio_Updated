@@ -2,7 +2,7 @@
 title: "Interpretability : The Missing Link in Enterprise AI"
 date: 2026-01-05T00:00:00Z
 lastmod: 2026-01-05T00:00:00Z
-draft: false
+draft: true
 description: 'From "Understanding Neurons" to Measurable Control Systems'
 author: ["H.T."]
 categories: ["Opinion"]

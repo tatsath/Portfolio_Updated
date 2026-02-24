@@ -55,6 +55,15 @@ The current mechanistic interpretability toolkit works well where you have acces
 
 This, however, does not make interpretability irrelevant. It changes where and how you apply it: build deeper visibility on models you *can* inspect (open or internal), turn those results into acceptance tests, monitors, and governance requirements, and apply those controls at the system level even when part of the stack is closed.
 
+### Limited to one or two layers
+
+Another legitimate complaint:  
+**“Understanding one neuron doesn’t explain a decision.”**
+
+Correct. Most mechanistic interpretability tools are still limited to one or two layers and some circuits; they don't yet go much beyond that. Reasoning and control are typically **distributed** and entangled. Single-layer “gotchas” collapse under distribution shift.
+
+This is exactly why the field has moved toward **features**, **circuits**, and **interventions**: because the goal is not a cute neuron story; it's identifying the mechanisms that actually compute behavior across contexts. **<u>[[7]](#ref-7)</u>** **<u>[[11]](#ref-11)</u>** **<u>[[13]](#ref-13)</u>**
+
 ---
 
 ## The interpretability toolkit
