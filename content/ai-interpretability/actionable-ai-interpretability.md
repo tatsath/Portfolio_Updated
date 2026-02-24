@@ -10,7 +10,7 @@ ShowToc: true
 ---
 
 # Interpretability: The Missing Link in Enterprise AI  
-*What changes when enterprises can **inspect, debug, and govern** models — not just prompt them.*
+*How enterprises can **inspect, debug, and govern** AI internals — not just prompt them.*
 
 ---
 
