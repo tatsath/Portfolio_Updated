@@ -14,9 +14,9 @@ ShowToc: true
 
 ---
 
-If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator does — the person or organization that chose to deploy it. That is what "production" means: not usage, but ownership of consequences.
+If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator does — the person or organization that chose to deploy it. 
 
-Enterprise AI is crossing the same line. Once models shape credit decisions, draft legal text, move money, or trigger operational actions, "the model did it" stops being an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring. It requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
+Enterprise AI models now draft legal text, shape credit decisions, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
 
 However, today's AI is in many ways a **computer without a monitor**: we have guardrails, system prompts, and surface-level controls, but almost nothing that lets organizations look inside. Responsibility and control are not keeping pace with model development. Organizations need to be ready with a response, and that requires visibility into how models behave, not just how they answer.
 
