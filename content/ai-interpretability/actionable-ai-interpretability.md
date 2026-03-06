@@ -14,6 +14,8 @@ ShowToc: true
 
 ---
 
+## The invisible risk
+
 If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator does — the person or organization that chose to deploy it. 
 
 Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
