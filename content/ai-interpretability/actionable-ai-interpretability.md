@@ -10,13 +10,13 @@ ShowToc: true
 ---
 
 # From "Understanding Neurons" to Production-Ready Interpretability  
-*How enterprises can inspect, debug, and govern AI internals — not just prompt them.*
+*How enterprises can inspect, debug, and govern AI internals, not just prompt them.*
 
 ---
 
 ## The invisible risk
 
-If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator does — the person or organization that chose to deploy it. 
+If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator does: the person or organization that chose to deploy it. 
 
 Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
 
@@ -28,13 +28,13 @@ The most dangerous failure mode in modern generative AI is not an obviously wron
 
 That matters because the operating environment always shifts: inputs drift, workflows expand, tools change, models update. A system can look reliable under a narrow test harness and still be fragile under distribution shift. The real risk is not inaccuracy. It is internal fragility hidden by plausible outputs.
 
-This is why the "race" framing matters: capability is compounding faster than interpretability maturity, and if interpretability arrives late, we will still deploy — just deploy blind.
+This is why the "race" framing matters: capability is compounding faster than interpretability maturity, and if interpretability arrives late, we will still deploy, just deploy blind.
 
 ---
 
 ## Why it gets dismissed
 
-A convincing case for interpretability cannot treat skepticism as ignorance. It has to concede what is true: much of it — including **mechanistic interpretability**, the kind that looks inside the model at weights, activations, and how computation flows — has looked fragile, slow, and academic to practitioners.
+A convincing case for interpretability cannot treat skepticism as ignorance. It has to concede what is true: much of it (including **mechanistic interpretability**, the kind that looks inside the model at weights, activations, and how computation flows) has looked fragile, slow, and academic to practitioners.
 
 The skepticism is often a practical response because of one of the following reasons:
 
@@ -108,7 +108,7 @@ Circuits aim to answer: **"what computation is implemented?"**
 
 The circuits framing remains one of the cleanest statements of the mission: not merely correlate internal units with concepts, but reverse-engineer the algorithms the network uses.
 
-And the most persuasive circuit work tends to share a trait enterprises recognize immediately: it attempts to meet an engineering standard — faithfulness tests, quantitative evaluation, and clear criteria for what counts as an explanation.
+And the most persuasive circuit work tends to share a trait enterprises recognize immediately: it attempts to meet an engineering standard: faithfulness tests, quantitative evaluation, and clear criteria for what counts as an explanation.
 
 ---
 
@@ -116,7 +116,7 @@ And the most persuasive circuit work tends to share a trait enterprises recogniz
 
 Treating interpretability as a research tool produces insights. Treating it as an enterprise discipline produces governance.
 
-In practice, this means building interpretability into the production lifecycle: versioning, regression testing, incident response, and audit-ready documentation — so that interpretability does not depend on a few experts or a one-time investigation.
+In practice, this means building interpretability into the production lifecycle: versioning, regression testing, incident response, and audit-ready documentation, so that interpretability does not depend on a few experts or a one-time investigation.
 
 ### What enterprise interpretability should produce
 
@@ -135,7 +135,7 @@ What happens when we suppress, patch, or amplify candidate mechanisms?
 Internal signals that can warn of failure earlier than output-only monitoring.
 
 **Governance outputs**
-Exportable evidence packs: versioned, reproducible, reviewable, built for audit — not vibes.
+Exportable evidence packs: versioned, reproducible, reviewable, built for audit, not vibes.
 
 This is why benchmarks matter: they move interpretability from "we saw something interesting" to "we can measure whether a method reliably separates, localizes, and supports intervention."
 
@@ -145,7 +145,7 @@ In regulated settings, the deployment question is rarely "does it work in a demo
 
 Real deployment incidents show why: black-box evaluation can miss behavioral shifts that only become obvious after release, and post-hoc debugging is painful when you cannot see what changed internally.
 
-A common pattern looks like this: a model update clears pre-deployment tests, but under stress (a regional downturn, a new product, a policy change) it quietly changes how it treats a narrow slice of users. The first signal is a business KPI moving weeks later — higher delinquency, unusual refund patterns, or suddenly skewed case routing — with no clear story about what changed inside the system.
+A common pattern looks like this: a model update clears pre-deployment tests, but under stress (a regional downturn, a new product, a policy change) it quietly changes how it treats a narrow slice of users. The first signal is a business KPI moving weeks later (higher delinquency, unusual refund patterns, or suddenly skewed case routing), with no clear story about what changed inside the system.
 
 Interpretability makes that possible by adding mechanistic evidence rather than purely black-box outcome tests.
 
