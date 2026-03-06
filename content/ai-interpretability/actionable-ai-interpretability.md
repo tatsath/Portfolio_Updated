@@ -28,7 +28,7 @@ The most dangerous failure mode in modern generative AI is not an obviously wron
 
 That matters because the operating environment always shifts: inputs drift, workflows expand, tools change, models update. A system can look reliable under a narrow test harness and still be fragile under distribution shift. The real risk is not inaccuracy. It is internal fragility hidden by plausible outputs.
 
-This is why the "race" framing matters: capability is compounding faster than interpretability maturity, and if interpretability arrives late, we will still deploy, just deploy blind.
+This is why the "race" framing matters: capability is compounding faster than interpretability maturity, and if interpretability arrives late, we will still deploy, just deploy blind. **<u>[[1]](#ref-1)</u>**
 
 ---
 
@@ -44,13 +44,13 @@ The production bar is not anti-science. It is a demand for repeatability and ope
 
 Part of the skepticism also comes from comparison with traditional explainable AI (XAI). In many classical ML systems such as fraud detection models, interpretability is built into the modeling process and feature importance can be produced alongside the prediction. Generative AI models do not expose factors in that way because behavior emerges from distributed computations across many neurons and layers. Because of this difference, some methods, especially mechanistic interpretability, are often judged against the XAI standard and considered not yet production ready.
 
-The production-first critique makes this point directly: compelling narratives can outrun deployable leverage.
+The production-first critique makes this point directly: compelling narratives can outrun deployable leverage. **<u>[[4]](#ref-4)</u>**
 
 ### Not measurable
 
 Interpretability has historically produced insight without always producing clear success criteria. In many discussions it is assumed that robust benchmarks do not yet exist, which makes progress harder to evaluate. That is why benchmarks matter: they make progress legible and prevent "interesting" results from being confused with deployable control.
 
-Although it is often assumed that benchmarks do not yet exist, a few early ones are beginning to appear. For example, **AxBench** tests whether interpretability methods can reliably influence or detect model behavior, and **SAEBench** evaluates whether discovered internal features correspond to meaningful concepts and can support analysis or control.
+Although it is often assumed that benchmarks do not yet exist, a few early ones are beginning to appear. For example, **AxBench** tests whether interpretability methods can reliably influence or detect model behavior, and **SAEBench** evaluates whether discovered internal features correspond to meaningful concepts and can support analysis or control. **<u>[[6]](#ref-6)</u>** **<u>[[5]](#ref-5)</u>**
 
 ### Built for open-source
 
@@ -65,7 +65,7 @@ Another legitimate complaint:
 
 Correct. Most interpretability tools are still limited to one or two layers and some circuits; they don't yet go much beyond that. Reasoning and control are typically **distributed** and entangled. Single-layer "gotchas" collapse under distribution shift.
 
-This is exactly why the field has moved toward **features**, **circuits**, and **interventions**: the goal is not a neuron story but understanding the mechanisms that compute behavior across contexts. The next section looks at the emerging interpretability toolkit that enables this.
+This is exactly why the field has moved toward **features**, **circuits**, and **interventions**: the goal is not a neuron story but understanding the mechanisms that compute behavior across contexts. The next section looks at the emerging interpretability toolkit that enables this. **<u>[[7]](#ref-7)</u>** **<u>[[11]](#ref-11)</u>** **<u>[[13]](#ref-13)</u>**
 
 ---
 
@@ -87,9 +87,9 @@ A core challenge in early interpretability was that many concepts are mixed toge
 
 It learns representations where internal activations can be decomposed into more separable "features."
 
-This shifts interpretability from hand labeling neurons to building **feature dictionaries** that can be searched, tested, and versioned.
+This shifts interpretability from hand labeling neurons to building **feature dictionaries** that can be searched, tested, and versioned. **<u>[[7]](#ref-7)</u>** **<u>[[8]](#ref-8)</u>**
 
-Platforms that expose these artifacts make interpretability shareable through feature browsers, activation examples, clustering, labeling workflows, and reproducible pointers into the model's internals.
+Platforms that expose these artifacts make interpretability shareable through feature browsers, activation examples, clustering, labeling workflows, and reproducible pointers into the model's internals. **<u>[[9]](#ref-9)</u>**
 
 ### Causality
 
@@ -99,14 +99,14 @@ Observation alone does not govern a model. Governance requires answering a simpl
 
 Methods such as **attribution patching** help test this by checking whether changing an internal signal changes the model's output. If modifying a component changes the result, it is likely part of the mechanism.
 
-This is also where healthy skepticism belongs. If a method cannot reliably detect, steer, or diagnose behavior better than simple baselines, it is not yet an operational tool. That standard is what makes interpretability usable in practice.
+This is also where healthy skepticism belongs. If a method cannot reliably detect, steer, or diagnose behavior better than simple baselines, it is not yet an operational tool. That standard is what makes interpretability usable in practice. **<u>[[13]](#ref-13)</u>** **<u>[[14]](#ref-14)</u>** **<u>[[6]](#ref-6)</u>** **<u>[[5]](#ref-5)</u>**
 
 ### From features to circuits
 
 Features answer: **"what is represented?"**  
 Circuits aim to answer: **"what computation is implemented?"**
 
-The circuits framing remains one of the cleanest statements of the mission: not merely correlate internal units with concepts, but reverse-engineer the algorithms the network uses.
+The circuits framing remains one of the cleanest statements of the mission: not merely correlate internal units with concepts, but reverse-engineer the algorithms the network uses. **<u>[[10]](#ref-10)</u>** **<u>[[11]](#ref-11)</u>** **<u>[[12]](#ref-12)</u>**
 
 And the most persuasive circuit work tends to share a trait enterprises recognize immediately: it attempts to meet an engineering standard: faithfulness tests, quantitative evaluation, and clear criteria for what counts as an explanation.
 
@@ -137,17 +137,17 @@ Internal signals that can warn of failure earlier than output-only monitoring.
 **Governance outputs**
 Exportable evidence packs: versioned, reproducible, reviewable, built for audit, not vibes.
 
-This is why benchmarks matter: they move interpretability from "we saw something interesting" to "we can measure whether a method reliably separates, localizes, and supports intervention."
+This is why benchmarks matter: they move interpretability from "we saw something interesting" to "we can measure whether a method reliably separates, localizes, and supports intervention." **<u>[[5]](#ref-5)</u>**
 
 ### How this fits regulated deployment
 
 In regulated settings, the deployment question is rarely "does it work in a demo?" It is whether an organization can bound failure modes, detect issues after updates, produce audit trails for decisions, and demonstrate incident response procedures that go beyond prompt tweaks.
 
-Real deployment incidents show why: black-box evaluation can miss behavioral shifts that only become obvious after release, and post-hoc debugging is painful when you cannot see what changed internally.
+Real deployment incidents show why: black-box evaluation can miss behavioral shifts that only become obvious after release, and post-hoc debugging is painful when you cannot see what changed internally. **<u>[[3]](#ref-3)</u>**
 
 A common pattern looks like this: a model update clears pre-deployment tests, but under stress (a regional downturn, a new product, a policy change) it quietly changes how it treats a narrow slice of users. The first signal is a business KPI moving weeks later (higher delinquency, unusual refund patterns, or suddenly skewed case routing), with no clear story about what changed inside the system.
 
-Interpretability makes that possible by adding mechanistic evidence rather than purely black-box outcome tests.
+Interpretability makes that possible by adding mechanistic evidence rather than purely black-box outcome tests. **<u>[[3]](#ref-3)</u>** **<u>[[15]](#ref-15)</u>**
 
 ---
 
@@ -155,7 +155,9 @@ Interpretability makes that possible by adding mechanistic evidence rather than 
 
 Powerful AI models will be deployed. That is already becoming inevitable. The real choice is how we deploy them: as black boxes we hope behave well, or as systems we actively monitor and control.
 
-The "race" framing captures the stakes: interpretability must mature quickly enough to matter.
+The "race" framing captures the stakes: interpretability must mature quickly enough to matter. **<u>[[1]](#ref-1)</u>**  
+The optimism case is real: the information is not hidden; the computational graph is observable; early methods show that scalable approaches can surface meaningful structure. **<u>[[2]](#ref-2)</u>**  
+And the skeptic discipline is necessary: progress must be benchmarked against strong baselines, and explanations must survive causal tests. **<u>[[16]](#ref-16)</u>** **<u>[[6]](#ref-6)</u>**
 
 That means investing in it directly. Research teams, companies, and investors can accelerate progress by treating interpretability as core infrastructure rather than a side project. More teams need to work on it, more tools need to be built, and more startups will likely emerge around model diagnostics and control.
 
@@ -182,5 +184,4 @@ Interpretability is the missing link because it turns capability into governabil
 - <a id="ref-13"></a>**13. Neel Nanda** — [_Attribution Patching_](https://www.neelnanda.io/) (methods + best practices)  
 - <a id="ref-14"></a>**14. Neel Nanda** — [writing on probes / mechanistic interpretability (incl. Othello-GPT materials)](https://www.neelnanda.io/)  
 - <a id="ref-15"></a>**15. Anthropic** — [model safety/evaluation artifacts (example transparency patterns)](https://www.anthropic.com/transparency)  
-- <a id="ref-16"></a>**16. Chris Potts** — [_Assessing skeptical views of interpretability research_](https://web.stanford.edu/~cgpotts/) (talk / notes)  
-- <a id="ref-17"></a>**17. CIO / IDC reporting** — [estimates on how many AI pilots fail to reach production (one widely cited figure: 88%)](https://www.cio.com/article/2471646/ai-projects-fail-in-production-88-percent-fail-to-make-it-from-pilot-to-production.html)
+- <a id="ref-16"></a>**16. Chris Potts** — [_Assessing skeptical views of interpretability research_](https://web.stanford.edu/~cgpotts/) (talk / notes)
