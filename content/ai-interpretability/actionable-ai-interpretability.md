@@ -16,18 +16,18 @@ ShowToc: true
 
 ## The invisible risk
 
+
 If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator!
 
 The same logic applies to enterprise AI: the organization that deploys it is accountable for the model's outcomes, including customer complaints and external audits.
 
-![Widening enterprise AI understanding gap](/assets/EnterpriseAI.png)
-
-
-Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks, as shown in the chart at the beginning.
+Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
 
 However, today's AI is in many ways a **computer without a monitor**: we have guardrails, system prompts, and surface-level controls, but almost nothing that lets organizations look inside. Responsibility and control are not keeping pace with model development. Organizations need to be ready with a response, and that requires visibility into how models behave, not just how they answer.
 
-It is frankly shameful that enterprise-grade tooling to inspect and verify model internals after deployment is still close to zero. We are racing to build the shiniest and fastest models and systems, but when regulators knock or customers demand clarity, the black-box excuse breaks down.
+![Widening enterprise AI understanding gap](/assets/EnterpriseAI.png)
+
+It is frankly shameful that enterprise-grade tooling to inspect and verify model internals after deployment is still close to zero. As shown in the chart above, model capability is rising much faster than our ability to understand those models, and that gap is widening. We are racing to build the shiniest and fastest models and systems, but when regulators knock or customers demand clarity, the black-box excuse breaks down.
 
 This was never negotiable in traditional machine learning: if a loan was rejected, the institution had to explain why. The same principle applies now. If a generative AI system causes harm, we cannot blame the model provider alone; the deploying organization will be held accountable.
 
