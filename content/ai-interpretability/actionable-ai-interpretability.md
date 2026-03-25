@@ -18,7 +18,7 @@ ShowToc: true
 
 If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator!
 
-The same logic applies to enterprise AI: the organization that deploys it is accountable for the model’s outcomes—customer complaints, audits, and even regulatory fines.
+The same logic applies to enterprise AI: the organization that deploys it is accountable for the model's outcomes, including customer complaints and external audits.
 
 ![Widening enterprise AI understanding gap](/assets/ai_gap_final.svg)
 
@@ -27,9 +27,7 @@ Enterprise AI models now draft legal text, move money, and trigger operational a
 
 However, today's AI is in many ways a **computer without a monitor**: we have guardrails, system prompts, and surface-level controls, but almost nothing that lets organizations look inside. Responsibility and control are not keeping pace with model development. Organizations need to be ready with a response, and that requires visibility into how models behave, not just how they answer.
 
-
-
-It is frankly shameful that enterprise-grade tooling to inspect and verify model internals after deployment is still close to zero. We are racing to build the shiniest and fastest models, but when regulators knock or customers demand clarity, the black-box excuse breaks down.
+It is frankly shameful that enterprise-grade tooling to inspect and verify model internals after deployment is still close to zero. We are racing to build the shiniest and fastest models and systems, but when regulators knock or customers demand clarity, the black-box excuse breaks down.
 
 This was never negotiable in traditional machine learning: if a loan was rejected, the institution had to explain why. The same principle applies now. If a generative AI system causes harm, we cannot blame the model provider alone; the deploying organization will be held accountable.
 
@@ -124,7 +122,7 @@ And the most persuasive circuit work tends to share a trait enterprises recogniz
 
 ---
 
-## Moving to enterprise-level interpretability
+## Enterprise-level interpretability
 
 Treating interpretability as a research tool produces insights. Treating it as an enterprise discipline produces governance.
 
@@ -181,19 +179,19 @@ Interpretability is the missing link because it turns capability into governabil
 
 ## References {#references}
 
-- <a id="ref-1"></a>**1. Dario Amodei** — [_The Urgency of Interpretability_](https://www.darioamodei.com/post/the-urgency-of-interpretability) (Apr 2025)  
-- <a id="ref-2"></a>**2. Eric Ho (Goodfire)** — [_On Optimism for Interpretability_](https://www.goodfire.ai/blog/on-optimism-for-interpretability) (Jul 2025)  
-- <a id="ref-3"></a>**3. OpenAI** — [_Expanding on what we missed with sycophancy_](https://openai.com/index/expanding-on-sycophancy/) (May 2025)  
-- <a id="ref-4"></a>**4. Stephen Casper** — [_The Engineer's Interpretability Sequence_](https://www.alignmentforum.org/s/6GfFLrY9v8x7zMZ7N) (Alignment Forum)  
-- <a id="ref-5"></a>**5. Adam Karvonen et al.** — [_SAEBench: A Comprehensive Benchmark for Sparse Autoencoders_](https://openreview.net/forum?id=qrU3yNfX0d) (OpenReview)  
-- <a id="ref-6"></a>**6. AxBench** — [concept steering / method-vs-baseline benchmarking (project/paper hub)](https://axbench.org/)  
-- <a id="ref-7"></a>**7. Anthropic** — [_Towards Monosemanticity: Decomposing Language Models with Dictionary Learning_](https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning)  
-- <a id="ref-8"></a>**8. Transformer Circuits** — [_Decomposing Language Models With Dictionary Learning_](https://transformer-circuits.pub/2023/monosemantic-features)  
-- <a id="ref-9"></a>**9. Neuronpedia** — [SAE feature explorer and docs](https://www.neuronpedia.org/)  
-- <a id="ref-10"></a>**10. Chris Olah (Distill)** — [_Circuits: Zoom In_](https://distill.pub/2020/circuits/zoom-in/)  
-- <a id="ref-11"></a>**11. Anthropic Interpretability Team** — [_Transformer Circuits Thread_](https://transformer-circuits.pub/)  
-- <a id="ref-12"></a>**12. Anthropic Interpretability Team** — [_Transformer Circuits_](https://transformer-circuits.pub/) (overview / index)  
-- <a id="ref-13"></a>**13. Neel Nanda** — [_Attribution Patching_](https://www.neelnanda.io/) (methods + best practices)  
-- <a id="ref-14"></a>**14. Neel Nanda** — [writing on probes / mechanistic interpretability (incl. Othello-GPT materials)](https://www.neelnanda.io/)  
-- <a id="ref-15"></a>**15. Anthropic** — [model safety/evaluation artifacts (example transparency patterns)](https://www.anthropic.com/transparency)  
-- <a id="ref-16"></a>**16. Chris Potts** — [_Assessing skeptical views of interpretability research_](https://web.stanford.edu/~cgpotts/) (talk / notes)
+- <a id="ref-1"></a>**1. Dario Amodei** - [_The Urgency of Interpretability_](https://www.darioamodei.com/post/the-urgency-of-interpretability) (Apr 2025)  
+- <a id="ref-2"></a>**2. Eric Ho (Goodfire)** - [_On Optimism for Interpretability_](https://www.goodfire.ai/blog/on-optimism-for-interpretability) (Jul 2025)  
+- <a id="ref-3"></a>**3. OpenAI** - [_Expanding on what we missed with sycophancy_](https://openai.com/index/expanding-on-sycophancy/) (May 2025)  
+- <a id="ref-4"></a>**4. Stephen Casper** - [_The Engineer's Interpretability Sequence_](https://www.alignmentforum.org/s/6GfFLrY9v8x7zMZ7N) (Alignment Forum)  
+- <a id="ref-5"></a>**5. Adam Karvonen et al.** - [_SAEBench: A Comprehensive Benchmark for Sparse Autoencoders_](https://openreview.net/forum?id=qrU3yNfX0d) (OpenReview)  
+- <a id="ref-6"></a>**6. AxBench** - [concept steering / method-vs-baseline benchmarking (project/paper hub)](https://axbench.org/)  
+- <a id="ref-7"></a>**7. Anthropic** - [_Towards Monosemanticity: Decomposing Language Models with Dictionary Learning_](https://www.anthropic.com/research/towards-monosemanticity-decomposing-language-models-with-dictionary-learning)  
+- <a id="ref-8"></a>**8. Transformer Circuits** - [_Decomposing Language Models With Dictionary Learning_](https://transformer-circuits.pub/2023/monosemantic-features)  
+- <a id="ref-9"></a>**9. Neuronpedia** - [SAE feature explorer and docs](https://www.neuronpedia.org/)  
+- <a id="ref-10"></a>**10. Chris Olah (Distill)** - [_Circuits: Zoom In_](https://distill.pub/2020/circuits/zoom-in/)  
+- <a id="ref-11"></a>**11. Anthropic Interpretability Team** - [_Transformer Circuits Thread_](https://transformer-circuits.pub/)  
+- <a id="ref-12"></a>**12. Anthropic Interpretability Team** - [_Transformer Circuits_](https://transformer-circuits.pub/) (overview / index)  
+- <a id="ref-13"></a>**13. Neel Nanda** - [_Attribution Patching_](https://www.neelnanda.io/) (methods + best practices)  
+- <a id="ref-14"></a>**14. Neel Nanda** - [writing on probes / mechanistic interpretability (incl. Othello-GPT materials)](https://www.neelnanda.io/)  
+- <a id="ref-15"></a>**15. Anthropic** - [model safety/evaluation artifacts (example transparency patterns)](https://www.anthropic.com/transparency)  
+- <a id="ref-16"></a>**16. Chris Potts** - [_Assessing skeptical views of interpretability research_](https://web.stanford.edu/~cgpotts/) (talk / notes)
