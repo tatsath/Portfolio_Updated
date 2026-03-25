@@ -179,7 +179,7 @@ export default function HomePage() {
               position: "absolute",
               right: 0,
               top: 0,
-              width: "50%",
+              width: "42%",
               height: "100%",
               zIndex: 1,
               pointerEvents: "none",

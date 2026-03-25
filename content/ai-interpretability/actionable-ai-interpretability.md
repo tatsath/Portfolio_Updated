@@ -20,10 +20,10 @@ If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator
 
 The same logic applies to enterprise AI: the organization that deploys it is accountable for the model's outcomes, including customer complaints and external audits.
 
-![Widening enterprise AI understanding gap](/assets/ai_gap_final.svg)
+![Widening enterprise AI understanding gap](/assets/EnterpriseAI.png)
 
 
-Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
+Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks, as shown in the chart at the beginning.
 
 However, today's AI is in many ways a **computer without a monitor**: we have guardrails, system prompts, and surface-level controls, but almost nothing that lets organizations look inside. Responsibility and control are not keeping pace with model development. Organizations need to be ready with a response, and that requires visibility into how models behave, not just how they answer.
 
@@ -38,7 +38,7 @@ The most dangerous failure mode in modern generative AI is not an obviously wron
 
 That matters because the operating environment always shifts: inputs drift, workflows expand, tools change, models update. A system can look reliable under a narrow test harness and still be fragile under distribution shift. The real risk is not inaccuracy. It is internal fragility hidden by plausible outputs.
 
-This is why the "race" framing matters: capability is compounding faster than interpretability maturity, and if interpretability arrives late, we will still deploy, just deploy blind. **<u>[[1]](#ref-1)</u>**
+This is why the "race" framing matters: capability is compounding faster than interpretability maturity, and if interpretability arrives late, we will still deploy, just deploy blind, exactly as the gap in the opening chart suggests. **<u>[[1]](#ref-1)</u>**
 
 ---
 
