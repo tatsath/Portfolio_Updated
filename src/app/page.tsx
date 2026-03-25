@@ -3,6 +3,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Link from "next/link";
+import mainHeaderImage from "../../assets/Main.png";
 
 declare global {
   interface Window {
@@ -182,7 +183,7 @@ export default function HomePage() {
               height: "100%",
               zIndex: 1,
               pointerEvents: "none",
-              backgroundImage: "url('/assets/htny.webp')",
+              backgroundImage: `url('${mainHeaderImage.src}')`,
               backgroundSize: "cover",
               backgroundPosition: "70% center",
               backgroundRepeat: "no-repeat",
@@ -391,7 +392,7 @@ export default function HomePage() {
                   }}
                 >
                   <img
-                    src="/assets/htny.webp"
+                    src={mainHeaderImage.src}
                     alt="Hariom Tatsat"
                     style={{
                       width: "100%",

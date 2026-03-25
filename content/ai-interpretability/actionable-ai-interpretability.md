@@ -18,16 +18,21 @@ ShowToc: true
 
 If an autonomous car gets a ticket, who pays? Not the manufacturer. The operator!
 
-
 The same logic applies to enterprise AI: the organization that deploys it is accountable for the model’s outcomes—customer complaints, audits, and even regulatory fines.
+
+![Widening enterprise AI understanding gap](/assets/ai_gap_final.svg)
+
 
 Enterprise AI models now draft legal text, move money, and trigger operational actions. In this scenario, "the model did it" is no longer an explanation. The enterprise becomes responsible for outcomes, and responsibility requires more than output monitoring: it requires the ability to explain behavior, defend decisions, and show what changed when something breaks.
 
 However, today's AI is in many ways a **computer without a monitor**: we have guardrails, system prompts, and surface-level controls, but almost nothing that lets organizations look inside. Responsibility and control are not keeping pace with model development. Organizations need to be ready with a response, and that requires visibility into how models behave, not just how they answer.
 
-It is frankly shameful that, at enterprise level, we still have (almost) zero tooling to inspect and verify what a model is doing internally after it is deployed. The race for an ever-more amazing model has moved faster than the race for internals, and the resulting “black box” is often treated as unavoidable—something limited to the foundation model provider’s control, not the deployer’s. But once your system makes decisions that affect money, safety, or rights, “provider-only visibility” is no longer an excuse; it becomes a governance failure for everyone downstream.
 
-If a loan is approved, a customer is not served by a confidence score—they deserve a reason you can explain, reproduce, and challenge. If the outcome is wrong (or the model silently changes), regulators and auditors will ask who can show what triggered the behavior and who manages the risk when things drift. And if a car breaks, the fine and the reputational damage do not fall on the sensor supplier; they fall on the operator who deployed it. Enterprise AI should follow that same accountability model: interpretable signals for incident response, evidence for audits, and a clear owner for “why” when the system acts.
+
+It is frankly shameful that enterprise-grade tooling to inspect and verify model internals after deployment is still close to zero. We are racing to build the shiniest and fastest models, but when regulators knock or customers demand clarity, the black-box excuse breaks down.
+
+This was never negotiable in traditional machine learning: if a loan was rejected, the institution had to explain why. The same principle applies now. If a generative AI system causes harm, we cannot blame the model provider alone; the deploying organization will be held accountable.
+
 
 ### When "correct" is still unsafe
 
