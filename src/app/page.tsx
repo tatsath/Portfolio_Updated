@@ -250,13 +250,15 @@ export default function HomePage() {
                       justifyContent: "flex-start",
                     }}
                   >
-                    <span>AUTHOR</span>
+                    <span>FINANCIAL AI</span>
                     <span style={{ color: "var(--text-secondary)" }}>|</span>
-                    <span>AI QUANT</span>
+                    <span>AI INTERPRETABILITY</span>
                     <span style={{ color: "var(--text-secondary)" }}>|</span>
-                    <span>ADVISOR</span>
+                    <span>O'REILLY AUTHOR</span>
                     <span style={{ color: "var(--text-secondary)" }}>|</span>
-                    <span>STOIC</span>
+                    <span>RESEARCHER</span>
+                    <span style={{ color: "var(--text-secondary)" }}>|</span>
+                    <span>SPEAKER</span>
                   </div>
                   <div
                     style={{
@@ -378,7 +380,30 @@ export default function HomePage() {
                       textAlign: "left",
                     }}
                   >
-                    Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He has several research in AI and Machine Learning and is performing research in neuroscience-inspired mechanistic interpretability to understand the inner workings of LLMs. He advises startups and has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning. He has a deep interest in physics, philosophy and simulation hypothesis.
+                    Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He has several research in AI and Machine Learning and is performing research in neuroscience-inspired mechanistic interpretability to understand the inner workings of LLMs. He has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning. He has a deep interest in physics, philosophy and simulation hypothesis.
+                  </p>
+                  <p
+                    style={{
+                      fontSize: "clamp(14px, 2vw, 16px)",
+                      color: "var(--text-secondary)",
+                      fontStyle: "italic",
+                      marginTop: "8px",
+                      textAlign: "left",
+                    }}
+                  >
+                    Reach out for{" "}
+                    <a
+                      href="/contact"
+                      style={{
+                        color: "var(--text-headings)",
+                        fontWeight: 600,
+                        textDecoration: "underline",
+                        textUnderlineOffset: "2px",
+                      }}
+                    >
+                      speaking engagements or collaboration inquiries
+                    </a>
+                    .
                   </p>
                 </div>
                 
@@ -454,6 +479,81 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Featured Research Callout */}
+        <section
+          style={{
+            padding: "20px 0 40px",
+            backgroundColor: "var(--bg-main)",
+          }}
+        >
+          <div className="container" style={containerStyle}>
+            <a
+              href="https://arxiv.org/abs/2505.24650"
+              target="_blank"
+              rel="noopener noreferrer"
+              style={{ textDecoration: "none", display: "block" }}
+            >
+              <div
+                style={{
+                  border: "1px solid var(--shadow-color)",
+                  borderLeft: "4px solid var(--text-headings)",
+                  borderRadius: "10px",
+                  padding: "24px 28px",
+                  backgroundColor: "var(--bg-card)",
+                  boxShadow: "var(--card-shadow)",
+                  transition: "var(--hover-transition)",
+                }}
+              >
+                <div
+                  style={{
+                    fontSize: "12px",
+                    fontWeight: 700,
+                    letterSpacing: "0.12em",
+                    textTransform: "uppercase",
+                    color: "var(--text-secondary)",
+                    marginBottom: "8px",
+                  }}
+                >
+                  Featured Research · 2025
+                </div>
+                <div
+                  style={{
+                    fontSize: "clamp(18px, 2.5vw, 22px)",
+                    fontWeight: 700,
+                    color: "var(--text-headings)",
+                    marginBottom: "8px",
+                    lineHeight: 1.4,
+                  }}
+                >
+                  Beyond the Black Box: Interpretability of LLMs in Finance
+                </div>
+                <p
+                  style={{
+                    fontSize: "clamp(14px, 2vw, 16px)",
+                    color: "var(--text-primary)",
+                    lineHeight: 1.7,
+                    margin: 0,
+                  }}
+                >
+                  A framework for making large language models transparent,
+                  auditable, and trustworthy for high-stakes financial
+                  workflows.{" "}
+                  <span
+                    style={{
+                      color: "var(--text-headings)",
+                      fontWeight: 600,
+                      textDecoration: "underline",
+                      textUnderlineOffset: "2px",
+                    }}
+                  >
+                    Read on arXiv →
+                  </span>
+                </p>
+              </div>
+            </a>
+          </div>
+        </section>
+
         {/* Videos and Podcasts Section */}
         <section
           id="videos"
@@ -474,6 +574,208 @@ export default function HomePage() {
                 marginTop: "40px",
               }}
             >
+              {/* Video: Federal Reserve Bank of Atlanta - 2026 */}
+              <div
+                className="card"
+                data-aos="fade-up"
+                style={{
+                  ...cardStyle,
+                  border: "2px solid var(--accent-primary)",
+                }}
+              >
+                <a
+                  href="https://www.youtube.com/live/Obxt730kgp8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", display: "block" }}
+                >
+                  <div
+                    className="ccimg"
+                    style={{
+                      overflow: "hidden",
+                      position: "relative",
+                      height: "200px",
+                    }}
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/Obxt730kgp8/maxresdefault.jpg"
+                      alt="Federal Reserve Bank of Atlanta — Financial AI"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        transition: "transform 0.5s ease",
+                        objectFit: "cover",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "15px",
+                        left: "15px",
+                        padding: "6px 12px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "11px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.1em",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      Conference Video
+                    </div>
+                  </div>
+                </a>
+                <div
+                  className="cdesc"
+                  style={{
+                    padding: "25px",
+                    flexGrow: 1,
+                    fontSize: "16px",
+                    lineHeight: 1.5,
+                    color: "var(--text-primary)",
+                    backgroundColor: "var(--bg-card)",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 500,
+                      color: "var(--text-secondary)",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Conference Video · Federal Reserve Bank of Atlanta
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Democratizing Financial AI — Federal Reserve Bank of Atlanta
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    2026
+                  </p>
+                </div>
+              </div>
+
+              {/* Video: NVIDIA GTC 2026 */}
+              <div
+                className="card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                style={{
+                  ...cardStyle,
+                  border: "2px solid var(--accent-primary)",
+                }}
+              >
+                <a
+                  href="https://www.nvidia.com/en-us/on-demand/session/gtc26-s82175/"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", display: "block" }}
+                >
+                  <div
+                    className="ccimg"
+                    style={{
+                      overflow: "hidden",
+                      position: "relative",
+                      height: "200px",
+                      backgroundColor: "#76b900",
+                    }}
+                  >
+                    <img
+                      src="/assets/nvidia-gtc-logo.png"
+                      alt="NVIDIA GTC — AI Interpretability in Finance"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        transition: "transform 0.5s ease",
+                        objectFit: "contain",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "15px",
+                        left: "15px",
+                        padding: "6px 12px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "11px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.1em",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      Conference Video
+                    </div>
+                  </div>
+                </a>
+                <div
+                  className="cdesc"
+                  style={{
+                    padding: "25px",
+                    flexGrow: 1,
+                    fontSize: "16px",
+                    lineHeight: 1.5,
+                    color: "var(--text-primary)",
+                    backgroundColor: "var(--bg-card)",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 500,
+                      color: "var(--text-secondary)",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Conference Video · NVIDIA GTC 2026
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    AI Interpretability in Finance
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    2026
+                  </p>
+                </div>
+              </div>
+
               {/* Video: AI Interpretability - 2025 (Latest) */}
               <div
                 className="card"
@@ -1712,6 +2014,21 @@ export default function HomePage() {
             <div className="ctitle" style={ctitleStyle}>
               Speaking
             </div>
+
+            <p
+              style={{
+                fontSize: "clamp(15px, 2vw, 17px)",
+                color: "var(--text-secondary)",
+                lineHeight: 1.7,
+                textAlign: "center",
+                maxWidth: "760px",
+                margin: "0 auto 30px",
+              }}
+            >
+              Featured speaker at leading AI and finance conferences. Recent:
+              Federal Reserve Bank of Atlanta 30th FMC (2026), NVIDIA GTC (2026),
+              AI4 2025.
+            </p>
 
             {/* Year Filter */}
             <div style={{ display: "flex", gap: "10px", marginBottom: "30px", flexWrap: "wrap", justifyContent: "center" }}>

@@ -1,0 +1,82 @@
+<svg viewBox="0 0 960 620" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:14px;fill:#64748b;}
+    .rowlbl{font-size:11.5px;font-weight:600;fill:#0f172a;}
+    .val{font-size:11px;font-weight:700;fill:#334155;}
+    .valw{font-size:11px;font-weight:700;fill:#ffffff;}
+    .tick{font-size:11px;fill:#94a3b8;}
+    .leg{font-size:11px;fill:#475569;}
+  </style>
+  <rect width="960" height="620" fill="#ffffff"/>
+  <text class="title" x="40" y="42">Offer &amp; price ladder</text>
+  <text class="subtitle" x="40" y="66">Engagement fees by offer (one-time unless marked recurring) — the ladder a diagnostic can climb</text>
+
+  <!-- gridlines -->
+  <g stroke="#eef2f7" stroke-width="1">
+    <line x1="230" y1="100" x2="230" y2="548"/>
+    <line x1="341.7" y1="100" x2="341.7" y2="548"/>
+    <line x1="453.3" y1="100" x2="453.3" y2="548"/>
+    <line x1="565" y1="100" x2="565" y2="548"/>
+    <line x1="676.7" y1="100" x2="676.7" y2="548"/>
+    <line x1="788.3" y1="100" x2="788.3" y2="548"/>
+    <line x1="900" y1="100" x2="900" y2="548"/>
+  </g>
+  <g class="tick" text-anchor="middle">
+    <text x="230" y="566">$0</text>
+    <text x="341.7" y="566">$50K</text>
+    <text x="453.3" y="566">$100K</text>
+    <text x="565" y="566">$150K</text>
+    <text x="676.7" y="566">$200K</text>
+    <text x="788.3" y="566">$250K</text>
+    <text x="900" y="566">$300K</text>
+  </g>
+
+  <!-- bars -->
+  <!-- 1 Diagnostic -->
+  <text class="rowlbl" x="215" y="144" text-anchor="end">AI Operating Diagnostic</text>
+  <rect x="263.5" y="127" width="33.5" height="26" rx="4" fill="#60a5fa"/>
+  <text class="val" x="303" y="144">$15–30K</text>
+  <!-- 2 Doc Factory Diagnostic -->
+  <text class="rowlbl" x="215" y="192" text-anchor="end">Document Factory Diagnostic</text>
+  <rect x="285.8" y="175" width="55.9" height="26" rx="4" fill="#60a5fa"/>
+  <text class="val" x="347" y="192">$25–50K</text>
+  <!-- 3 DDQ -->
+  <text class="rowlbl" x="215" y="240" text-anchor="end">DDQ / Investor Pack (add-on)</text>
+  <rect x="285.8" y="223" width="111.7" height="26" rx="4" fill="#8b5cf6"/>
+  <text class="val" x="403" y="240">$25–75K</text>
+  <!-- 4 RIA Governance -->
+  <text class="rowlbl" x="215" y="288" text-anchor="end">RIA AI Governance</text>
+  <rect x="341.7" y="271" width="167.5" height="26" rx="4" fill="#2563eb"/>
+  <text class="val" x="515" y="288">$50–125K</text>
+  <!-- 5 Trading (demoted) -->
+  <text class="rowlbl" x="215" y="336" text-anchor="end">Trading Validation Lab</text>
+  <rect x="341.7" y="319" width="223.3" height="26" rx="4" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="5,4"/>
+  <text class="val" x="571" y="336">$50–150K</text>
+  <!-- 6 Document Factory -->
+  <text class="rowlbl" x="215" y="384" text-anchor="end">Financial Document Factory</text>
+  <rect x="397.5" y="367" width="279.2" height="26" rx="4" fill="#2563eb"/>
+  <text class="val" x="683" y="384">$75–200K</text>
+  <!-- 7 HF Research -->
+  <text class="rowlbl" x="215" y="432" text-anchor="end">Hedge Fund Research</text>
+  <rect x="453.3" y="415" width="335" height="26" rx="4" fill="#0d9488"/>
+  <text class="val" x="794" y="432">$100–250K</text>
+  <!-- 8 Private Credit (flagship) -->
+  <text class="rowlbl" x="215" y="480" text-anchor="end">Private Credit Integrity</text>
+  <rect x="565" y="463" width="335" height="26" rx="4" fill="#1e3a8a" stroke="#f59e0b" stroke-width="2"/>
+  <text class="valw" x="575" y="480">$150–300K · flagship</text>
+
+  <!-- separator + retainer -->
+  <line x1="40" y1="503" x2="900" y2="503" stroke="#e2e8f0" stroke-width="1" stroke-dasharray="3,3"/>
+  <text class="rowlbl" x="215" y="528" text-anchor="end">Fractional retainer</text>
+  <rect x="252.3" y="511" width="44.7" height="26" rx="4" fill="#f59e0b"/>
+  <text class="val" x="303" y="528" fill="#b45309" font-weight="700">$10–30K / mo · recurring ★</text>
+
+  <!-- legend -->
+  <rect x="40" y="588" width="14" height="12" rx="3" fill="#1e3a8a" stroke="#f59e0b" stroke-width="2"/>
+  <text class="leg" x="60" y="598">Flagship</text>
+  <rect x="140" y="588" width="14" height="12" rx="3" fill="#f59e0b"/>
+  <text class="leg" x="160" y="598">Recurring revenue</text>
+  <rect x="300" y="588" width="14" height="12" rx="3" fill="#cbd5e1" stroke="#94a3b8" stroke-width="1.5" stroke-dasharray="3,3"/>
+  <text class="leg" x="320" y="598">Demoted to content for now</text>
+</svg>

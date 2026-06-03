@@ -1,0 +1,32 @@
+<svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">The conversation vs. the risk</text>
+  <text x="40" y="68" font-size="13.5" fill="#5a6b78" font-style="italic">Tool selection is a procurement decision. AI risk is a governance problem.</text>
+  <text x="40" y="86" font-size="13.5" fill="#5a6b78" font-style="italic">They are not the same project.</text>
+
+  <!-- divider -->
+  <line x1="440" y1="110" x2="440" y2="372" stroke="#dde3e7" stroke-width="1.5" stroke-dasharray="4,4"/>
+
+  <!-- LEFT: the conversation -->
+  <text x="60" y="136" font-size="15" font-weight="bold" fill="#5a6b78">THE CONVERSATION EVERYONE'S HAVING</text>
+  <g font-size="13" fill="#5a6b78">
+    <text x="60" y="172">· which notetaker?</text>
+    <text x="60" y="200">· meeting capture &amp; transcription</text>
+    <text x="60" y="228">· CRM auto-sync</text>
+    <text x="60" y="256">· minutes saved per meeting</text>
+    <text x="60" y="284">· 14 products to choose from</text>
+  </g>
+  <rect x="56" y="306" width="350" height="44" rx="6" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.2"/>
+  <text x="231" y="333" text-anchor="middle" font-size="12.5" fill="#5a6b78" font-style="italic">a procurement decision</text>
+
+  <!-- RIGHT: where the risk lives -->
+  <text x="468" y="136" font-size="15" font-weight="bold" fill="#8a3328">WHERE THE CCO'S RISK ACTUALLY LIVES</text>
+  <g font-size="13" fill="#3d4d58">
+    <text x="468" y="172">· which uses are approved / prohibited?</text>
+    <text x="468" y="200">· what client data touches which tool?</text>
+    <text x="468" y="228">· who reviews client-facing output?</text>
+    <text x="468" y="256">· is the claim substantiated?</text>
+    <text x="468" y="284">· can we reconstruct it in an exam?</text>
+  </g>
+  <rect x="464" y="306" width="360" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.4"/>
+  <text x="644" y="333" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8a3328">a governance problem</text>
+</svg>

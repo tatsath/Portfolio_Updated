@@ -1,0 +1,30 @@
+<svg viewBox="0 0 880 320" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">Two reads of one print</text>
+  <text x="40" y="68" font-size="14" fill="#5a6b78" font-style="italic">The summary is the part everyone automates — and the part that matters least.</text>
+
+  <!-- timeline baseline -->
+  <line x1="60" y1="170" x2="820" y2="170" stroke="#c3cbd1" stroke-width="2"/>
+  <text x="60" y="300" font-size="12.5" fill="#2a7d6f" font-style="italic">AI's real leverage sits on the two ends — not the summary in the middle.</text>
+
+  <!-- PRE-READ -->
+  <rect x="60" y="92" width="300" height="60" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.6"/>
+  <text x="210" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4d44">PRE-READ &#160;(T–)</text>
+  <text x="210" y="138" text-anchor="middle" font-size="11.5" fill="#3f6f66">assemble the prep pack vs. last quarter's watch-list</text>
+  <circle cx="210" cy="170" r="6" fill="#2a7d6f"/>
+
+  <!-- THE PRINT (small, plain) -->
+  <rect x="392" y="150" width="96" height="40" rx="6" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.4"/>
+  <text x="440" y="166" text-anchor="middle" font-size="12" font-weight="bold" fill="#5a6b78">the print</text>
+  <text x="440" y="181" text-anchor="middle" font-size="10.5" fill="#8a97a1">/ the call</text>
+  <circle cx="440" cy="170" r="6" fill="#8a97a1"/>
+
+  <!-- POST-READ -->
+  <rect x="520" y="92" width="300" height="60" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.6"/>
+  <text x="670" y="118" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4d44">POST-READ &#160;(T+)</text>
+  <text x="670" y="138" text-anchor="middle" font-size="11.5" fill="#3f6f66">reconcile · extract deltas · update the thesis</text>
+  <circle cx="670" cy="170" r="6" fill="#2a7d6f"/>
+
+  <!-- connectors from boxes to baseline -->
+  <line x1="210" y1="152" x2="210" y2="164" stroke="#2a7d6f" stroke-width="1.5"/>
+  <line x1="670" y1="152" x2="670" y2="164" stroke="#2a7d6f" stroke-width="1.5"/>
+</svg>

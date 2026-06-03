@@ -1,0 +1,97 @@
+<svg viewBox="0 0 1000 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:14px;fill:#64748b;}
+    .h{font-size:11.5px;font-weight:800;fill:#ffffff;}
+    .b{font-size:9.3px;fill:#334155;}
+    .gate{font-size:12.5px;font-weight:700;fill:#92400e;}
+    .gsub{font-size:11px;fill:#b45309;}
+    .insight{font-size:13px;font-style:italic;fill:#0f172a;font-weight:600;}
+  </style>
+  <rect width="1000" height="560" fill="#ffffff"/>
+  <text class="title" x="30" y="42">Evidence + Workflow + Controls</text>
+  <text class="subtitle" x="30" y="66">The durable product layer — a governed pipeline, not just retrieval-augmented generation</text>
+
+  <!-- stage boxes -->
+  <!-- 1 Ingestion -->
+  <rect x="30" y="132" width="142" height="180" rx="8" fill="#ffffff" stroke="#93c5fd" stroke-width="1.5"/>
+  <rect x="30" y="132" width="142" height="28" rx="8" fill="#93c5fd"/>
+  <text class="h" x="101" y="151" text-anchor="middle" fill="#0f172a">1 · Ingestion</text>
+  <text class="b" x="40" y="180">• PDFs · transcripts</text>
+  <text class="b" x="40" y="196">• Filings · CRM exports</text>
+  <text class="b" x="40" y="212">• Portfolio files</text>
+  <text class="b" x="40" y="228">• Credit agreements</text>
+  <text class="b" x="40" y="244">• DDQs · policies</text>
+
+  <!-- 2 Parsing -->
+  <rect x="190" y="132" width="142" height="180" rx="8" fill="#ffffff" stroke="#60a5fa" stroke-width="1.5"/>
+  <rect x="190" y="132" width="142" height="28" rx="8" fill="#60a5fa"/>
+  <text class="h" x="261" y="151" text-anchor="middle">2 · Parsing</text>
+  <text class="b" x="200" y="180">• Unsiloed · Docling</text>
+  <text class="b" x="200" y="196">• OCR · tables</text>
+  <text class="b" x="200" y="212">• Section detection</text>
+  <text class="b" x="200" y="228">• Source-page</text>
+  <text class="b" x="208" y="244">preservation</text>
+
+  <!-- 3 Retrieval -->
+  <rect x="350" y="132" width="142" height="180" rx="8" fill="#ffffff" stroke="#3b82f6" stroke-width="1.5"/>
+  <rect x="350" y="132" width="142" height="28" rx="8" fill="#3b82f6"/>
+  <text class="h" x="421" y="151" text-anchor="middle">3 · Retrieval</text>
+  <text class="b" x="360" y="180">• BM25 + vector</text>
+  <text class="b" x="360" y="196">• Hybrid + reranking</text>
+  <text class="b" x="360" y="212">• Metadata filters</text>
+  <text class="b" x="360" y="228">• Version / period</text>
+  <text class="b" x="368" y="244">awareness</text>
+
+  <!-- 4 Workflow agents -->
+  <rect x="510" y="132" width="142" height="180" rx="8" fill="#ffffff" stroke="#2563eb" stroke-width="1.5"/>
+  <rect x="510" y="132" width="142" height="28" rx="8" fill="#2563eb"/>
+  <text class="h" x="581" y="151" text-anchor="middle">4 · Workflow agents</text>
+  <text class="b" x="520" y="180">• extractor</text>
+  <text class="b" x="520" y="196">• analyst → critic</text>
+  <text class="b" x="520" y="212">• reviewer</text>
+  <text class="b" x="520" y="228">• validator</text>
+  <text class="b" x="520" y="244">• writer</text>
+
+  <!-- 5 Validation -->
+  <rect x="670" y="132" width="142" height="180" rx="8" fill="#ffffff" stroke="#1e40af" stroke-width="1.5"/>
+  <rect x="670" y="132" width="142" height="28" rx="8" fill="#1e40af"/>
+  <text class="h" x="741" y="151" text-anchor="middle">5 · Validation</text>
+  <text class="b" x="680" y="180">• claim ↔ evidence</text>
+  <text class="b" x="680" y="196">• numeric checks</text>
+  <text class="b" x="680" y="212">• source coverage</text>
+  <text class="b" x="680" y="228">• contradiction</text>
+  <text class="b" x="680" y="244">• compliance flags</text>
+
+  <!-- 6 Audit -->
+  <rect x="830" y="132" width="142" height="180" rx="8" fill="#ffffff" stroke="#1e3a8a" stroke-width="1.5"/>
+  <rect x="830" y="132" width="142" height="28" rx="8" fill="#1e3a8a"/>
+  <text class="h" x="901" y="151" text-anchor="middle">6 · Audit</text>
+  <text class="b" x="840" y="180">• prompt/output logs</text>
+  <text class="b" x="840" y="196">• source ledger</text>
+  <text class="b" x="840" y="212">• approval status</text>
+  <text class="b" x="840" y="228">• model/version track</text>
+  <text class="b" x="840" y="244">• compliance pack</text>
+
+  <!-- arrows between -->
+  <g fill="#94a3b8">
+    <polygon points="176,216 188,224 176,232"/>
+    <polygon points="336,216 348,224 336,232"/>
+    <polygon points="496,216 508,224 496,232"/>
+    <polygon points="656,216 668,224 656,232"/>
+    <polygon points="816,216 828,224 816,232"/>
+  </g>
+
+  <!-- connector from validation down to gate -->
+  <path d="M 741,312 L 741,340" stroke="#f59e0b" stroke-width="2" stroke-dasharray="3,3"/>
+
+  <!-- human review gate -->
+  <rect x="30" y="340" width="942" height="62" rx="10" fill="#fff7ed" stroke="#f59e0b" stroke-width="2.5"/>
+  <text class="gate" x="48" y="368">★  Human review &amp; approval gate</text>
+  <text class="gsub" x="48" y="388">Sits between Validation and Audit, before anything is published. Every material claim is signed off with its evidence chain attached — the human-in-the-loop is the product, not a fallback.</text>
+
+  <!-- insight -->
+  <text class="insight" x="30" y="448">“Retrieval is not evidence. A citation is not proof.”</text>
+  <text class="subtitle" x="30" y="472">In finance, every material claim needs claim-level source support, calculation traceability, and human review.</text>
+  <text class="subtitle" x="30" y="500" font-style="italic" fill="#94a3b8">Make numerical checks deterministic (code/rules); use the model to flag, never to be the final verifier. A verifier that misses an error is worse than none.</text>
+</svg>

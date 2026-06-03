@@ -1,0 +1,49 @@
+<svg viewBox="0 0 880 470" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="aCv" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#8a97a1"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">A covenant is not a number — it's a chain</text>
+  <text x="40" y="68" font-size="13.5" fill="#5a6b78" font-style="italic">The threshold is trivial. The computed value is the output of a definition chain —</text>
+  <text x="40" y="86" font-size="13.5" fill="#5a6b78" font-style="italic">and that's where it goes wrong.</text>
+
+  <!-- top: the easy part -->
+  <rect x="300" y="108" width="280" height="48" rx="8" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.6"/>
+  <text x="440" y="130" text-anchor="middle" font-size="15" font-weight="bold" fill="#3d4d58">Leverage ≤ 5.0x</text>
+  <text x="440" y="148" text-anchor="middle" font-size="11.5" fill="#8a97a1" font-style="italic">the maintenance covenant — the easy part</text>
+
+  <!-- arrow down "depends on the computed value" -->
+  <line x1="440" y1="156" x2="440" y2="182" stroke="#8a97a1" stroke-width="1.6" marker-end="url(#aCv)"/>
+  <text x="452" y="174" font-size="11" fill="#8a97a1" font-style="italic">what's actually tested ↓</text>
+
+  <!-- computed leverage ratio (accent — this is the hard number) -->
+  <rect x="300" y="186" width="280" height="52" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="2"/>
+  <text x="440" y="210" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4d44">Computed Leverage Ratio</text>
+  <text x="440" y="228" text-anchor="middle" font-size="11.5" fill="#2a6b60">= Consolidated Total Debt ÷ Consolidated EBITDA</text>
+
+  <!-- two dependency boxes -->
+  <rect x="80" y="278" width="320" height="64" rx="8" fill="#f3f6f7" stroke="#7fb3a9" stroke-width="1.4"/>
+  <text x="240" y="302" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b4d44">Consolidated Total Debt</text>
+  <text x="240" y="322" text-anchor="middle" font-size="11.5" fill="#3f6f66">defined term — inclusions &amp; exclusions,</text>
+  <text x="240" y="336" text-anchor="middle" font-size="11.5" fill="#3f6f66">netting, baskets</text>
+
+  <rect x="480" y="278" width="320" height="64" rx="8" fill="#f3f6f7" stroke="#7fb3a9" stroke-width="1.4"/>
+  <text x="640" y="302" text-anchor="middle" font-size="13.5" font-weight="bold" fill="#1b4d44">Consolidated EBITDA</text>
+  <text x="640" y="322" text-anchor="middle" font-size="11.5" fill="#3f6f66">defined term — permitted add-backs,</text>
+  <text x="640" y="336" text-anchor="middle" font-size="11.5" fill="#3f6f66">caps, lookback periods</text>
+
+  <line x1="380" y1="238" x2="280" y2="276" stroke="#8a97a1" stroke-width="1.4" marker-end="url(#aCv)"/>
+  <line x1="500" y1="238" x2="600" y2="276" stroke="#8a97a1" stroke-width="1.4" marker-end="url(#aCv)"/>
+
+  <!-- bottom modifiers band -->
+  <rect x="80" y="372" width="720" height="48" rx="8" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.4"/>
+  <text x="440" y="394" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a3328">...and all of it is modified by:</text>
+  <text x="440" y="412" text-anchor="middle" font-size="12" fill="#8a3328">baskets &amp; carve-outs · MFN · step-down schedules · amendments · side letters · waivers</text>
+
+  <line x1="240" y1="342" x2="240" y2="370" stroke="#cd9388" stroke-width="1.3" marker-end="url(#aCv)"/>
+  <line x1="640" y1="342" x2="640" y2="370" stroke="#cd9388" stroke-width="1.3" marker-end="url(#aCv)"/>
+
+  <text x="80" y="452" font-size="12.5" fill="#2f4858" font-style="italic">"Summarize the covenants" flattens this chain to nothing. The discarded detail is the risk.</text>
+</svg>

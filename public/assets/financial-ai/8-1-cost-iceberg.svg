@@ -1,0 +1,35 @@
+<svg viewBox="0 0 880 520" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <text x="40" y="40" font-size="22" font-weight="bold" fill="#1d2d3a">The cost iceberg</text>
+  <text x="40" y="63" font-size="13.5" fill="#5a6b78" font-style="italic">The part everyone budgets is the tip. "AI isn't expensive because of the model."</text>
+
+  <!-- waterline -->
+  <line x1="40" y1="150" x2="840" y2="150" stroke="#7fa8c9" stroke-width="1.4" stroke-dasharray="6,4"/>
+  <text x="840" y="145" font-size="11" fill="#7fa8c9" text-anchor="end" font-style="italic">waterline — the business case stops here</text>
+
+  <!-- TIP: obvious cost (above water) -->
+  <path d="M380,86 L500,150 L260,150 Z" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.5"/>
+  <text x="380" y="120" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#3d4d58">THE OBVIOUS COST</text>
+  <text x="540" y="108" font-size="11.5" fill="#5a6b78">subscriptions · seats · API/tokens · data add-ons</text>
+  <text x="540" y="126" font-size="11" fill="#8a97a1" font-style="italic">the number in the business case — the floor, not the cost</text>
+
+  <!-- LAYER 2: hidden cost -->
+  <path d="M260,150 L500,150 L560,320 L200,320 Z" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.8"/>
+  <text x="380" y="178" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">THE HIDDEN COST</text>
+  <text x="380" y="200" text-anchor="middle" font-size="11" fill="#2a6b60">data prep (25–45%)</text>
+  <text x="380" y="218" text-anchor="middle" font-size="11" fill="#2a6b60">integration + testing (40–60%)</text>
+  <text x="380" y="236" text-anchor="middle" font-size="11" fill="#2a6b60">workflow design &amp; evals</text>
+  <text x="380" y="254" text-anchor="middle" font-size="11" fill="#2a6b60">human review (recurring)</text>
+  <text x="380" y="272" text-anchor="middle" font-size="11" fill="#2a6b60">compliance · vendor diligence · security · training</text>
+  <text x="380" y="290" text-anchor="middle" font-size="11" fill="#2a6b60">ongoing ops (+15–30%/yr)</text>
+
+  <!-- LAYER 3: failure cost -->
+  <path d="M200,320 L560,320 L620,480 L140,480 Z" fill="#f5e6e3" stroke="#b04a3f" stroke-width="1.8"/>
+  <text x="380" y="350" text-anchor="middle" font-size="13" font-weight="bold" fill="#8a3328">THE FAILURE COST</text>
+  <text x="380" y="372" text-anchor="middle" font-size="11" fill="#8a3328">unused subscriptions · stalled pilots</text>
+  <text x="380" y="390" text-anchor="middle" font-size="11" fill="#8a3328">wrong numbers caught (or not) · duplicated spend</text>
+  <text x="380" y="414" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a3328">MIT, 2025: ~95% of enterprises saw</text>
+  <text x="380" y="432" text-anchor="middle" font-size="12" font-weight="bold" fill="#8a3328">no measurable ROI on $30–40B spent</text>
+  <text x="380" y="452" text-anchor="middle" font-size="11" fill="#8a3328" font-style="italic">the failure layer, realized at industry scale</text>
+
+  <text x="40" y="506" font-size="12.5" fill="#2f4858" font-style="italic">The model is the entry fee. The cost — and the risk — live below the waterline.</text>
+</svg>

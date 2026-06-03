@@ -1,0 +1,77 @@
+<svg viewBox="0 0 960 660" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:14px;fill:#64748b;}
+    .axislbl{font-size:13.5px;font-weight:600;fill:#334155;}
+    .ends{font-size:12px;fill:#94a3b8;font-weight:600;}
+    .ct{font-size:12.5px;font-weight:700;}
+    .cm{font-size:9.5px;fill:#475569;}
+    .ws{font-size:12px;fill:#d97706;font-style:italic;font-weight:600;}
+  </style>
+  <rect width="960" height="660" fill="#ffffff"/>
+  <text class="title" x="40" y="42">Competitive positioning</text>
+  <text class="subtitle" x="40" y="66">Everyone clusters in tools, data, or post-hoc supervision — the open ground is finance-vertical implementation &amp; governance</text>
+
+  <!-- frame -->
+  <rect x="150" y="100" width="730" height="460" fill="#fcfdff" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- mid dividers -->
+  <line x1="515" y1="100" x2="515" y2="560" stroke="#eef2f7" stroke-width="1"/>
+  <line x1="150" y1="330" x2="880" y2="330" stroke="#eef2f7" stroke-width="1"/>
+
+  <!-- white space highlight -->
+  <rect x="636" y="112" width="244" height="196" rx="12" fill="#fffbeb" stroke="#fde68a" stroke-width="1.5" stroke-dasharray="6,5"/>
+  <text class="ws" x="650" y="300">open white space</text>
+
+  <!-- cluster boxes -->
+  <!-- Consultancies -->
+  <rect x="281" y="179" width="176" height="62" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text class="ct" x="369" y="201" text-anchor="middle" fill="#334155">Broad consultancies</text>
+  <text class="cm" x="369" y="220" text-anchor="middle">Deloitte · PwC ·</text>
+  <text class="cm" x="369" y="233" text-anchor="middle">Accenture · Capco</text>
+
+  <!-- AI-gov platforms -->
+  <rect x="252" y="253" width="176" height="62" rx="9" fill="#f8fafc" stroke="#94a3b8" stroke-width="1.5"/>
+  <text class="ct" x="340" y="275" text-anchor="middle" fill="#334155">AI-governance platforms</text>
+  <text class="cm" x="340" y="294" text-anchor="middle">Credo AI · Holistic AI ·</text>
+  <text class="cm" x="340" y="307" text-anchor="middle">Arize · Fiddler</text>
+
+  <!-- Compliance -->
+  <rect x="485" y="244" width="176" height="62" rx="9" fill="#faf5ff" stroke="#7c3aed" stroke-width="1.5"/>
+  <text class="ct" x="573" y="266" text-anchor="middle" fill="#6d28d9">Compliance / supervision</text>
+  <text class="cm" x="573" y="285" text-anchor="middle">Smarsh · Global Relay ·</text>
+  <text class="cm" x="573" y="298" text-anchor="middle">Saifr · Hearsay</text>
+
+  <!-- RIA advisor tools -->
+  <rect x="529" y="317" width="176" height="62" rx="9" fill="#f0fdfa" stroke="#0d9488" stroke-width="1.5"/>
+  <text class="ct" x="617" y="339" text-anchor="middle" fill="#0f766e">RIA advisor tools</text>
+  <text class="cm" x="617" y="358" text-anchor="middle">Jump · Zocks ·</text>
+  <text class="cm" x="617" y="371" text-anchor="middle">FP Alpha · Hazel</text>
+
+  <!-- Finance AI platforms -->
+  <rect x="588" y="400" width="176" height="62" rx="9" fill="#eff6ff" stroke="#2563eb" stroke-width="1.5"/>
+  <text class="ct" x="676" y="422" text-anchor="middle" fill="#1d4ed8">Finance AI platforms</text>
+  <text class="cm" x="676" y="441" text-anchor="middle">Rogo · Hebbia · LinqAlpha ·</text>
+  <text class="cm" x="676" y="454" text-anchor="middle">Matterfact · Auquan</text>
+
+  <!-- Data incumbents -->
+  <rect x="719" y="467" width="161" height="62" rx="9" fill="#eff6ff" stroke="#3b82f6" stroke-width="1.5"/>
+  <text class="ct" x="799" y="489" text-anchor="middle" fill="#1d4ed8">Data incumbents</text>
+  <text class="cm" x="799" y="508" text-anchor="middle">Bloomberg · FactSet ·</text>
+  <text class="cm" x="799" y="521" text-anchor="middle">AlphaSense · OpenBB</text>
+
+  <!-- YOU -->
+  <rect x="704" y="124" width="176" height="62" rx="9" fill="#fff7ed" stroke="#f59e0b" stroke-width="3"/>
+  <text class="ct" x="792" y="146" text-anchor="middle" fill="#b45309">★ YOU</text>
+  <text class="cm" x="792" y="165" text-anchor="middle" fill="#92400e">Finance-vertical implementation,</text>
+  <text class="cm" x="792" y="178" text-anchor="middle" fill="#92400e">evidence &amp; governance</text>
+
+  <!-- axis labels -->
+  <text class="ends" x="160" y="580">Generic / horizontal</text>
+  <text class="ends" x="870" y="580" text-anchor="end">Finance-vertical</text>
+  <text class="axislbl" x="515" y="600" text-anchor="middle">Vertical focus  →</text>
+  <text class="ends" x="132" y="557" text-anchor="end" transform="rotate(-90 132 557)">Builds tools &amp; data</text>
+  <text class="ends" x="132" y="103" text-anchor="end" transform="rotate(-90 132 103)">Designs workflows &amp; governance</text>
+  <text class="axislbl" x="56" y="330" text-anchor="middle" transform="rotate(-90 56 330)">Where value is added  →</text>
+
+  <text class="subtitle" x="40" y="636" font-style="italic">Note: the moat is the position, not the technology — the rails (Unsiloed, AlgoBulls, Claude) are inputs, not the differentiator.</text>
+</svg>

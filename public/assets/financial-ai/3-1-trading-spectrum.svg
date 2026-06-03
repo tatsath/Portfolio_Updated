@@ -1,0 +1,45 @@
+<svg viewBox="0 0 880 360" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="aSp" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#8a97a1"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">The agentic-trading spectrum</text>
+  <text x="40" y="68" font-size="14" fill="#5a6b78" font-style="italic">Vendors blur these together. You shouldn't.</text>
+
+  <!-- gradient direction labels -->
+  <text x="60" y="104" font-size="12" fill="#8a97a1">mature, boring</text>
+  <text x="820" y="104" font-size="12" fill="#b04a3f" text-anchor="end">frontier, risky</text>
+  <line x1="60" y1="114" x2="820" y2="114" stroke="#dde3e7" stroke-width="1.5" marker-end="url(#aSp)"/>
+
+  <!-- band 1 -->
+  <rect x="60" y="130" width="244" height="180" rx="8" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.6"/>
+  <text x="182" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#5a6b78">1 · Execution algos</text>
+  <text x="182" y="186" text-anchor="middle" font-size="12" fill="#5a6b78">VWAP / TWAP · smart routing</text>
+  <text x="182" y="206" text-anchor="middle" font-size="12" fill="#5a6b78">market-making · HFT</text>
+  <line x1="92" y1="226" x2="272" y2="226" stroke="#d5dbe0" stroke-width="1"/>
+  <text x="182" y="250" text-anchor="middle" font-size="12.5" fill="#5a6b78" font-style="italic">mature; ~60–75% of</text>
+  <text x="182" y="268" text-anchor="middle" font-size="12.5" fill="#5a6b78" font-style="italic">US equity volume</text>
+  <text x="182" y="292" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#5a6b78">not the story</text>
+
+  <!-- band 2 (the highlighted, recommended zone) -->
+  <rect x="318" y="130" width="244" height="180" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="2"/>
+  <text x="440" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#1b4d44">2 · Research &amp; data agents</text>
+  <text x="440" y="186" text-anchor="middle" font-size="12" fill="#2a6b60">read filings · screen · monitor</text>
+  <text x="440" y="206" text-anchor="middle" font-size="12" fill="#2a6b60">pressure-test theses</text>
+  <line x1="350" y1="226" x2="530" y2="226" stroke="#bcd4cf" stroke-width="1"/>
+  <text x="440" y="250" text-anchor="middle" font-size="12.5" fill="#1b4d44" font-style="italic">highest near-term value,</text>
+  <text x="440" y="268" text-anchor="middle" font-size="12.5" fill="#1b4d44" font-style="italic">lowest risk</text>
+  <text x="440" y="292" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#1b4d44">— and it doesn't trade</text>
+
+  <!-- band 3 -->
+  <rect x="576" y="130" width="244" height="180" rx="8" fill="#f5e6e3" stroke="#b04a3f" stroke-width="1.6"/>
+  <text x="698" y="160" text-anchor="middle" font-size="15" font-weight="bold" fill="#8a3328">3 · Autonomous trading</text>
+  <text x="698" y="186" text-anchor="middle" font-size="12" fill="#8a3328">genetic / evolutionary search</text>
+  <text x="698" y="206" text-anchor="middle" font-size="12" fill="#8a3328">multi-agent · consumer agents</text>
+  <line x1="608" y1="226" x2="788" y2="226" stroke="#e3c4bd" stroke-width="1"/>
+  <text x="698" y="250" text-anchor="middle" font-size="12.5" fill="#8a3328" font-style="italic">frontier + hype + risk</text>
+  <text x="698" y="274" text-anchor="middle" font-size="12.5" fill="#8a3328" font-style="italic">irreversible mistakes</text>
+  <text x="698" y="296" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8a3328">sequence it last</text>
+</svg>

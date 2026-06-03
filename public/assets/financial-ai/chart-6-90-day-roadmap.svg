@@ -1,0 +1,89 @@
+<svg viewBox="0 0 1000 620" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:14px;fill:#64748b;}
+    .hd{font-size:14px;font-weight:800;}
+    .hp{font-size:9px;font-weight:700;letter-spacing:0.5px;}
+    .sl{font-size:13px;font-weight:700;fill:#0f172a;}
+    .b{font-size:10.5px;fill:#334155;}
+    .ba{font-size:10.5px;fill:#b45309;font-weight:700;}
+    .gate{font-size:12px;font-weight:600;fill:#9f1239;}
+  </style>
+  <rect width="1000" height="620" fill="#ffffff"/>
+  <text class="title" x="30" y="42">90-day plan</text>
+  <text class="subtitle" x="30" y="66">Three workstreams across three windows — aim for pipeline and first small wins, not big closes</text>
+
+  <!-- headers -->
+  <rect x="185" y="84" width="258" height="40" rx="7" fill="#93c5fd"/>
+  <text class="hd" x="314" y="103" text-anchor="middle" fill="#0f172a">Days 1–15</text>
+  <text class="hp" x="314" y="117" text-anchor="middle" fill="#1e3a8a">FOUNDATION</text>
+  <rect x="451" y="84" width="258" height="40" rx="7" fill="#3b82f6"/>
+  <text class="hd" x="580" y="103" text-anchor="middle" fill="#ffffff">Days 16–45</text>
+  <text class="hp" x="580" y="117" text-anchor="middle" fill="#dbeafe">LAUNCH &amp; CHANNEL</text>
+  <rect x="717" y="84" width="258" height="40" rx="7" fill="#1e3a8a"/>
+  <text class="hd" x="846" y="103" text-anchor="middle" fill="#ffffff">Days 46–90</text>
+  <text class="hp" x="846" y="117" text-anchor="middle" fill="#bfdbfe">FIRST WINS</text>
+
+  <!-- swimlane labels -->
+  <rect x="30" y="132" width="145" height="154" rx="7" fill="#f1f5f9"/>
+  <text class="sl" x="46" y="203">Assets &amp;</text>
+  <text class="sl" x="46" y="220">foundation</text>
+  <rect x="30" y="294" width="145" height="120" rx="7" fill="#f1f5f9"/>
+  <text class="sl" x="46" y="349">Channel &amp;</text>
+  <text class="sl" x="46" y="366">authority</text>
+  <rect x="30" y="422" width="145" height="120" rx="7" fill="#f1f5f9"/>
+  <text class="sl" x="46" y="477">Pipeline &amp;</text>
+  <text class="sl" x="46" y="494">wins</text>
+
+  <!-- Row 1 cells -->
+  <rect x="185" y="132" width="258" height="154" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="199" y="156">• 3 offer one-pagers</text>
+  <text class="b" x="199" y="174">• Unsiloed partner deck</text>
+  <text class="b" x="199" y="192">• RIA AI Usage Policy template</text>
+  <text class="b" x="199" y="210">• E&amp;O insurance · contracts · DPA</text>
+  <text class="b" x="199" y="228">• Begin formalizing Unsiloed</text>
+  <text class="b" x="207" y="244">terms (economics, rights)</text>
+
+  <rect x="451" y="132" width="258" height="154" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="465" y="156">• Refine collateral from</text>
+  <text class="b" x="473" y="172">early calls</text>
+
+  <rect x="717" y="132" width="258" height="154" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="731" y="156">• Package reusable IP:</text>
+  <text class="b" x="739" y="172">checklists, templates,</text>
+  <text class="b" x="739" y="188">diagnostic report</text>
+
+  <!-- Row 2 cells -->
+  <rect x="185" y="294" width="258" height="120" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="199" y="318">• Draft 2 RIA flagship essays</text>
+
+  <rect x="451" y="294" width="258" height="120" rx="7" fill="#fffdf7" stroke="#fde68a"/>
+  <text class="b" x="465" y="318">• Publish 2 RIA essays</text>
+  <text class="ba" x="465" y="338">• ★ Sign 1–2 compliance-</text>
+  <text class="ba" x="473" y="354">consultant partners</text>
+  <text class="b" x="465" y="374">(highest-leverage move)</text>
+
+  <rect x="717" y="294" width="258" height="120" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="731" y="318">• Open fractional-retainer</text>
+  <text class="b" x="739" y="334">conversations</text>
+
+  <!-- Row 3 cells -->
+  <rect x="185" y="422" width="258" height="120" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="199" y="446">• Build target list:</text>
+  <text class="b" x="207" y="462">RIAs $1–10B AUM</text>
+
+  <rect x="451" y="422" width="258" height="120" rx="7" fill="#ffffff" stroke="#e2e8f0"/>
+  <text class="b" x="465" y="446">• Outreach via consultant</text>
+  <text class="b" x="473" y="462">network</text>
+  <text class="b" x="465" y="482">• 2–3 doc / credit prospects</text>
+
+  <rect x="717" y="422" width="258" height="120" rx="7" fill="#f0fdf4" stroke="#86efac"/>
+  <text class="b" x="731" y="446">• 2 paid diagnostics ($15–30K)</text>
+  <text class="b" x="731" y="466">• 1 RIA program signed /</text>
+  <text class="b" x="739" y="482">contracting ($50K+)</text>
+  <text class="b" x="731" y="502">• Qualified doc/credit pipeline</text>
+
+  <!-- gate footer -->
+  <rect x="30" y="556" width="945" height="46" rx="8" fill="#fff1f2" stroke="#fda4af"/>
+  <text class="gate" x="48" y="584">▶  Day-90 gate — Is there serious RIA pipeline? If not, the positioning is still too broad or the segment is wrong: narrow further before scaling delivery capacity.</text>
+</svg>

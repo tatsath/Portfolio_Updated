@@ -1,0 +1,70 @@
+<svg viewBox="0 0 960 600" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="up" markerWidth="12" markerHeight="10" refX="8" refY="3" orient="auto"><path d="M0,0 L8,3 L0,6 Z" fill="#94a3b8"/></marker>
+  </defs>
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:14px;fill:#64748b;}
+    .bt{font-size:13px;font-weight:700;}
+    .bd{font-size:12.5px;font-weight:600;}
+    .tag{font-size:10px;font-weight:700;}
+    .flow{font-size:12.5px;fill:#94a3b8;font-weight:600;}
+    .base{font-size:13px;fill:#475569;font-weight:600;}
+    .num{font-size:11px;fill:#94a3b8;font-weight:700;}
+  </style>
+  <rect width="960" height="600" fill="#ffffff"/>
+  <text class="title" x="40" y="42">The engagement escalator</text>
+  <text class="subtitle" x="40" y="66">Each stage raises commitment and value — the recurring retainer is the goal of every engagement</text>
+
+  <!-- top flow arrow -->
+  <line x1="70" y1="120" x2="892" y2="120" stroke="#cbd5e1" stroke-width="2" marker-end="url(#up)"/>
+  <text class="flow" x="481" y="112" text-anchor="middle">increasing client commitment, value &amp; stickiness</text>
+
+  <!-- baseline -->
+  <line x1="50" y1="520" x2="910" y2="520" stroke="#e2e8f0" stroke-width="2"/>
+  <text class="base" x="481" y="548" text-anchor="middle">Stage of the relationship  →</text>
+
+  <!-- 0 Content -->
+  <rect x="60" y="440" width="128" height="80" rx="8" fill="#93c5fd"/>
+  <text class="bt" x="124" y="462" text-anchor="middle" fill="#0f172a">Content /</text>
+  <text class="bt" x="124" y="478" text-anchor="middle" fill="#0f172a">essays</text>
+  <text class="bd" x="124" y="500" text-anchor="middle" fill="#1e3a8a">Free · lead gen</text>
+  <text class="num" x="124" y="536" text-anchor="middle">1</text>
+
+  <!-- 1 Workshops -->
+  <rect x="202" y="380" width="128" height="140" rx="8" fill="#60a5fa"/>
+  <text class="bt" x="266" y="404" text-anchor="middle" fill="#ffffff">Private</text>
+  <text class="bt" x="266" y="420" text-anchor="middle" fill="#ffffff">workshops</text>
+  <text class="bd" x="266" y="442" text-anchor="middle" fill="#ffffff">$15–50K</text>
+  <text class="num" x="266" y="536" text-anchor="middle">2</text>
+
+  <!-- 2 Diagnostic -->
+  <rect x="344" y="340" width="128" height="180" rx="8" fill="#3b82f6"/>
+  <text class="bt" x="408" y="364" text-anchor="middle" fill="#ffffff">Diagnostic</text>
+  <text class="bd" x="408" y="384" text-anchor="middle" fill="#ffffff">$15–30K</text>
+  <text class="num" x="408" y="536" text-anchor="middle">3</text>
+
+  <!-- 3 Implementation -->
+  <rect x="486" y="270" width="128" height="250" rx="8" fill="#2563eb"/>
+  <text class="bt" x="550" y="294" text-anchor="middle" fill="#ffffff">Implementation</text>
+  <text class="bd" x="550" y="314" text-anchor="middle" fill="#ffffff">$50–300K</text>
+  <text class="num" x="550" y="536" text-anchor="middle">4</text>
+
+  <!-- 4 Retainer (highlight) -->
+  <rect x="628" y="190" width="128" height="330" rx="8" fill="#f59e0b"/>
+  <rect x="628" y="160" width="128" height="24" rx="6" fill="#b45309"/>
+  <text class="tag" x="692" y="176" text-anchor="middle" fill="#ffffff">★ THE GOAL</text>
+  <text class="bt" x="692" y="216" text-anchor="middle" fill="#ffffff">Fractional</text>
+  <text class="bt" x="692" y="232" text-anchor="middle" fill="#ffffff">retainer</text>
+  <text class="bd" x="692" y="254" text-anchor="middle" fill="#ffffff">$10–30K / mo</text>
+  <text class="tag" x="692" y="274" text-anchor="middle" fill="#7c2d12">RECURRING</text>
+  <text class="num" x="692" y="536" text-anchor="middle">5</text>
+
+  <!-- 5 Productization (future) -->
+  <rect x="770" y="160" width="128" height="360" rx="8" fill="#f8fafc" stroke="#94a3b8" stroke-width="2" stroke-dasharray="6,5"/>
+  <text class="bt" x="834" y="186" text-anchor="middle" fill="#334155">Productize</text>
+  <text class="bd" x="834" y="208" text-anchor="middle" fill="#475569">After 5–10</text>
+  <text class="bd" x="834" y="224" text-anchor="middle" fill="#475569">projects</text>
+  <text class="tag" x="834" y="246" text-anchor="middle" fill="#94a3b8">FUTURE</text>
+  <text class="num" x="834" y="536" text-anchor="middle">6</text>
+</svg>

@@ -1,0 +1,77 @@
+<svg viewBox="0 0 960 660" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <defs>
+    <marker id="arr" markerWidth="10" markerHeight="8" refX="7" refY="3" orient="auto"><path d="M0,0 L7,3 L0,6 Z" fill="#b45309"/></marker>
+  </defs>
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:14px;fill:#64748b;}
+    .axislbl{font-size:14px;font-weight:600;fill:#334155;}
+    .ends{font-size:12px;fill:#94a3b8;font-weight:600;}
+    .quad{font-size:12.5px;fill:#cbd5e1;font-weight:600;}
+    .rank{font-size:17px;font-weight:800;fill:#ffffff;}
+    .bname{font-size:10.5px;font-weight:600;fill:#ffffff;}
+    .leg{font-size:12px;fill:#475569;}
+    .pathlbl{font-size:11px;fill:#b45309;font-style:italic;font-weight:600;}
+  </style>
+  <rect width="960" height="660" fill="#ffffff"/>
+  <text class="title" x="40" y="42">Wedge prioritization</text>
+  <text class="subtitle" x="40" y="66">Where each opportunity sits on delivery difficulty vs deal value — and the recommended 1→2→3 sequence</text>
+
+  <!-- plot frame -->
+  <rect x="140" y="90" width="720" height="450" fill="#fcfdff" stroke="#e2e8f0" stroke-width="1"/>
+  <!-- quadrant dividers -->
+  <line x1="500" y1="90" x2="500" y2="540" stroke="#eef2f7" stroke-width="1"/>
+  <line x1="140" y1="315" x2="860" y2="315" stroke="#eef2f7" stroke-width="1"/>
+  <!-- quadrant labels -->
+  <text class="quad" x="260" y="112" text-anchor="middle">High value · lower lift</text>
+  <text class="quad" x="700" y="112" text-anchor="middle">Flagship · build toward</text>
+  <text class="quad" x="250" y="532" text-anchor="middle">Easy add-ons</text>
+  <text class="quad" x="700" y="532" text-anchor="middle">Hard · lower payoff — avoid</text>
+
+  <!-- recommended sequence path (behind bubbles) -->
+  <path d="M 374,302 C 440,272 472,256 505,247" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="2,6" opacity="0.75"/>
+  <path d="M 528,236 C 600,200 662,166 738,134" fill="none" stroke="#f59e0b" stroke-width="2" stroke-dasharray="2,6" opacity="0.75" marker-end="url(#arr)"/>
+  <text class="pathlbl" x="452" y="232" transform="rotate(-16 452 232)">recommended sequence</text>
+
+  <!-- bubbles -->
+  <!-- 1 RIA Gov (beachhead, amber) -->
+  <circle cx="342" cy="306" r="34" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <text class="rank" x="342" y="302" text-anchor="middle">1</text>
+  <text class="bname" x="342" y="318" text-anchor="middle">RIA Gov</text>
+  <!-- 2 Doc Factory (blue) -->
+  <circle cx="514" cy="243" r="37" fill="#2563eb"/>
+  <text class="rank" x="514" y="239" text-anchor="middle">2</text>
+  <text class="bname" x="514" y="255" text-anchor="middle">Doc Factory</text>
+  <!-- 3 Private Credit (flagship, dark + amber ring) -->
+  <circle cx="759" cy="126" r="41" fill="#1e3a8a" stroke="#f59e0b" stroke-width="4"/>
+  <text class="rank" x="759" y="122" text-anchor="middle">3</text>
+  <text class="bname" x="759" y="138" text-anchor="middle">Priv. Credit</text>
+  <!-- 4 DDQ (violet) -->
+  <circle cx="313" cy="423" r="30" fill="#7c3aed"/>
+  <text class="rank" x="313" y="419" text-anchor="middle">4</text>
+  <text class="bname" x="313" y="435" text-anchor="middle">DDQ</text>
+  <!-- 5 HF Research (teal) -->
+  <circle cx="658" cy="180" r="39" fill="#0d9488"/>
+  <text class="rank" x="658" y="176" text-anchor="middle">5</text>
+  <text class="bname" x="658" y="192" text-anchor="middle">HF Research</text>
+  <!-- 6 Trading (demoted, muted dashed) -->
+  <circle cx="615" cy="306" r="34" fill="#94a3b8" stroke="#64748b" stroke-width="2" stroke-dasharray="5,4"/>
+  <text class="rank" x="615" y="302" text-anchor="middle">6</text>
+  <text class="bname" x="615" y="318" text-anchor="middle">Trading</text>
+
+  <!-- axes labels -->
+  <text class="ends" x="150" y="558">Low</text>
+  <text class="ends" x="850" y="558" text-anchor="end">High</text>
+  <text class="axislbl" x="500" y="580" text-anchor="middle">Delivery difficulty / technical risk  →</text>
+  <text class="ends" x="124" y="535" text-anchor="end" transform="rotate(-90 124 535)">Low</text>
+  <text class="ends" x="124" y="98" text-anchor="end" transform="rotate(-90 124 98)" >High</text>
+  <text class="axislbl" x="58" y="315" text-anchor="middle" transform="rotate(-90 58 315)">Deal value / ticket size  →</text>
+
+  <!-- legend -->
+  <circle cx="48" cy="616" r="7" fill="#f59e0b" stroke="#b45309" stroke-width="2"/>
+  <text class="leg" x="62" y="620">Priority focus (beachhead + flagship)</text>
+  <circle cx="330" cy="616" r="7" fill="#94a3b8" stroke="#64748b" stroke-width="2" stroke-dasharray="3,3"/>
+  <text class="leg" x="344" y="620">Run as content for now</text>
+  <text class="leg" x="40" y="642">1 RIA AI Governance — beachhead   ·   2 Document Factory — horizontal capability   ·   3 Private Credit — flagship (Phase 2)</text>
+  <text class="leg" x="40" y="658">4 DDQ Pack — add-on   ·   5 Hedge Fund Research — selective / inbound   ·   6 Trading Validation — content now, paid later</text>
+</svg>

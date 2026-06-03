@@ -1,0 +1,32 @@
+<svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">The overfitting mirage</text>
+  <text x="40" y="68" font-size="13.5" fill="#5a6b78" font-style="italic">The more strategies an agent tries, the more certain the winner is a mirage —</text>
+  <text x="40" y="86" font-size="13.5" fill="#5a6b78" font-style="italic">unless you correct for the number of trials (Bailey &amp; López de Prado).</text>
+
+  <!-- axes -->
+  <line x1="90" y1="110" x2="90" y2="320" stroke="#8a97a1" stroke-width="1.6"/>
+  <line x1="90" y1="320" x2="820" y2="320" stroke="#8a97a1" stroke-width="1.6"/>
+  <text x="62" y="220" font-size="12" fill="#8a97a1" transform="rotate(-90 62 220)" text-anchor="middle">cumulative return</text>
+  <text x="455" y="350" font-size="12" fill="#8a97a1" text-anchor="middle">time</text>
+
+  <!-- go-live divider -->
+  <line x1="455" y1="110" x2="455" y2="320" stroke="#c3cbd1" stroke-width="1.4" stroke-dasharray="5,4"/>
+  <text x="455" y="128" font-size="12" font-weight="bold" fill="#5a6b78" text-anchor="middle">↓ go live</text>
+  <text x="270" y="310" font-size="11.5" fill="#8a97a1" text-anchor="middle" font-style="italic">in-sample (backtest)</text>
+  <text x="640" y="310" font-size="11.5" fill="#8a97a1" text-anchor="middle" font-style="italic">out-of-sample (live)</text>
+
+  <!-- backtest curve: soaring -->
+  <path d="M90,300 C200,250 340,150 455,140" fill="none" stroke="#2a7d6f" stroke-width="3"/>
+  <!-- live curve: flat to declining, continuing from the join point -->
+  <path d="M455,140 C540,150 650,200 820,235" fill="none" stroke="#b04a3f" stroke-width="3" stroke-dasharray="1,0"/>
+
+  <!-- labels on curves -->
+  <text x="300" y="180" font-size="13" font-weight="bold" fill="#2a7d6f">backtest: Sharpe 2.3 ✨</text>
+  <text x="600" y="195" font-size="13" font-weight="bold" fill="#8a3328">live: ≈ 0</text>
+
+  <!-- annotation callout -->
+  <rect x="120" y="120" width="300" height="0" />
+  <text x="100" y="372" font-size="12.5" fill="#2f4858">
+    <tspan font-weight="bold">10,000 strategies tested</tspan> → the best backtest is almost certainly luck → it dies live.
+  </text>
+</svg>

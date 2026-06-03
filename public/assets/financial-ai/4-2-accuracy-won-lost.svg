@@ -1,0 +1,59 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="aC" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#2a7d6f"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">Where accuracy is won or lost</text>
+  <text x="40" y="68" font-size="14" fill="#5a6b78" font-style="italic">This layer is invisible in a demo and decisive in production.</text>
+
+  <!-- column headers -->
+  <text x="60" y="104" font-size="15" font-weight="bold" fill="#8a3328">FAILURE POINTS</text>
+  <text x="500" y="104" font-size="15" font-weight="bold" fill="#1b4d44">CONTROLS</text>
+
+  <!-- rows: each failure -> control -->
+  <!-- row 1 -->
+  <rect x="60" y="118" width="330" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.3"/>
+  <text x="76" y="145" font-size="12.5" fill="#8a3328">Mangled tables (lost columns, units, signs)</text>
+  <rect x="500" y="118" width="330" height="44" rx="6" fill="#d9e6e4" stroke="#7fb3a9" stroke-width="1.3"/>
+  <text x="516" y="145" font-size="12.5" fill="#1b4d44">Structure-aware parsing</text>
+  <line x1="392" y1="140" x2="498" y2="140" stroke="#2a7d6f" stroke-width="1.3" marker-end="url(#aC)"/>
+
+  <!-- row 2 -->
+  <rect x="60" y="170" width="330" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.3"/>
+  <text x="76" y="197" font-size="12.5" fill="#8a3328">Missed footnotes &amp; defined terms</text>
+  <rect x="500" y="170" width="330" height="44" rx="6" fill="#d9e6e4" stroke="#7fb3a9" stroke-width="1.3"/>
+  <text x="516" y="197" font-size="12.5" fill="#1b4d44">Pull footnotes + definitions with the figure</text>
+  <line x1="392" y1="192" x2="498" y2="192" stroke="#2a7d6f" stroke-width="1.3" marker-end="url(#aC)"/>
+
+  <!-- row 3 -->
+  <rect x="60" y="222" width="330" height="44" rx="6" fill="#f0d9d3" stroke="#c97f70" stroke-width="1.6"/>
+  <text x="76" y="243" font-size="12.5" font-weight="bold" fill="#8a3328">Wrong source / wrong period</text>
+  <text x="76" y="258" font-size="10.5" fill="#8a3328" font-style="italic">the silent error — looks right, is wrong</text>
+  <rect x="500" y="222" width="330" height="44" rx="6" fill="#cfe0dd" stroke="#5fa093" stroke-width="1.6"/>
+  <text x="516" y="243" font-size="12.5" font-weight="bold" fill="#1b4d44">Designated source-of-record + period</text>
+  <text x="516" y="258" font-size="10.5" fill="#1b4d44" font-style="italic">restatement-aware</text>
+  <line x1="392" y1="244" x2="498" y2="244" stroke="#2a7d6f" stroke-width="1.6" marker-end="url(#aC)"/>
+
+  <!-- row 4 -->
+  <rect x="60" y="274" width="330" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.3"/>
+  <text x="76" y="301" font-size="12.5" fill="#8a3328">OCR noise on scanned PDFs</text>
+  <rect x="500" y="274" width="330" height="44" rx="6" fill="#d9e6e4" stroke="#7fb3a9" stroke-width="1.3"/>
+  <text x="516" y="301" font-size="12.5" fill="#1b4d44">OCR with confidence flags</text>
+  <line x1="392" y1="296" x2="498" y2="296" stroke="#2a7d6f" stroke-width="1.3" marker-end="url(#aC)"/>
+
+  <!-- row 5 -->
+  <rect x="60" y="326" width="330" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.3"/>
+  <text x="76" y="353" font-size="12.5" fill="#8a3328">Arithmetic &amp; unit errors</text>
+  <rect x="500" y="326" width="330" height="44" rx="6" fill="#d9e6e4" stroke="#7fb3a9" stroke-width="1.3"/>
+  <text x="516" y="353" font-size="12.5" fill="#1b4d44">Numerical reconciliation (foot / cross-foot)</text>
+  <line x1="392" y1="348" x2="498" y2="348" stroke="#2a7d6f" stroke-width="1.3" marker-end="url(#aC)"/>
+
+  <!-- row 6 -->
+  <rect x="60" y="378" width="330" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.3"/>
+  <text x="76" y="405" font-size="12.5" fill="#8a3328">Fabrication when the answer isn't there</text>
+  <rect x="500" y="378" width="330" height="44" rx="6" fill="#d9e6e4" stroke="#7fb3a9" stroke-width="1.3"/>
+  <text x="516" y="405" font-size="12.5" fill="#1b4d44">Explicit abstention ("not in the documents")</text>
+  <line x1="392" y1="400" x2="498" y2="400" stroke="#2a7d6f" stroke-width="1.3" marker-end="url(#aC)"/>
+</svg>

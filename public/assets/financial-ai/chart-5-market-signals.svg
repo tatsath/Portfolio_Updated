@@ -1,0 +1,63 @@
+<svg viewBox="0 0 960 560" xmlns="http://www.w3.org/2000/svg" font-family="Inter, -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif">
+  <style>
+    .title{font-size:25px;font-weight:700;fill:#0f172a;}
+    .subtitle{font-size:13.5px;fill:#b45309;font-weight:600;}
+    .tick{font-size:11px;fill:#94a3b8;}
+    .ylbl{font-size:12px;fill:#475569;font-weight:600;}
+    .val{font-size:16px;font-weight:800;fill:#0f172a;}
+    .cap{font-size:9.7px;fill:#475569;font-weight:600;}
+    .badge{font-size:10px;font-weight:800;fill:#ffffff;}
+  </style>
+  <rect width="960" height="560" fill="#ffffff"/>
+  <text class="title" x="40" y="42">Market signals</text>
+  <rect x="40" y="54" width="68" height="18" rx="9" fill="#f59e0b"/>
+  <text class="badge" x="74" y="67" text-anchor="middle">VERIFY</text>
+  <text class="subtitle" x="118" y="67">Figures carried from prior research — confirm each before using in any client-facing material.</text>
+
+  <!-- gridlines + y ticks -->
+  <g stroke="#eef2f7" stroke-width="1">
+    <line x1="120" y1="460" x2="900" y2="460"/>
+    <line x1="120" y1="372.5" x2="900" y2="372.5"/>
+    <line x1="120" y1="285" x2="900" y2="285"/>
+    <line x1="120" y1="197.5" x2="900" y2="197.5"/>
+    <line x1="120" y1="110" x2="900" y2="110"/>
+  </g>
+  <g class="tick" text-anchor="end">
+    <text x="110" y="464">0%</text>
+    <text x="110" y="376.5">25%</text>
+    <text x="110" y="289">50%</text>
+    <text x="110" y="201.5">75%</text>
+    <text x="110" y="114">100%</text>
+  </g>
+  <text class="ylbl" x="48" y="285" text-anchor="middle" transform="rotate(-90 48 285)">Reported adoption</text>
+
+  <!-- bars -->
+  <!-- b0 AIMA 95% -->
+  <rect x="155" y="127.5" width="86" height="332.5" rx="5" fill="#1e3a8a"/>
+  <text class="val" x="198" y="119" text-anchor="middle">95%</text>
+  <text class="cap" x="198" y="480" text-anchor="middle">Fund managers</text>
+  <text class="cap" x="198" y="493" text-anchor="middle">using GenAI · AIMA</text>
+  <!-- b1 AIMA 58% -->
+  <rect x="311" y="257" width="86" height="203" rx="5" fill="#2563eb"/>
+  <text class="val" x="354" y="248" text-anchor="middle">58%</text>
+  <text class="cap" x="354" y="480" text-anchor="middle">Expect more GenAI in</text>
+  <text class="cap" x="354" y="493" text-anchor="middle">investment process · AIMA</text>
+  <!-- b2 AIMA 60% -->
+  <rect x="467" y="250" width="86" height="210" rx="5" fill="#2563eb"/>
+  <text class="val" x="510" y="241" text-anchor="middle">60%</text>
+  <text class="cap" x="510" y="480" text-anchor="middle">Investors favor funds with</text>
+  <text class="cap" x="510" y="493" text-anchor="middle">GenAI budget · AIMA</text>
+  <!-- b3 OpenAI 95% -->
+  <rect x="623" y="127.5" width="86" height="332.5" rx="5" fill="#1e3a8a"/>
+  <text class="val" x="666" y="119" text-anchor="middle">95%</text>
+  <text class="cap" x="666" y="480" text-anchor="middle">Balyasny teams on</text>
+  <text class="cap" x="666" y="493" text-anchor="middle">AI platform · OpenAI</text>
+  <!-- b4 Schwab 63% (RIA, amber) -->
+  <rect x="779" y="239.5" width="86" height="220.5" rx="5" fill="#f59e0b"/>
+  <text class="val" x="822" y="231" text-anchor="middle">63%</text>
+  <text class="cap" x="822" y="480" text-anchor="middle">RIA advisors</text>
+  <text class="cap" x="822" y="493" text-anchor="middle">using AI · Schwab</text>
+
+  <text class="cap" x="822" y="520" text-anchor="middle" fill="#b45309" font-style="italic">RIA = your beachhead</text>
+  <text class="cap" x="40" y="535" fill="#94a3b8">Sources: AIMA front-office GenAI study · OpenAI Balyasny case study · Schwab 2026 RIA &amp; AI study.</text>
+</svg>

@@ -1,0 +1,53 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">It's the parsing, not the brain</text>
+  <text x="40" y="68" font-size="13.5" fill="#5a6b78" font-style="italic">Frontier-agent accuracy on OfficeQA Pro — 89,000 pages, 26M+ numbers.</text>
+  <text x="40" y="86" font-size="13.5" fill="#5a6b78" font-style="italic">The biggest single lever wasn't a smarter model. It was better parsing.</text>
+
+  <!-- y axis -->
+  <line x1="120" y1="120" x2="120" y2="380" stroke="#8a97a1" stroke-width="1.6"/>
+  <line x1="120" y1="380" x2="820" y2="380" stroke="#8a97a1" stroke-width="1.6"/>
+  <!-- gridlines / labels -->
+  <g font-size="11" fill="#9aa5ad">
+    <line x1="120" y1="320" x2="820" y2="320" stroke="#eef1f3" stroke-width="1"/>
+    <text x="112" y="324" text-anchor="end">10%</text>
+    <line x1="120" y1="260" x2="820" y2="260" stroke="#eef1f3" stroke-width="1"/>
+    <text x="112" y="264" text-anchor="end">20%</text>
+    <line x1="120" y1="200" x2="820" y2="200" stroke="#eef1f3" stroke-width="1"/>
+    <text x="112" y="204" text-anchor="end">30%</text>
+    <line x1="120" y1="140" x2="820" y2="140" stroke="#eef1f3" stroke-width="1"/>
+    <text x="112" y="144" text-anchor="end">40%</text>
+  </g>
+
+  <!-- bars: scale 6px per 1% (so 40% = 240px tall, baseline y=380) -->
+  <!-- 5% -> 30px -->
+  <rect x="160" y="350" width="120" height="30" fill="#c3cbd1"/>
+  <text x="220" y="343" text-anchor="middle" font-size="13" font-weight="bold" fill="#5a6b78">&lt;5%</text>
+  <text x="220" y="400" text-anchor="middle" font-size="11.5" fill="#5a6b78">model alone</text>
+  <text x="220" y="416" text-anchor="middle" font-size="10.5" fill="#9aa5ad">(parametric)</text>
+
+  <!-- 12% -> 72px -->
+  <rect x="320" y="308" width="120" height="72" fill="#aab6bd"/>
+  <text x="380" y="301" text-anchor="middle" font-size="13" font-weight="bold" fill="#5a6b78">&lt;12%</text>
+  <text x="380" y="400" text-anchor="middle" font-size="11.5" fill="#5a6b78">+ web search</text>
+
+  <!-- 34.1% -> ~205px -->
+  <rect x="480" y="175" width="120" height="205" fill="#2f6f63"/>
+  <text x="540" y="168" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">34.1%</text>
+  <text x="540" y="400" text-anchor="middle" font-size="11.5" fill="#3f6f66">+ document</text>
+  <text x="540" y="416" text-anchor="middle" font-size="11.5" fill="#3f6f66">corpus</text>
+
+  <!-- +16.1% relative gain from parsing, shown as a stacked bump on the 34.1 bar's neighbour -->
+  <rect x="640" y="142" width="120" height="238" fill="#2a7d6f"/>
+  <rect x="640" y="142" width="120" height="33" fill="#7fc0b4"/>
+  <text x="700" y="135" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">↑ parsing</text>
+  <text x="700" y="400" text-anchor="middle" font-size="11.5" fill="#3f6f66">+ structured</text>
+  <text x="700" y="416" text-anchor="middle" font-size="11.5" fill="#3f6f66">parsing</text>
+
+  <!-- callout for the parsing gain -->
+  <rect x="600" y="150" width="0" height="0"/>
+  <text x="772" y="158" font-size="11.5" fill="#2a7d6f" font-style="italic">+16.1%</text>
+  <text x="772" y="172" font-size="11.5" fill="#2a7d6f" font-style="italic">relative</text>
+  <text x="772" y="186" font-size="11.5" fill="#2a7d6f" font-style="italic">(parsing)</text>
+
+  <text x="120" y="446" font-size="11.5" fill="#9aa5ad">Source: OfficeQA Pro, Databricks AI Research, March 2026. Figures stated conservatively; confirm against the paper.</text>
+</svg>

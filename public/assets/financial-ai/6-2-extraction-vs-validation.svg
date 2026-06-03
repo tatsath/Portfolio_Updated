@@ -1,0 +1,21 @@
+<svg viewBox="0 0 880 400" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">Extraction is table stakes. Validation is the moat.</text>
+  <text x="40" y="68" font-size="13.5" fill="#5a6b78" font-style="italic">A tool that extracts fluently and validates weakly is the "looks finished, might be</text>
+  <text x="40" y="86" font-size="13.5" fill="#5a6b78" font-style="italic">wrong" trap — applied to a number where wrong is a loss.</text>
+
+  <!-- EXTRACTION band (neutral) -->
+  <rect x="60" y="112" width="760" height="118" rx="10" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.6"/>
+  <text x="84" y="140" font-size="17" font-weight="bold" fill="#3d4d58">EXTRACTION</text>
+  <text x="84" y="160" font-size="12.5" fill="#5a6b78">· identify every covenant — financial, negative, affirmative, reporting</text>
+  <text x="84" y="180" font-size="12.5" fill="#5a6b78">· capture each defined term and its dependencies</text>
+  <text x="84" y="200" font-size="12.5" fill="#5a6b78">· record thresholds, baskets, add-backs, step-downs, amendments</text>
+  <text x="84" y="222" font-size="12" fill="#9aa5ad" font-style="italic">hard — and where most tools concentrate (the demoable 80%)</text>
+
+  <!-- VALIDATION band (accent) -->
+  <rect x="60" y="244" width="760" height="124" rx="10" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="2"/>
+  <text x="84" y="272" font-size="17" font-weight="bold" fill="#1b4d44">VALIDATION</text>
+  <text x="84" y="292" font-size="12.5" fill="#2a6b60">· extracted structure matches the agreement, clause for clause</text>
+  <text x="84" y="312" font-size="12.5" fill="#2a6b60">· computed ratios footed &amp; reconciled to the borrower's reporting</text>
+  <text x="84" y="332" font-size="12.5" fill="#2a6b60">· add-backs applied within their caps and lookbacks · clause-level citation + confidence</text>
+  <text x="84" y="352" font-size="12.5" font-weight="bold" fill="#1b4d44">· abstain → human review when a definition is ambiguous or an input is missing</text>
+</svg>

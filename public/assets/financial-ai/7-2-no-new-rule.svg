@@ -1,0 +1,52 @@
+<svg viewBox="0 0 880 460" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <defs>
+    <marker id="aR7" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#8a97a1"/>
+    </marker>
+  </defs>
+
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">No new rule required</text>
+  <text x="40" y="68" font-size="13.5" fill="#5a6b78" font-style="italic">The everyday AI uses filling the governance gap run straight into rules RIAs already have.</text>
+
+  <!-- center box -->
+  <rect x="330" y="96" width="220" height="92" rx="10" fill="#2f4858"/>
+  <text x="440" y="124" text-anchor="middle" font-size="15" font-weight="bold" fill="#ffffff">Everyday AI use</text>
+  <text x="440" y="146" text-anchor="middle" font-size="11" fill="#cdd6dc">drafted client emails ·</text>
+  <text x="440" y="161" text-anchor="middle" font-size="11" fill="#cdd6dc">portfolio commentary · marketing ·</text>
+  <text x="440" y="176" text-anchor="middle" font-size="11" fill="#cdd6dc">meeting summaries · ad-hoc data Qs</text>
+
+  <!-- five rule boxes -->
+  <rect x="40" y="240" width="250" height="56" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.5"/>
+  <text x="165" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">Marketing Rule 206(4)-1</text>
+  <text x="165" y="282" text-anchor="middle" font-size="11" fill="#3f6f66">no untrue / unsubstantiated claims</text>
+
+  <rect x="310" y="240" width="260" height="56" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.5"/>
+  <text x="440" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">Compliance Rule 206(4)-7</text>
+  <text x="440" y="282" text-anchor="middle" font-size="11" fill="#3f6f66">written policies, implemented &amp; enforced</text>
+
+  <rect x="590" y="240" width="250" height="56" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.5"/>
+  <text x="715" y="264" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">Recordkeeping 204-2</text>
+  <text x="715" y="282" text-anchor="middle" font-size="11" fill="#3f6f66">preserve comms — any channel</text>
+
+  <rect x="180" y="312" width="250" height="56" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.5"/>
+  <text x="305" y="336" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">Regulation S-P</text>
+  <text x="305" y="354" text-anchor="middle" font-size="11" fill="#3f6f66">client data &amp; vendor oversight</text>
+
+  <rect x="450" y="312" width="250" height="56" rx="8" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.5"/>
+  <text x="575" y="336" text-anchor="middle" font-size="13" font-weight="bold" fill="#1b4d44">Fiduciary duty</text>
+  <text x="575" y="354" text-anchor="middle" font-size="11" fill="#3f6f66">act in the client's best interest</text>
+
+  <!-- arrows -->
+  <g stroke="#8a97a1" stroke-width="1.4">
+    <line x1="375" y1="190" x2="210" y2="238" marker-end="url(#aR7)"/>
+    <line x1="440" y1="190" x2="440" y2="238" marker-end="url(#aR7)"/>
+    <line x1="505" y1="190" x2="680" y2="238" marker-end="url(#aR7)"/>
+    <line x1="400" y1="190" x2="315" y2="310" marker-end="url(#aR7)"/>
+    <line x1="480" y1="190" x2="565" y2="310" marker-end="url(#aR7)"/>
+  </g>
+
+  <!-- footer callout -->
+  <rect x="40" y="400" width="800" height="44" rx="6" fill="#f5e6e3" stroke="#cd9388" stroke-width="1.4"/>
+  <text x="440" y="421" text-anchor="middle" font-size="12.5" font-weight="bold" fill="#8a3328">The SEC's first AI-washing cases (Delphia / Global Predictions, 2024 — $400K) were charged under these existing rules.</text>
+  <text x="440" y="437" text-anchor="middle" font-size="11.5" fill="#8a3328">No AI-specific rule was needed.</text>
+</svg>

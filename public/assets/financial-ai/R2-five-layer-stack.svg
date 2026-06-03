@@ -1,0 +1,34 @@
+<svg viewBox="0 0 640 460" xmlns="http://www.w3.org/2000/svg" font-family="Georgia, 'Times New Roman', serif">
+  <!-- title -->
+  <text x="40" y="44" font-size="22" font-weight="bold" fill="#1d2d3a">The five-layer stack</text>
+  <text x="40" y="68" font-size="14" fill="#5a6b78" font-style="italic">Most firms have built the bottom band and called it an AI strategy.</text>
+
+  <!-- durable-advantage bracket -->
+  <path d="M548,96 h20 v228 h-20" fill="none" stroke="#2a7d6f" stroke-width="2"/>
+  <text x="586" y="210" font-size="13" font-weight="bold" fill="#1b4d44" transform="rotate(90 586 210)" text-anchor="middle">the durable advantage</text>
+
+  <!-- four top bands (durable) -->
+  <rect x="60" y="96" width="470" height="52" rx="6" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.6"/>
+  <text x="80" y="120" font-size="17" font-weight="bold" fill="#1b4d44">Control</text>
+  <text x="80" y="138" font-size="12" fill="#3f6f66">human approval · logs · review · audit trail</text>
+
+  <rect x="60" y="154" width="470" height="52" rx="6" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.6"/>
+  <text x="80" y="178" font-size="17" font-weight="bold" fill="#1b4d44">Evidence</text>
+  <text x="80" y="196" font-size="12" fill="#3f6f66">citations · source pages · calculations · checks</text>
+
+  <rect x="60" y="212" width="470" height="52" rx="6" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.6"/>
+  <text x="80" y="236" font-size="17" font-weight="bold" fill="#1b4d44">Workflow</text>
+  <text x="80" y="254" font-size="12" fill="#3f6f66">the repeatable steps people actually follow</text>
+
+  <rect x="60" y="270" width="470" height="52" rx="6" fill="#d9e6e4" stroke="#2a7d6f" stroke-width="1.6"/>
+  <text x="80" y="294" font-size="17" font-weight="bold" fill="#1b4d44">Data</text>
+  <text x="80" y="312" font-size="12" fill="#3f6f66">filings · transcripts · portfolio · CRM · archives</text>
+
+  <!-- bottom band (commodity model) -->
+  <rect x="60" y="328" width="470" height="52" rx="6" fill="#eef1f3" stroke="#8a97a1" stroke-width="1.6"/>
+  <text x="80" y="352" font-size="17" font-weight="bold" fill="#5a6b78">Model</text>
+  <text x="80" y="370" font-size="12" fill="#8a97a1">Claude · GPT · Gemini — rented, commodity</text>
+
+  <!-- annotation for model band -->
+  <text x="60" y="410" font-size="13" fill="#8a97a1" font-style="italic">The layer everyone obsesses over is the one that matters least to the outcome.</text>
+</svg>

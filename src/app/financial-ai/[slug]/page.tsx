@@ -1,4 +1,4 @@
-import { getAIPostBySlug, getAllAIPosts } from "@/lib/ai-interpretability";
+import { getFinancialAIPostBySlug, getAllFinancialAIPosts } from "@/lib/financial-ai";
 import { parseShortcodes } from "@/lib/shortcodes";
 import ContactBlock from "@/components/ContactBlock";
 import ReactMarkdown from "react-markdown";
@@ -11,12 +11,12 @@ import { Calendar, Tag, ArrowLeft } from "lucide-react";
 import type { Metadata } from "next";
 import "katex/dist/katex.min.css";
 
-interface BlogPostPageProps {
+interface FinancialAIPostPageProps {
   params: Promise<{ slug: string }>;
 }
 
 export async function generateStaticParams() {
-  const posts = getAllAIPosts();
+  const posts = getAllFinancialAIPosts();
   return posts.map((post) => ({
     slug: post.slug,
   }));
@@ -24,9 +24,9 @@ export async function generateStaticParams() {
 
 export async function generateMetadata({
   params,
-}: BlogPostPageProps): Promise<Metadata> {
+}: FinancialAIPostPageProps): Promise<Metadata> {
   const { slug } = await params;
-  const post = getAIPostBySlug(slug);
+  const post = getFinancialAIPostBySlug(slug);
 
   if (!post) {
     return {
@@ -35,8 +35,8 @@ export async function generateMetadata({
   }
 
   return {
-    title: `${post.title} | AI Interpretability`,
-    description: post.description || "AI Interpretability post by Hariom Tatsat",
+    title: `${post.title} | Financial AI`,
+    description: post.description || "Financial AI post by Hariom Tatsat",
     authors: Array.isArray(post.author)
       ? post.author.map((a) => ({ name: a }))
       : post.author
@@ -45,9 +45,9 @@ export async function generateMetadata({
   };
 }
 
-export default async function BlogPostPage({ params }: BlogPostPageProps) {
+export default async function FinancialAIPostPage({ params }: FinancialAIPostPageProps) {
   const { slug } = await params;
-  const post = getAIPostBySlug(slug);
+  const post = getFinancialAIPostBySlug(slug);
 
   if (!post) {
     return (
@@ -63,14 +63,14 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
             Post Not Found
           </h1>
           <Link
-            href="/ai-interpretability"
+            href="/financial-ai"
             className="px-4 py-2 rounded"
             style={{
               backgroundColor: "var(--button-bg-light)",
               color: "var(--button-text-dark)",
             }}
           >
-            Back to AI Interpretability
+            Back to Financial AI
           </Link>
         </div>
       </div>
@@ -95,7 +95,6 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
       .replace(/\s+/g, "-");
   };
 
-  // Extract explicit ID from heading text if present, return { text, id }
   const extractHeadingId = (text: string): { text: string; id: string } => {
     const idMatch = text.match(/\s*\{#([^}]+)\}$/);
     if (idMatch) {
@@ -114,32 +113,29 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     while ((match = headingRegex.exec(content)) !== null) {
       const level = match[1]?.length || 0;
       let text = match[2] || "";
-      
-      // Strip out {#id} syntax from the text if present
+
       const idMatch = text.match(/\s*\{#([^}]+)\}$/);
       if (idMatch) {
         text = text.replace(/\s*\{#[^}]+\}$/, "").trim();
-        // Use the explicit ID if provided
         const explicitId = idMatch[1];
         let id = explicitId;
-        
+
         const count = idCounts.get(id) || 0;
         idCounts.set(id, count + 1);
         if (count > 0) {
           id = `${id}-${count}`;
         }
-        
+
         headings.push({ level, text, id });
       } else {
-        // No explicit ID, generate one from text
         let id = generateId(text);
-        
+
         const count = idCounts.get(id) || 0;
         idCounts.set(id, count + 1);
         if (count > 0) {
           id = `${id}-${count}`;
         }
-        
+
         headings.push({ level, text, id });
       }
     }
@@ -215,12 +211,12 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
           )}
           <div className="max-w-4xl">
             <Link
-              href="/ai-interpretability"
+              href="/financial-ai"
               className="inline-flex items-center gap-2 mb-6 transition-colors hover:opacity-80"
               style={{ color: "var(--text-primary)" }}
             >
               <ArrowLeft className="h-4 w-4" />
-              Back to AI Interpretability
+              Back to Financial AI
             </Link>
 
             {showTOC && (
@@ -402,8 +398,8 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
                     ),
                     a: ({ node, ...props }) => (
                       <a
-                        className="hover:underline"
-                        style={{ color: "var(--accent-primary)" }}
+                        className="underline underline-offset-2 hover:opacity-70"
+                        style={{ color: "#2563eb" }}
                         target="_blank"
                         rel="noopener noreferrer"
                         {...props}
@@ -464,4 +460,3 @@ export default async function BlogPostPage({ params }: BlogPostPageProps) {
     </div>
   );
 }
-
