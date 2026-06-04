@@ -54,7 +54,7 @@ function BlogContent({
             className="text-lg max-w-3xl"
             style={{ color: "var(--text-secondary)" }}
           >
-            Insights on understanding AI systems, primarily focusing on mechanistic interpretability.
+            Insights, Opinion and Essays on understanding AI systems, primarily focusing on mechanistic interpretability.
           </p>
         </div>
 

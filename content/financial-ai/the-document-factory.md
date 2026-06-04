@@ -1,5 +1,5 @@
 ---
-title: "The Document Factory"
+title: "The Document Factory: Why the Hard Part of AI-Generated Reports Isn't the Report"
 date: 2026-04-22
 description: "AI-generated pitchbooks and credit memos are the easy 80%. The number on slide 14 — correct, sourced, from the right period — is the hard 20%. It is the entire point."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 04
+> *The AI Operating Manual for Investment Firms*
 
 # The Document Factory: Why the Hard Part of AI-Generated Reports Isn't the Report
 
@@ -99,7 +99,7 @@ The architecture that actually wins is the set of controls opposite those failur
 1. **Structure-aware parsing**, not naive text-chunking, preserving tables, headers, and units (structure-preserving retrieval is exactly what some platforms now build their retrieval engines around).
 2. **A structured-data backbone where possible**, querying normalized financials rather than re-reading prose every time (the 90.8%-vs-19.8% gap is the whole argument for this).
 3. **A designated source of record and period**, with provenance tracked and restatements handled, so the number comes from the filing you chose, not whatever the index surfaced.
-4. **Grounding to the exact location**, meaning page, table, cell, footnote, so every figure is a link, not an assertion. This is the evidence chain from Essay 01, applied to numbers.
+4. **Grounding to the exact location**, meaning page, table, cell, footnote, so every figure is a link, not an assertion. This is the evidence chain from the first essay in this series, applied to numbers.
 5. **A numerical verification layer**, recompute, foot and cross-foot, reconcile across documents, instead of trusting the model's arithmetic.
 6. **Explicit abstention**, where the system says "this figure is not in the provided documents" rather than inventing one.
 7. **Evals on your own documents**, a labeled regression set (FinanceBench-style) that measures extraction accuracy, citation validity, and numerical correctness, so you are buying on measured performance over *your* filings, not on a demo.
@@ -138,7 +138,7 @@ The question every confused firm asks is "what should we buy?" The honest answer
 - **Build or own** the parts that are your actual edge or your actual risk: your internal research archive, your house credit-memo and covenant logic, your firm-specific models and templates, and anything touching confidential live-deal data. Critically, **the verification, evidence, and review layer should be yours regardless of whose engine you buy**, because that is the operating-model layer this whole series is about, and it does not come in the box.
 - **Configure** is the synthesis and the right default for most firms: license the engine and the content, then own the workflow, the house format, the source-of-record rules, the numerical checks, the controls, and the evals on top of it.
 
-The decision reduces to four questions: Is this capability a source of competitive edge or is it table stakes? How proprietary or sensitive is the data it touches? How firm-specific is the workflow? And can you maintain what you build? Underneath all four sits the only metric that ultimately matters, the one Citi's technology leadership uses internally: not "what does the tool cost" but **what does it cost to produce one *approved*, defensible output**, the cost-per-approved-output measure from Essay 01. **<u>[[15]](#ref-15)</u>**
+The decision reduces to four questions: Is this capability a source of competitive edge or is it table stakes? How proprietary or sensitive is the data it touches? How firm-specific is the workflow? And can you maintain what you build? Underneath all four sits the only metric that ultimately matters, the one Citi's technology leadership uses internally: not "what does the tool cost" but **what does it cost to produce one *approved*, defensible output**, the cost-per-approved-output measure from the first essay in this series. **<u>[[15]](#ref-15)</u>**
 
 ![Figure 4 — Build / Buy / Configure](/assets/financial-ai/4-4-build-buy-configure.svg)
 
@@ -150,7 +150,7 @@ The right next step depends on what kind of firm you are:
 
 - **Large banks / bulge bracket:** you are already building internally and partnering with labs. Govern AI at the enterprise level, measure capacity, and make the numerical-verification layer non-negotiable before any AI-produced figure reaches a client deliverable.
 - **Boutique investment banks / M&A advisory:** buy a deliverable engine that produces pitchbooks and profiles in your formats, then configure your house style, your source-of-record rules, and a verification pass. Do not try to build the model; do own the checking.
-- **Hedge funds (fundamental):** adopt research and extraction agents with auditable, source-linked outputs, build the proprietary research-archive layer that is your edge, and run evals on your own coverage names. This is the document-side complement to the earnings-season workflow in Essay 02.
+- **Hedge funds (fundamental):** adopt research and extraction agents with auditable, source-linked outputs, build the proprietary research-archive layer that is your edge, and run evals on your own coverage names. This is the document-side complement to the earnings-season workflow covered earlier in this series.
 - **Private credit:** covenant extraction and the credit memo are the sharpest, highest-stakes case in all of finance for this technology: long agreements, defined terms that reference other defined terms, numbers whose meaning lives in footnotes. Invest here in structure-aware extraction, footnote-and-definition handling, numerical verification, and an investment-committee evidence pack that separates what the model extracted from what a credit professional approved.
 - **RIAs / wealth managers:** your documents are portfolio commentary, client reporting, and planning materials. The extraction-accuracy stakes are lower than IB or credit, but source-linking and compliance review still matter, so buy, configure to your compliance rules, and keep a human reviewer.
 
@@ -178,15 +178,11 @@ In document generation, the prose is the commodity. The number, pulled from the 
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is Essay 04 of *The AI Operating Manual for Investment Firms*. The technical thread here, why retrieval is not evidence, gets its own deeper piece later in the series, as does a full treatment of covenant extraction for private credit (the highest-stakes version of this problem) and a build-vs-buy decision framework expanded into a working scorecard. The spine, as always: the advantage is in the workflow, the evidence, and the controls, not the subscription.
+In document generation, the fluent, on-brand report is the easy 80%, and it is becoming a commodity. The hard, valuable 20% is the number on slide 14 — pulled from the right source, the right period, the right line, verified, and traceable. A wrong figure does not announce itself; it sits in a polished deck behind a real citation and leaves the building with the firm's name on it, so the only defense is to treat extraction and verification as the product, not the plumbing, and to measure them on your own documents rather than a vendor's clean demo. Take the last AI-generated deliverable your firm produced and audit ten numbers against the source filings — the right filings, the right periods — and count how many are correct, correctly sourced, and from the authoritative version. That number, not the demo, is your real starting point: the prose is the commodity, but the number is the product.
 
-> **Practical next step.** Take the last AI-generated deliverable your firm produced and audit ten numbers in it against the source filings, the right filings, the right periods. Count how many are correct, correctly sourced, and from the authoritative version. That number, not the demo, is your real starting point.
-
-> **Working with me.** I help banks, funds, and advisory firms turn AI document generation from an impressive demo into a defensible production process: source-of-record discipline, structure-aware extraction, numerical verification, and an evidence trail every figure can survive. My work is vendor-neutral by design, so the question I help you answer is not "which platform has the best demo" but "which numbers are actually right, and can you prove it on your own documents." If you have seen the platforms and do not know how to choose or how to make them safe, the place to start is a ten-number audit of one real deliverable and a conversation about what it reveals.
-
-> **A companion checklist.** The natural companion to this essay is a one-page artifact you can actually use: the failure-points-versus-controls list from the technical section, turned into a "Financial Extraction Accuracy Checklist," alongside a "Build / Buy / Configure" scorecard and an equity-report source-of-record and verification template. These are the operational form of the argument above.
+---
 
 ## References
 

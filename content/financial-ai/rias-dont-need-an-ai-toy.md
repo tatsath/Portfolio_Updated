@@ -1,5 +1,5 @@
 ---
-title: "RIAs Need a Policy, Not a Tool"
+title: "RIAs Don't Need an AI Toy. They Need an AI Usage Policy"
 date: 2026-05-19
 description: "For a chief compliance officer, the question is not which tool to buy. It is whether the firm can describe, supervise, and defend how AI is used. The SEC has already charged firms that couldn't."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 07
+> *The AI Operating Manual for Investment Firms*
 
 # RIAs Don't Need an AI Toy. They Need an AI Usage Policy
 
@@ -138,15 +138,11 @@ An RIA doesn't need an AI toy. It needs an AI usage policy that's written, enfor
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is Essay 07 of *The AI Operating Manual for Investment Firms*, and the first written for the compliance seat rather than the investment desk. From here the series takes up the economics directly, namely the real cost of GenAI in an investment firm, where tokens are the smallest line item, and, for managers facing their investors, what the coming AI due-diligence questionnaire will demand. The spine is unchanged: the advantage is in the workflow, the evidence, and the controls, not the subscription, not the citation, and not the tool.
+For an RIA, the AI question that matters is not which tool to buy but whether the firm can describe, supervise, and defend how AI is used across the business — and the SEC has already shown, with real penalties under existing rules, that "we were experimenting" is not an answer. AI does not create a new rulebook; it creates faster, higher-volume ways to violate the one you already have, which is why the durable protection is governance: a written and enforced usage policy, an approved-use matrix, a recorded client-communication review, and real vendor oversight. So ask one question at your firm this week — if an examiner asked today how AI is used here, who would answer, and what would they say? If the honest answer is "it depends who you ask," you have usage without governance. Start with the inventory, because you cannot govern what you have not found: an RIA doesn't need an AI toy, it needs an AI usage policy that is written, enforced, and defensible.
 
-> **Practical next step.** Ask one question at your firm this week: *if an examiner asked us today how AI is used here, who would answer, and what would they say?* If the answer is "it depends who you ask," you have usage without governance, and that's the gap this essay is about. Start with the inventory: find every place AI is actually being used, including informally and by your vendors. You can't govern what you haven't found.
-
-> **Working with me.** I help RIAs turn scattered, unsanctioned AI use into a defensible program: an enforced usage policy, an approved-use matrix, a recorded client-communication review workflow, and vendor oversight that meets the actual rules. I do not sell a notetaker or a compliance platform, so my only interest is in the governance being real and the firm being able to defend it. The cleanest way to start is the inventory and the matrix: find where AI is actually being used, decide what is permitted, and put the review and the records behind the client-facing parts. If you are a CCO, COO, or founder who can't yet answer "how is AI used here," that is the conversation to have.
-
-> **A companion template.** The natural companion to this essay is an "RIA AI Usage Policy Template and CCO Checklist": the approved/prohibited matrix, client-data rules, the mandatory-review trigger and record, recordkeeping alignment (204-2), the vendor due-diligence questions (Reg S-P, training-on-data, audit and reproduction), and the "does our marketing match reality" AI-washing self-check. It is the operational form of this essay, and for many firms the most useful starting point is to adapt it with their own counsel rather than start from a blank page.
+---
 
 ## References
 

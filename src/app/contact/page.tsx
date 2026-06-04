@@ -16,21 +16,6 @@ export default function ContactPage() {
         className="max-w-4xl mx-auto px-4 sm:px-6"
         style={{ paddingTop: "120px", paddingBottom: "80px" }}
       >
-        <div className="mb-10">
-          <h1
-            className="text-3xl md:text-4xl lg:text-5xl font-bold mb-4"
-            style={{ color: "var(--text-headings)" }}
-          >
-            Speaking, collaboration &amp; inquiries
-          </h1>
-          <p
-            className="text-lg max-w-2xl"
-            style={{ color: "var(--text-secondary)", lineHeight: 1.7 }}
-          >
-            I speak at conferences and podcasts on Financial AI, AI interpretability, and quantitative methods. I am also open to research collaborations and media inquiries. Fill in the form below — I read every message.
-          </p>
-        </div>
-
         <div
           style={{
             display: "grid",

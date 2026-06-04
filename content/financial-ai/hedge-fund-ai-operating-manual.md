@@ -1,5 +1,5 @@
 ---
-title: "The Hedge Fund AI Operating Manual"
+title: "The Investment Firms AI Operating Manual: From Earnings Season to the Trading Frontier"
 date: 2026-06-01
 description: "From earnings season to the trading frontier: the complete playbook for what the funds winning with AI actually do differently, and how to build the operating model around it."
 categories:
@@ -10,7 +10,7 @@ ShowToc: true
 
 > *The AI Operating Manual for Investment Firms* · Buy-Side Flagship
 
-# The Hedge Fund AI Operating Manual: From Earnings Season to the Trading Frontier
+# The Investment Firms AI Operating Manual: From Earnings Season to the Trading Frontier
 
 *Every fund, from a two-person emerging manager to a multi-strat with a twenty-person AI team, is now asking the same question. Not "should we use AI," but "what do the people who are actually winning with it do differently?" The honest answer, hidden in plain sight in what those funds have published about themselves, is that the edge was never the model. It is the operating model. Here is the whole playbook: the names, the traps, and where a small fund should start on Monday.*
 
@@ -23,9 +23,9 @@ Let me tell you the most useful thing I have learned reading everything the lead
 
 That sounds like a slogan until you look at what these firms actually did, in their own words. Balyasny did not buy a better chatbot. It stood up a twenty-person Applied AI team and rebuilt research as a system. Man Group did not prompt GPT into picking stocks. It built a three-agent workflow that puts every AI-generated idea through the same investment-committee gauntlet a human analyst's idea faces. Neither story is about intelligence. Both are about discipline, evidence, and review wrapped around the intelligence.
 
-I will be straight about where I sit. I have not run a book or sat on a quant desk. What I have done is read the primary record closely, skeptically, end to end, and synthesize it into something a fund can actually use. That turns out to be the scarce thing here. The funds I talk to do not lack access to AI; they are drowning in vendor demos and breathless takes. What they lack is someone who has read what the best funds published, understands exactly where this breaks, and can lay out a disciplined operating model without a platform to sell them. That is the gap I help funds close, and this essay is the map.
+I will be straight about where I sit. I have not run a book or sat on a quant desk. What I have done is read the primary record closely, skeptically, end to end, and synthesize it into something a fund can actually use. That turns out to be the scarce thing here. Most funds do not lack access to AI; they are drowning in vendor demos and breathless takes. What they lack is a disciplined operating model laid out plainly — what the best funds actually published, where it breaks, and how to apply it — without a platform being sold alongside it. That is the gap this essay sets out to close, and what follows is the map.
 
-My vantage point is deliberately an outside one, and that is the point of it. I am not employed by a fund whose methods I am bound to defend, and I am not selling the software, so I have no reason to talk up a tool that does not earn its place. The advisory work I do sits next to the model layer, not on top of it: on the document side with extraction and verification, and on the trading side with strategy validation and execution governance. That keeps me close to where these systems actually fail in production, which is the only vantage from which the failures are visible. The reading is what makes the synthesis honest. The proximity to the failure points is what makes it useful.
+My vantage point is deliberately an outside one, and that is the point of it. I am not employed by a fund whose methods I am bound to defend, and I am not selling software, so I have no reason to talk up a tool that does not earn its place. That outside view is what keeps this honest, and what lets the essay say plainly where these systems actually fail in production — the only vantage from which the failures are visible.
 
 It runs from research to the trading frontier. Let's go.
 
@@ -143,8 +143,6 @@ For trading specifically, stay in the green zone. Use AI for ideation, data, res
 
 That is the whole thing: narrow, measured, evidence-backed, reviewed. It is what the giants do, scaled to your size.
 
-A closing word on what I actually do, since this is the kind of work I am describing. I help funds build exactly this operating layer: the workflow design, the evidence layer, the validation discipline, and the vendor-neutral judgment about what to configure versus build versus leave alone. I am not a platform and I am not reselling one, which is the point. The funds I am most useful to are the ones that already have the tools and have realized that the tools were never the hard part. If that is the position you are in, the right first move is small and concrete: pick the one workflow you run most often, and build the operating model around it before you touch the second.
-
 ---
 
 ## The edge was never the model
@@ -153,17 +151,15 @@ Strip away the hype and every example in this manual says the same thing. Balyas
 
 That is the opportunity for every fund that is not a multi-strat giant. The durable advantage lives in the workflows, the evidence, and the controls, and those scale down. A disciplined two-person fund can run a version of what the leaders run. The model will keep changing; this year's best will be ordinary by next. The operating model is what endures.
 
-The funds that win the next decade will not be the ones that bought the most AI or hired the most PhDs. They will be the ones who built the operating layer around the intelligence, and who knew, at every stage, where AI made them faster and where it would quietly hurt them. That is the manual. That is the work. And it is the work I help funds do.
+The funds that win the next decade will not be the ones that bought the most AI or hired the most PhDs. They will be the ones who built the operating layer around the intelligence, and who knew, at every stage, where AI made them faster and where it would quietly hurt them. That is the manual. That is the work.
 
 ---
 
-### Where this fits
+## Conclusion
 
-This is the buy-side flagship of *The AI Operating Manual for Investment Firms.* It is the front door; the deeper rooms are the essays it links to: the full earnings-season research workflow, the complete agentic-trading field guide, why retrieval is not evidence, the real cost of GenAI, and, for the credit-focused, covenant extraction. The spine is constant: **the advantage is in the workflow, the evidence, and the controls, not the subscription.**
+Every example in this manual points the same way: the funds winning with AI are not the ones with the best model, but the ones who wrapped it in evidence, structure, and review. That advantage scales down — a disciplined two-person shop can run a smaller version of what Balyasny and Man Group built, because the durable work lives in the workflows, the evidence, and the controls, not the subscription. Start where the value is highest and the risk is lowest: pick the one research workflow your desk runs most often and ask three questions of it — is every number sourced, is there a named reviewer, and could you reconstruct it in a year? If any answer is no, that is usage, not an operating model, and that gap is exactly where to begin. The model will keep changing; the operating model is what endures.
 
-> **Practical next step.** Pick the one research workflow your desk runs most often. Ask three questions of it: is every number sourced, is there a named reviewer, and could you reconstruct it in a year? If any answer is no, that is usage, not an operating model, and that gap is where to start.
-
-> **Working with me.** I help hedge funds, from emerging managers to established shops evaluating every platform on the market, build the operating model around AI: research workflows, the evidence-and-review layer, strategy-validation discipline, and vendor-neutral build-versus-configure judgment. My advisory work sits on the document side (extraction and verification) and the trading side (strategy validation and execution governance), which keeps me close to where these systems fail in production. I do not sell a platform, so the advice is about your workflows, not my license. If you have the tools and not the operating layer, that is exactly the gap to start on.
+---
 
 ## References
 

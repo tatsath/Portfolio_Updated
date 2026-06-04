@@ -89,7 +89,7 @@ export default function ContactBlock() {
             lineHeight: 1.7,
           }}
         >
-          Conference talks, podcast appearances, research collaboration, media quotes — use the form below and I will get back to you.
+          For speaking and collaboration, you can reach out.
         </p>
 
         {status === "success" ? (

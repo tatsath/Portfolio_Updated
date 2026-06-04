@@ -1,5 +1,5 @@
 ---
-title: "AI for Earnings Season: The Workflow That Works"
+title: "How a Hedge Fund Should Actually Use AI for Earnings Season"
 date: 2026-03-24
 description: "Summarizing the call is the least valuable thing a model can do for a serious analyst. Here is the earnings-season workflow that actually earns a place on the desk."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 02
+> *The AI Operating Manual for Investment Firms*
 
 # How a Hedge Fund Should Actually Use AI for Earnings Season
 
@@ -149,13 +149,9 @@ The models will change. This quarter's best one will be ordinary by next year. T
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is Essay 02 in *The AI Operating Manual for Investment Firms*. Earnings season touches several threads I will develop on their own: a deeper piece on building a thesis tracker that knows when a long/short view is breaking; one on management-tone analysis as a discipline rather than a sentiment score; and one on turning years of internal memos into searchable investment memory. The connective tissue is the operating-model argument from Essay 01. That the advantage is in the workflow, the evidence, and the controls, not the subscription.
-
-> **Practical next step.** Before the next print in your coverage, write down the three things you will be watching for. After the print, ask whether your process answered them within hours, with the proof attached, or whether you were still hand-assembling context while the stock moved. The gap between those two is the workflow this essay is about.
-
-> **Working with me.** I help investment teams turn earnings season from a scramble into a defensible, evidence-backed workflow: pre-read assembly, structured reconciliation, the tone and red-team passes, and memos a PM can stand behind. I do not sell a platform, so my only interest is in the workflow working on your desk. The companion to this essay is a template that captures the moving parts, namely the fixed reconciliation structure, the quality-of-earnings red flags (basis changes, guidance-walk quality, cash conversion, adjustment creep), and the tone and red-team prompts. If a scattered research process is the gap you are staring at, that template and a conversation about one name are the place to start.
+Earnings season rewards judgment exercised under time pressure, and that is exactly the resource a disciplined AI workflow protects. Summarizing the call is the commodity — and the part most likely to be confidently wrong. The work that matters is the thesis update: the pre-read that orients you before the print, the reconciliation against your model, consensus, and prior guidance, the tone read that lives in the Q&A, and the red team that argues against your own conviction. So before the next print in your coverage, write down the three things you will be watching for; after it lands, ask whether your process answered them within hours, with the proof attached, or whether you were still hand-assembling context while the stock moved. That distance is the entire workflow, and closing it is how the desks that win earnings season pull ahead.
 
 ---
 

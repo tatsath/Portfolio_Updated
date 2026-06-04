@@ -1,5 +1,5 @@
 ---
-title: "Covenant Extraction Is Not Summarization"
+title: "Covenant Extraction Is Not PDF Summarization"
 date: 2026-05-12
 description: "Of every job in finance you could point an AI at, private-credit covenant work is the one where the demos lie hardest. Here is what the work actually demands."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 06
+> *The AI Operating Manual for Investment Firms*
 
 # Covenant Extraction Is Not PDF Summarization
 
@@ -54,7 +54,7 @@ Here is the distinction that separates a useful covenant system from a dangerous
 
 The reason this matters is the reason the whole series matters: a covenant tool that *extracts* fluently and *validates* weakly is precisely the "looks finished, might be wrong" trap, applied to a number where being wrong is a realized loss. An IC memo that states a leverage covenant of 5.0x with 0.4x of headroom, built on an add-back the model misread, is not a harmless hallucination. It is a credit decision made on a false premise.
 
-The strongest tools, and the strongest internal builds, treat extraction as table stakes and compete on validation: clause-level citation to the exact page and section, confidence scores, reconciliation of computed ratios, and an explicit "ambiguous / conflicting / not found → human review" path. That is the deterministic extraction-and-validation layer from Essay 05, pointed at the hardest documents in finance.
+The strongest tools, and the strongest internal builds, treat extraction as table stakes and compete on validation: clause-level citation to the exact page and section, confidence scores, reconciliation of computed ratios, and an explicit "ambiguous / conflicting / not found → human review" path. That is the deterministic extraction-and-validation layer from the previous essay, pointed at the hardest documents in finance.
 
 ![Extraction is table stakes. Validation is the moat.](/assets/financial-ai/6-2-extraction-vs-validation.svg)
 
@@ -131,15 +131,11 @@ A credit agreement is a system of definitions. Reading it is not the job. Recons
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is Essay 06 of *The AI Operating Manual for Investment Firms*, and the most demanding application of the deterministic-extraction thesis from Essay 05. From here the series turns to the buyer who has been watching all of this from the compliance seat: the next essays take up RIA AI governance, namely what a chief compliance officer should actually ask before allowing these tools, and the real cost model behind build-versus-buy. The spine holds: the advantage is in the workflow, the evidence, and the controls, not the subscription, not the citation, and not the demo.
+Covenant work is unforgiving because a wrong number here is a mispriced risk, not an embarrassment — which is exactly why it rewards the firms that treat extraction as the easy part and compete on validation: clause-level citation, recomputed and reconciled ratios, defined-term reasoning, source-of-record discipline, and honest abstention. The way to tell a credit-grade system from a document chatbot is to run it on one agreement your team already knows cold, ideally an amended-and-restated one with real add-backs and a step-down. Did it follow the defined-term chain to the right computed ratio? Did it catch the amendments and side letters? Does every covenant carry a citation you can click? Then ask the vendor how it validates the computed value, and what it does when a definition is ambiguous. Reconstructing the system the agreement encodes — and proving every number it produces — is the whole job, and it is what turns covenant AI from a demo into work an investment committee can stand behind.
 
-> **Practical next step.** Take one credit agreement your team has already modeled by hand, ideally an amended-and-restated one with real add-backs and a step-down. Run whatever AI tool you're considering against it, and check three things: did it follow the *defined-term chain* to the right computed ratio, did it pick up the *amendments and side letters*, and does every extracted covenant carry a *clause-level citation* you can click? Then ask the vendor how it *validates* the computed value and what it does when a definition is *ambiguous*. The answers separate a credit-grade system from a document chatbot.
-
-> **Working with me.** I help private-credit teams turn covenant work from manual spreadsheets and fluent-but-unverified AI into a validated, defensible process: extraction, defined-term reasoning, recomputed headroom, IC evidence packs, and an accuracy benchmark on your own agreements. I do not sell a covenant platform, so the question I help you answer is not "which tool demos best" but "which tool actually follows the definition chain and validates the computed number on your messiest agreement." If you are evaluating covenant tools and can't tell who does the hard part, the place to start is a single amended-and-restated agreement your team knows cold, run head-to-head, and a conversation about what the comparison shows.
-
-> **A companion checklist.** The natural companion to this essay is a "Covenant Extraction and Validation Checklist": the defined-term chain (leverage and coverage, EBITDA add-backs and caps), baskets and carve-outs, MFN and step-down schedules, amendment and side-letter capture, source-of-record rules, clause-level citation, computed-ratio reconciliation, and the abstention-to-review test, plus a template for benchmarking a tool on your own agreements. It speaks directly to a credit PM, CIO, or COO.
+---
 
 ## References
 

@@ -54,7 +54,7 @@ function FinancialAIContent({
             className="text-lg max-w-3xl"
             style={{ color: "var(--text-secondary)" }}
           >
-            Democratizing Financial AI — practical insights on LLMs, quantitative methods, risk modeling, and market microstructure.
+            Insights, Opinion and Essays on AI in Finance.
           </p>
         </div>
 

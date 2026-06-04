@@ -1,5 +1,5 @@
 ---
-title: "The Real Cost of GenAI: Tokens Are the Smallest Part"
+title: "The Real Cost of GenAI in an Investment Firm: Tokens Are the Smallest Part"
 date: 2026-05-27
 description: "When a firm asks what AI will cost, it looks at the model bill. That number is real and it is the least important figure in the entire budget."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 08
+> *The AI Operating Manual for Investment Firms*
 
 # The Real Cost of GenAI in an Investment Firm: Tokens Are the Smallest Part
 
@@ -111,15 +111,11 @@ Don't ask what your AI costs. Ask what one approved output costs, and whether th
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is Essay 08 of *The AI Operating Manual for Investment Firms*. The cost lens completes the build-vs-buy argument from the document-factory essay and the governance argument from the RIA essay: what you can afford to build, what you should buy, and what an approved output actually costs. From here the series turns to the investor's side of the table, namely the AI due-diligence questionnaire that allocators are increasingly putting in front of managers, and what a fund must be ready to answer. The spine holds: the advantage is in the workflow, the evidence, and the controls, not the subscription.
+The model bill is the smallest, most visible line in the AI budget, and fixating on it is how firms end up in the 95% that see no measurable return. The cost and the risk live outside the model — in data preparation, integration, workflow design, the recurring human-review time, and the governance a regulated firm cannot skip — so the number that actually matters is not your subscription spend but the fully-loaded cost to produce one approved output: one reviewed memo, one compliant client letter, one signed-off credit model. Take one workflow your firm runs and build that number honestly — token cost, plus a fair share of setup, plus the real review time, plus compliance overhead — then compare it to what the manual version costs. If you have never done this math, you do not yet know whether your AI is saving money or quietly costing it. Don't ask what your AI costs; ask what one approved output costs, and whether that is less than doing it the old way.
 
-> **Practical next step.** Take one AI workflow your firm runs and try to compute its fully-loaded cost per approved output: token cost, plus a fair share of setup, plus the actual review time, plus compliance overhead. Then compare it to what the manual version costs. If you've never done this math, you don't yet know whether your AI is saving money or quietly costing it. That number is where cost discipline begins.
-
-> **Working with me.** I help investment firms see the real cost of GenAI, namely the hidden integration, review, and compliance layers the business case omits, and build a cost-per-approved-output model that tells them which workflows actually pay off and which to kill. I do not sell a platform, so my interest is in the math being honest rather than in talking you into more software. If your AI budget is a subscription line and nothing more, the place to start is one workflow, priced fully, against what it cost you the old way.
-
-> **A companion worksheet.** The natural companion to this essay is a "Cost-Per-Approved-Output Worksheet": the cost iceberg checklist (obvious, hidden, and failure layers), a per-workflow calculator (token cost plus amortized setup plus review time plus compliance overhead), the review-time and "small-experiment" traps, and a build-vs-buy cost comparison. It pairs with the build-vs-buy scorecard from the document-factory essay, and it is built for a CFO or COO who wants the real number rather than the invoice.
+---
 
 ## References
 

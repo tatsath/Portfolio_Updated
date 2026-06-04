@@ -1,5 +1,5 @@
 ---
-title: "Retrieval Is Not Evidence"
+title: 'Retrieval Is Not Evidence: Why "It Cited a Source" Still Gets Finance Wrong'
 date: 2026-05-05
 description: "A citation tells you the model found a document. It does not tell you the model read the number correctly. That gap is exactly where wrong figures hide in finance."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 05
+> *The AI Operating Manual for Investment Firms*
 
 # Retrieval Is Not Evidence: Why "It Cited a Source" Still Gets Finance Wrong
 
@@ -141,15 +141,11 @@ Retrieval finds text. Evidence proves a number. Build for the difference.
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is Essay 05 of *The AI Operating Manual for Investment Firms*. It sets up the most demanding application of everything here: **covenant extraction in private credit**, where the documents are longest, the defined terms reference other defined terms, and a misread threshold is a real loss, not a typo. That's the next essay, and it's the deterministic-extraction thesis at its highest stakes. The spine remains constant: the advantage is in the workflow, the evidence, and the controls, not the subscription, and not the citation.
+The reframe that matters is not agents versus RAG — both are probabilistic reading, wonderful for synthesis and treacherous for exact numbers. A citation proves a document was found, not that a number was read correctly, and in finance that gap is where wrong figures hide. The firms that get this right draw the line deliberately: synthesis on one side, a deterministic extraction-and-validation layer on the other, with every consequential number traceable to the cell it came from and the check that confirmed it. Test it on your own work — take the last AI-generated number your firm relied on and try to rebuild its evidence chain. Can you point to the exact cell? Was it the authoritative filing, and the right period? Was the arithmetic re-checked, or simply trusted? If the chain breaks at any link, you were doing probabilistic reading on a job that needed the deterministic layer — and that audit tells you exactly where your firm stands.
 
-> **Practical next step.** Take the last AI-generated number your firm relied on, a figure in a memo, a model, a client report, and try to rebuild its evidence chain. Can you point to the exact cell it came from? Was the source the authoritative filing, and the right period? Was the arithmetic re-checked, or trusted? If the chain breaks at any link, you were doing probabilistic reading on a deterministic-number job. That's the gap this essay is about.
-
-> **Working with me.** I help investment firms draw the line correctly: synthesis where probabilistic reading is fine, a deterministic extraction-and-validation layer where the number has to be right, and an accuracy benchmark on their own documents to prove which is which. I do not sell a platform, so the question I help you answer is not "which tool has the best demo" but "where exactly does this break on your documents, and is that a place you can afford it to break." If your AI gives confident, cited answers and you are not sure the numbers are right, the place to start is a ten-number audit and a conversation about what it shows.
-
-> **A companion checklist.** The natural companion to this essay is a "Financial Extraction Accuracy Checklist": wrong-source and wrong-period risk, table-parsing failures, footnotes and defined terms, confidence scores, source-of-record rules, the abstention test, and a ten-number audit template. It is the operational form of this whole essay.
+---
 
 ## References
 

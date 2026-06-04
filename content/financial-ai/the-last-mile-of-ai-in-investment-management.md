@@ -1,5 +1,5 @@
 ---
-title: "The Last Mile: Where AI Adoption Actually Stalls"
+title: "The Last Mile of AI in Investment Management"
 date: 2026-03-10
 description: "Almost every fund and advisory firm now has the tools. Very few have changed how the work actually gets done. The gap is not a software problem."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-> *The AI Operating Manual for Investment Firms* · Essay 01
+> *The AI Operating Manual for Investment Firms*
 
 # The Last Mile of AI in Investment Management
 
@@ -181,13 +181,9 @@ Prompts are disposable. Workflows and controls are durable. Everything I write h
 
 ---
 
-### Where this goes next
+## Conclusion
 
-This is the first essay in *The AI Operating Manual for Investment Firms*. Over the coming weeks I will take the pieces I only gestured at here and make them concrete: why retrieval-augmented generation fails in finance and what an evidence layer looks like in practice; the real cost model for GenAI in a fund; what every RIA chief compliance officer should ask before allowing ChatGPT or Claude; how a hedge fund should actually run earnings season; why private credit may be the single best GenAI use case in finance; and what the coming AI DDQ will demand of you.
-
-> **Practical next step.** Take one AI-assisted workflow in your firm: a client communication, a DDQ response, a research memo, a credit memo, a piece of portfolio commentary. Ask three questions of it. Is every claim source-backed? Is there a named reviewer? Could you reconstruct the process in a year? If the answer to any of those is no, that workflow is usage, not adoption. That gap is where to start.
-
-> **Working with me.** I help investment firms move from scattered AI usage to defensible, evidence-backed workflows across research, client communication, DDQs, credit memos, and compliance review. My role is deliberately vendor-neutral: I do not sell a platform, so I have no reason to tell you to buy one. What I bring is the operating layer the platforms leave out, built around the workflows your firm already runs. If that is the gap you are staring at, the best place to start is a single workflow and a conversation about it.
+The frontier of AI in investment management is no longer the model — it is the last mile between a capable system on a screen and a repeatable, reviewed, evidence-backed process a firm can stand behind. Usage is everywhere; adoption is rare, and the difference is the operating layer of workflows, evidence, and controls that turns an impressive tool into a defensible result — the one thing no vendor hands you in the box. Cross that last mile one workflow at a time: take a single AI-assisted process your firm runs — a client communication, a DDQ response, a research memo, a credit memo, a piece of portfolio commentary — and ask three questions of it. Is every claim source-backed? Is there a named reviewer? Could you reconstruct the process in a year? If the answer to any is no, that workflow is usage, not adoption — and that gap is where the next decade of advantage will be won.
 
 ---
 

@@ -699,22 +699,50 @@ export default function HomePage() {
                       backgroundColor: "#76b900",
                     }}
                   >
-                    <img
-                      src="/assets/nvidia-gtc-logo.png"
-                      alt="NVIDIA GTC — AI Interpretability in Finance"
+                    <div
                       style={{
                         width: "100%",
                         height: "100%",
-                        transition: "transform 0.5s ease",
-                        objectFit: "contain",
+                        display: "flex",
+                        flexDirection: "column",
+                        alignItems: "center",
+                        justifyContent: "center",
+                        gap: "4px",
+                        color: "#ffffff",
                       }}
-                      onMouseEnter={(e) => {
-                        e.currentTarget.style.transform = "scale(1.1)";
-                      }}
-                      onMouseLeave={(e) => {
-                        e.currentTarget.style.transform = "scale(1)";
-                      }}
-                    />
+                    >
+                      <span
+                        style={{
+                          fontSize: "42px",
+                          fontWeight: 800,
+                          letterSpacing: "0.04em",
+                          lineHeight: 1,
+                        }}
+                      >
+                        NVIDIA
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "52px",
+                          fontWeight: 800,
+                          letterSpacing: "0.08em",
+                          lineHeight: 1,
+                        }}
+                      >
+                        GTC
+                      </span>
+                      <span
+                        style={{
+                          fontSize: "14px",
+                          fontWeight: 600,
+                          letterSpacing: "0.18em",
+                          marginTop: "6px",
+                          opacity: 0.9,
+                        }}
+                      >
+                        2026
+                      </span>
+                    </div>
                     <div
                       style={{
                         position: "absolute",
@@ -4571,7 +4599,7 @@ export default function HomePage() {
                   lineHeight: 1.8,
                 }}
               >
-                For inquiries, speaking engagements, or collaborations, please reach out:
+                For speaking and collaboration, you can reach out.
               </p>
               <div
                 style={{
