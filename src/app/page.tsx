@@ -382,29 +382,6 @@ export default function HomePage() {
                   >
                     Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He has several research in AI and Machine Learning and is performing research in neuroscience-inspired mechanistic interpretability to understand the inner workings of LLMs. He has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning. He has a deep interest in physics, philosophy and simulation hypothesis.
                   </p>
-                  <p
-                    style={{
-                      fontSize: "clamp(14px, 2vw, 16px)",
-                      color: "var(--text-secondary)",
-                      fontStyle: "italic",
-                      marginTop: "8px",
-                      textAlign: "left",
-                    }}
-                  >
-                    Reach out for{" "}
-                    <a
-                      href="/contact"
-                      style={{
-                        color: "var(--text-headings)",
-                        fontWeight: 600,
-                        textDecoration: "underline",
-                        textUnderlineOffset: "2px",
-                      }}
-                    >
-                      speaking engagements or collaboration inquiries
-                    </a>
-                    .
-                  </p>
                 </div>
                 
                 {/* Mobile Image - Shows only on mobile */}

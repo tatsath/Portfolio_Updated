@@ -17,7 +17,7 @@ ShowToc: true
 
 ---
 
-Spend a week talking to portfolio managers, RIA principals, and private-credit teams about artificial intelligence and you stop hearing the question that dominated 2023. Almost nobody asks *whether* generative AI matters anymore. The numbers settled that argument. In its 2025 research, the Alternative Investment Management Association found that 95% of fund-manager respondents now use generative AI in their work, up from 86% a year earlier. **<u>[[1]](#ref-1)</u>** Charles Schwab's January 2026 study put adoption among registered investment advisers at 63%, more than double the level of 2023. **<u>[[2]](#ref-2)</u>** At Balyasny Asset Management, roughly 95% of the firm's investment teams actively use its internal AI research platform. **<u>[[3]](#ref-3)</u>**
+Across portfolio managers, RIA principals, and private-credit teams, the question that dominated 2023 has all but disappeared. Almost nobody asks *whether* generative AI matters anymore. The numbers settled that argument. In its 2025 research, the Alternative Investment Management Association found that 95% of fund-manager respondents now use generative AI in their work, up from 86% a year earlier. **<u>[[1]](#ref-1)</u>** Charles Schwab's January 2026 study put adoption among registered investment advisers at 63%, more than double the level of 2023. **<u>[[2]](#ref-2)</u>** At Balyasny Asset Management, roughly 95% of the firm's investment teams actively use its internal AI research platform. **<u>[[3]](#ref-3)</u>**
 
 So the tools are everywhere. And yet, if you sit with the people inside these firms, a quieter and more uncomfortable question keeps surfacing.
 
