@@ -28,7 +28,7 @@ The general case comes first, because it applies to everything. Then the essay s
 
 ---
 
-## The general principle: extraction and generation are the easy part
+## The general principle: production is the easy part
 
 The pattern repeats with almost monotonous regularity across the use cases an investment firm cares about.
 
@@ -50,7 +50,7 @@ That combination, enormous document volume, real money at stake, and rising dema
 
 ---
 
-## Why a credit agreement is a system of definitions, not a document
+## A credit agreement is a system of definitions
 
 Hand a frontier model a credit agreement and ask it to "summarize the covenants," and it will give you a fluent, confident, plausible answer. It will also, with disturbing regularity, be wrong in ways you cannot see, and the reason is structural, not a matter of model quality.
 
@@ -69,7 +69,7 @@ This is why "summarize the covenants" is the wrong instruction. Summarization co
 
 ---
 
-## Extraction vs. validation: the two jobs people merge into one
+## Extraction vs. validation: two distinct jobs
 
 Here is the distinction that separates a useful covenant system from a dangerous one, and it maps directly onto the deterministic-extraction argument. There are two different jobs, and most tooling, and most pitches, blur them together.
 
@@ -89,7 +89,7 @@ There is a useful way to think about how such a system should be built, drawn fr
 
 ---
 
-## The recurring job: borrower monitoring and covenant headroom
+## Borrower monitoring and covenant headroom
 
 One-time extraction at underwriting is valuable, but the place covenant AI earns its keep over and over is **ongoing monitoring**, and it's where the manual status quo is most obviously broken.
 
@@ -146,7 +146,7 @@ Two non-negotiables throughout. First, **measure accuracy on your own agreements
 
 ---
 
-## Why this is the best GenAI use case in finance, and the most unforgiving
+## The best GenAI use case — and the most unforgiving
 
 Put it together and covenant work sits at a rare intersection. The documents are long, dense, repetitive, and high-stakes, exactly where automation should pay off most. The core questions are deterministic, since a leverage ratio under a defined term either computes to 4.6x or it doesn't, exactly where the extraction-and-validation tier belongs. And the output, done right, is an evidence pack that makes a credit decision more defensible, not less, exactly what a scrutinized, scaling asset class needs.
 

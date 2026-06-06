@@ -26,7 +26,7 @@ This is the capstone of everything in this series, because it is the principle u
 
 ---
 
-## The fact: it is not reproducible, and the vendors say so
+## The fact, from the vendors themselves
 
 Here is the experiment, run by researchers at Thinking Machines Lab, the company founded by OpenAI's former chief technology officer, and published in September 2025. They took a large open model, set the temperature to zero (which is supposed to make it pick the single highest-probability word every time, the closest thing to "no randomness" the system offers), and asked it the same question, "Tell me about Richard Feynman," one thousand times. Identical model, identical settings, identical prompt, a thousand times.
 
@@ -42,7 +42,7 @@ Read that again, because it is the entire foundation of this essay. The companie
 
 ---
 
-## Why this is the organizing principle, not a footnote
+## One principle, not a footnote
 
 It would be easy to file this under "interesting technical trivia" and move on. That would be a mistake, because non-determinism is not one consideration among many. It is the root cause of nearly every operating discipline this series has argued for, and seeing the connection is what turns a pile of best practices into a coherent way of thinking.
 
@@ -98,7 +98,7 @@ There is a useful piece of evidence behind this beyond first principles. MIT's 2
 
 ---
 
-## Discipline two: stop expecting 100%, and engineer for the failure rate
+## Discipline two: engineer for the failure rate
 
 Here is the second instinct that has to go: the expectation that the system will be right every time, and the disappointment when it is not.
 
@@ -128,7 +128,7 @@ Put the two together and you have the complete engineering answer to "never 100%
 
 ---
 
-## Discipline three: map every use case to its tolerance for variance
+## Discipline three: map use cases to variance tolerance
 
 Now bring it together into the thing a firm actually needs, which is a map. Not every use case has the same tolerance for the system giving a different answer next time. Some are entirely fine with it. Some are absolutely not. Most of the confusion in deploying AI comes from treating them all the same, applying the same enthusiasm or the same caution across the board, when the right posture differs sharply from one job to the next.
 
@@ -152,7 +152,7 @@ The map is the practical heart of this essay. Notice that it is not "AI good her
 
 ---
 
-## Where reproducibility is non-negotiable, and the toolkit you use instead
+## Where reproducibility is non-negotiable
 
 The right edge of that map deserves its own treatment, because it is where the stakes are highest and where the temptation to over-trust the technology does the most damage.
 

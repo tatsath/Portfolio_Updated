@@ -38,7 +38,7 @@ Most of the confusion in this space comes from collapsing three distinct things 
 
 ![Figure 1 — The Agentic-Trading Spectrum](/assets/financial-ai/3-1-trading-spectrum.svg)
 
-## The axis the spectrum hides: speed versus intelligence
+## Speed vs. intelligence: the hidden axis
 
 That spectrum sorts tools by autonomy. There is a second axis it hides, and it decides where large language models can play at all, which is speed. High-frequency trading has been pushed so close to the physical limit that the contest is fought in nanoseconds and in the length of fibre-optic cable between two machines, and no language model is remotely fast enough to compete there. But raw speed only matters if your holding period is measured in microseconds. Stretch the horizon to seconds, minutes, or hours, the mid-frequency band, and the binding constraint flips: the edge comes from more data and better reasoning, not from lower latency. Speakers at the STAC quant-infrastructure summit framed this directly as a Pareto frontier between speed and intelligence, the point being that LLMs are not there to win the speed race but to do the slower, judgment-heavy work that used to require a human discretionary trader.**<u>[[5]](#ref-5)</u>** The academic work points the same way. A 2025 study that built a high-frequency-trading benchmark to measure the latency-versus-quality tradeoff found that the right balance depends entirely on the task, and that LLM agents belong where there is time to think rather than time only to react.**<u>[[6]](#ref-6)</u>** The practical reading for a fund is simple. Do not put a language model in the nanosecond race. Put it in the mid-frequency, research, and monitoring work where intelligence, not speed, is the scarce input.
 
@@ -90,7 +90,7 @@ And here is where the honesty has to kick in, because the people doing this care
 
 ---
 
-## The trap nobody puts on the slide: backtest overfitting
+## The overfitting trap nobody mentions
 
 This is the single most important section in the essay, and it is the one that separates a practitioner from someone reposting "our AI found a strategy with a Sharpe of 2.3."
 
@@ -108,7 +108,7 @@ The lesson is not "don't use AI to generate strategies." It is: treat every auto
 
 ---
 
-## The deeper trap, unique to language models: the profit mirage
+## The profit mirage: an LLM-specific danger
 
 Overfitting is the classical danger, and it applies to any search over strategies, human or machine. But large language models introduce a second, subtler failure that is specific to them, and it is more dangerous precisely because it does not look like overfitting. It looks like skill.
 
@@ -134,7 +134,7 @@ Overfitting is the big one, but two more failures separate durable systems from 
 
 ---
 
-## The right approach: an operating model for AI in trading
+## An operating model for AI in trading
 
 So how should a fund or RIA actually proceed? Not by buying the most autonomous thing available. By sequencing.
 

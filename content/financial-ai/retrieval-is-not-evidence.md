@@ -70,7 +70,7 @@ The conclusion is no longer arguable. **The system around the model, meaning how
 
 ---
 
-## Where retrieval fails on a financial number, specifically
+## Where retrieval fails on a number
 
 Strip it down to mechanics and the failure points are specific, and obvious to anyone who has actually read a 10-K or a credit agreement:
 
@@ -121,7 +121,7 @@ The failure mode that actually hurts firms is using a probabilistic-reading tool
 
 ---
 
-## Why this is the most important decision you'll make
+## The decision that matters most
 
 Pull it together and the practical weight of the reframe becomes clear. When a firm evaluates AI for anything touching its numbers, the first question is usually "which model?" or "does it have citations?" Both are close to the wrong question. The right first question is: **is this a synthesis task or an exact-number task, and if it's an exact-number task, where is the deterministic extraction-and-validation layer?**
 

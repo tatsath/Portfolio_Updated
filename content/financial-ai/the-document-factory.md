@@ -66,7 +66,7 @@ Notice what nearly all of them now advertise: citations, "grounded" answers, aud
 
 ---
 
-## The technical crux: extraction and the "right source" problem
+## The technical crux: the right-source problem
 
 Getting the numbers extracted from the right place is the key, and it is genuinely hard. Here is why, with the evidence.
 
@@ -143,7 +143,7 @@ The decision reduces to four questions: Is this capability a source of competiti
 
 ---
 
-## What different organizations should actually do next
+## Next steps by firm type
 
 The right next step depends on what kind of firm you are:
 
