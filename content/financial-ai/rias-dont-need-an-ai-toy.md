@@ -4,7 +4,7 @@ date: 2026-05-19
 description: "For a chief compliance officer, the question is not which tool to buy. It is whether the firm can describe, supervise, and defend how AI is used. The SEC has already charged firms that couldn't."
 categories:
  - Opinion
-draft: false
+draft: true
 ShowToc: true
 ---
 

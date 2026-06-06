@@ -4,7 +4,7 @@ date: 2026-05-12
 description: "Of every job in finance you could point an AI at, private-credit covenant work is the one where the demos lie hardest. Here is what the work actually demands."
 categories:
  - Technical
-draft: false
+draft: true
 ShowToc: true
 ---
 

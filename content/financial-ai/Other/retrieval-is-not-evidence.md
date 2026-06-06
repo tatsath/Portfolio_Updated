@@ -1,18 +1,16 @@
 ---
-title: 'Retrieval Is Not Evidence: Why "It Cited a Source" Still Gets Finance Wrong'
+title: "Retrieval Is Not Evidence: Why \"It Cited a Source\" Still Gets Finance Wrong"
 date: 2026-05-05
-description: "A citation tells you the model found a document. It does not tell you the model read the number correctly. That gap is exactly where wrong figures hide in finance."
-categories:
- - Technical
-draft: false
-ShowToc: true
+draft: true
 ---
 
-> *The AI Operating Manual for Investment Firms*
+> *The AI Operating Manual for Investment Firms* — Essay 05
 
 # Retrieval Is Not Evidence: Why "It Cited a Source" Still Gets Finance Wrong
 
-*Everyone has converged on the same fix for AI hallucination: ground the model in your documents, show a citation, trust the answer. For synthesis, that works. For the number on slide 14, it quietly doesn't, and the reason exposes the most important architectural decision in financial AI. It isn't "agents vs. RAG." It's probabilistic reading vs. deterministic extraction.*
+### Everyone has converged on the same fix for AI hallucination: ground the model in your documents, show a citation, trust the answer. For synthesis, that works. For the number on slide 14, it quietly doesn't, and the reason exposes the most important architectural decision in financial AI. It isn't "agents vs. RAG." It's *probabilistic reading vs. deterministic extraction.*
+
+*By [YOUR NAME] · [DATE] · ~16 min read · Nothing here is investment advice.*
 
 ---
 
@@ -48,7 +46,7 @@ And the relationship between them matters: RAG is not a peer of "agent." RAG sit
 
 > Probabilistic reading is fine for synthesis. Finance numbers need a deterministic extraction-and-validation layer.
 
-![Three tiers, not two](/assets/financial-ai/5-1-three-tiers.svg)
+`[FIGURE 1 — "Three tiers, not two." Render the table above as a clean three-row stack. Crucial visual detail: show RAG as a thin horizontal band sitting UNDERNEATH both "Agent" and "Deterministic extraction" — i.e., a shared substrate, not a third peer column — to make the "RAG is not a peer category" point visually. Shade tiers 1–2 in the neutral/grey 'probabilistic reading' family and tier 3 in the teal 'deterministic' accent. Caption: "The fault line isn't agent vs. RAG. It's probabilistic reading vs. deterministic extraction."]`
 
 ---
 
@@ -66,7 +64,7 @@ And lest anyone object that this is a 2026 problem with 2026 models, it isn't ne
 
 The conclusion is no longer arguable. **The system around the model, meaning how the document is parsed, where the number is retrieved from, and whether the value is validated, dominates the outcome far more than which model you use.** The model is not the bottleneck. The plumbing is.
 
-![It's the parsing, not the brain](/assets/financial-ai/5-2-officeqa-parsing.svg)
+`[FIGURE 2 — "It's the parsing, not the brain." A simple bar chart of OfficeQA Pro accuracy: ~5% (model alone) → ~12% (+ web) → 34.1% (+ document corpus) → then a clearly-labelled bump showing the +16.1% relative gain from structured parsing on top. Annotate the last step: "the biggest lever wasn't a smarter model — it was better parsing." Caption: source OfficeQA Pro, Databricks, March 2026. Keep the bars sober; this is a serious finding, not a victory lap.]`
 
 ---
 
@@ -98,7 +96,7 @@ If retrieval isn't evidence, what is? Evidence is a chain you can inspect, and i
 
 This is the evidence chain that runs through this entire series, here pointed at the hardest case, a single financial figure. The difference between this and a RAG citation is the difference between "here is a document that mentions this" and "here is the exact cell this came from, here is the math I redid, here is where it sits versus the other places it appears, and here is who approved it."
 
-![The Evidence Chain](/assets/financial-ai/R1-evidence-chain.svg)
+`[FIGURE 3 — The Evidence Chain (reuse R1, the recurring brand figure). Use the figure/cell-level labels: Claim → Source (document · page · cell · footnote) → Calculation (recompute · reconcile) → Reviewer (sign-off), with the "rejected / sent back" loop. Caption: "The same evidence chain as the rest of the series — pointed at a single number. A RAG citation gives you the first arrow and skips the rest."]`
 
 The architecture that delivers this is the set of controls that mirror the failure points above: **structure-aware parsing** instead of naive text-chunking (the OfficeQA lesson); a **structured-data backbone** wherever the fields are known (the FinRetrieval lesson); a **designated source-of-record and period** with provenance tracked; **grounding to the exact cell** so every figure is a link, not an assertion; a **numerical verification layer** that recomputes rather than trusting the model's arithmetic; and **explicit abstention**, where the system says "this figure is not in the provided documents" instead of inventing one. And critically, the abstention and review belong to a *deterministic* layer, not to an agent asked to double-check its own work, because a probabilistic reader auditing a probabilistic reader inherits the same blind spots.
 
@@ -119,6 +117,8 @@ So this is not "deterministic good, probabilistic bad." It is **horses for cours
 
 The failure mode that actually hurts firms is using a probabilistic-reading tool for a deterministic-number job, trusting the citation, and shipping the wrong figure with the firm's name on it.
 
+`[FIGURE 4 — "Match the tier to the job." A two-column sorting diagram. Left, "Probabilistic reading is fine (agents / RAG)": cross-document research · thesis & sector synthesis · memo & note drafting · CIM summaries · deal-room search · comps screening structure. Right, "Deterministic extraction is mandatory": financial spreading · covenant thresholds & breach checks · debt schedules · NAV & holdings ingestion · position reconciliation · statement tie-outs · reported-vs-adjusted · chart-value extraction. Caption: "The mistake that costs you is using the left tool for a right-column job — and trusting the citation."]`
+
 ---
 
 ## Why this is the most important decision you'll make
@@ -129,7 +129,7 @@ A tool that produces fluent answers with citations will pass every demo. It will
 
 This is also, quietly, where the regulatory wind is blowing. The SEC's 2026 examination priorities have examiners reviewing the accuracy of firms' representations about their AI, and FINRA has flagged hallucination as a core risk of exactly the summarization-and-extraction use case this essay is about.[^reg] "We use a grounded AI with citations" is not, by itself, a defensible answer to "how do you know the numbers are right." The defensible answer describes the evidence layer.
 
-There is a version of this failure that plays out more than once in how firms talk about their tools, and it is worth stating as a caution rather than a war story. A team adopts a grounded, citation-linked assistant, sees clean sourcing in the demo, and concludes the accuracy problem is solved. Months later someone checks a figure that drove a real decision and finds the citation was perfectly real, the document genuine, and the number still wrong: the right company, the prior period; the right table, a misread row. Nothing in the interface flagged it, because nothing in the interface was checking the value, only displaying the source. That is the entire gap between retrieval and evidence, and it is invisible until someone goes looking.
+There is a version of this failure I have watched play out more than once in how firms talk about their tools, and it is worth stating as a caution rather than a war story. A team adopts a grounded, citation-linked assistant, sees clean sourcing in the demo, and concludes the accuracy problem is solved. Months later someone checks a figure that drove a real decision and finds the citation was perfectly real, the document genuine, and the number still wrong: the right company, the prior period; the right table, a misread row. Nothing in the interface flagged it, because nothing in the interface was checking the value, only displaying the source. That is the entire gap between retrieval and evidence, and it is invisible until someone goes looking.
 
 ---
 
@@ -143,10 +143,16 @@ Retrieval finds text. Evidence proves a number. Build for the difference.
 
 ---
 
+### Where this goes next
+
+This is Essay 05 of *The AI Operating Manual for Investment Firms*. It sets up the broader principle that runs through the next essay: that producing an answer is the easy part, and **validation**, confirming the result is correct and being able to prove it, is the hard part that decides whether any of it is usable. The most demanding version of that, where the documents are longest and a misread is a real loss, is private-credit covenant analysis. The spine remains constant: the advantage is in the workflow, the evidence, and the controls, not the subscription, and not the citation.
+
 > **Practical next step.** Take the last AI-generated number your firm relied on, a figure in a memo, a model, a client report, and try to rebuild its evidence chain. Can you point to the exact cell it came from? Was the source the authoritative filing, and the right period? Was the arithmetic re-checked, or trusted? If the chain breaks at any link, you were doing probabilistic reading on a deterministic-number job. That's the gap this essay is about.
 
 
 ## Sources
+
+*Verify each against the primary link before publishing. The four benchmarks below carry the argument; all are citable from arXiv or the issuing company. I've stated each result conservatively — confirm the exact figures against the source, since precision is the entire credibility of this piece.*
 
 [^officeqa]: Databricks AI Research, "OfficeQA Pro: An Enterprise Benchmark for End-to-End Grounded Reasoning," arXiv:2603.08655 (March 2026). Corpus: ~89,000 pages of U.S. Treasury Bulletins spanning ~100 years, 26M+ numerical values. Frontier models (Claude Opus 4.6, GPT-5.4, Gemini 3.1 Pro Preview) scored <5% on parametric knowledge, <12% with web access, and 34.1% on average with direct document-corpus access (still failing >50% of questions). A structured document representation via Databricks' `ai_parse_document` yielded a 16.1% average relative performance gain. Error analysis identified "table topology failures" and the wrong-source/wrong-period problem (bulletins are revised/reissued; agents stop at the first plausible answer despite being told to find the latest). https://arxiv.org/abs/2603.08655 ; blog: https://www.databricks.com/blog/introducing-officeqa-benchmark-end-to-end-grounded-reasoning ; code: https://github.com/databricks/officeqa
 

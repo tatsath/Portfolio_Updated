@@ -4,7 +4,7 @@ date: 2026-06-01
 description: "From earnings season to the trading frontier: the complete playbook for what the funds winning with AI actually do differently, and how to build the operating model around it."
 categories:
  - Opinion
-draft: false
+draft: true
 ShowToc: true
 ---
 
