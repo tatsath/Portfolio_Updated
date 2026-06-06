@@ -98,7 +98,7 @@ There is a useful piece of evidence behind this beyond first principles. MIT's 2
 
 ---
 
-## Discipline two: engineer for the failure rate
+## Discipline two: engineer for failure
 
 Here is the second instinct that has to go: the expectation that the system will be right every time, and the disappointment when it is not.
 
@@ -128,7 +128,7 @@ Put the two together and you have the complete engineering answer to "never 100%
 
 ---
 
-## Discipline three: map use cases to variance tolerance
+## Discipline three: variance by use case
 
 Now bring it together into the thing a firm actually needs, which is a map. Not every use case has the same tolerance for the system giving a different answer next time. Some are entirely fine with it. Some are absolutely not. Most of the confusion in deploying AI comes from treating them all the same, applying the same enthusiasm or the same caution across the board, when the right posture differs sharply from one job to the next.
 
@@ -172,7 +172,7 @@ The principle underneath all three is the same: **match reproducibility to conse
 
 ---
 
-## How the vendors talk about this, and how to listen
+## How to read vendor guidance
 
 Since the practical task is often choosing and evaluating tools, it is worth being precise about how vendors handle this subject, because the language is a tell.
 

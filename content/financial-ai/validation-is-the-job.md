@@ -28,7 +28,7 @@ The general case comes first, because it applies to everything. Then the essay s
 
 ---
 
-## The general principle: production is the easy part
+## The general principle
 
 The pattern repeats with almost monotonous regularity across the use cases an investment firm cares about.
 
@@ -42,7 +42,7 @@ Now to the hardest place that question gets asked.
 
 ---
 
-## The worked example: private-credit covenants
+## Worked example: covenants
 
 Private credit has spent the last decade moving from the edge of the financial system to its center. Global assets under management now sit in the low trillions, with estimates clustering around $2 trillion and running higher depending on what you count, with credible forecasts pointing toward $3–4 trillion by the end of the decade, and direct lending now rivaling the broadly syndicated loan market in size.**<u>[[2]](#ref-2)</u>** As the asset class has scaled, investors and regulators have started applying tighter scrutiny to underwriting, reporting quality, and risk management; the market is, as one outlook put it, becoming less forgiving.**<u>[[3]](#ref-3)</u>**
 
@@ -50,7 +50,7 @@ That combination, enormous document volume, real money at stake, and rising dema
 
 ---
 
-## A credit agreement is a system of definitions
+## A credit agreement, defined
 
 Hand a frontier model a credit agreement and ask it to "summarize the covenants," and it will give you a fluent, confident, plausible answer. It will also, with disturbing regularity, be wrong in ways you cannot see, and the reason is structural, not a matter of model quality.
 
@@ -69,7 +69,7 @@ This is why "summarize the covenants" is the wrong instruction. Summarization co
 
 ---
 
-## Extraction vs. validation: two distinct jobs
+## Extraction vs. validation
 
 Here is the distinction that separates a useful covenant system from a dangerous one, and it maps directly onto the deterministic-extraction argument. There are two different jobs, and most tooling, and most pitches, blur them together.
 
@@ -118,7 +118,7 @@ That last line is the product. The entire value of bringing AI to this workflow 
 
 ---
 
-## What the whole category is still getting wrong
+## What the category still gets wrong
 
 Here is the honest state of the market, and it is not "nobody does this." Covenant extraction is now a contested space: contract-analysis platforms, generative legal-AI tools, credit-document-intelligence providers, and a wave of private-credit-specific agents are all here, several advertising very high extraction accuracy and source-linked clauses.**<u>[[8]](#ref-8)</u>** Pretending the field is empty would be the kind of claim this series does not make. The gap is more specific, and more useful to name, and the description stays at the category level rather than singling anyone out, because it's a pattern, not a vendor flaw.
 
@@ -146,7 +146,7 @@ Two non-negotiables throughout. First, **measure accuracy on your own agreements
 
 ---
 
-## The best GenAI use case — and the most unforgiving
+## The best GenAI use case — and hardest
 
 Put it together and covenant work sits at a rare intersection. The documents are long, dense, repetitive, and high-stakes, exactly where automation should pay off most. The core questions are deterministic, since a leverage ratio under a defined term either computes to 4.6x or it doesn't, exactly where the extraction-and-validation tier belongs. And the output, done right, is an evidence pack that makes a credit decision more defensible, not less, exactly what a scrutinized, scaling asset class needs.
 
@@ -158,7 +158,7 @@ A credit agreement is a system of definitions. Reading it is not the job. Recons
 
 ---
 
-## Back to the general case: validation is the work
+## The general case: validation is the work
 
 Covenants are the extreme, but step back and the lesson is the one that governs every AI workflow in an investment firm. Whatever the model produces, an extracted figure, a drafted memo, a client letter, a generated exhibit, the production is the easy 80% and is rapidly becoming a commodity. The validation, confirming the result is correct and being able to prove it, is the hard 20%, and it is the part that decides whether the output is something you can stand behind.
 

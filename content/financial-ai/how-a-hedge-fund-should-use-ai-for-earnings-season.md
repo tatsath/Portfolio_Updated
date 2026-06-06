@@ -51,7 +51,7 @@ The shift this enables is easy to underrate. Building a pre-read by hand is mech
 
 ---
 
-## The post-read: structured extraction, not a summary
+## The post-read: extraction, not summary
 
 When the release hits, the task is not "tell me what they said." It is "reconcile what they reported against three reference points and show me every delta that matters." Those reference points are your model, consensus, and prior guidance, and the work is to compute the differences line by line and segment by segment, not to narrate.
 

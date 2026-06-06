@@ -25,7 +25,7 @@ This matters for an investment firm more than for most businesses, because the w
 
 ---
 
-## The number that should reframe the conversation
+## The number that reframes everything
 
 Start with the finding that ought to be on the wall of every firm contemplating an AI budget. In July 2025, MIT's Project NANDA published *The GenAI Divide: State of AI in Business 2025*, built on 150 leader interviews, 350 employee surveys, and analysis of 300 public deployments. Its headline: despite an estimated **$30–40 billion** in enterprise generative-AI spending, roughly **95% of organizations were seeing no measurable return** on the P&L. Only about 5% of pilots were extracting real value. **<u>[[2]](#ref-2)</u>**
 
@@ -56,7 +56,7 @@ Think of GenAI cost as an iceberg. The part above the waterline, the part everyo
 
 ---
 
-## Why the model is the cheapest thing you'll buy
+## Why the model is the cheapest part
 
 It's worth dwelling on the counterintuitive core, because it inverts how most firms reason about this.
 

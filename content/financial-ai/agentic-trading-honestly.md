@@ -26,7 +26,7 @@ There are two lazy reactions to this moment, and both are wrong. One is to hand 
 
 ---
 
-## First, stop comparing three different things
+## Stop comparing three different things
 
 Most of the confusion in this space comes from collapsing three distinct things into one word, "agentic trading." They sit on a spectrum from boring-and-mature to frontier-and-dangerous, and a fund or RIA needs to know which one a vendor is selling.
 
@@ -64,7 +64,7 @@ The pattern is hard to miss once you draw it. AI's value is concentrated in the 
 
 ---
 
-## Below the surface: what the platforms actually do
+## Below the surface: how platforms work
 
 Here is the research-agent layer in real detail, because this is where a fund or RIA should look first, and where, notably, even the most advanced players keep AI firmly in the *research* seat, not the trading seat.
 
@@ -158,7 +158,7 @@ Your edge with AI is not autonomous execution. It is the green part of the workf
 
 ---
 
-## The order is the commodity; the judgment is the edge
+## The judgment is the edge
 
 Strip away the spectacle and agentic trading resolves into the same lesson as everything else in this series. The model that can place an order is rapidly becoming a commodity — Robinhood made it model-agnostic, plugging in whatever agent you bring through a standard protocol. What is scarce, and therefore valuable, is the operating model around it: knowing which stage of the workflow to automate, validating ruthlessly against the overfitting that an agent makes *worse*, keeping an evidence trail you can defend, and holding human judgment and hard risk limits at the point of decision.
 

@@ -52,7 +52,7 @@ And the relationship between them matters: RAG is not a peer of "agent." RAG sit
 
 ---
 
-## The evidence is now overwhelming, and recent
+## The evidence is now overwhelming
 
 This is not a theoretical worry, and you no longer have to take it on assertion. Two benchmarks published in the last few months make the point with unusual force, and a third and fourth confirm it isn't new.
 

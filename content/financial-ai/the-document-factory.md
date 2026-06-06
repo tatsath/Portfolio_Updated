@@ -66,11 +66,11 @@ Notice what nearly all of them now advertise: citations, "grounded" answers, aud
 
 ---
 
-## The technical crux: the right-source problem
+## The right-source problem
 
 Getting the numbers extracted from the right place is the key, and it is genuinely hard. Here is why, with the evidence.
 
-### The numbers are not as good as the demos suggest
+### The numbers don't match the demos
 
 Start with the most important benchmark in this space. Researchers at Stanford and Patronus AI built **FinanceBench**, a test of thousands of *deliberately clear-cut* questions about public companies, paired with the source filings, a minimum competence bar rather than a hard exam. The headline result, in 2023: a leading model used with a retrieval system answered incorrectly or refused on **81% of questions**, even with the right documents available; across realistic configurations, performance landed around 47% correct, 26% outright wrong, and 27% non-answers.**<u>[[18]](#ref-18)</u>** Those were 2023-era models, and frontier models have improved meaningfully since. But the *structural* lesson has not changed, and a 2026 financial-retrieval benchmark proves it: the same class of model scored about **90.8% accuracy when it could query a structured financial database, versus 19.8% on open web search** — a 71-percentage-point swing driven not by the model's intelligence but by what it was allowed to retrieve from.**<u>[[19]](#ref-19)</u>**
 
@@ -129,7 +129,7 @@ One more thing the category underinvests in deserves its own mention, because it
 
 ---
 
-## Build vs. buy: a framework, not a recommendation
+## Build vs. buy: a decision framework
 
 The question every confused firm asks is "what should we buy?" The honest answer for most is: stop framing it as buy-versus-build, and reframe it as **configure**.
 
@@ -157,7 +157,7 @@ The common error across all five is the same one: a firm buys on the strength of
 
 ---
 
-## How to produce one equity report you can defend
+## How to produce a defensible report
 
 The way to start is not to automate the whole thing. Produce *one* report, the disciplined way, and measure it.
 
@@ -167,7 +167,7 @@ That is the difference between a report that compresses your week and a report t
 
 ---
 
-## The prose is the commodity; the number is the product
+## The number is the product, not the prose
 
 Strip away the platform names and the demos, and the document factory resolves into the same lesson as the rest of this series. Generating a fluent, on-brand report is rapidly becoming a commodity — every serious tool can do it, and next year's will do it better. What is scarce, and therefore valuable, is everything the demo skips: extracting the right number from the right source, grounding it so it can be checked, verifying the arithmetic, and putting a human accountable at the end.
 
