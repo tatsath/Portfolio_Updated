@@ -3,7 +3,7 @@
 import { useEffect, useState } from "react";
 import Header from "@/components/Header";
 import Link from "next/link";
-import mainHeaderImage from "../../assets/Main.png";
+import mainHeaderImage from "../../assets/Home.png";
 
 declare global {
   interface Window {
@@ -185,7 +185,7 @@ export default function HomePage() {
               pointerEvents: "none",
               backgroundImage: `url('${mainHeaderImage.src}')`,
               backgroundSize: "cover",
-              backgroundPosition: "70% center",
+              backgroundPosition: "center top",
               backgroundRepeat: "no-repeat",
               opacity: 1.0,
             }}
