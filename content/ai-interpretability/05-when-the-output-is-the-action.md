@@ -1,14 +1,14 @@
 ---
-title: "Before the Agent Acts"
+title: "The Gap in Agent Observability"
 date: 2026-05-27
-description: "The agent safety stack watches inputs, outputs, and traces — the edges of the pipeline. The decision that produces every tool call forms in the middle, inside the model, invisible to all of it. Here is what reading that decision before the action fires actually changes."
+description: "Every tool in the agent observability stack — traces, logs, output monitors — watches the edges of the pipeline. The decision that produces each action forms in the middle, inside the model, where none of them can see."
 categories:
  - Opinion
 draft: false
 ShowToc: true
 ---
 
-# Before the Agent Acts
+# The Gap in Agent Observability
 
 *A chatbot's worst output is text you can filter. An agent's worst output is an action that already happened. Most of the agent safety stack still watches the edges, and the decision that matters is made in the middle, inside the model, before anything reaches the surface.*
 

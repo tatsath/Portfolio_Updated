@@ -1,14 +1,14 @@
 ---
-title: "Reading the System Cards"
-date: 2026-06-10
-description: "A close reading of what major-lab system cards quietly admit about the limits of surface-level safety, and where the next layer of defense needs to live."
+title: "Interpretability: The Missing Link in Enterprise AI"
+date: 2026-06-12
+description: "The major labs publish detailed system cards that quietly admit surface-level safety has hard limits. Read closely, those admissions form a map — and the missing layer they point to is internal monitoring of the model itself."
 categories:
  - Opinion
 draft: false
 ShowToc: true
 ---
 
-# Reading the System Cards
+# Interpretability: The Missing Link in Enterprise AI
 
 *The major labs publish detailed, carefully measured system cards. The most useful parts are the parts they admit they still cannot solve. Read closely, those admissions form a map.*
 
