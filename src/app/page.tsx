@@ -172,25 +172,6 @@ export default function HomePage() {
             }}
           />
           
-          {/* Background Image - Positioned on Right Side, Showing More of Left Side */}
-          <div
-            className="hero-background-image"
-            style={{
-              position: "absolute",
-              right: 0,
-              top: 0,
-              width: "42%",
-              height: "100%",
-              zIndex: 1,
-              pointerEvents: "none",
-              backgroundImage: `url('${mainHeaderImage.src}')`,
-              backgroundSize: "cover",
-              backgroundPosition: "center top",
-              backgroundRepeat: "no-repeat",
-              opacity: 1.0,
-            }}
-          />
-
           <div className="container" style={{ ...containerStyle, maxWidth: "1400px", position: "relative", zIndex: 2 }}>
             {/* Hero Content Grid - Text Left, Image Right */}
             <div
@@ -383,38 +364,34 @@ export default function HomePage() {
                     Hariom has years of experience bridging AI, machine learning and quantitative techniques with Finance. He is an O'Reilly author and published researcher. He has several research in AI and Machine Learning and is performing research in neuroscience-inspired mechanistic interpretability to understand the inner workings of LLMs. He has been a featured speaker at several conferences and industry forums. He received the Indian Achiever Award in Machine Learning. He has a deep interest in physics, philosophy and simulation hypothesis.
                   </p>
                 </div>
-                
-                {/* Mobile Image - Shows only on mobile */}
-                <div
-                  className="hero-mobile-image"
-                  style={{
-                    display: "none",
-                    marginTop: "40px",
-                    textAlign: "center",
-                  }}
-                >
-                  <img
-                    src={mainHeaderImage.src}
-                    alt="Hariom Tatsat"
-                    style={{
-                      width: "100%",
-                      maxWidth: "400px",
-                      height: "auto",
-                      borderRadius: "12px",
-                      boxShadow: "0 8px 24px var(--shadow-color)",
-                      objectFit: "cover",
-                    }}
-                  />
-                </div>
               </div>
 
-              {/* Right Side - Empty space for background image to show through */}
+              {/* Right Side - Profile Image */}
               <div
+                className="hero-right-image-container"
                 style={{
+                  display: "flex",
+                  alignItems: "center",
+                  justifyContent: "center",
                   position: "relative",
                   zIndex: 1,
                 }}
-              />
+              >
+                <img
+                  src={mainHeaderImage.src}
+                  alt="Hariom Tatsat"
+                  style={{
+                    width: "100%",
+                    maxWidth: "520px",
+                    height: "auto",
+                    borderRadius: "16px",
+                    objectFit: "cover",
+                    objectPosition: "center top",
+                    boxShadow: "0 12px 40px var(--shadow-color)",
+                    display: "block",
+                  }}
+                />
+              </div>
             </div>
           </div>
         </section>

@@ -237,16 +237,17 @@ hr {
     min-height: 300px !important;
   }
   
-  /* Hide background image on mobile */
-  .hero-background-image {
-    display: none !important;
+  /* Right image: center and constrain on mobile */
+  .hero-right-image-container {
+    justify-content: center !important;
+    margin-top: 0 !important;
   }
-  
-  /* Show mobile image in content area */
-  .hero-mobile-image {
-    display: block !important;
+
+  .hero-right-image-container img {
+    max-width: 380px !important;
+    border-radius: 12px !important;
   }
-  
+
   /* Ensure text container has proper background on mobile */
   .hero-content-grid > div:first-child {
     background-color: var(--bg-main) !important;
