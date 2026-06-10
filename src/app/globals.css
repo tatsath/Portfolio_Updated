@@ -290,3 +290,12 @@ hr {
   }
 }
 
+/* /speak page responsive */
+@media (max-width: 600px) {
+  .speak-identity {
+    grid-template-columns: 1fr !important;
+    justify-items: center !important;
+    text-align: center !important;
+  }
+}
+
