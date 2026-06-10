@@ -6,8 +6,8 @@ const highlights = [
   "Author of Machine Learning & Data Science Blueprints for Finance (O'Reilly, 2020) — #1 new release on Amazon in AI",
   "Featured speaker at Federal Reserve Bank of Atlanta, NVIDIA GTC, AI4, NexGen Banking Summit, and Momentum AI Finance",
   "Published researcher in AI interpretability — Beyond the Black Box: Interpretability of LLMs in Finance (arXiv, 2025)",
-  "Recipient of the Indian Achievers' Award in Machine Learning; EB-1 Extraordinary Ability (Einstein Visa)",
-  "VP at Barclays Investment Bank; 15+ years bridging quantitative finance, machine learning, and AI",
+  "Recipient of the Indian Achievers' Award in Machine Learning",
+  "15+ years bridging quantitative finance, machine learning, and AI across top-tier financial institutions",
 ];
 
 export default function SpeakPage() {
@@ -142,6 +142,50 @@ export default function SpeakPage() {
           }}
         />
 
+        {/* Bio */}
+        <section style={{ marginBottom: "56px" }}>
+          <h2
+            style={{
+              fontSize: "11px",
+              fontWeight: 700,
+              letterSpacing: "0.16em",
+              textTransform: "uppercase",
+              color: "var(--text-secondary)",
+              marginBottom: "20px",
+            }}
+          >
+            Bio
+          </h2>
+          <p
+            style={{
+              fontSize: "17px",
+              lineHeight: 1.8,
+              color: "var(--text-primary)",
+              margin: 0,
+            }}
+          >
+            Hariom has years of experience bridging AI, machine learning,
+            quantitative techniques, and finance. He is an O'Reilly author and
+            published researcher, with multiple research contributions in AI,
+            machine learning, and mechanistic interpretability, particularly
+            focused on making large language models more transparent and reliable
+            in financial and agentic AI settings. He has been a featured speaker
+            at several conferences and industry forums and received the Indian
+            Achiever Award in Machine Learning. He completed his MS at UC
+            Berkeley and his BE at IIT (India).
+          </p>
+        </section>
+
+        {/* Divider */}
+        <div
+          style={{
+            height: "1px",
+            background: "linear-gradient(to right, transparent, var(--text-secondary), transparent)",
+            opacity: 0.4,
+            marginBottom: "48px",
+          }}
+        />
+
         {/* Highlights */}
         <section style={{ marginBottom: "56px" }}>
           <h2
@@ -187,50 +231,6 @@ export default function SpeakPage() {
               </li>
             ))}
           </ul>
-        </section>
-
-        {/* Divider */}
-        <div
-          style={{
-            height: "1px",
-            background: "linear-gradient(to right, transparent, var(--text-secondary), transparent)",
-            opacity: 0.4,
-            marginBottom: "48px",
-          }}
-        />
-
-        {/* Bio */}
-        <section style={{ marginBottom: "56px" }}>
-          <h2
-            style={{
-              fontSize: "11px",
-              fontWeight: 700,
-              letterSpacing: "0.16em",
-              textTransform: "uppercase",
-              color: "var(--text-secondary)",
-              marginBottom: "20px",
-            }}
-          >
-            Bio
-          </h2>
-          <p
-            style={{
-              fontSize: "17px",
-              lineHeight: 1.8,
-              color: "var(--text-primary)",
-              margin: 0,
-            }}
-          >
-            Hariom has years of experience bridging AI, machine learning,
-            quantitative techniques, and finance. He is an O'Reilly author and
-            published researcher, with multiple research contributions in AI,
-            machine learning, and mechanistic interpretability, particularly
-            focused on making large language models more transparent and reliable
-            in financial and agentic AI settings. He has been a featured speaker
-            at several conferences and industry forums and received the Indian
-            Achiever Award in Machine Learning. He completed his MS at UC
-            Berkeley and his BE at IIT (India).
-          </p>
         </section>
 
         {/* Divider */}
