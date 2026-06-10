@@ -1,0 +1,53 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="900" height="300" fill="#FBF9F3"/>
+  <defs>
+    <marker id="rl" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/></marker>
+  </defs>
+
+  <text x="450" y="28" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">THE REPAIR LOOP</text>
+
+  <!-- 4 stages -->
+  <g font-family="'Courier New','DejaVu Sans Mono',monospace">
+    <rect x="24" y="74" width="200" height="68" rx="8" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.3"/>
+    <text x="124" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">FAILURE</text>
+    <text x="124" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">IDENTIFIED</text>
+
+    <rect x="248" y="74" width="200" height="68" rx="8" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.3"/>
+    <text x="348" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">FIND THE</text>
+    <text x="348" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">INTERNAL SIGNAL</text>
+
+    <rect x="472" y="74" width="200" height="68" rx="8" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.3"/>
+    <text x="572" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">CONSTRAINED</text>
+    <text x="572" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">TRAINING OR EDIT</text>
+
+    <rect x="696" y="74" width="180" height="68" rx="8" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.3"/>
+    <text x="786" y="104" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">VERIFY</text>
+    <text x="786" y="124" text-anchor="middle" font-size="13" font-weight="bold" fill="#1C1B17">TARGET + ANCHOR</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#73705F" stroke-width="1.6" fill="none">
+    <line x1="224" y1="108" x2="246" y2="108" marker-end="url(#rl)"/>
+    <line x1="448" y1="108" x2="470" y2="108" marker-end="url(#rl)"/>
+    <line x1="672" y1="108" x2="694" y2="108" marker-end="url(#rl)"/>
+  </g>
+
+  <!-- examples under each -->
+  <g font-size="12" fill="#73705F">
+    <text x="124" y="170" text-anchor="middle">a specific behavior</text>
+    <text x="124" y="186" text-anchor="middle">that needs fixing</text>
+
+    <text x="348" y="170" text-anchor="middle">probe / direction / feature /</text>
+    <text x="348" y="186" text-anchor="middle">circuit (from the toolkit)</text>
+
+    <text x="572" y="170" text-anchor="middle">LoRA penalty, weight</text>
+    <text x="572" y="186" text-anchor="middle">surgery, or RL reward</text>
+
+    <text x="786" y="170" text-anchor="middle">target metric up,</text>
+    <text x="786" y="186" text-anchor="middle">other behaviors held</text>
+  </g>
+
+  <!-- bottom note -->
+  <text x="450" y="248" text-anchor="middle" font-size="14" fill="#1C1B17">The interpretability signal turns a blunt training update into a targeted one.</text>
+  <text x="450" y="272" text-anchor="middle" font-style="italic" font-size="13" fill="#73705F">Without the verify step, you have not repaired the model. You have only changed it.</text>
+</svg>

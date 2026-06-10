@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 300" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="860" height="300" fill="#FBF9F3"/>
+  <defs>
+    <marker id="c1" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/></marker>
+  </defs>
+
+  <text x="430" y="30" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">THE INTERNAL-EVIDENCE LOOP</text>
+
+  <!-- 5 capability nodes in a row -->
+  <g font-family="'Courier New','DejaVu Sans Mono',monospace">
+    <rect x="24" y="96" width="140" height="72" rx="8" fill="#4F7A4A"/>
+    <text x="94" y="126" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">SEE INSIDE</text>
+    <text x="94" y="146" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">probes, logit lens</text>
+
+    <rect x="196" y="96" width="140" height="72" rx="8" fill="#7FA15A"/>
+    <text x="266" y="126" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">UNDERSTAND</text>
+    <text x="266" y="146" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">SAEs, circuits</text>
+
+    <rect x="368" y="96" width="140" height="72" rx="8" fill="#C49A4A"/>
+    <text x="438" y="126" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">STEER</text>
+    <text x="438" y="146" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">runtime control</text>
+
+    <rect x="540" y="96" width="140" height="72" rx="8" fill="#9A6A12"/>
+    <text x="610" y="126" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">REPAIR</text>
+    <text x="610" y="146" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">persistent fixes</text>
+
+    <rect x="712" y="96" width="140" height="72" rx="8" fill="#3A4A50"/>
+    <text x="782" y="120" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">GUARD THE</text>
+    <text x="782" y="136" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">ACTION</text>
+    <text x="782" y="154" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">pre-action gate</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#73705F" stroke-width="1.6" fill="none">
+    <line x1="164" y1="132" x2="194" y2="132" marker-end="url(#c1)"/>
+    <line x1="336" y1="132" x2="366" y2="132" marker-end="url(#c1)"/>
+    <line x1="508" y1="132" x2="538" y2="132" marker-end="url(#c1)"/>
+    <line x1="680" y1="132" x2="710" y2="132" marker-end="url(#c1)"/>
+  </g>
+
+  <!-- caption -->
+  <text x="430" y="216" text-anchor="middle" font-size="14" fill="#1C1B17">Every essay in this series reads the same internal evidence and does something different with it.</text>
+  <text x="430" y="240" text-anchor="middle" font-size="14" fill="#1C1B17">The agent gate is where seeing inside becomes acting in time.</text>
+  <text x="430" y="272" text-anchor="middle" font-style="italic" font-size="13" fill="#73705F">Necessary but not yet sufficient, and closer to sufficient than the surface ever was.</text>
+</svg>

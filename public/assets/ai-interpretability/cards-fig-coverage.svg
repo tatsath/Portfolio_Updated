@@ -1,0 +1,70 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 408" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="820" height="408" fill="#FBF9F3"/>
+
+  <!-- header -->
+  <rect x="20" y="16" width="280" height="48" rx="6" fill="#1C1B17"/>
+  <text x="40" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">CATEGORY</text>
+
+  <rect x="308" y="16" width="246" height="48" rx="6" fill="#73705F"/>
+  <text x="328" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">WHAT SURFACE SEES</text>
+
+  <rect x="562" y="16" width="238" height="48" rx="6" fill="#9A6A12"/>
+  <text x="582" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">WHAT INTERNAL ADDS</text>
+
+  <g font-size="13">
+    <!-- row 1 -->
+    <rect x="20" y="72" width="280" height="58" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="100" fill="#1C1B17" font-weight="bold">Direct prompt injection</text>
+    <text x="40" y="118" fill="#73705F" font-size="11">jailbreak attempts</text>
+    <rect x="308" y="72" width="246" height="58" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="328" y="100" fill="#46443B">prompt text, unsafe answer</text>
+    <text x="328" y="118" fill="#73705F" font-size="11">after the fact</text>
+    <rect x="562" y="72" width="238" height="58" rx="5" fill="#ffffff" stroke="#9A6A12" stroke-width="1.2"/>
+    <text x="582" y="100" fill="#1C1B17">instruction-override pattern</text>
+    <text x="582" y="118" fill="#73705F" font-size="11">before the answer forms</text>
+
+    <!-- row 2 -->
+    <rect x="20" y="136" width="280" height="58" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="164" fill="#1C1B17" font-weight="bold">Indirect / RAG poisoning</text>
+    <text x="40" y="182" fill="#73705F" font-size="11">hidden instructions in docs</text>
+    <rect x="308" y="136" width="246" height="58" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="328" y="164" fill="#46443B">the retrieved chunk text</text>
+    <text x="328" y="182" fill="#73705F" font-size="11">looks clean by keyword</text>
+    <rect x="562" y="136" width="238" height="58" rx="5" fill="#ffffff" stroke="#9A6A12" stroke-width="1.2"/>
+    <text x="582" y="164" fill="#1C1B17">chunk-level risk score</text>
+    <text x="582" y="182" fill="#73705F" font-size="11">which doc raised the signal</text>
+
+    <!-- row 3 -->
+    <rect x="20" y="200" width="280" height="58" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="228" fill="#1C1B17" font-weight="bold">Agent runtime gap</text>
+    <text x="40" y="246" fill="#73705F" font-size="11">tool execution path</text>
+    <rect x="308" y="200" width="246" height="58" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="328" y="228" fill="#46443B">tool call, after it fired</text>
+    <text x="328" y="246" fill="#73705F" font-size="11">cleanup, not prevention</text>
+    <rect x="562" y="200" width="238" height="58" rx="5" fill="#ffffff" stroke="#9A6A12" stroke-width="1.2"/>
+    <text x="582" y="228" fill="#1C1B17">pre-action intent signal</text>
+    <text x="582" y="246" fill="#73705F" font-size="11">gate the call before it runs</text>
+
+    <!-- row 4 -->
+    <rect x="20" y="264" width="280" height="58" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="292" fill="#1C1B17" font-weight="bold">Output safety drift</text>
+    <text x="40" y="310" fill="#73705F" font-size="11">unsafe content emerging</text>
+    <rect x="308" y="264" width="246" height="58" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="328" y="292" fill="#46443B">final-output moderation</text>
+    <text x="328" y="310" fill="#73705F" font-size="11">block or pass at the end</text>
+    <rect x="562" y="264" width="238" height="58" rx="5" fill="#ffffff" stroke="#9A6A12" stroke-width="1.2"/>
+    <text x="582" y="292" fill="#1C1B17">stage of emergence</text>
+    <text x="582" y="310" fill="#73705F" font-size="11">input, context, or generation</text>
+
+    <!-- row 5 -->
+    <rect x="20" y="328" width="280" height="58" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="356" fill="#1C1B17" font-weight="bold">Latent unsafe state</text>
+    <text x="40" y="374" fill="#73705F" font-size="11">misaligned before visible</text>
+    <rect x="308" y="328" width="246" height="58" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="328" y="356" fill="#46443B">nothing</text>
+    <text x="328" y="374" fill="#73705F" font-size="11">until generation or action</text>
+    <rect x="562" y="328" width="238" height="58" rx="5" fill="#ffffff" stroke="#9A6A12" stroke-width="1.2"/>
+    <text x="582" y="356" fill="#1C1B17">residual-stream probe fires</text>
+    <text x="582" y="374" fill="#73705F" font-size="11">before output is generated</text>
+  </g>
+</svg>

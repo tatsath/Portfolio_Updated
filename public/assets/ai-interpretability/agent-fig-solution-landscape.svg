@@ -1,0 +1,86 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 880 470" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="880" height="470" fill="#FBF9F3"/>
+  <defs>
+    <marker id="sl" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/></marker>
+    <marker id="slg" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4F7A4A"/></marker>
+  </defs>
+
+  <text x="440" y="28" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">THE SPACE OF SOLUTIONS, AND THE GAP</text>
+
+  <!-- pipeline of 5 stages -->
+  <g font-family="'Courier New','DejaVu Sans Mono',monospace">
+    <rect x="24" y="150" width="140" height="58" rx="7" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.2"/>
+    <text x="94" y="176" text-anchor="middle" font-size="11.5" fill="#46443B">prompt /</text>
+    <text x="94" y="192" text-anchor="middle" font-size="11.5" fill="#46443B">context</text>
+
+    <rect x="196" y="142" width="160" height="74" rx="7" fill="#3A4A50" stroke="#B5462E" stroke-width="2.4"/>
+    <text x="276" y="170" text-anchor="middle" font-size="12" font-weight="bold" fill="#ffffff">MODEL</text>
+    <text x="276" y="190" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">the decision</text>
+    <text x="276" y="205" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="10.5" fill="#ffffff">forms here</text>
+
+    <rect x="388" y="150" width="140" height="58" rx="7" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.2"/>
+    <text x="458" y="184" text-anchor="middle" font-size="11.5" fill="#46443B">tool call</text>
+
+    <rect x="560" y="150" width="140" height="58" rx="7" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.2"/>
+    <text x="630" y="184" text-anchor="middle" font-size="11.5" fill="#46443B">execute</text>
+
+    <rect x="732" y="150" width="124" height="58" rx="7" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.2"/>
+    <text x="794" y="176" text-anchor="middle" font-size="11.5" fill="#46443B">trace /</text>
+    <text x="794" y="192" text-anchor="middle" font-size="11.5" fill="#46443B">output</text>
+  </g>
+
+  <!-- pipeline arrows -->
+  <g stroke="#73705F" stroke-width="1.5" fill="none">
+    <line x1="164" y1="179" x2="194" y2="179" marker-end="url(#sl)"/>
+    <line x1="356" y1="179" x2="386" y2="179" marker-end="url(#sl)"/>
+    <line x1="528" y1="179" x2="558" y2="179" marker-end="url(#sl)"/>
+    <line x1="700" y1="179" x2="730" y2="179" marker-end="url(#sl)"/>
+  </g>
+
+  <!-- EXTERNAL defenses (above), with tick marks down to their stage -->
+  <text x="440" y="74" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" font-weight="bold" fill="#73705F">WHERE TODAY'S DEFENSES ACT  (all on inputs, outputs, and traces)</text>
+
+  <g font-family="Georgia, 'DejaVu Serif', serif" font-size="11.5" fill="#46443B">
+    <rect x="30" y="88" width="128" height="40" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="94" y="104" text-anchor="middle">prompt hardening,</text>
+    <text x="94" y="119" text-anchor="middle">spotlighting</text>
+    <line x1="94" y1="128" x2="94" y2="148" stroke="#b3b0a3" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <rect x="566" y="88" width="128" height="40" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="630" y="104" text-anchor="middle">sandbox,</text>
+    <text x="630" y="119" text-anchor="middle">permissions</text>
+    <line x1="630" y1="128" x2="630" y2="148" stroke="#b3b0a3" stroke-width="1" stroke-dasharray="3 3"/>
+
+    <rect x="724" y="88" width="140" height="40" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="794" y="104" text-anchor="middle">observability +</text>
+    <text x="794" y="119" text-anchor="middle">guardrails, LLM-judge</text>
+    <line x1="794" y1="128" x2="794" y2="148" stroke="#b3b0a3" stroke-width="1" stroke-dasharray="3 3"/>
+  </g>
+
+  <!-- THE GAP marker on the MODEL box -->
+  <text x="276" y="250" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" font-weight="bold" fill="#B5462E">THE GAP</text>
+  <line x1="276" y1="216" x2="276" y2="262" stroke="#B5462E" stroke-width="1.6"/>
+
+  <!-- INTERNAL monitor fills the gap -->
+  <rect x="150" y="268" width="252" height="62" rx="8" fill="#ffffff" stroke="#4F7A4A" stroke-width="1.8"/>
+  <text x="276" y="292" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#4F7A4A">INTERNAL MONITOR</text>
+  <text x="276" y="312" text-anchor="middle" font-size="11.5" fill="#46443B">a probe or SAE feature reads the</text>
+  <text x="276" y="327" text-anchor="middle" font-size="11.5" fill="#46443B">model's intent at the decision point</text>
+
+  <!-- did vs intended callouts -->
+  <rect x="470" y="262" width="386" height="34" rx="6" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1"/>
+  <text x="486" y="284" font-size="12.5" fill="#1C1B17">External tools see <tspan font-weight="bold">what the agent did.</tspan></text>
+  <rect x="470" y="302" width="386" height="34" rx="6" fill="#ffffff" stroke="#4F7A4A" stroke-width="1.3"/>
+  <text x="486" y="324" font-size="12.5" fill="#1C1B17">Internal monitoring sees <tspan font-weight="bold" fill="#4F7A4A">what it intended.</tspan></text>
+
+  <!-- bottom: the two failures only internal catches -->
+  <rect x="150" y="356" width="346" height="92" rx="8" fill="#FBF9F3" stroke="#E4DCC9" stroke-width="1.2"/>
+  <text x="323" y="378" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" font-weight="bold" fill="#9A6A12">ONLY THE INTERNAL VIEW CATCHES</text>
+  <text x="170" y="402" font-size="12.5" fill="#46443B"><tspan font-weight="bold" fill="#B5462E">Silent failure:</tspan> intent is there, no tool fires.</text>
+  <text x="170" y="424" font-size="12.5" fill="#46443B"><tspan font-weight="bold" fill="#B5462E">Spurious call:</tspan> a tool fires with no real intent.</text>
+  <text x="323" y="442" text-anchor="middle" font-style="italic" font-size="11" fill="#73705F">the output can look fine in both cases</text>
+
+  <text x="676" y="392" text-anchor="middle" font-size="13.5" fill="#1C1B17">Every existing defense guards the</text>
+  <text x="676" y="412" text-anchor="middle" font-size="13.5" fill="#1C1B17">edges. None reads the middle, where</text>
+  <text x="676" y="432" text-anchor="middle" font-size="13.5" fill="#1C1B17">the decision is actually made.</text>
+</svg>

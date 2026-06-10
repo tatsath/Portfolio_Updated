@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 408" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="820" height="408" fill="#FBF9F3"/>
+
+  <rect x="20" y="16" width="500" height="48" rx="6" fill="#1C1B17"/>
+  <text x="40" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">IF YOUR SAFETY GAP IS...</text>
+  <rect x="528" y="16" width="272" height="48" rx="6" fill="#9A6A12"/>
+  <text x="548" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">START WITH...</text>
+
+  <g font-size="14">
+    <rect x="20" y="72" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="102" fill="#1C1B17">obvious unsafe content in the final answer</text>
+    <rect x="528" y="72" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="102" fill="#9A6A12" font-weight="bold">output moderation (keep it)</text>
+
+    <rect x="20" y="128" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="158" fill="#1C1B17">user-side jailbreak / instruction override</text>
+    <rect x="528" y="128" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="158" fill="#9A6A12" font-weight="bold">internal prompt-injection probe</text>
+
+    <rect x="20" y="184" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="214" fill="#1C1B17">hidden instructions in retrieved content</text>
+    <rect x="528" y="184" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="214" fill="#9A6A12" font-weight="bold">context probe + spotlighting</text>
+
+    <rect x="20" y="240" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="270" fill="#1C1B17">agent tool calls outside model-eval scope</text>
+    <rect x="528" y="240" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="270" fill="#9A6A12" font-weight="bold">pre-action probe + sandbox</text>
+
+    <rect x="20" y="296" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="326" fill="#1C1B17">unsafe state appears before any output</text>
+    <rect x="528" y="296" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="326" fill="#9A6A12" font-weight="bold">residual-stream monitor</text>
+
+    <rect x="20" y="352" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="382" fill="#1C1B17">a high-stakes behavior you must understand end to end</text>
+    <rect x="528" y="352" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="382" fill="#9A6A12" font-weight="bold">escalate to circuit analysis</text>
+  </g>
+</svg>

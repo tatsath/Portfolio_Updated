@@ -1,0 +1,41 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 780 290" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="780" height="290" fill="#FBF9F3"/>
+  <defs>
+    <marker id="ax" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/>
+    </marker>
+  </defs>
+
+  <!-- Card 1: ablate r -->
+  <rect x="24" y="34" width="222" height="150" rx="8" fill="#ffffff" stroke="#3A4A50" stroke-width="1.6"/>
+  <text x="135" y="64" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#3A4A50">ABLATE r</text>
+  <!-- open shield / cross -->
+  <circle cx="135" cy="108" r="20" fill="none" stroke="#3A4A50" stroke-width="2.4"/>
+  <line x1="126" y1="99" x2="144" y2="117" stroke="#3A4A50" stroke-width="2.6" stroke-linecap="round"/>
+  <line x1="144" y1="99" x2="126" y2="117" stroke="#3A4A50" stroke-width="2.6" stroke-linecap="round"/>
+  <text x="135" y="158" text-anchor="middle" font-size="13.5" fill="#1C1B17">complies, even harmful</text>
+
+  <!-- Card 2: baseline -->
+  <rect x="279" y="34" width="222" height="150" rx="8" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.4"/>
+  <text x="390" y="64" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#73705F">BASELINE</text>
+  <circle cx="390" cy="108" r="20" fill="none" stroke="#73705F" stroke-width="2.2"/>
+  <text x="390" y="158" text-anchor="middle" font-size="13.5" fill="#1C1B17">normal refusal behavior</text>
+
+  <!-- Card 3: add r -->
+  <rect x="534" y="34" width="222" height="150" rx="8" fill="#ffffff" stroke="#9A6A12" stroke-width="1.8"/>
+  <text x="645" y="64" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#9A6A12">ADD r</text>
+  <!-- check -->
+  <circle cx="645" cy="108" r="20" fill="#4F7A4A"/>
+  <path d="M635 108 l7 8 l13 -16" stroke="#ffffff" stroke-width="2.8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="645" y="158" text-anchor="middle" font-size="13.5" fill="#1C1B17">refuses more strongly</text>
+
+  <!-- axis -->
+  <line x1="120" y1="226" x2="660" y2="226" stroke="#D6CBB1" stroke-width="1.6"/>
+  <line x1="120" y1="226" x2="104" y2="226" stroke="#73705F" stroke-width="1.6" marker-end="url(#ax)"/>
+  <line x1="660" y1="226" x2="676" y2="226" stroke="#73705F" stroke-width="1.6" marker-end="url(#ax)"/>
+  <text x="120" y="250" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">remove</text>
+  <text x="390" y="250" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" font-weight="bold" fill="#1C1B17">refusal direction r</text>
+  <text x="660" y="250" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">amplify</text>
+
+  <text x="390" y="278" text-anchor="middle" font-size="13" fill="#46443B">the same lever hardens refusal and, removed, defeats it</text>
+</svg>

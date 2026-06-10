@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 404" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="800" height="404" fill="#FBF9F3"/>
+
+  <!-- row 1 -->
+  <rect x="20" y="16" width="760" height="68" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="16" width="8" height="68" rx="4" fill="#3A4A50"/>
+  <text x="44" y="44" font-size="15.5" font-weight="bold" fill="#1C1B17">Difference-of-means vectors (CAA)</text>
+  <text x="44" y="68" font-size="14" fill="#46443B">subtract the mean activations of contrasting prompts</text>
+  <text x="764" y="44" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">the workhorse · opaque</text>
+
+  <!-- row 2 -->
+  <rect x="20" y="92" width="760" height="68" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="92" width="8" height="68" rx="4" fill="#3A4A50"/>
+  <text x="44" y="120" font-size="15.5" font-weight="bold" fill="#1C1B17">Probe-directed (ITI, representation engineering)</text>
+  <text x="44" y="144" font-size="14" fill="#46443B">a probe finds the direction, then push activations along it</text>
+  <text x="764" y="120" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">surgical · per-head</text>
+
+  <!-- row 3 -->
+  <rect x="20" y="168" width="760" height="68" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="168" width="8" height="68" rx="4" fill="#9A6A12"/>
+  <text x="44" y="196" font-size="15.5" font-weight="bold" fill="#1C1B17">Concept editing (the refusal direction)</text>
+  <text x="44" y="220" font-size="14" fill="#46443B">one direction governs a whole behavior: add it or ablate it</text>
+  <text x="764" y="196" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">low-rank</text>
+
+  <!-- row 4 -->
+  <rect x="20" y="244" width="760" height="68" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="244" width="8" height="68" rx="4" fill="#9A6A12"/>
+  <text x="44" y="272" font-size="15.5" font-weight="bold" fill="#1C1B17">SAE feature steering (clamping)</text>
+  <text x="44" y="296" font-size="14" fill="#46443B">decompose into named features, then clamp the one you want</text>
+  <text x="764" y="272" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">interpretable</text>
+
+  <!-- row 5 -->
+  <rect x="20" y="320" width="760" height="68" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="320" width="8" height="68" rx="4" fill="#4F7A4A"/>
+  <text x="44" y="348" font-size="15.5" font-weight="bold" fill="#1C1B17">Conditional &amp; fine-grained (CAST, vector fields)</text>
+  <text x="44" y="372" font-size="14" fill="#46443B">steer only when, and only where, it is actually needed</text>
+  <text x="764" y="348" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">selective · newest</text>
+</svg>

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 760 336" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="760" height="336" fill="#FBF9F3"/>
+
+  <!-- Tier 1: steers cleanly -->
+  <rect x="20" y="16" width="724" height="92" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="16" width="8" height="92" rx="4" fill="#4F7A4A"/>
+  <text x="44" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#4F7A4A">STEERS CLEANLY</text>
+  <text x="44" y="70" font-size="15" fill="#1C1B17">refusal &amp; compliance · sentiment &amp; tone · formality · conciseness</text>
+  <text x="44" y="94" font-size="15" fill="#1C1B17">· expressed uncertainty</text>
+  <text x="724" y="46" text-anchor="end" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="12.5" fill="#73705F">low-dimensional · register, not logic</text>
+
+  <!-- Tier 2: unreliable -->
+  <rect x="20" y="122" width="724" height="92" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="122" width="8" height="92" rx="4" fill="#9A6A12"/>
+  <text x="44" y="152" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12">UNRELIABLE</text>
+  <text x="44" y="176" font-size="15" fill="#1C1B17">instruction hierarchy · &#8220;creativity&#8221; · technical depth</text>
+  <text x="44" y="200" font-size="14" fill="#73705F" font-style="italic">high variance across inputs; the target direction is fuzzy</text>
+
+  <!-- Tier 3: effectively unsteerable -->
+  <rect x="20" y="228" width="724" height="92" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="228" width="8" height="92" rx="4" fill="#3A4A50"/>
+  <text x="44" y="258" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#3A4A50">EFFECTIVELY UNSTEERABLE</text>
+  <text x="44" y="282" font-size="15" fill="#1C1B17">factual accuracy · multi-step reasoning · injecting specific facts</text>
+  <text x="44" y="306" font-size="14" fill="#73705F" font-style="italic">a &#8220;be smarter&#8221; vector makes a model more confident, not more correct</text>
+</svg>

@@ -1,0 +1,60 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 420" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="820" height="420" fill="#FBF9F3"/>
+  <defs>
+    <marker id="ss" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/></marker>
+    <marker id="ssg" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#4F7A4A"/></marker>
+  </defs>
+
+  <text x="410" y="28" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">ADDING AN INTERNAL LAYER</text>
+
+  <!-- LEFT: Surface-only -->
+  <text x="210" y="64" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#73705F">SURFACE FILTERS ALONE</text>
+
+  <rect x="40" y="80" width="340" height="280" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.3"/>
+
+  <rect x="60" y="100" width="300" height="40" rx="6" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1"/>
+  <text x="210" y="124" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" fill="#46443B">input filter</text>
+
+  <line x1="210" y1="140" x2="210" y2="170" stroke="#73705F" stroke-width="1.6" marker-end="url(#ss)"/>
+
+  <rect x="60" y="172" width="300" height="56" rx="6" fill="#3A4A50"/>
+  <text x="210" y="196" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" font-weight="bold" fill="#ffffff">MODEL</text>
+  <text x="210" y="216" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="11.5" fill="#ffffff">internal state opaque</text>
+
+  <line x1="210" y1="228" x2="210" y2="258" stroke="#73705F" stroke-width="1.6" marker-end="url(#ss)"/>
+
+  <rect x="60" y="260" width="300" height="40" rx="6" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1"/>
+  <text x="210" y="284" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" fill="#46443B">output filter</text>
+
+  <line x1="210" y1="300" x2="210" y2="332" stroke="#B5462E" stroke-width="1.8" stroke-dasharray="4 3" marker-end="url(#ssg)"/>
+  <text x="210" y="348" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="12" fill="#B5462E">attacks pass when both filters miss</text>
+
+  <!-- RIGHT: Surface + internal -->
+  <text x="610" y="64" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#4F7A4A">WITH INTERNAL PROBES</text>
+
+  <rect x="440" y="80" width="340" height="280" rx="8" fill="#ffffff" stroke="#4F7A4A" stroke-width="1.6"/>
+
+  <rect x="460" y="100" width="300" height="40" rx="6" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1"/>
+  <text x="610" y="124" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" fill="#46443B">input filter</text>
+
+  <line x1="610" y1="140" x2="610" y2="170" stroke="#73705F" stroke-width="1.6" marker-end="url(#ss)"/>
+
+  <rect x="460" y="172" width="300" height="56" rx="6" fill="#3A4A50"/>
+  <text x="540" y="196" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" font-weight="bold" fill="#ffffff">MODEL</text>
+  <text x="540" y="216" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="11.5" fill="#ffffff">residual stream</text>
+  <!-- probe tap from inside the model -->
+  <rect x="640" y="180" width="100" height="40" rx="4" fill="#9A6A12"/>
+  <text x="690" y="196" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="10" font-weight="bold" fill="#ffffff">INTERNAL</text>
+  <text x="690" y="212" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="10" font-weight="bold" fill="#ffffff">PROBES</text>
+
+  <line x1="610" y1="228" x2="610" y2="258" stroke="#73705F" stroke-width="1.6" marker-end="url(#ss)"/>
+
+  <rect x="460" y="260" width="300" height="40" rx="6" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1"/>
+  <text x="610" y="284" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" fill="#46443B">output filter</text>
+
+  <line x1="610" y1="300" x2="610" y2="332" stroke="#4F7A4A" stroke-width="1.8" marker-end="url(#ssg)"/>
+  <text x="610" y="348" text-anchor="middle" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="12" fill="#4F7A4A">internal evidence catches what the filters cannot</text>
+
+  <!-- bottom caption -->
+  <text x="410" y="396" text-anchor="middle" font-size="13" fill="#46443B" font-style="italic">The internal probes do not replace the surface filters. They sit between them, reading the model's state directly.</text>
+</svg>

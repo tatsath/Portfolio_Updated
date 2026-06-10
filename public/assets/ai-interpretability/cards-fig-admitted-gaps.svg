@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 432" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="820" height="432" fill="#FBF9F3"/>
+
+  <text x="410" y="28" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">WHAT THE CARDS OPENLY FLAG</text>
+
+  <!-- Row 1 -->
+  <rect x="20" y="48" width="780" height="64" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="48" width="10" height="64" fill="#B5462E"/>
+  <text x="46" y="74" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#1C1B17" letter-spacing="0.6">DIRECT PROMPT INJECTION &#183; JAILBREAK RESIDUAL</text>
+  <text x="46" y="96" font-size="14" fill="#46443B">User-side override attempts; multi-turn adaptive attackers; new variants found weekly</text>
+  <text x="788" y="74" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" fill="#73705F">every major card</text>
+
+  <!-- Row 2 -->
+  <rect x="20" y="120" width="780" height="64" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="120" width="10" height="64" fill="#B5462E"/>
+  <text x="46" y="146" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#1C1B17" letter-spacing="0.6">INDIRECT INJECTION &#183; RAG OR TOOL OUTPUT</text>
+  <text x="46" y="168" font-size="14" fill="#46443B">Hidden instructions in retrieved docs, emails, web pages, tool responses</text>
+  <text x="788" y="146" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" fill="#73705F">Echoleak &#183; Comment-and-Control</text>
+
+  <!-- Row 3 -->
+  <rect x="20" y="192" width="780" height="64" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="192" width="10" height="64" fill="#C49A4A"/>
+  <text x="46" y="218" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#1C1B17" letter-spacing="0.6">AGENT RUNTIME GAPS</text>
+  <text x="46" y="240" font-size="14" fill="#46443B">Tool-execution paths the model-layer evals do not cover; permissioning at the runtime, not the model</text>
+  <text x="788" y="218" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" fill="#73705F">explicitly noted by Anthropic</text>
+
+  <!-- Row 4 -->
+  <rect x="20" y="264" width="780" height="64" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="264" width="10" height="64" fill="#C49A4A"/>
+  <text x="46" y="290" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#1C1B17" letter-spacing="0.6">OUTPUT SAFETY DRIFT</text>
+  <text x="46" y="312" font-size="14" fill="#46443B">Unsafe content emerging during generation, not from a clearly unsafe prompt</text>
+  <text x="788" y="290" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" fill="#73705F">OpenAI safe-completions</text>
+
+  <!-- Row 5 -->
+  <rect x="20" y="336" width="780" height="64" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.2"/>
+  <rect x="20" y="336" width="10" height="64" fill="#3A4A50"/>
+  <text x="46" y="362" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" font-weight="bold" fill="#1C1B17" letter-spacing="0.6">LATENT UNSAFE STATE BEFORE OUTPUT</text>
+  <text x="46" y="384" font-size="14" fill="#46443B">Internal state can be misaligned before the surface shows it</text>
+  <text x="788" y="362" text-anchor="end" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11" fill="#73705F">Anthropic sleeper-agent work</text>
+</svg>

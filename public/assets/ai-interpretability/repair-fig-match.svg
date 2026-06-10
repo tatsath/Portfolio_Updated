@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 820 408" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="820" height="408" fill="#FBF9F3"/>
+
+  <rect x="20" y="16" width="500" height="48" rx="6" fill="#1C1B17"/>
+  <text x="40" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">IF YOU HAVE...</text>
+  <rect x="528" y="16" width="272" height="48" rx="6" fill="#9A6A12"/>
+  <text x="548" y="46" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#ffffff">REACH FOR...</text>
+
+  <g font-size="14">
+    <rect x="20" y="72" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="102" fill="#1C1B17">only labels and a tight budget</text>
+    <rect x="528" y="72" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="102" fill="#9A6A12" font-weight="bold">LoRA + KL anchor</text>
+
+    <rect x="20" y="128" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="158" fill="#1C1B17">a probe for the failure</text>
+    <rect x="528" y="128" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="158" fill="#9A6A12" font-weight="bold">probe-guided LoRA</text>
+
+    <rect x="20" y="184" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="214" fill="#1C1B17">a clean SAE feature signature</text>
+    <rect x="528" y="184" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="214" fill="#9A6A12" font-weight="bold">SAE-guided LoRA / SASFT</text>
+
+    <rect x="20" y="240" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="270" fill="#1C1B17">a localizable circuit</text>
+    <rect x="528" y="240" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="270" fill="#9A6A12" font-weight="bold">circuit-restricted edit (C-&#916;&#920;)</text>
+
+    <rect x="20" y="296" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="326" fill="#1C1B17">a specific factual error</text>
+    <rect x="528" y="296" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="326" fill="#9A6A12" font-weight="bold">ROME / MEMIT</text>
+
+    <rect x="20" y="352" width="500" height="50" rx="5" fill="#ffffff" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="40" y="382" fill="#1C1B17">a probe or feature you can score rollouts with</text>
+    <rect x="528" y="352" width="272" height="50" rx="5" fill="#F4F0E6" stroke="#E4DCC9" stroke-width="1"/>
+    <text x="548" y="382" fill="#9A6A12" font-weight="bold">RLFR (RL with feature rewards)</text>
+  </g>
+</svg>

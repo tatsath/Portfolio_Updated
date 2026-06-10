@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 340" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="720" height="340" fill="#FBF9F3"/>
+  <defs>
+    <marker id="cc" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/></marker>
+    <marker id="ccp" markerWidth="10" markerHeight="10" refX="6" refY="3" orient="auto"><path d="M0,0 L6,3 L0,6 Z" fill="#9A6A12"/></marker>
+  </defs>
+
+  <text x="360" y="28" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">ACTIVATION PATCHING</text>
+
+  <!-- CLEAN run -->
+  <text x="78" y="92" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#4F7A4A">CLEAN</text>
+  <rect x="120" y="64" width="430" height="56" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.3"/>
+  <g><rect x="150" y="80" width="26" height="24" rx="3" fill="#e6e0d2"/><rect x="210" y="80" width="26" height="24" rx="3" fill="#e6e0d2"/><rect x="300" y="80" width="26" height="24" rx="3" fill="#9A6A12"/><rect x="400" y="80" width="26" height="24" rx="3" fill="#e6e0d2"/><rect x="470" y="80" width="26" height="24" rx="3" fill="#e6e0d2"/></g>
+  <text x="313" y="74" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="10.5" font-weight="bold" fill="#9A6A12">C</text>
+  <rect x="572" y="72" width="120" height="40" rx="6" fill="#ffffff" stroke="#4F7A4A" stroke-width="1.6"/>
+  <text x="632" y="97" text-anchor="middle" font-size="13" fill="#4F7A4A">correct</text>
+  <line x1="550" y1="92" x2="570" y2="92" stroke="#73705F" stroke-width="1.5" marker-end="url(#cc)"/>
+
+  <!-- CORRUPTED run -->
+  <text x="78" y="244" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#B5462E">CORRUPTED</text>
+  <rect x="120" y="216" width="430" height="56" rx="8" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.3"/>
+  <g><rect x="150" y="232" width="26" height="24" rx="3" fill="#e6e0d2"/><rect x="210" y="232" width="26" height="24" rx="3" fill="#e6e0d2"/><rect x="300" y="232" width="26" height="24" rx="3" fill="#ffffff" stroke="#9A6A12" stroke-width="1.6" stroke-dasharray="3 2"/><rect x="400" y="232" width="26" height="24" rx="3" fill="#e6e0d2"/><rect x="470" y="232" width="26" height="24" rx="3" fill="#e6e0d2"/></g>
+  <rect x="572" y="224" width="120" height="40" rx="6" fill="#ffffff" stroke="#4F7A4A" stroke-width="1.6"/>
+  <text x="632" y="249" text-anchor="middle" font-size="13" fill="#4F7A4A">flips to correct</text>
+  <line x1="550" y1="244" x2="570" y2="244" stroke="#73705F" stroke-width="1.5" marker-end="url(#cc)"/>
+
+  <!-- patch arrow -->
+  <line x1="313" y1="104" x2="313" y2="232" stroke="#9A6A12" stroke-width="2.2" marker-end="url(#ccp)"/>
+  <text x="340" y="172" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#9A6A12">patch C</text>
+  <text x="340" y="188" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic" font-size="11.5" fill="#73705F">copy its activation</text>
+
+  <!-- conclusion -->
+  <text x="360" y="312" text-anchor="middle" font-size="14" fill="#1C1B17">If patching component C flips the output, C is causally responsible, not just correlated.</text>
+</svg>

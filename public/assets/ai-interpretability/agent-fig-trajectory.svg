@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 860 320" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="860" height="320" fill="#FBF9F3"/>
+  <defs>
+    <marker id="t1" markerWidth="8" markerHeight="8" refX="5" refY="3" orient="auto"><path d="M0,0 L5,3 L0,6 Z" fill="#B5462E"/></marker>
+  </defs>
+
+  <text x="430" y="28" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="13" font-weight="bold" fill="#9A6A12" letter-spacing="1">AN EARLY ERROR PROPAGATES</text>
+
+  <!-- trajectory line -->
+  <line x1="60" y1="150" x2="800" y2="150" stroke="#D6CBB1" stroke-width="2"/>
+
+  <!-- steps -->
+  <g font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="10" fill="#73705F">
+    <circle cx="80" cy="150" r="11" fill="#ffffff" stroke="#73705F" stroke-width="1.5"/><text x="80" y="176" text-anchor="middle">step 1</text>
+    <circle cx="170" cy="150" r="13" fill="#B5462E" stroke="#B5462E" stroke-width="1.5"/><text x="170" y="178" text-anchor="middle" fill="#B5462E" font-weight="bold">step 2</text>
+    <circle cx="260" cy="150" r="11" fill="#ffffff" stroke="#73705F" stroke-width="1.5"/><text x="260" y="176" text-anchor="middle">step 3</text>
+    <circle cx="350" cy="150" r="11" fill="#ffffff" stroke="#C49A4A" stroke-width="1.5"/><text x="350" y="176" text-anchor="middle">step 4</text>
+    <circle cx="440" cy="150" r="11" fill="#ffffff" stroke="#C49A4A" stroke-width="1.5"/><text x="440" y="176" text-anchor="middle">step 5</text>
+    <circle cx="530" cy="150" r="11" fill="#ffffff" stroke="#C49A4A" stroke-width="1.5"/><text x="530" y="176" text-anchor="middle">step 6</text>
+    <circle cx="620" cy="150" r="11" fill="#ffffff" stroke="#B5462E" stroke-width="1.5"/><text x="620" y="176" text-anchor="middle">step 7</text>
+    <circle cx="710" cy="150" r="11" fill="#ffffff" stroke="#B5462E" stroke-width="1.5"/><text x="710" y="176" text-anchor="middle">step 8</text>
+    <circle cx="788" cy="150" r="14" fill="#B5462E" stroke="#B5462E" stroke-width="1.5"/><text x="788" y="180" text-anchor="middle" fill="#B5462E" font-weight="bold">step 9</text>
+  </g>
+
+  <!-- internal monitor annotation (step 2) -->
+  <line x1="170" y1="137" x2="170" y2="96" stroke="#4F7A4A" stroke-width="1.4"/>
+  <rect x="84" y="62" width="172" height="34" rx="6" fill="#ffffff" stroke="#4F7A4A" stroke-width="1.4"/>
+  <text x="170" y="78" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="10" font-weight="bold" fill="#4F7A4A">INTERNAL MONITOR</text>
+  <text x="170" y="91" text-anchor="middle" font-size="10.5" fill="#46443B" font-style="italic">catches the error here</text>
+
+  <!-- output watcher annotation (step 9) -->
+  <line x1="788" y1="136" x2="788" y2="222" stroke="#73705F" stroke-width="1.4"/>
+  <rect x="668" y="224" width="180" height="34" rx="6" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.2"/>
+  <text x="758" y="240" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="10" font-weight="bold" fill="#73705F">OUTPUT WATCHER</text>
+  <text x="758" y="253" text-anchor="middle" font-size="10.5" fill="#46443B" font-style="italic">sees it only now</text>
+
+  <!-- caption -->
+  <text x="430" y="288" text-anchor="middle" font-size="14" fill="#1C1B17">A small early misstep compounds across a long agent trajectory.</text>
+  <text x="430" y="308" text-anchor="middle" font-size="14" fill="#1C1B17">By the time the output looks wrong, the damage is done.</text>
+</svg>

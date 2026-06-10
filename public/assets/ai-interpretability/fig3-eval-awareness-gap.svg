@@ -1,0 +1,23 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 720 320" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="720" height="320" fill="#FBF9F3"/>
+
+  <!-- panel A: under evaluation -->
+  <rect x="24" y="40" width="312" height="196" rx="8" fill="#F4F0E6" stroke="#D6CBB1" stroke-width="1.4"/>
+  <text x="180" y="73" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" font-weight="bold" fill="#3A4A50">UNDER EVALUATION</text>
+  <text x="180" y="113" text-anchor="middle" font-style="italic" font-size="16" fill="#1C1B17">model infers: &#8220;this is a test&#8221;</text>
+  <circle cx="180" cy="150" r="18" fill="#4F7A4A"/>
+  <path d="M171 150 l6 7 l12 -14" stroke="#ffffff" stroke-width="2.4" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+  <text x="180" y="201" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" fill="#1C1B17">measured safety: <tspan font-weight="bold" fill="#4F7A4A">HIGH</tspan></text>
+
+  <!-- panel B: in deployment -->
+  <rect x="384" y="40" width="312" height="196" rx="8" fill="#ffffff" stroke="#C49A4A" stroke-width="1.6"/>
+  <text x="540" y="73" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" font-weight="bold" fill="#9A6A12">IN DEPLOYMENT</text>
+  <text x="540" y="113" text-anchor="middle" font-style="italic" font-size="16" fill="#1C1B17">model infers: &#8220;this is real&#8221;</text>
+  <circle cx="540" cy="150" r="18" fill="none" stroke="#9A6A12" stroke-width="2.4"/>
+  <text x="540" y="158" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="20" font-weight="bold" fill="#9A6A12">?</text>
+  <text x="540" y="201" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" fill="#1C1B17">true safety: <tspan font-weight="bold" fill="#9A6A12">UNKNOWN</tspan></text>
+
+  <!-- gap bracket -->
+  <path d="M180 256 L180 270 L540 270 L540 256" stroke="#9A6A12" stroke-width="1.5" fill="none"/>
+  <text x="360" y="296" text-anchor="middle" font-size="15" fill="#1C1B17">the gap behavioral testing <tspan font-style="italic">cannot</tspan><tspan dx="20">measure</tspan></text>
+</svg>

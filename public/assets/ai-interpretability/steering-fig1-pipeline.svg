@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 900 300" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="900" height="300" fill="#FBF9F3"/>
+  <defs>
+    <marker id="ar2" markerWidth="9" markerHeight="9" refX="6" refY="3" orient="auto">
+      <path d="M0,0 L6,3 L0,6 Z" fill="#73705F"/>
+    </marker>
+  </defs>
+
+  <g font-family="'Courier New','DejaVu Sans Mono',monospace">
+    <!-- box 1 -->
+    <rect x="12" y="96" width="156" height="76" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.4"/>
+    <text x="90" y="128" text-anchor="middle" fill="#1C1B17" font-size="12.5" font-weight="bold">CONTRAST PAIRS</text>
+    <text x="90" y="148" text-anchor="middle" fill="#73705F" font-size="11" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic">&#8220;be X&#8221; vs &#8220;not X&#8221;</text>
+
+    <!-- box 2 -->
+    <rect x="192" y="96" width="156" height="76" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.4"/>
+    <text x="270" y="128" text-anchor="middle" fill="#1C1B17" font-size="12.5" font-weight="bold">FORWARD PASS</text>
+    <text x="270" y="148" text-anchor="middle" fill="#73705F" font-size="11" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic">read activations</text>
+
+    <!-- box 3 (the vector) -->
+    <rect x="372" y="96" width="156" height="76" rx="6" fill="#F4F0E6" stroke="#9A6A12" stroke-width="1.7"/>
+    <text x="450" y="128" text-anchor="middle" fill="#1C1B17" font-size="12.5" font-weight="bold">MEAN DIFFERENCE</text>
+    <text x="450" y="148" text-anchor="middle" fill="#9A6A12" font-size="11.5" font-weight="bold">= steering vector</text>
+
+    <!-- box 4 -->
+    <rect x="552" y="96" width="156" height="76" rx="6" fill="#ffffff" stroke="#D6CBB1" stroke-width="1.4"/>
+    <text x="630" y="124" text-anchor="middle" fill="#1C1B17" font-size="12.5" font-weight="bold">AT INFERENCE</text>
+    <text x="630" y="144" text-anchor="middle" fill="#73705F" font-size="11" font-family="Georgia, 'DejaVu Serif', serif" font-style="italic">add</text>
+    <text x="630" y="160" text-anchor="middle" fill="#1C1B17" font-size="12" font-weight="bold">&#945; &#215; vector @ layer L</text>
+
+    <!-- box 5 (output) -->
+    <rect x="732" y="96" width="156" height="76" rx="6" fill="#9A6A12"/>
+    <text x="810" y="132" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold">STEERED</text>
+    <text x="810" y="150" text-anchor="middle" fill="#ffffff" font-size="12.5" font-weight="bold">OUTPUT</text>
+  </g>
+
+  <!-- arrows -->
+  <g stroke="#73705F" stroke-width="1.6" fill="none">
+    <line x1="168" y1="134" x2="190" y2="134" marker-end="url(#ar2)"/>
+    <line x1="348" y1="134" x2="370" y2="134" marker-end="url(#ar2)"/>
+    <line x1="528" y1="134" x2="550" y2="134" marker-end="url(#ar2)"/>
+    <line x1="708" y1="134" x2="730" y2="134" marker-end="url(#ar2)"/>
+  </g>
+
+  <!-- top label -->
+  <text x="450" y="48" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" font-weight="bold" fill="#3A4A50" letter-spacing="1">NO FINE-TUNING · NO GRADIENTS · NO WEIGHT CHANGES</text>
+
+  <!-- bottom note -->
+  <text x="450" y="232" text-anchor="middle" font-size="14.5" fill="#1C1B17">A probe reads this direction to detect; steering adds it to control.</text>
+  <text x="450" y="256" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12" fill="#73705F">( same math, opposite verb )</text>
+</svg>

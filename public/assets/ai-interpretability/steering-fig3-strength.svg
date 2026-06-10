@@ -1,0 +1,30 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 340" font-family="Georgia, 'DejaVu Serif', serif">
+  <rect x="0" y="0" width="640" height="340" fill="#FBF9F3"/>
+
+  <!-- axes -->
+  <line x1="78" y1="40" x2="78" y2="276" stroke="#D6CBB1" stroke-width="1.4"/>
+  <line x1="78" y1="276" x2="600" y2="276" stroke="#D6CBB1" stroke-width="1.4"/>
+
+  <!-- sweet-spot band -->
+  <rect x="236" y="40" width="104" height="236" fill="#9A6A12" opacity="0.08"/>
+
+  <!-- curve: rises to peak then falls -->
+  <path d="M78,268 C 150,250 200,120 288,92 S 470,150 600,214" fill="none" stroke="#9A6A12" stroke-width="3"/>
+
+  <!-- peak marker -->
+  <circle cx="288" cy="92" r="5" fill="#9A6A12"/>
+  <line x1="288" y1="97" x2="288" y2="276" stroke="#9A6A12" stroke-width="1" stroke-dasharray="4 4"/>
+
+  <!-- zone labels -->
+  <text x="150" y="300" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">too weak</text>
+  <text x="288" y="300" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" font-weight="bold" fill="#9A6A12">sweet spot</text>
+  <text x="500" y="300" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="11.5" fill="#73705F">over-steered</text>
+
+  <!-- over-steer annotation -->
+  <text x="520" y="236" text-anchor="middle" font-size="13" fill="#1C1B17">effect can reverse,</text>
+  <text x="520" y="254" text-anchor="middle" font-size="13" fill="#1C1B17">coherence degrades</text>
+
+  <!-- axis titles -->
+  <text x="339" y="328" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" fill="#1C1B17">steering strength &#945; &#8594;</text>
+  <text x="34" y="158" text-anchor="middle" font-family="'Courier New','DejaVu Sans Mono',monospace" font-size="12.5" fill="#1C1B17" transform="rotate(-90 34 158)">intended effect &#8594;</text>
+</svg>
