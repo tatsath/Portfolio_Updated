@@ -237,14 +237,13 @@ hr {
     min-height: 300px !important;
   }
   
-  /* Right image: center and constrain on mobile */
+  /* Right image: fixed height on mobile so it doesn't go full-screen */
   .hero-right-image-container {
-    justify-content: center !important;
-    margin-top: 0 !important;
+    min-height: 320px !important;
+    max-height: 420px !important;
   }
 
   .hero-right-image-container img {
-    max-width: 380px !important;
     border-radius: 12px !important;
   }
 

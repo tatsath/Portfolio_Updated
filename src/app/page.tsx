@@ -179,8 +179,8 @@ export default function HomePage() {
                 display: "grid",
                 gridTemplateColumns: "1fr 1fr",
                 gap: "60px",
-                alignItems: "center",
-                minHeight: "400px",
+                alignItems: "stretch",
+                minHeight: "520px",
               }}
               className="hero-content-grid"
             >
@@ -370,11 +370,10 @@ export default function HomePage() {
               <div
                 className="hero-right-image-container"
                 style={{
-                  display: "flex",
-                  alignItems: "center",
-                  justifyContent: "center",
                   position: "relative",
                   zIndex: 1,
+                  alignSelf: "stretch",
+                  minHeight: "480px",
                 }}
               >
                 <img
@@ -382,8 +381,7 @@ export default function HomePage() {
                   alt="Hariom Tatsat"
                   style={{
                     width: "100%",
-                    maxWidth: "520px",
-                    height: "auto",
+                    height: "100%",
                     borderRadius: "16px",
                     objectFit: "cover",
                     objectPosition: "center top",
