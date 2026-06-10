@@ -297,5 +297,8 @@ hr {
     justify-items: center !important;
     text-align: center !important;
   }
+  .speak-identity a[download] {
+    margin: 0 auto !important;
+  }
 }
 

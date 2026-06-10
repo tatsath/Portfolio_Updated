@@ -33,19 +33,50 @@ export default function SpeakPage() {
           }}
           className="speak-identity"
         >
-          <img
-            src="/assets/Picture_bio.jpg"
-            alt="Hariom Tatsat"
-            style={{
-              width: "180px",
-              height: "180px",
-              borderRadius: "50%",
-              objectFit: "cover",
-              objectPosition: "center top",
-              display: "block",
-              boxShadow: "0 4px 20px var(--shadow-color)",
-            }}
-          />
+          <div>
+            <img
+              src="/assets/Picture_bio.jpg"
+              alt="Hariom Tatsat"
+              style={{
+                width: "180px",
+                height: "auto",
+                borderRadius: "8px",
+                objectFit: "cover",
+                objectPosition: "center top",
+                display: "block",
+                boxShadow: "0 4px 20px var(--shadow-color)",
+                marginBottom: "12px",
+              }}
+            />
+            <a
+              href="/assets/Picture_bio.jpg"
+              download="Hariom_Tatsat_Photo.jpg"
+              style={{
+                display: "block",
+                textAlign: "center",
+                padding: "7px 0",
+                border: "1px solid var(--text-secondary)",
+                borderRadius: "6px",
+                color: "var(--text-secondary)",
+                fontSize: "12px",
+                fontWeight: 600,
+                letterSpacing: "0.08em",
+                textDecoration: "none",
+                width: "180px",
+                transition: "border-color 0.2s ease, color 0.2s ease",
+              }}
+              onMouseEnter={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--text-headings)";
+                (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-headings)";
+              }}
+              onMouseLeave={(e) => {
+                (e.currentTarget as HTMLAnchorElement).style.borderColor = "var(--text-secondary)";
+                (e.currentTarget as HTMLAnchorElement).style.color = "var(--text-secondary)";
+              }}
+            >
+              ↓ Download Photo
+            </a>
+          </div>
 
           <div>
             <h1
