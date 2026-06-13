@@ -1,5 +1,5 @@
 ---
-title: "Interpretability: The Missing Link in Enterprise AI"
+title: "Inside the Model: The Next Layer of AI Safety"
 date: 2026-06-12
 description: "The major labs publish detailed system cards that quietly admit surface-level safety has hard limits. Read closely, those admissions form a map — and the missing layer they point to is internal monitoring of the model itself."
 categories:
@@ -8,7 +8,7 @@ draft: false
 ShowToc: true
 ---
 
-# Interpretability: The Missing Link in Enterprise AI
+# Inside the Model: The Next Layer of AI Safety
 
 *The major labs publish detailed, carefully measured system cards. The most useful parts are the parts they admit they still cannot solve. Read closely, those admissions form a map.*
 
