@@ -431,6 +431,77 @@ export default function HomePage() {
           </div>
         </div>
 
+        {/* Featured Video */}
+        <section
+          style={{
+            padding: "20px 0 40px",
+            backgroundColor: "var(--bg-main)",
+          }}
+        >
+          <div className="container" style={containerStyle}>
+            <div
+              style={{
+                fontSize: "12px",
+                fontWeight: 700,
+                letterSpacing: "0.12em",
+                textTransform: "uppercase" as const,
+                color: "var(--text-secondary)",
+                marginBottom: "14px",
+              }}
+            >
+              Featured Talk · 2025
+            </div>
+            <div style={{ maxWidth: "640px" }}>
+              <div
+                style={{
+                  position: "relative",
+                  width: "100%",
+                  paddingTop: "56.25%",
+                  borderRadius: "10px",
+                  overflow: "hidden",
+                  boxShadow: "var(--card-shadow)",
+                  marginBottom: "12px",
+                }}
+              >
+                <iframe
+                  src="https://www.youtube.com/embed/7kwzpE86qxs"
+                  title="Trustworthy AI in Finance"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                  allowFullScreen
+                  style={{
+                    position: "absolute",
+                    top: 0,
+                    left: 0,
+                    width: "100%",
+                    height: "100%",
+                    border: 0,
+                  }}
+                />
+              </div>
+              <div
+                style={{
+                  fontSize: "18px",
+                  fontWeight: 700,
+                  color: "var(--text-headings)",
+                  marginBottom: "4px",
+                  lineHeight: 1.4,
+                }}
+              >
+                Trustworthy AI in Finance
+              </div>
+              <p
+                style={{
+                  fontSize: "14px",
+                  color: "var(--text-secondary)",
+                  margin: 0,
+                }}
+              >
+                AI in Finance Summit, NY
+              </p>
+            </div>
+          </div>
+        </section>
+
         {/* Featured Research Callout */}
         <section
           style={{
@@ -526,6 +597,207 @@ export default function HomePage() {
                 marginTop: "40px",
               }}
             >
+              {/* Video: Trustworthy AI in Finance - AI in Finance Summit NY */}
+              <div
+                className="card"
+                data-aos="fade-up"
+                style={{
+                  ...cardStyle,
+                  border: "2px solid var(--accent-primary)",
+                }}
+              >
+                <a
+                  href="https://www.youtube.com/watch?v=7kwzpE86qxs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", display: "block" }}
+                >
+                  <div
+                    className="ccimg"
+                    style={{
+                      overflow: "hidden",
+                      position: "relative",
+                      height: "200px",
+                    }}
+                  >
+                    <img
+                      src="https://img.youtube.com/vi/7kwzpE86qxs/maxresdefault.jpg"
+                      alt="Trustworthy AI in Finance"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        transition: "transform 0.5s ease",
+                        objectFit: "cover",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "15px",
+                        left: "15px",
+                        padding: "6px 12px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "11px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.1em",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      Conference Video
+                    </div>
+                  </div>
+                </a>
+                <div
+                  className="cdesc"
+                  style={{
+                    padding: "25px",
+                    flexGrow: 1,
+                    fontSize: "16px",
+                    lineHeight: 1.5,
+                    color: "var(--text-primary)",
+                    backgroundColor: "var(--bg-card)",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 500,
+                      color: "var(--text-secondary)",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Conference Video · AI in Finance Summit, NY
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    Trustworthy AI in Finance
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    2025
+                  </p>
+                </div>
+              </div>
+
+              {/* Video: AI System Explainability in Finance - Reuters */}
+              <div
+                className="card"
+                data-aos="fade-up"
+                data-aos-delay="100"
+                style={{
+                  ...cardStyle,
+                  border: "2px solid var(--accent-primary)",
+                }}
+              >
+                <a
+                  href="https://vimeo.com/1201531048/2f8074dce8"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  style={{ textDecoration: "none", display: "block" }}
+                >
+                  <div
+                    className="ccimg"
+                    style={{
+                      overflow: "hidden",
+                      position: "relative",
+                      height: "200px",
+                    }}
+                  >
+                    <img
+                      src="/assets/Reuters.png"
+                      alt="AI System Explainability in Finance - Reuters"
+                      style={{
+                        width: "100%",
+                        height: "100%",
+                        transition: "transform 0.5s ease",
+                        objectFit: "cover",
+                      }}
+                      onMouseEnter={(e) => {
+                        e.currentTarget.style.transform = "scale(1.1)";
+                      }}
+                      onMouseLeave={(e) => {
+                        e.currentTarget.style.transform = "scale(1)";
+                      }}
+                    />
+                    <div
+                      style={{
+                        position: "absolute",
+                        top: "15px",
+                        left: "15px",
+                        padding: "6px 12px",
+                        backgroundColor: "var(--accent-primary)",
+                        color: "var(--bg-main)",
+                        fontSize: "11px",
+                        fontWeight: 600,
+                        textTransform: "uppercase",
+                        letterSpacing: "0.1em",
+                        borderRadius: "4px",
+                      }}
+                    >
+                      Conference Video
+                    </div>
+                  </div>
+                </a>
+                <div
+                  className="cdesc"
+                  style={{
+                    padding: "25px",
+                    flexGrow: 1,
+                    fontSize: "16px",
+                    lineHeight: 1.5,
+                    color: "var(--text-primary)",
+                    backgroundColor: "var(--bg-card)",
+                  }}
+                >
+                  <div
+                    style={{
+                      fontSize: "13px",
+                      fontWeight: 500,
+                      color: "var(--text-secondary)",
+                      marginBottom: "10px",
+                    }}
+                  >
+                    Conference Video · Reuters, Momentum AI Finance
+                  </div>
+                  <h3
+                    style={{
+                      fontSize: "18px",
+                      fontWeight: 600,
+                      color: "var(--text-headings)",
+                      marginBottom: "8px",
+                    }}
+                  >
+                    AI System Explainability in Finance
+                  </h3>
+                  <p
+                    style={{
+                      fontSize: "14px",
+                      color: "var(--text-secondary)",
+                    }}
+                  >
+                    2025
+                  </p>
+                </div>
+              </div>
+
               {/* Video: Federal Reserve Bank of Atlanta - 2026 */}
               <div
                 className="card"
@@ -1562,6 +1834,7 @@ export default function HomePage() {
                   </p>
                 </div>
               </div>
+
             </div>
           </div>
         </section>
@@ -2551,81 +2824,6 @@ export default function HomePage() {
                       </h3>
                   </div>
                   </div>
-
-                  {/* Data Science Salon - 2024 */}
-                  <div className="card" data-aos="fade-up" data-aos-delay="200" style={cardStyle}>
-                    <a
-                      href="https://www.datascience.salon/miami-2024"
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      style={{ textDecoration: "none", display: "block" }}
-                    >
-                      <div
-                        className="ccimg"
-                        style={{
-                          overflow: "hidden",
-                          position: "relative",
-                          height: "250px",
-                        }}
-                      >
-                        <img
-                          src="/assets/Featuredtalk2.jpeg"
-                          alt="Data Science Salon"
-                          style={{
-                            width: "100%",
-                            height: "100%",
-                            transition: "transform 0.5s ease",
-                            objectFit: "cover",
-                          }}
-                          onMouseEnter={(e) => {
-                            e.currentTarget.style.transform = "scale(1.1)";
-                          }}
-                          onMouseLeave={(e) => {
-                            e.currentTarget.style.transform = "scale(1)";
-                          }}
-                        />
-                </div>
-                    </a>
-                    <div
-                      className="cdesc"
-                      style={{
-                        padding: "25px",
-                        flexGrow: 1,
-                        fontSize: "16px",
-                        lineHeight: 1.6,
-                        color: "var(--text-primary)",
-                        backgroundColor: "var(--bg-card)",
-                        display: "flex",
-                        flexDirection: "column",
-                      }}
-                    >
-                      <div style={{ display: "flex", gap: "10px", marginBottom: "15px", flexWrap: "wrap" }}>
-                        <span
-                          style={{
-                            padding: "6px 12px",
-                            backgroundColor: "var(--text-primary)",
-                            color: "var(--bg-main)",
-                            borderRadius: "6px",
-                            fontSize: "12px",
-                            fontWeight: 600,
-                            textTransform: "uppercase",
-                          }}
-                        >
-                          2024
-                        </span>
-                  </div>
-              <h3
-                style={{
-                  fontSize: "22px",
-                          fontWeight: 700,
-                          color: "var(--text-headings)",
-                          marginBottom: "8px",
-                        }}
-                      >
-                        Data Science Salon
-                      </h3>
-              </div>
-            </div>
 
                   {/* AI Summit New York - 2024 */}
                   <div className="card" data-aos="fade-up" data-aos-delay="300" style={cardStyle}>
