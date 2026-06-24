@@ -4,7 +4,7 @@ date: 2026-05-08
 description: "A practical guide to interpretability-guided model repair, from LoRA baselines to SAE-guided fine-tuning, circuit-restricted edits, and RL with feature rewards."
 categories:
  - Opinion
-draft: false
+draft: true
 ShowToc: true
 ---
 
