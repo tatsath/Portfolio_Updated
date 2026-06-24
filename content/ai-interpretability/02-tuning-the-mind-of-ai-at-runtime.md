@@ -4,7 +4,7 @@ date: 2026-04-01
 description: "Editing a model's behavior from the inside, at inference, without retraining. A field guide to activation steering and the case for using it in production."
 categories:
  - Opinion
-draft: false
+draft: true
 ShowToc: true
 ---
 
