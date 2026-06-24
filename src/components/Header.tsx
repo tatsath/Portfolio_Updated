@@ -156,11 +156,11 @@ export default function Header() {
               Papers
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link href="/#media" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Media
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link href="/contact" style={linkStyle} onClick={() => setIsMenuOpen(false)}>
               Contact
