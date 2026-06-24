@@ -86,6 +86,7 @@ The stack with surface filters alone has the model as an opaque box between two 
 
 ---
 
+<!--
 ## A four-probe architecture
 
 In practice, one probe is rarely enough. The five categories of gap in Figure 1 do not share an internal signature, only an approach.
@@ -105,6 +106,7 @@ The four probe roles map onto the gaps the cards admit:
 **Threat Radar** is a coarser detector for offensive-tactic patterns, of the kind enumerated in red-team tactics datasets **[[20]](#ref-20)** and in MITRE ATT&amp;CK-style taxonomies. It is calibrated for review rather than hard block, because legitimate defensive security work can look superficially similar to the patterns it watches for.
 
 The decision gate is what turns four scores into an action. The right setting depends on context: block on high confidence, route to human review on medium, allow with a logged event on low. Different deployment domains, finance, healthcare, agentic coding, calibrate the gate differently.
+-->
 
 ---
 
@@ -112,9 +114,9 @@ The decision gate is what turns four scores into an action. The right setting de
 
 To make the value concrete, it helps to lay the two views side by side.
 
-![Figure 5: What surface sees vs what internal adds, per category](/assets/ai-interpretability/cards-fig-coverage.svg)
+![Figure 4: What surface sees vs what internal adds, per category](/assets/ai-interpretability/cards-fig-coverage.svg)
 
-*Figure 5. For each gap category, what surface observability sees and what an internal probe adds. The internal column is what the system cards' admitted gaps are pointing at.*
+*Figure 4. For each gap category, what surface observability sees and what an internal probe adds. The internal column is what the system cards' admitted gaps are pointing at.*
 
 Two rows deserve attention. **Indirect / RAG poisoning** is where the surface really cannot help: the chunk text looks clean by every keyword measure, but the model reads it as a command. An internal probe can score *that specific chunk* in the context of how it activates the model, and tell you which retrieved document raised the risk. This is the closest thing the field currently has to a working RAG poisoning detector running in-band with the model. **Latent unsafe state** is the row where the surface literally sees nothing until generation begins. That is the row Anthropic's sleeper-agent work directly targets.
 
@@ -136,9 +138,9 @@ It would be inconsistent with the spirit of this essay to overclaim. Internal pr
 
 ## Choosing in practice
 
-![Figure 6: Match the defense to the gap](/assets/ai-interpretability/cards-fig-match.svg)
+![Figure 5: Match the defense to the gap](/assets/ai-interpretability/cards-fig-match.svg)
 
-*Figure 6. A starting heuristic for matching defense to gap. The choice is not "internal probes instead of everything else." It is "internal probes where the surface cannot reach, and only as far as their calibration earns."*
+*Figure 5. A starting heuristic for matching defense to gap. The choice is not "internal probes instead of everything else." It is "internal probes where the surface cannot reach, and only as far as their calibration earns."*
 
 The right reading of the system cards is not a critique. It is a checklist. For every category the cards openly flag, ask the same question: where does the existing surface defense actually sit, and what kind of evidence could catch what it misses? In a surprising number of cases, the answer is now a probe on the residual stream, validated against the OWASP-style threat taxonomies. **[[7]](#ref-7)** **[[9]](#ref-9)** In a few, the answer is a stronger output filter or a tighter sandbox. In the rarest and most consequential cases, the answer is to escalate all the way to circuit-level analysis on a specific behavior the system has to understand end to end.
 
