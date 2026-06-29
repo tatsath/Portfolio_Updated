@@ -12,8 +12,6 @@ ShowToc: true
 
 # The AI Misconceptions Keeping Financial Enterprises Stuck
 
-*Most financial firms have already bought the models and the compute. Almost none have them doing trustworthy work in production. That gap is not a model problem or a budget problem. It is a set of misconceptions, most of them planted by vendors, about what to buy, who to buy it from, what has to run where, and how to tell if any of it is working. Here are the eight that do the most damage, and the one posture that dissolves all of them: rent the commodity, build the edge, orchestrate the pieces yourself.*
-
 *Nothing here is investment advice.*
 
 ---
