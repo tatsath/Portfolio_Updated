@@ -1,7 +1,7 @@
 ---
 title: "Inside the Model: The Next Layer of AI Safety"
 date: 2026-06-12
-description: "The major labs publish detailed system cards that quietly admit surface-level safety has hard limits. Read closely, those admissions form a map — and the missing layer they point to is internal monitoring of the model itself."
+description: "The major labs publish detailed system cards that quietly admit surface-level safety has hard limits. Read closely, those admissions form a map ,  and the missing layer they point to is internal monitoring of the model itself."
 categories:
  - Opinion
 draft: false

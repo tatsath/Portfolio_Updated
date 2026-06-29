@@ -1,7 +1,7 @@
 ---
 title: "The Gap in Agent Observability"
 date: 2026-05-27
-description: "Every tool in the agent observability stack — traces, logs, output monitors — watches the edges of the pipeline. The decision that produces each action forms in the middle, inside the model, where none of them can see."
+description: "Every tool in the agent observability stack ,  traces, logs, output monitors ,  watches the edges of the pipeline. The decision that produces each action forms in the middle, inside the model, where none of them can see."
 categories:
  - Opinion
 draft: false

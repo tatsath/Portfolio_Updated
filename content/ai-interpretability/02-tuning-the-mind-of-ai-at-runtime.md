@@ -12,7 +12,7 @@ ShowToc: true
 
 *We can reach into a running model and turn a behavior up or down. The limits are real; the production payoff is closer than the skeptics think.*
 
-*Editing a model's behavior from the inside, at inference, without retraining — and the case for using it in production.*
+*Editing a model's behavior from the inside, at inference, without retraining ,  and the case for using it in production.*
 
 ---
 
