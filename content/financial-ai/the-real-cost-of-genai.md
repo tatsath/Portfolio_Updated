@@ -12,9 +12,6 @@ ShowToc: true
 
 # The Real Cost of GenAI in an Investment Firm: Tokens Are the Smallest Part
 
-*When a firm asks "what will AI cost us," it looks at the invoice from OpenAI or Anthropic. That number is real, and it is the least important figure in the entire budget. The cost that decides whether the investment pays off lives in five places the business case almost never includes, and the data on where AI spending actually fails is unambiguous about which ones.*
-
-
 ---
 
 Ask a fund COO or an RIA principal what their AI costs, and you'll usually get an answer denominated in subscriptions: so many Claude seats, so much API usage, a data add-on or two. It's a clean number, it fits on a line, and the CFO can approve it. It is also, for the purposes of deciding whether AI will actually pay off, close to irrelevant.

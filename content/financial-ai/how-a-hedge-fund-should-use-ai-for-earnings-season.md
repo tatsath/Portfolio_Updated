@@ -12,9 +12,6 @@ ShowToc: true
 
 # How a Hedge Fund Should Actually Use AI for Earnings Season
 
-*The one thing every AI demo shows you, "summarize the call", is close to the least valuable thing a model can do for a serious analyst. Here is the earnings-season workflow that actually earns a place on the desk.*
-
-
 ---
 
 Earnings season is, before it is anything else, a capacity problem. A fundamental analyst covers some number of names deeply, call it fifteen to twenty-five. During a three-week window, a large share of them report within a few days of each other, often two or three on the same morning, each dropping a release, a deck, a 10-Q, and an hour of management commentary into a day that already has a fixed number of hours in it. The constraint is never the analyst's intelligence. It is attention, and there is never enough of it when it is needed most.

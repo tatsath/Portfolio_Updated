@@ -12,8 +12,6 @@ ShowToc: true
 
 # AI Is Not Reproducible, and That Changes How You Deploy It
 
-*Run the same prompt through the same model twice, with the temperature set to zero, and you can get two different answers. That is not a bug to be fixed before you deploy. It is a property of the technology, and it is the single fact that should organize how an investment firm decides where AI belongs, where it is forbidden, how complex a system to build, what to log, and when to trust a number. This is the operating model expressed as one principle: the system is probabilistic, not deterministic, so you engineer around the variance instead of pretending it away.*
-
 ---
 
 There is a demo every vendor gives and a fact every vendor leaves out, and the gap between them is the whole subject of this essay.
