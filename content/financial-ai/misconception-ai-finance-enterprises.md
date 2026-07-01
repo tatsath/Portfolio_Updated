@@ -1,7 +1,7 @@
 ---
 title: "The AI Misconceptions Keeping Financial Enterprises Stuck"
 date: 2026-06-29
-description: "Most financial firms have already bought the models and the compute. Almost none have them doing trustworthy work in production. That gap is not a model problem or a budget problem. Here are the eight misconceptions that do the most damage, and the one posture that dissolves all of them."
+description: "Most financial firms have already bought the models and the compute. Almost none have them doing trustworthy work in production. That gap is not a model problem or a budget problem. Here are the seven misconceptions that do the most damage, and the one posture that dissolves all of them."
 categories:
  - Opinion
 draft: false
@@ -16,7 +16,7 @@ ShowToc: true
 
 ---
 
-There is a scene that repeats at financial firm after financial firm.
+There is a scene that repeats at several financial firms.
 
 Leadership decides to "do AI." A budget appears. Enterprise deals get signed with one or more of the big providers. Maybe there is a GPU allocation, an internal platform team, a pilot or three. The slideware is gorgeous.
 
@@ -24,7 +24,7 @@ Then you ask the only question that matters: *what is actually in production, tr
 
 And the honest answer is: not much.
 
-The firm has bought the most powerful engine on the market, and it is sitting idle. Not because the engine is weak. Because the hard part was never the engine. It is the last mile: getting the thing into trustworthy production, wired into real workflows, validated, governed, actually used.
+The firm has bought the most powerful engine on the market, and it is sitting idle. Not because the engine is weak. Because the hard part was never the engine. It is the last mile: getting the thing into trustworthy production, wired into real workflows, validated, governed, actually used (Figure 1).
 
 ![The engine is in the shop, few firms get it on the road](/assets/financial-ai/misconception-fig-ferrari.png)
 
@@ -32,7 +32,7 @@ And the reason so many firms stall on that last mile is that they have absorbed 
 
 ![Figure 1: Firms buy the engine; few get it into production. The gap is the last mile.](/assets/financial-ai/misconception-fig-last-mile.png)
 
-*Figure 1. The gap between capability purchased and capability trusted in production. This is the last mile, and it is where almost every firm stalls.*
+*Figure 1. The last mile: capability bought vs. capability trusted in production.*
 
 > **A note on where this comes from.** I do not sell models, platforms, or pilots. This is the view from reading the primary record and watching where these systems break, which is the only vantage from which most of these misconceptions are even visible, because every one of them is comfortable for somebody who is selling you something.
 
@@ -62,7 +62,7 @@ Think Lego. The labs and data vendors now sell extraordinary *bricks*: models, e
 
 ---
 
-## 2. "It all has to run in the cloud, on someone else's API."
+## 2. "It all has to run in the hyperscaler's cloud "
 
 This is the one I most want to correct, because it is both widely believed and, for a regulated firm, dangerously wrong.
 
@@ -78,7 +78,7 @@ The thing that makes consumer AI cheap and easy, *send your data to the model*, 
 
 Flip the boundary from problem to design constraint, and the on-prem, open-model path stops looking like a compromise. It starts looking like the natural architecture: capable models on a box you own, inside your perimeter, nothing phoning home.
 
-The corrected belief is not "never use a hyperscaler." Some jobs are worth the trip outside, and some firms have no appetite to run inference. The corrected belief is that **the choice is real, and the default is no longer "cloud."** A firm that has never seriously evaluated the local option has been quietly sold the most expensive and least private architecture as if it were the only one.
+The corrected belief is not "never use a hyperscaler." Some jobs are worth the trip outside, and some firms have no appetite to run inference. The corrected belief is that **the choice is real, and the default is no longer "cloud."** A firm that has never seriously evaluated the local option on-prem GPU option has been quietly sold the most expensive and least private architecture as if it were the only one.
 
 ---
 
@@ -98,17 +98,17 @@ This is the single most important misconception to kill, because it decides wher
 
 Believe the model is the hard part, and you chase the best model, upgrade on every release, treat model selection as the central decision. Understand that the harness is the hard part, and you spend your effort on the thing that actually moves results: the orchestration, the retrieval, the validation, the workflow fit.
 
-And here is the reassuring part for any firm worried about being left behind. Because the value lives in the harness, and the harness is buildable in-house, the edge is available to you. You do not need to win the model race. You need to win the assembly race, and that one is not decided by who has the biggest GPU budget.
+And here is the reassuring part for any firm worried about being left behind. Because the value lives in the harness, and the harness is buildable in-house, the edge is available to you. You do not need to win the model race. You need to win the assembly race, and that one is not decided by who has the biggest GPU budget (Figure 2).
 
 ![Figure 2: Rent the commodity, build the edge. Firms stall by building the bottom or buying the top.](/assets/financial-ai/misconception-fig-rent-build.png)
 
-*Figure 2. Funds stall by building the commodity layer themselves or buying a black-box that owns their edge. The winning posture is the opposite: rent the model, build the harness.*
+*Figure 2. Rent the commodity layer, build the edge — firms stall by doing the reverse.*
 
 ---
 
-## 4. "More complex is better, use the most sophisticated stack."
+## 4. "More complex is better, and the most advanced thing is an agent."
 
-There is a status game in enterprise AI where the most elaborate architecture wins the meeting. Multi-agent swarms, autonomous planners, the full agentic apparatus, presented as self-evidently superior to anything simpler.
+There is a status game in enterprise AI where the most elaborate architecture wins the meeting. Multi-agent swarms, autonomous planners, the full agentic apparatus, presented as self-evidently superior to anything simpler. And the single most complicated thing on the menu, the one everybody reaches for precisely *because* it is the most complicated, is the agent. So these are really one misconception wearing two hats: *more complex is better*, and its favorite child, *the most advanced thing is an agent, so build one.*
 
 It is usually wrong, and expensively so.
 
@@ -116,33 +116,21 @@ The right question is never "what is the most advanced thing we can deploy?" It 
 
 Some tasks genuinely suit a retrieval setup, where the work is finding the right passage and grounding an answer in it. Some need an agent, a real multi-step loop with tools, because the work requires planning and acting across stages. And a great many tasks, more than vendors will ever admit, are best served by something boring: a tuned extraction with a deterministic check, a single focused model call, a classical pipeline with a model doing one bounded thing inside it.
 
-Reaching for an autonomous multi-agent system to do a job a structured extraction would nail is not sophistication. It is paying more, waiting longer, and adding failure surface for nothing.
+The most valuable of those boring jobs is also the least glamorous: reading documents. Roughly 80% of the data inside a financial firm is unstructured, locked in filings, memos, contracts, statements, and PDFs, and financial services carries the largest share of unstructured data of any industry. **[[7]](#ref-7)** Almost every downstream use case, the summary, the screen, the risk flag, the model, is only as good as the extraction beneath it: read the document wrong and everything built on top inherits the error. Get document processing right and an enormous amount of trapped value comes loose, since modern extraction can now turn the large majority of that locked data into usable, validated fields at high accuracy. **[[7]](#ref-7)** Reaching for an autonomous multi-agent swarm to do a job a well-built extraction pipeline would nail is not sophistication. It is paying more, waiting longer, and adding failure surface for nothing.
+
+Agents themselves are a real, valuable tool, just for a narrow shape of problem: open-ended, multi-step work where the path cannot be specified in advance and the system genuinely needs to plan, act, observe, adapt. For that shape, nothing else does as well. But most of what a firm needs from AI is not that shape, and the tell that you are being agent-washed is when a vendor sells autonomy as the feature rather than the means. Autonomy is not a benefit. It is a cost you accept only when the problem demands it.
 
 Complexity is not free, and in agentic systems it compounds. Every extra step is another place to fail, and the failures multiply rather than add. It costs real money too: an agentic workflow can burn many times the tokens of a single call, and the production economics of a multi-step loop bear no relationship to the pilot economics of a one-shot demo. **[[4]](#ref-4)**
 
-The discipline is simple. Match the tool to the job. Reach for the simplest architecture that clears the bar, then add complexity only when a specific failure forces you to. The most sophisticated stack is not the one with the most agents. It is the one that solves the problem and nothing more.
+The discipline is simple. Match the tool to the job, and use the least autonomy that works (Figure 3). Reach for the simplest architecture that clears the bar, then add complexity only when a specific failure forces you to. "Is it an agent?" is the wrong question. "Does this job actually require one?" is the right one, and for most of a firm's work the answer is no.
 
 ![Figure 3: Match the tool to the job. Not everything is an agent.](/assets/financial-ai/misconception-fig-match-tool.png)
 
-*Figure 3. Three lanes: retrieval for bounded lookup tasks, a single model call for well-scoped generation, a true agent only for multi-step work where the path cannot be specified in advance. Most of a firm's actual use cases land in the first two lanes.*
+*Figure 3. Match the tool to the job — most work needs retrieval or a single call, not an agent.*
 
 ---
 
-## 5. "If it's AI, it should be an agent."
-
-A close cousin, worth separating out: the assumption that the frontier of AI is autonomous agents, so the goal of any project is to build one, and a workflow that is not agentic is somehow behind.
-
-Agents are a real, valuable tool for a specific shape of problem: open-ended, multi-step work where the path cannot be specified in advance and the system genuinely needs to plan, act, observe, adapt. For that shape, nothing else does as well.
-
-But most of what a firm needs from AI is not that shape. Summarizing a call, extracting a number, drafting a memo section, screening a universe, watching for an alert, these are mostly bounded, specifiable tasks where an agent's autonomy buys you nothing and costs you predictability, latency, and money.
-
-The tell that you are being agent-washed is when a vendor sells autonomy as the feature rather than the means. Autonomy is not a benefit. It is a cost you accept when the problem demands it.
-
-Use the least autonomy the job allows. A bounded call where a bounded call works, retrieval where retrieval works, an agent only where the problem genuinely cannot be specified in advance. "Is it an agent?" is the wrong question. "Does this job actually require one?" is the right one, and for most of a firm's work the answer is no.
-
----
-
-## 6. "What works in the demo will work in our shop."
+## 5. "What works in the demo will work in our shop."
 
 A leader watches a slick demo, or a YouTube walkthrough, or reads a blog post with a clean reference architecture, and concludes the thing will work inside the firm.
 
@@ -154,11 +142,11 @@ None of that is safe inside a regulated firm.
 
 A large share of the typical vendor toolkit, and of the tutorial stacks online, is built on external connectors and outbound calls: the orchestration framework that quietly sends data back out, the component that ships usage telemetry to the vendor, the "managed" feature that quietly routes your data through someone else's cloud. Inside a regulated boundary, where data residency, egress controls, and information barriers are not negotiable, much of that cannot run as shipped.
 
-You discover this not in the demo but three weeks into the integration, when security flags that half the stack is making calls you cannot allow.
+You discover this not in the demo but three weeks into the integration, when security flags that half the stack is making calls you cannot allow (Figure 4).
 
 ![Figure 4: Much of the off-the-shelf toolkit assumes the open internet. Inside a regulated firm, a large share cannot run as shipped.](/assets/financial-ai/misconception-fig-phones-home.png)
 
-*Figure 4. The components that quietly phone home. Orchestration frameworks, telemetry, "managed" connectors, and vendor-routed features all make outbound calls the demo never shows. Inside a regulated perimeter, these are the calls that fail procurement.*
+*Figure 4. The parts that quietly phone home — the outbound calls that fail procurement inside a regulated perimeter.*
 
 Which lands on the conclusion this whole piece keeps reaching from different directions. Because so much of the off-the-shelf, internet-native toolkit dies at a regulated perimeter, the realistic path is to **orchestrate it yourself**: assemble components you control, run where your data is allowed to be, design out the outbound calls you cannot make from the start rather than discover them late.
 
@@ -166,9 +154,9 @@ That is not paranoia. It is a description of what the compliance boundary actual
 
 ---
 
-## 7. "You can't really do this in-house."
+## 6. "You can't really do this in-house."
 
-The weight of the previous six produces a seventh, and it is the most defeating: the belief that all of this is too hard, too specialized, too fast-moving to do internally, so the only real path is to outsource it wholesale and hope.
+The weight of the previous five produces a sixth, and it is the most defeating: the belief that all of this is too hard, too specialized, too fast-moving to do internally, so the only real path is to outsource it wholesale and hope.
 
 This gets it exactly backwards, and by now you can see why.
 
@@ -182,7 +170,7 @@ The distinction is between buying a *result* you cannot see inside or change, an
 
 ---
 
-## 8. "ROI is about the token cost."
+## 7. "ROI is about the token cost."
 
 The last misconception is about measurement, and getting it wrong quietly distorts every decision above it.
 
@@ -194,19 +182,19 @@ The token is close to the least important number in the whole picture. What matt
 
 And the harder truth the vendors will not volunteer: **durable, measurable GenAI ROI is genuinely difficult to show right now.** The largest study of enterprise deployments found that against tens of billions in spending, the substantial majority of organizations saw no measurable return, and the cause was not weak models but poor integration and spend aimed at the most visible rather than the most valuable use cases. **[[6]](#ref-6)** Surveys consistently find only about half of enterprises can confidently evaluate their AI ROI at all. **[[4]](#ref-4)**
 
-That is not a reason to give up. It is a reason to measure honestly and point the spend correctly.
+That is not a reason to give up. It is a reason to measure honestly and point the spend correctly (Figure 5).
 
 ![Figure 5: Token-maxing is not ROI. Return per user, on the right workflow, is.](/assets/financial-ai/misconception-fig-roi.png)
 
-*Figure 5. The wrong number versus the right number. Token consumption measures cost and nothing else. Return per user on an approved, workflow-embedded output is the metric that separates the few firms that show real value from the many that do not.*
+*Figure 5. The wrong number vs. the right one — token consumption vs. return per approved output.*
 
 A firm that measures cost per approved output, per user, on the workflows where that output genuinely beats the manual cost, will be in the small minority that can show a return. A firm that celebrates its token consumption is measuring the one number that tells it nothing.
 
 ---
 
-## The posture that dissolves all eight
+## The posture that dissolves all seven
 
-Step back and the eight collapse into a single operating posture. This is the part to keep.
+Step back and the seven collapse into a single operating posture. This is the part to keep.
 
 **Rent the commodity.** Models, connectors, raw infrastructure, are bricks you buy off the shelf, including capable open-weight models you run on your own hardware, inside your own walls. Do not build them. Do not overpay a hyperscaler when a local model clears the bar. Do not make model selection your central decision.
 
@@ -236,6 +224,7 @@ That is not a model you can buy. It is an operating model you have to build. And
 - <a id="ref-4"></a>**4. EY / CloudZero** - [*Agentic AI Token Costs*](https://ey.com/en_us/insights/ai/agentic-ai-token-costs); [*Inference Cost and ROI Visibility*](https://cloudzero.com/blog/inference-cost/)
 - <a id="ref-5"></a>**5. Citi Technology** - [*How Citi's CTO Is Rolling Out Gen AI Productivity Tools Across the Globe*](https://const-ins.com/how-citis-cto-is-rolling-out-new-gen-ai-productivity-tools-to-more-employees-across-the-globe/)
 - <a id="ref-6"></a>**6. MIT / Fortune** - [*95% of Enterprise GenAI Pilots Failing to Show Measurable ROI*](https://fortune.com/2025/08/18/mit-report-95-percent-generative-ai-pilots-at-companies-failing-cfo/) (2025)
+- <a id="ref-7"></a>**7. Snowflake / MIT Sloan** - [*How Financial Services Institutions Should Think About Unstructured Data*](https://www.snowflake.com/en/blog/financial-services-unstructured-data/); [*Tapping the Power of Unstructured Data*](https://mitsloan.mit.edu/ideas-made-to-matter/tapping-power-unstructured-data)
 
 ---
 
