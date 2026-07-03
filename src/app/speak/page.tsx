@@ -132,6 +132,35 @@ export default function SpeakPage() {
           </div>
         </div>
 
+        {/* Featured video */}
+        <section style={{ marginBottom: "56px" }}>
+          <div
+            style={{
+              position: "relative",
+              width: "100%",
+              paddingTop: "56.25%",
+              borderRadius: "10px",
+              overflow: "hidden",
+              boxShadow: "0 8px 32px var(--shadow-color)",
+            }}
+          >
+            <iframe
+              src="https://www.youtube.com/embed/i5DJhGm-6kQ"
+              title="Hariom Tatsat — Featured Talk"
+              style={{
+                position: "absolute",
+                top: 0,
+                left: 0,
+                width: "100%",
+                height: "100%",
+                border: 0,
+              }}
+              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+              allowFullScreen
+            />
+          </div>
+        </section>
+
         {/* Divider */}
         <div
           style={{
