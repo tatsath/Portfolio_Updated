@@ -302,3 +302,10 @@ hr {
   }
 }
 
+/* /workshop page responsive */
+@media (max-width: 700px) {
+  .testimonial-grid {
+    grid-template-columns: 1fr !important;
+  }
+}
+

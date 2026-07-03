@@ -4323,8 +4323,7 @@ export default function HomePage() {
           </div>
         </div>
 
-        {/* Courses and Workshop - DISABLED */}
-        {false && (
+        {/* Courses and Workshop */}
         <div
           className="card-section"
           id="courses"
@@ -4335,88 +4334,6 @@ export default function HomePage() {
               Courses and Workshop
             </div>
             <div className="card-container" style={cardContainerStyle}>
-              <div className="card" data-aos="fade-up" data-aos-delay="100" style={cardStyle}>
-                <a
-                  href="https://finmlcourse.thinkific.com/courses/ML"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="ccimg"
-                    style={{
-                      overflow: "hidden",
-                      position: "relative",
-                      height: "200px",
-                    }}
-                  >
-                    <img
-                      src="/assets/one1.jpg"
-                      alt="ML in Finance Course"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        transition: "transform 0.5s ease",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                </a>
-                <div
-                  className="cdesc"
-                  style={{
-                    padding: "20px",
-                    flexGrow: 1,
-                    fontSize: "16px",
-                    lineHeight: 1.5,
-                    color: "var(--text-primary)",
-                    backgroundColor: "var(--bg-card)",
-                  }}
-                >
-                  Machine Learning in Finance
-                </div>
-              </div>
-
-              <div className="card" data-aos="fade-up" data-aos-delay="200" style={cardStyle}>
-                <a
-                  href="https://finmlcourse.thinkific.com/courses/algo-trading-courses-multiverse"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <div
-                    className="ccimg"
-                    style={{
-                      overflow: "hidden",
-                      position: "relative",
-                      height: "200px",
-                    }}
-                  >
-                    <img
-                      src="/assets/three3.jpg"
-                      alt="Algo Trading Course"
-                      style={{
-                        width: "100%",
-                        height: "100%",
-                        transition: "transform 0.5s ease",
-                        objectFit: "cover",
-                      }}
-                    />
-                  </div>
-                </a>
-                <div
-                  className="cdesc"
-                  style={{
-                    padding: "20px",
-                    flexGrow: 1,
-                    fontSize: "16px",
-                    lineHeight: 1.5,
-                    color: "var(--text-primary)",
-                    backgroundColor: "var(--bg-card)",
-                  }}
-                >
-                  Algo Trading Multiverse
-                </div>
-              </div>
-
               <div className="card" data-aos="fade-up" style={cardStyle}>
                 <a
                   href="https://masterclass.economictimes.indiatimes.com/ai-generative-ai-finance-services-hariom-tatsat"
@@ -4502,7 +4419,6 @@ export default function HomePage() {
             </div>
           </div>
         </div>
-        )}
 
         {/* Awards Section - DISABLED */}
         {false && (

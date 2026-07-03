@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState, useEffect } from "react";
 
-export default function Header() {
+export default function Header({ topOffset = 0 }: { topOffset?: number }) {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isMobile, setIsMobile] = useState(false);
@@ -43,7 +43,7 @@ export default function Header() {
       className={`header ${isScrolled ? "scrolled" : ""}`}
       style={{
         position: "fixed",
-        top: 0,
+        top: topOffset,
         width: "100%",
         backdropFilter: "blur(10px)",
         backgroundColor: "var(--bg-header)",
