@@ -176,7 +176,7 @@ export default function WorkshopPage() {
               margin: 0,
             }}
           >
-            Courses and corporate workshops for financial institutions,
+            Corporate workshops and consulting for financial institutions,
             taking leadership and technical teams from "we bought the
             models" to "we have AI in trustworthy production."
           </p>
@@ -185,6 +185,19 @@ export default function WorkshopPage() {
         {/* Courses I've taught */}
         <section style={{ marginBottom: "0" }}>
           <h2 style={sectionLabelStyle}>Courses I've Taught</h2>
+          <p
+            style={{
+              ...bodyTextStyle,
+              fontSize: "15px",
+              color: "var(--text-secondary)",
+              marginBottom: "24px",
+            }}
+          >
+            A sample of programs delivered to senior executives and
+            leadership teams. If your team is looking for something similar,
+            a dedicated in-house session for your leadership group is the
+            better starting point.
+          </p>
           <div
             style={{
               display: "grid",
@@ -318,20 +331,18 @@ export default function WorkshopPage() {
         <section style={{ marginBottom: "0" }}>
           <h2 style={sectionLabelStyle}>The Corporate Workshop</h2>
           <p style={{ ...bodyTextStyle, marginBottom: "16px" }}>
-            Beyond the courses above, I also run direct, in-house workshops
-            for teams. Most financial firms have already bought the models
-            and the compute. Very few have them doing trustworthy work in
-            production. This program closes that gap directly, not with
-            another vendor pitch, but with the operating knowledge a firm
-            needs to build, govern, and ship AI internally.
+            I run in-house workshops and consulting sessions for leadership
+            teams at financial institutions. There is no fixed program: the
+            aim is simply to give a firm the operating knowledge it needs to
+            build, govern, and ship AI internally, not another vendor pitch.
           </p>
           <p style={bodyTextStyle}>
             Delivered in person or virtually to leadership teams, quant and
             data science groups, and enterprise-wide cohorts at banks, asset
-            managers, and fintechs, the workshop is built around the same
-            questions that come up in every serious AI initiative: what to
-            rent versus build, how to match the tool to the job, and how to
-            get something into production that people actually trust.
+            managers, and fintechs. Sessions focus on the questions that
+            come up in every serious AI initiative: what to rent versus
+            build, how to match the tool to the job, and how to get
+            something into production that people actually trust.
           </p>
         </section>
 
